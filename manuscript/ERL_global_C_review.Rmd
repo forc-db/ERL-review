@@ -1,0 +1,62 @@
+---
+title: ""
+output: 
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+bibliography: [library.bib,  packages.bib]
+biblio-style: apalike
+csl: apa.csl
+    
+header-includes:  \usepackage{float}
+                  \usepackage{caption}
+                  \captionsetup[table]{font=footnotesize}
+                  \captionsetup[figure]{font=footnotesize}
+                  \captionsetup[figure]{labelformat=empty}
+                  \captionsetup[table]{labelformat=empty}
+---
+\raggedright
+
+**Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global forest carbon database (ForC)
+
+**Authors:** 
+Kristina J. Anderson-Teixeira^1,2^*
+Valentine Herrmann^1^
+Becky Banbury Morgan
+Ben Bond-Lamberty
+Susan Cook-Patton
+Abigail Ferson
+Norbert Kunert
+Jennifer McGarvey
+Helene C. Muller-Landau^1^
+Maria Wang
+
+
+**Author Affiliations:**
+
+1. Conservation Ecology Center; Smithsonian Conservation Biology Institute; National Zoological Park, Front Royal, VA 22630, USA
+2. Center for Tropical Forest Science-Forest Global Earth Observatory; Smithsonian Tropical Research Institute; Panama, Republic of Panama
+
+*corresponding author: teixeirak@si.edu; +1 540 635 6546
+
+\newpage
+
+### Summary
+*(The Summary should be no longer than 300 words and divided into the following sections: Background, Methods/Design, Review results/ Synthesis and Discussion. Up to 7 Keywords should also be provided. The total length of the article is flexible.)*
+
+*Background.* The fate of Earth’s climate closely linked to forests, which strongly influence atmospheric carbon dioxide (CO2) and climate through their influential role in the global carbon (C) cycle. Synthetic understanding of global forest C cycles is needed to constrain model estimates of forest feedbacks to climate change and to more accurately quantify the influence of land use decisions on climate.
+
+*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon ## records from ## geographic locations representing ## C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
+
+*Review Results/ Synthesis.*  The rate of C cycling generally increased from boreal to tropical regions, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, and the rate of increase again tended to increase from boreal to tropical regions.
+
+*Discussion.* *[Discussion section will interpret results, highlighting new and significant findings, and discuss implications. Tentative headings are “Stand level C cycling in forests globally”, “Age trends in C cycling”, and “Implications for climate change mitigation”.]*
+ 
+*Key words*: forest ecosystems; carbon cycle; stand age; productivity; respiration; biomass; global 
+
+### Background
+*(The Background section needs to present the rationale for why a systematic review of this topic is needed along with a history of what has been done to date and an expectation of what new will emerge from the review, especially if quantitative meta-analyses of studies are being considered.)*
+
+Forest ecosystems globally influence climate through their critical role in the global carbon (C) cycle (Fig. 1). Their annual gross CO2 sequestration (gross primary productivity, GPP) is estimated at 59 Gt C yr-1 (Beer et al 2010), or 6.3 times average annual fossil fuel emissions from 2007-2016 (9.4 ± 0.5 Gt C yr-1; Le Quéré et al 2017). A small portion of global terrestrial GPP is retained in ecosystems (mainly forests), resulting in a C sink that averaged 3.0 ± 0.8 Gt C yr-1 from 2007-2016, offsetting 32% of anthropogenic fossil fuel emissions (Le Quéré et al 2017). The remaining ~98% of global GPP is counterbalanced by ecosystem respiration (Reco) or wildfire. Perturbation to the global GPP- Reco balance can substantially influence the growth rate of atmospheric CO2; for example, the 2015-2016 El Niño, which brought historically high temperatures and low precipitation to the tropics, released an extra 2.5 ± 0.3 Gt C to the atmosphere, resulting in the largest recorded atmospheric CO2 growth rate (Le Quéré et al 2016, Liu et al 2017). In addition, forests contain substantial C stocks that, when disturbed, release significant amounts of CO2 to the atmosphere. Although they cover only ~30% of the land surface, forests contain an estimated 92% of terrestrial biomass (Pan et al 2013) and 45% of terrestrial C (biomass and soils; Bonan 2008). Globally, gross tropical deforestation averaged 2.8 Gt C yr-1 from 2000-2007, but ~40% of this was offset by forest regrowth, resulting in a net source of ~1.1 Gt C yr-1 from tropical land use change (Pan et al 2011). This, coupled with minimal net deforestation in the extratropics and net uptake by intact forests (Pan et al 2011, Schimel et al 2015), resulted in a total gain in forest C of ~1.2-1.7 Gt C yr-1 (Le Quéré et al 2017, Schimel et al 2015), thereby substantially slowing the rate of increase of atmospheric CO2.     
+
+![**Figure 1 | The role of forests in the global carbon cycle. Values apply to the period 2000-2018.** Sources are as follows: biomass- (Pan et al 2013, Baccini et al 2012) IPCC 2000; intact forest sink, net forest sink, tropical deforestation and regrowth-(Pan et al 2011); terrestrial sink- (Le Quéré et al 2017); GPP- (Beer et al 2010); respiration+fire: calculated here; fossil fuel emissions- (Le Quéré et al 2017); atmospheric CO2 (2018 value from https://scripps.ucsd.edu/programs/keelingcurve/). ](tables_figures/Global_C_cycle/Global C cycle diagram.png)
