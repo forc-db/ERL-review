@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 FEB 2020 08:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 FEB 2020 08:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -845,28 +845,28 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 223.
 [2] [3 <./tables_figures/Global_C_cycle/Global C cycle diagram.png>] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 424.
+(Font)              <12> on input line 429.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5] [6]
 No file ERL_global_C_review.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
 [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 536.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 536.
 Package rerunfilecheck Info: File `ERL_global_C_review.out' has not changed.
 (rerunfilecheck)             Checksum: 7A097378BAB70831ADBCA347DFFE0BC3;470.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 528.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 536.
  ) 
 Here is how much of TeX's memory you used:
- 15720 strings out of 492616
- 231031 string characters out of 6129482
- 372669 words of memory out of 5000000
- 19298 multiletter control sequences out of 15000+600000
- 57849 words of font info for 94 fonts, out of 8000000 for 9000
+ 15724 strings out of 492616
+ 231090 string characters out of 6129482
+ 372729 words of memory out of 5000000
+ 19299 multiletter control sequences out of 15000+600000
+ 57802 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,44p,982b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
@@ -885,10 +885,10 @@ fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/loc
 al/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive
 /2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texm
 f-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ERL_global_C_review.pdf (7 pages, 1788765 bytes).
+Output written on ERL_global_C_review.pdf (7 pages, 1786873 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
  14374 words of extra memory for PDF output out of 14400 (max. 10000000)
 
