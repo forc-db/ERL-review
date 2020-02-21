@@ -19,7 +19,9 @@ $R_{auto}$,autotrophic respiration ($R_{auto-ag}+ R_{root}$),n,n,n
 $R_{auto-ag}$,"aboveground autotrophic respiration (i.e., leaves and stems)",n,n,n
 $R_{root}$,root respiration,n,n,n
 $R_{soil}$,soil respiration ($R_{het-soil} + R_{root}$),n,n,n
-$R_{het-soil}$,heterotrophic soil respiration,n,n,n
+$R_{het-soil}$,soil heterotrophic respiration,n,n,n
+$R_{het-ag}$,aboveground heterotrophic respiration,0,0,0
+$R_{het}$,heterotrophic respiration ($R_{het-ag} +R_{het-soil}$),0,0,0
 biomass,total live biomass ,n,n,n
 aboveground biomass,aboveground live biomass ,n,n,n
 woody aboveground biomass,woody component of aboveground biomass,n,n,n
