@@ -2,33 +2,32 @@ Variable,Description,records,plots,geographic areas
 $NEE$,net ecosystem exchange or net ecosystem production (- indicates C sink),n,n,n
 $GPP$,gross primary production ($NPP + R_{auto}$ or $R_{eco}-NEE$),n,n,n
 $NPP$,net primary production ($ANPP$ + $BNPP$),n,n,n
-$ANPP$,,n,n,n
-ANPPwoody,,n,n,n
-ANPPstem,,n,n,n
-ANPPbranch,,n,n,n
-ANPPfoliage,"foliage production, typically estimated as annual leaf litterfall",n,n,n
-ANPPlitterfall,,n,n,n
-ANPPrepro,,n,n,n
-ANPPfolivory,,n,n,n
-woody mortality,,n,n,n
-BNPP,,n,n,n
-BNPPcoarse ,,n,n,n
-BNPPfine ,,n,n,n
-Reco,,n,n,n
-Rauto,,n,n,n
-Rauto-ag,,n,n,n
-Rroot,,n,n,n
-Rsoil,,n,n,n
-Rhet-soil,,n,n,n
-Stocks,,n,n,n
-biomass,,n,n,n
-aboveground biomass,,n,n,n
-woody aboveground biomass,,n,n,n
-foliage biomass,,n,n,n
-root biomass,,n,n,n
-coarse root biomass,,n,n,n
-fine root biomass,,n,n,n
-deadwood,,n,n,n
-standing deadwood,,n,n,n
-down deadwood,,n,n,n
-organic layer,,n,n,n
+$ANPP$,aboveground $NPP$,n,n,n
+$ANPP_{woody}$,woody production (stem growth + branch turnover),n,n,n
+$ANPP_{stem}$,stem production ,n,n,n
+$ANPP_{branch}$,branch turnover,n,n,n
+$ANPP_{foliage}$,"foliage production, typically estimated as annual leaf litterfall",n,n,n
+$ANPP_{litterfall}$,"litterfall, including leaves, reproductive structures, twigs, and sometimes branches ",n,n,n
+$ANPP_{repro}$,"production of reproductive structures (flowers, fruits, seeds)",n,n,n
+$ANPP_{folivory}$,foliar biomass consumed by folivores,n,n,n
+$M_{woody}$,aboveground biomass of trees that died,n,n,n
+$BNPP$,belowground NPP ($BNPP_{coarse}$+ $BNPP_{fine}$),n,n,n
+$BNPPcoarse$,coarse root production,n,n,n
+$BNPP_{fine}$ ,fine root production,n,n,n
+$R_{eco}$,ecosystem respiration ,n,n,n
+$R_{auto}$,autotrophic respiration ($R_{auto-ag}+ R_{root}$),n,n,n
+$R_{auto-ag}$,"aboveground autotrophic respiration (i.e., leaves and stems)",n,n,n
+$R_{root}$,root respiration,n,n,n
+$R_{soil}$,soil respiration ($R_{het-soil} + R_{root}$),n,n,n
+$R_{het-soil}$,heterotrophic soil respiration,n,n,n
+biomass,total live biomass ,n,n,n
+aboveground biomass,aboveground live biomass ,n,n,n
+woody aboveground biomass,woody component of aboveground biomass,n,n,n
+foliage biomass,foliage biomass ,n,n,n
+root biomass,total root biomass ,n,n,n
+coarse root biomass,coarse root biomass ,n,n,n
+fine root biomass,fine root biomass C ,n,n,n
+deadwood,deadwood (standing+down),n,n,n
+standing deadwood,standing dead wood ,n,n,n
+down deadwood,"fallen dead wood, including coarse and sometimes fine woody debris",n,n,n
+organic layer,organic layer $/$ litter$/$ forest floor,n,n,n

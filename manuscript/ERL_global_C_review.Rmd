@@ -85,6 +85,7 @@ library(knitr)
 library(kableExtra)
 S1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
 kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. ForC variables included in this analysis. Shown are variable names and descriptions, the associated variable name(s) in the database, and number of plots with records. Complete list of variables with full definitions is available at [GitHub url].", escape = F)%>%
-  kable_styling(latex_options = c("scale_down", "hold_position"), font_size = 7) %>%
-  column_spec(1, width = "2cm") 
+  kable_styling(latex_options = c("scale_down", "hold_position"), font_size = 12)  %>%
+  pack_rows("Annual fluxes", 1, 21, latex_gap_space = "1em", colnum = 1, hline_before = FALSE) %>%
+  pack_rows("Stocks", 22, 32, latex_gap_space = "1em", colnum = 1, hline_before = FALSE)
 ```
