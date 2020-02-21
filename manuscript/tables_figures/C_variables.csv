@@ -1,0 +1,34 @@
+Variable,Description,records,plots,geographic areas
+$NEE$,net ecosystem exchange or net ecosystem production (- indicates C sink),n,n,n
+$GPP$,gross primary production ($NPP + R_{auto}$ or $R_{eco}-NEE$),n,n,n
+$NPP$,net primary production ($ANPP$ + $BNPP$),n,n,n
+$ANPP$,,n,n,n
+ANPPwoody,,n,n,n
+ANPPstem,,n,n,n
+ANPPbranch,,n,n,n
+ANPPfoliage,"foliage production, typically estimated as annual leaf litterfall",n,n,n
+ANPPlitterfall,,n,n,n
+ANPPrepro,,n,n,n
+ANPPfolivory,,n,n,n
+woody mortality,,n,n,n
+BNPP,,n,n,n
+BNPPcoarse ,,n,n,n
+BNPPfine ,,n,n,n
+Reco,,n,n,n
+Rauto,,n,n,n
+Rauto-ag,,n,n,n
+Rroot,,n,n,n
+Rsoil,,n,n,n
+Rhet-soil,,n,n,n
+Stocks,,n,n,n
+biomass,,n,n,n
+aboveground biomass,,n,n,n
+woody aboveground biomass,,n,n,n
+foliage biomass,,n,n,n
+root biomass,,n,n,n
+coarse root biomass,,n,n,n
+fine root biomass,,n,n,n
+deadwood,,n,n,n
+standing deadwood,,n,n,n
+down deadwood,,n,n,n
+organic layer,,n,n,n
