@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 FEB 2020 09:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 FEB 2020 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,7 +831,7 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 186.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<tables_figures/Global_C_cycle/Global C cycle diagram.png, id=31, 506.8536pt x 
+<tables_figures/Global_C_cycle/Global C cycle diagram.png, id=43, 506.8536pt x 
 392.1852pt>
 File: tables_figures/Global_C_cycle/Global C cycle diagram.png Graphic file (ty
 pe png)
@@ -849,52 +849,111 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5] [6]
-<tables_figures/Tropical broadleaf MATURE.png, id=84, 588.2778pt x 406.1574pt>
+[5] [6] [7]
+<tables_figures/Tropical broadleaf MATURE.png, id=101, 588.2778pt x 406.1574pt>
+
 File: tables_figures/Tropical broadleaf MATURE.png Graphic file (type png)
 <use tables_figures/Tropical broadleaf MATURE.png>
 Package pdftex.def Info: tables_figures/Tropical broadleaf MATURE.png  used on 
-input line 537.
-(pdftex.def)             Requested size: 469.77011pt x 324.3376pt.
+input line 540.
+(pdftex.def)             Requested size: 588.27635pt x 406.1564pt.
+<tables_figures/Temperate broadleaf MATURE.png, id=102, 592.1322pt x 402.303pt>
+
+File: tables_figures/Temperate broadleaf MATURE.png Graphic file (type png)
+<use tables_figures/Temperate broadleaf MATURE.png>
+Package pdftex.def Info: tables_figures/Temperate broadleaf MATURE.png  used on
+ input line 549.
+(pdftex.def)             Requested size: 592.15785pt x 402.3204pt.
+[8
+
+ <./tables_figures/Tropical broadleaf MATURE.png>]
+<tables_figures/Temperate conifer MATURE.png, id=112, 595.2639pt x 395.3169pt>
+File: tables_figures/Temperate conifer MATURE.png Graphic file (type png)
+<use tables_figures/Temperate conifer MATURE.png>
+Package pdftex.def Info: tables_figures/Temperate conifer MATURE.png  used on i
+nput line 558.
+(pdftex.def)             Requested size: 595.26245pt x 395.31592pt.
+[9 <./tables_figures/Temperate broadleaf MATURE.png>]
+<tables_figures/Boreal conifer MATURE.png, id=119, 581.5326pt x 402.0621pt>
+File: tables_figures/Boreal conifer MATURE.png Graphic file (type png)
+<use tables_figures/Boreal conifer MATURE.png>
+Package pdftex.def Info: tables_figures/Boreal conifer MATURE.png  used on inpu
+t line 567.
+(pdftex.def)             Requested size: 581.56667pt x 402.08565pt.
+[10 <./tables_figures/Temperate conifer MATURE.png>] [11 <./tables_figures/Bore
+al conifer MATURE.png>]
+<tables_figures/Tropical broadleaf YOUNG.png, id=133, 584.6643pt x 424.7067pt>
+File: tables_figures/Tropical broadleaf YOUNG.png Graphic file (type png)
+<use tables_figures/Tropical broadleaf YOUNG.png>
+Package pdftex.def Info: tables_figures/Tropical broadleaf YOUNG.png  used on i
+nput line 643.
+(pdftex.def)             Requested size: 469.7572pt x 341.23688pt.
+<tables_figures/Temperate broadleaf YOUNG.png, id=134, 581.5326pt x 428.3202pt>
+
+File: tables_figures/Temperate broadleaf YOUNG.png Graphic file (type png)
+<use tables_figures/Temperate broadleaf YOUNG.png>
+Package pdftex.def Info: tables_figures/Temperate broadleaf YOUNG.png  used on 
+input line 657.
+(pdftex.def)             Requested size: 469.7788pt x 346.0094pt.
+<tables_figures/Temperate conifer YOUNG.png, id=135, 596.9502pt x 436.5108pt>
+File: tables_figures/Temperate conifer YOUNG.png Graphic file (type png)
+<use tables_figures/Temperate conifer YOUNG.png>
+Package pdftex.def Info: tables_figures/Temperate conifer YOUNG.png  used on in
+put line 671.
+(pdftex.def)             Requested size: 469.76375pt x 343.50761pt.
+<tables_figures/Boreal conifer YOUNG.png, id=136, 592.8549pt x 430.9701pt>
+File: tables_figures/Boreal conifer YOUNG.png Graphic file (type png)
+<use tables_figures/Boreal conifer YOUNG.png>
+Package pdftex.def Info: tables_figures/Boreal conifer YOUNG.png  used on input
+ line 685.
+(pdftex.def)             Requested size: 469.76146pt x 341.48851pt.
+[12
+
+] [13 <./tables_figures/Tropical broadleaf YOUNG.png>] [14 <./tables_figures/Te
+mperate broadleaf YOUNG.png>] [15 <./tables_figures/Temperate conifer YOUNG.png
+>] [16 <./tables_figures/Boreal conifer YOUNG.png>]
 No file ERL_global_C_review.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 550.
-[7] [8 <./tables_figures/Tropical broadleaf MATURE.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 550.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 738.
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 738.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 550.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 550.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 738.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 738.
 Package rerunfilecheck Info: File `ERL_global_C_review.out' has not changed.
-(rerunfilecheck)             Checksum: 7A097378BAB70831ADBCA347DFFE0BC3;470.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 550.
+(rerunfilecheck)             Checksum: 34A771B11A32136886EF4395FD30F35A;785.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 738.
  ) 
 Here is how much of TeX's memory you used:
- 15735 strings out of 492616
- 231374 string characters out of 6129482
- 373729 words of memory out of 5000000
- 19305 multiletter control sequences out of 15000+600000
- 58258 words of font info for 96 fonts, out of 8000000 for 9000
+ 15814 strings out of 492616
+ 233299 string characters out of 6129482
+ 375488 words of memory out of 5000000
+ 19347 multiletter control sequences out of 15000+600000
+ 62047 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,44p,982b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
-/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2
-019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2019/texmf-
-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc
-/dvips/lm/lm-ec.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
+19/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2019/texmf-dist
+/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvi
+ps/lm/lm-mathsy.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
 mbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local
 /texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2
 019/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/lm/lmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/lm/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr7.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/loc
-al/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ERL_global_C_review.pdf (8 pages, 6999294 bytes).
+dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/
+type1/public/lm/lmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
+c/lm/lmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr10.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
+ype1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on ERL_global_C_review.pdf (17 pages, 40718881 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 14379 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 14438 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -14,10 +14,14 @@ header-includes:  \usepackage{float}
                   \captionsetup[figure]{font=footnotesize}
                   \captionsetup[figure]{labelformat=empty}
                   \captionsetup[table]{labelformat=empty}
+                  \usepackage{pdflscape}
+                  \newcommand{\blandscape}{\begin{landscape}}
+                  \newcommand{\elandscape}{\end{landscape}}
+
 ---
 \raggedright
 
-**Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global forest carbon database (ForC)
+**Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database 
 
 **Authors:** 
 Kristina J. Anderson-Teixeira^1,2^*
@@ -86,7 +90,7 @@ We drew upon records for *#* annual flux and *#* C stock variables (Table 1). Fo
 library(knitr)
 library(kableExtra)
 S1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
-kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. ForC variables included in this analysis. Shown are variable names and descriptions, the associated variable name(s) in the database, and number of plots with records. Complete list of variables with full definitions is available at [GitHub url].", escape = F)%>%
+kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. Carbon cycle variables incuded in this analysis. Complete list of variables with full definitions is available at [GitHub url].", escape = F)%>%
   kable_styling(latex_options = c("scale_down", "hold_position"), font_size = 12)  %>%
   pack_rows("Annual fluxes", 1, 23, latex_gap_space = "1em", colnum = 1, hline_before = FALSE) %>%
   pack_rows("Stocks", 24, 34, latex_gap_space = "1em", colnum = 1, hline_before = FALSE)
@@ -105,8 +109,66 @@ All database manipulation, analyses, and figure production were fully automated 
 ### Review Results/ Synthesis
 *(The Review Results/Synthesis section presents the findings of the analyses.)*
 
-#### C stocks and fluxes of mature forests
+*C cycling in mature forests*
 
 Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5, and statistics for each biome type are also summarized at: [GitHub URL]. Of the # flux and # stock variables mapped in these diagrams, ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, # fluxes and # stocks in temperate broadleaf forests, #fluxes and # stocks in temperate conifer forests, and fluxes and # stocks in boreal forests. For variables with records from $\ge$ 7 distinct geographic areas, these ensemble C budgets were generally consistent. That is, component fluxes and stocks summed to within 1 std of more inclusive fluxes in all but one instance (in temperate conifer forests, $aboveground woody biomass + foliage biomass > aboveground biomass + 1std$; Fig. 4). **This is based on my quick scan of the figures. Need to add a formal automated test: https://github.com/forc-db/ERL-review/issues/16 **
 
-![**Fig. 2 | C cycle diagram for mature tropical broadleaf forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha-1 yr-1 (fluxes) or Mg C ha-1 (stocks). Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Tropical broadleaf MATURE.png)
+\newpage
+\blandscape
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | C cycle diagram for mature tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Tropical broadleaf MATURE.png")
+```
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature temperate broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Temperate broadleaf MATURE.png")
+```
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature temperate conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Temperate conifer MATURE.png")
+```
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 4 | C cycle diagram for mature boreal conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Boreal conifer MATURE.png")
+```
+\elandscape
+
+
+
+(**check paragraph with latest data**) The largest C fluxes—including $GPP$, $NPP$, $ANPP$, $BNPP$, $R_{soil_het}$, $R_{soil}$, $R_{eco}$, — were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests  ([ForC_variable_averages_per_Biome](https://github.com/forc-db/ForC/blob/master/numbers_and_facts/ForC_variable_averages_per_Biome.csv)) (Fig. 6). The same held true for some of the subsidiary fluxes: ANPP_foliage, ANPP_woody, [**OTHERS?**]. Other subsidiary fluxes—including NPP_woody, ANPP_repro, ANPP_stem, ANPP_branch, woody.mortality, BNPP_coarse, BNPP_fine,  [**OTHERS?**]—deviated from this pattern and/or lacked data for some biomes. Net ecosystem exchange (NEE) did not follow this pattern, with no significant differences across biomes but the largest (negative) average in temperate broadleaf forests, followed by temperate conifer, boreal, and tropical forests. Thus, C cycling rates generally decreased from tropical to temperate to boreal forests, but with less apparent trends for some of the subsidiary fluxes and an important exception in the overall C balance (NEE).
+
+There were less distinct trends in C stocks across biomes (Fig. 7). Biome means for live aboveground and total biomass followed the same general trend as the major fluxes, with biomass of tropical= temperate broadleaf $\ge$ temperate conifer> boreal forests (Fig. 7a). However, the relative differences in these means were much smaller than for the major C fluxes, and there was significant variation within biomes. Maximum aboveground biomass values followed a very different trend than the means: temperate broadleaf> temperate conifer>boreal>tropical. There were some statistically significant biome differences in less frequently sampled C stocks (e.g., woody biomass, foliage biomass, deadwood), but given high within-biome variability in C stocks and relatively low sample sizes, these were likely attributable to sampling biases and methodological differences than to true differences across biomes. 
+
+*C cycling in young forests* 
+
+(**check paragraph with latest data**) Average C cycles for forests <100 years old are presented in Figures 8-11. In general, ForC contained roughly comparable information on C fluxes in regrowth vs mature forests, with the notable exception of tropical forests, for which there were no fluxes that had been measured in $\ge$ 7 different geographic areas. C stocks were better documented for regrowth stands, with a total of # records from # distinct geographic areas. Both C stocks and fluxes commonly displayed significant trends with stand age for within-biome analyses (Fig. 6-11; detailed below). Differences across biomes typically paralleled those observed for mature forests, with C cycling generally most rapid in the tropics and slowest in boreal forests (Figs. 6-7).  
+
+(**check paragraph with latest data**) ForC contained 14 flux variables with sufficient data for cross-biome analyses of age trends in regrowth forests (see Methods) (Fig. 6-7 and **S#- SI figures including plots for all variables**). Of these, 9 increased significantly with log10[stand.age]: GPP, NPP, ANPP, ANPP_foliage, ANPP_woody, ANPP_woody_stem, BNPP, BNPP_root_fine, Reco, and net C sequestration (-NEE). The remaining five--ANPP_woody_branch, BNPP_root_coarse, soil heterotrophic respiration, and total soil respiration–displayed no significant relationship to stand age, although all displayed a positive trend. In terms of C stocks, 10 variables had sufficient data to test for age trends. Six of these—total biomass, aboveground biomass, aboveground woody biomass, foliage biomass, root biomass, and coarse root biomass—increased significantly with log10[stand.age]. The remaining four displayed non-significant positive trends:  fine root biomass, total dead wood, standing dead wood, and organic layer. 
+
+![**Fig. 8 | C cycle diagram for mature tropical broadleaf forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Tropical broadleaf YOUNG.png)
+
+![**Fig. 9 | C cycle diagram for mature temperate broadleaf forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Temperate broadleaf YOUNG.png)
+
+![**Fig. 10 | C cycle diagram for mature temperate deciduous forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Temperate conifer YOUNG.png)
+
+![**Fig. 11 | C cycle diagram for mature boreal forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Boreal conifer YOUNG.png)
+
+### Discussion 
+(*The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.*) 
+
+Carbon cycling rates generally increased from boreal to tropical regions and with stand age. Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests—a pattern that generally held for regrowth as well as mature forests (Figs. 6-7). In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7). The majority of flux variables, together with most live biomass pools, increased significantly with stand age (Figs. 6-7). Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks of mature forests are influenced by a different set of drivers. 
+
+*C cycling across biomes*
+
+*Age trends in C cycling*
+
+### Acknowledgements
+All researchers whose data is included in ForC and this analysis.
+A Smithsonian Scholarly Studies grant to KAT and HML. 
+
+### References
+(*All references should be presented in alphabetical order and should also be bundled in ways that will help the reader to find those that are germane to each of the themes, topics or issues that the authors have used to organize the review. Such a matrix will be included 
+as supplementary material. ERL has no standardized format for subdividing references by cross-cutting themes, but guidance from editors will be helpful to authors.*)
