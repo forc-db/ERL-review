@@ -113,6 +113,8 @@ All database manipulation, analyses, and figure production were fully automated 
 
 Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5, and statistics for each biome type are also summarized at: [GitHub URL]. Of the # flux and # stock variables mapped in these diagrams, ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, # fluxes and # stocks in temperate broadleaf forests, #fluxes and # stocks in temperate conifer forests, and fluxes and # stocks in boreal forests. For variables with records from $\ge$ 7 distinct geographic areas, these ensemble C budgets were generally consistent. That is, component fluxes and stocks summed to within 1 std of more inclusive fluxes in all but one instance (in temperate conifer forests, $aboveground woody biomass + foliage biomass > aboveground biomass + 1std$; Fig. 4). **This is based on my quick scan of the figures. Need to add a formal automated test: https://github.com/forc-db/ERL-review/issues/16 **
 
+(**check paragraph with latest data**) The largest C fluxes—including $GPP$, $NPP$, $ANPP$, $BNPP$, $R_{soil_het}$, $R_{soil}$, $R_{eco}$, — were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests  ([ForC_variable_averages_per_Biome](https://github.com/forc-db/ForC/blob/master/numbers_and_facts/ForC_variable_averages_per_Biome.csv)) (Fig. 6). The same held true for some of the subsidiary fluxes: ANPP_foliage, ANPP_woody, [**OTHERS?**]. Other subsidiary fluxes—including NPP_woody, ANPP_repro, ANPP_stem, ANPP_branch, woody.mortality, BNPP_coarse, BNPP_fine,  [**OTHERS?**]—deviated from this pattern and/or lacked data for some biomes. Net ecosystem exchange (NEE) did not follow this pattern, with no significant differences across biomes but the largest (negative) average in temperate broadleaf forests, followed by temperate conifer, boreal, and tropical forests. Thus, C cycling rates generally decreased from tropical to temperate to boreal forests, but with less apparent trends for some of the subsidiary fluxes and an important exception in the overall C balance (NEE).
+
 \newpage
 \blandscape
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | C cycle diagram for mature tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
@@ -138,9 +140,20 @@ Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer,
 
 
 
-(**check paragraph with latest data**) The largest C fluxes—including $GPP$, $NPP$, $ANPP$, $BNPP$, $R_{soil_het}$, $R_{soil}$, $R_{eco}$, — were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests  ([ForC_variable_averages_per_Biome](https://github.com/forc-db/ForC/blob/master/numbers_and_facts/ForC_variable_averages_per_Biome.csv)) (Fig. 6). The same held true for some of the subsidiary fluxes: ANPP_foliage, ANPP_woody, [**OTHERS?**]. Other subsidiary fluxes—including NPP_woody, ANPP_repro, ANPP_stem, ANPP_branch, woody.mortality, BNPP_coarse, BNPP_fine,  [**OTHERS?**]—deviated from this pattern and/or lacked data for some biomes. Net ecosystem exchange (NEE) did not follow this pattern, with no significant differences across biomes but the largest (negative) average in temperate broadleaf forests, followed by temperate conifer, boreal, and tropical forests. Thus, C cycling rates generally decreased from tropical to temperate to boreal forests, but with less apparent trends for some of the subsidiary fluxes and an important exception in the overall C balance (NEE).
+
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 6 | Age trends and biome differences in some of the major C fluxes: (a) $GPP$, (b) $NPP$, (c) $ANPP$, (d) $R_{soil}$, (e) $R_{eco}$, and (f) $NEE$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Lines...  .", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Figure6.png")
+```
 
 There were less distinct trends in C stocks across biomes (Fig. 7). Biome means for live aboveground and total biomass followed the same general trend as the major fluxes, with biomass of tropical= temperate broadleaf $\ge$ temperate conifer> boreal forests (Fig. 7a). However, the relative differences in these means were much smaller than for the major C fluxes, and there was significant variation within biomes. Maximum aboveground biomass values followed a very different trend than the means: temperate broadleaf> temperate conifer>boreal>tropical. There were some statistically significant biome differences in less frequently sampled C stocks (e.g., woody biomass, foliage biomass, deadwood), but given high within-biome variability in C stocks and relatively low sample sizes, these were likely attributable to sampling biases and methodological differences than to true differences across biomes. 
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 7 | Age trends and biome differences in some of the major forest C stocks: (a) aboveground biomass, (b) foliage, (c) fine roots, (d) dead wood.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Figure7.png")
+```
+
 
 *C cycling in young forests* 
 
