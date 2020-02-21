@@ -148,13 +148,28 @@ There were less distinct trends in C stocks across biomes (Fig. 7). Biome means 
 
 (**check paragraph with latest data**) ForC contained 14 flux variables with sufficient data for cross-biome analyses of age trends in regrowth forests (see Methods) (Fig. 6-7 and **S#- SI figures including plots for all variables**). Of these, 9 increased significantly with log10[stand.age]: GPP, NPP, ANPP, ANPP_foliage, ANPP_woody, ANPP_woody_stem, BNPP, BNPP_root_fine, Reco, and net C sequestration (-NEE). The remaining five--ANPP_woody_branch, BNPP_root_coarse, soil heterotrophic respiration, and total soil respiration–displayed no significant relationship to stand age, although all displayed a positive trend. In terms of C stocks, 10 variables had sufficient data to test for age trends. Six of these—total biomass, aboveground biomass, aboveground woody biomass, foliage biomass, root biomass, and coarse root biomass—increased significantly with log10[stand.age]. The remaining four displayed non-significant positive trends:  fine root biomass, total dead wood, standing dead wood, and organic layer. 
 
-![**Fig. 8 | C cycle diagram for mature tropical broadleaf forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Tropical broadleaf YOUNG.png)
+\newpage
+\blandscape
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 8 | C cycle diagram for young tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-![**Fig. 9 | C cycle diagram for mature temperate broadleaf forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Temperate broadleaf YOUNG.png)
+  knitr::include_graphics("tables_figures/Tropical broadleaf YOUNG.png")
+```
 
-![**Fig. 10 | C cycle diagram for mature temperate deciduous forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Temperate conifer YOUNG.png)
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 9 | C cycle diagram for young temperate broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-![**Fig. 11 | C cycle diagram for mature boreal forests.** Presented are mean±std, where geographically distinct areas are treated as the unit of replication. All units are Mg C ha^-1^ yr^-1^ (fluxes) or Mg C ha^-1^ (stocks). Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.](tables_figures/Boreal conifer YOUNG.png)
+  knitr::include_graphics("tables_figures/Temperate broadleaf YOUNG.png")
+```
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 10 | C cycle diagram for young temperate conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Temperate conifer YOUNG.png")
+```
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 11 | C cycle diagram for young boreal conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. When age trends are signficant, they are presented with numbered equations; otherwise, means are presented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/Boreal conifer YOUNG.png")
+```
+\elandscape
 
 ### Discussion 
 (*The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.*) 
