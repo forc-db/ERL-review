@@ -10,6 +10,10 @@ total C (biomass + soils),3836,NI,1630,NI,1018,NI,394,NI,202,NI,,,NA,obtained fr
 ,,,,,,,,,,,,,,,,,,,
 **C flux** (All Gt C yr-1=Pg C yr-1= 1000 Tg C yr-1. Sign convention: - is CO2 removal from atmosphere. ),,,,,,,,,,,,,,,,,,,
 GPP ,-121.7,NI,-59,NI,-40.8,NI,-9.9,NI,-8.3,NI,,,,,,(Beer et al 2010),,,yes
+,-118,,-53.98,,-40.48,,,,,,,,,FLUXCOM (eddy flux upscaling),"Table 4 in SI gives breakdown by biome, but doesn't fit categories in this spreadsheet. Tropical estimate here is only broadleaf evergreen.",citations in Badgley et al 2019,,,
+,-122,,-54.72,,-40.18,,,,,,,,,BESS (eddy flux upscaling),"Table 4 in SI gives breakdown by biome, but doesn't fit categories in this spreadsheet. Tropical estimate here is only broadleaf evergreen.",reported in Badgley et al 2019,,,
+,,-150 to -175,,,,,,,,,,,,O2 isotopes,O2 isotopes,reported in Badgley et al 2019,,,
+,-147,-131 to -163,-69.1,,-46.74,,,,,,2005-2015,,,NIRV_derived GPP ,"Table 4 in SI gives breakdown by biome, but doesn't fit categories in this spreadsheet. Tropical estimate here is only broadleaf evergreen.",Badgley et al 2019,,probably the best available estimate,
 NPP,-62.6,NI,-32.6,NI,-21.9,NI,-8.1,NI,-2.6,NI,,,,,Saugier et al. 2001,,Pan et al. 2013,,
 Reco,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
