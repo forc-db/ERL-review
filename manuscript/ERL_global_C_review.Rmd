@@ -100,6 +100,8 @@ We drew upon records for *#* annual flux and *#* C stock variables (Table 1). Fo
 library(knitr)
 library(kableExtra)
 S1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
+names(S1) [6]  <- paste0(names(S1) [6], footnote_marker_symbol(1))
+names(S1) [7]  <- paste0(names(S1) [7], footnote_marker_symbol(2))
 kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. Carbon cycle variables included in this analysis, their sample sizes, and summary of biome differences and age trends.", escape = F)%>%
   # footnote(general = "Complete list of variables with full definitions and association to ForC variables is given in [XXXXX](https://github.com/forc-db/ForC/blob/master/figures/C_cycle_diagrams/ForC_variables_mapping_for_C_cycle_diagrams.csv). ") %>%
   kable_styling(latex_options = c("scale_down", "hold_position"), font_size = 12)  %>%
@@ -110,7 +112,8 @@ kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. Carbon cycle va
   column_spec(4, width = "1cm") %>%
   column_spec(5, width = "1.8cm") %>%
   pack_rows("Annual fluxes", 1, 23, colnum = 2, hline_before = FALSE) %>%
-  pack_rows("Stocks", 24, 34, colnum = 2, hline_before = FALSE)
+  pack_rows("Stocks", 24, 34, colnum = 2, hline_before = FALSE) %>%
+kableExtra::footnote(symbol = c("Tr: Tropical, TeB: Temperate Broadleaf, TeN: Temperate Needleleaf, B: Boreal, n.s.: no significant differences", "+ or -: significant positive or negative trend, xB: significant age x biome interaction, n.s.: no significant age trend"), footnote_as_chunk = FALSE)
 ```
 
 Analyses drew from ForC-simplified (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which is a rearrangement of ForC intended to facilitate analyses. In generating ForC-simplified, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ (IPCC 2006). Duplicate or otherwise conflicting records (indicated in conflicts field of MEASUREMENTS table) were reconciled as follows. Replicate measurements (*i.e.*, replicates from within a single study) were averaged. Records that subsumed others— **i.e.**, the time period included that of $\ge$ 2 other records or dates were unknown and therefore conflicted with $\ge$ 2 other records—were removed. For each group of duplicate records—*i.e.*, measurements of the same variable in the same plot at the same time—one record was assigned precedence (recorded in D.precedence field). When measurement periods overlapped or were not specified, precedence was given first to records representing longer measurement periods (*i.e.*, end.date - start.date) and then to more recently published values. We manually reviewed duplicates that differed only in methodology, assigning precedence to the record employing a more comprehensive approach (*e.g.*, inclusion of understory, lianas, or bamboo as opposed to just trees) or using a favored methodology.

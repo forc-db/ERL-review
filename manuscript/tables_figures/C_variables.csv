@@ -2,7 +2,7 @@ Variable,Description,records,plots,geographic areas,biome differences,age trend
 $NEE$,net ecosystem exchange or net ecosystem production (- indicates C sink),n,n,n,n.s.,-
 $GPP$,gross primary production ($NPP + R_{auto}$ or $R_{eco}-NEE$),n,n,n,Tr > TeB = TeN > B,+
 $NPP$,net primary production ($ANPP$ + $BNPP$),n,n,n,Tr > TeB = TeN > B,+
-$ANPP$,aboveground $NPP$,n,n,n,Tr > TeB $\ge$ TeN $\ge$ B,"+, x biome"
+$ANPP$,aboveground $NPP$,n,n,n,Tr > TeB $\ge$ TeN $\ge$ B,"+, xB"
 $ANPP_{woody}$,woody production ($ANPP_{stem}$ + $ANPP_{branch}$),n,n,n,,
 $ANPP_{stem}$,woody stem production ,n,n,n,,
 $ANPP_{branch}$,branch turnover,n,n,n,,
