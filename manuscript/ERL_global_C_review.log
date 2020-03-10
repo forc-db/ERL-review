@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 FEB 2020 07:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  10 MAR 2020 06:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,6 +664,23 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count140
+\output=\toks35
+\linenoprevgraf=\count141
+\linenumbersep=\dimen168
+\linenumberwidth=\dimen169
+\c@linenumber=\count142
+\c@pagewiselinenumber=\count143
+\c@LN@truepage=\count144
+\c@internallinenumber=\count145
+\c@internallinenumbers=\count146
+\quotelinenumbersep=\dimen170
+\bframerule=\dimen171
+\bframesep=\dimen172
+\bframebox=\box47
+LaTeX Info: Redefining \\ on input line 3056.
 ) (./ERL_global_C_review.aux)
 \openout1 = `ERL_global_C_review.aux'.
 
@@ -742,14 +759,14 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box47
+\AtBeginShipoutBox=\box48
 Package hyperref Info: Link coloring OFF on input line 103.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count140
+\c@section@level=\count147
 )
 LaTeX Info: Redefining \ref on input line 103.
 LaTeX Info: Redefining \pageref on input line 103.
@@ -760,17 +777,17 @@ LaTeX Info: Redefining \nameref on input line 103.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count141
-\scratchdimen=\dimen168
-\scratchbox=\box48
-\nofMPsegments=\count142
-\nofMParguments=\count143
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count144
-\MPscratchDim=\dimen169
-\MPnumerator=\count145
-\makeMPintoPDFobject=\count146
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count148
+\scratchdimen=\dimen173
+\scratchbox=\box49
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen174
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -788,6 +805,11 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 110.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 111.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -834,18 +856,18 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 205.
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2] [3] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 424.
+(Font)              <12> on input line 429.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 424.
+(Font)              <8> on input line 429.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 424.
+(Font)              <6> on input line 429.
 
-Overfull \hbox (4.58968pt too wide) in paragraph at lines 424--424
+Overfull \hbox (4.58968pt too wide) in paragraph at lines 429--429
 []|\T1/lmr/m/n/12 (-20) records|  
  []
 
 
-Overfull \hbox (2.52153pt too wide) in paragraph at lines 424--424
+Overfull \hbox (2.52153pt too wide) in paragraph at lines 429--429
 []|\T1/lmr/m/n/12 (-20) geographic 
  []
 
@@ -853,104 +875,105 @@ Overfull \hbox (2.52153pt too wide) in paragraph at lines 424--424
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5] [6] [7]
-<tables_figures/Tropical broadleaf MATURE.png, id=96, 588.2778pt x 406.1574pt>
+<tables_figures/Tropical broadleaf MATURE.png, id=99, 588.2778pt x 406.1574pt>
 File: tables_figures/Tropical broadleaf MATURE.png Graphic file (type png)
 <use tables_figures/Tropical broadleaf MATURE.png>
 Package pdftex.def Info: tables_figures/Tropical broadleaf MATURE.png  used on 
-input line 533.
+input line 538.
 (pdftex.def)             Requested size: 588.27635pt x 406.1564pt.
-<tables_figures/Temperate broadleaf MATURE.png, id=98, 592.1322pt x 402.303pt>
+<tables_figures/Temperate broadleaf MATURE.png, id=101, 592.1322pt x 402.303pt>
+
 File: tables_figures/Temperate broadleaf MATURE.png Graphic file (type png)
 <use tables_figures/Temperate broadleaf MATURE.png>
 Package pdftex.def Info: tables_figures/Temperate broadleaf MATURE.png  used on
- input line 542.
+ input line 547.
 (pdftex.def)             Requested size: 592.15785pt x 402.3204pt.
 [8
 
  <./tables_figures/Tropical broadleaf MATURE.png>]
-<tables_figures/Temperate conifer MATURE.png, id=107, 595.2639pt x 395.3169pt>
+<tables_figures/Temperate conifer MATURE.png, id=110, 595.2639pt x 395.3169pt>
 File: tables_figures/Temperate conifer MATURE.png Graphic file (type png)
 <use tables_figures/Temperate conifer MATURE.png>
 Package pdftex.def Info: tables_figures/Temperate conifer MATURE.png  used on i
-nput line 551.
+nput line 556.
 (pdftex.def)             Requested size: 595.26245pt x 395.31592pt.
 [9 <./tables_figures/Temperate broadleaf MATURE.png>]
-<tables_figures/Boreal conifer MATURE.png, id=114, 581.5326pt x 402.0621pt>
+<tables_figures/Boreal conifer MATURE.png, id=117, 581.5326pt x 402.0621pt>
 File: tables_figures/Boreal conifer MATURE.png Graphic file (type png)
 <use tables_figures/Boreal conifer MATURE.png>
 Package pdftex.def Info: tables_figures/Boreal conifer MATURE.png  used on inpu
-t line 560.
+t line 565.
 (pdftex.def)             Requested size: 581.56667pt x 402.08565pt.
 [10 <./tables_figures/Temperate conifer MATURE.png>] [11 <./tables_figures/Bore
 al conifer MATURE.png>]
-<tables_figures/Figure6.png, id=128, 481.8pt x 481.8pt>
+<tables_figures/Figure6.png, id=131, 481.8pt x 481.8pt>
 File: tables_figures/Figure6.png Graphic file (type png)
 <use tables_figures/Figure6.png>
-Package pdftex.def Info: tables_figures/Figure6.png  used on input line 590.
+Package pdftex.def Info: tables_figures/Figure6.png  used on input line 595.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 [12
 
 ]
-<tables_figures/Figure7.png, id=134, 479.8728pt x 318.9516pt>
+<tables_figures/Figure7.png, id=137, 479.8728pt x 318.9516pt>
 File: tables_figures/Figure7.png Graphic file (type png)
 <use tables_figures/Figure7.png>
-Package pdftex.def Info: tables_figures/Figure7.png  used on input line 614.
+Package pdftex.def Info: tables_figures/Figure7.png  used on input line 619.
 (pdftex.def)             Requested size: 469.78154pt x 312.24434pt.
 [13 <./tables_figures/Figure6.png>] [14 <./tables_figures/Figure7.png>] [15]
-<tables_figures/Tropical broadleaf YOUNG.png, id=154, 584.6643pt x 424.7067pt>
+<tables_figures/Tropical broadleaf YOUNG.png, id=157, 584.6643pt x 424.7067pt>
 File: tables_figures/Tropical broadleaf YOUNG.png Graphic file (type png)
 <use tables_figures/Tropical broadleaf YOUNG.png>
 Package pdftex.def Info: tables_figures/Tropical broadleaf YOUNG.png  used on i
-nput line 659.
+nput line 664.
 (pdftex.def)             Requested size: 584.68071pt x 424.7186pt.
-<tables_figures/Temperate broadleaf YOUNG.png, id=155, 581.5326pt x 428.3202pt>
+<tables_figures/Temperate broadleaf YOUNG.png, id=158, 581.5326pt x 428.3202pt>
 
 File: tables_figures/Temperate broadleaf YOUNG.png Graphic file (type png)
 <use tables_figures/Temperate broadleaf YOUNG.png>
 Package pdftex.def Info: tables_figures/Temperate broadleaf YOUNG.png  used on 
-input line 668.
+input line 673.
 (pdftex.def)             Requested size: 581.54004pt x 428.32568pt.
 [16
 
  <./tables_figures/Tropical broadleaf YOUNG.png>]
-<tables_figures/Temperate conifer YOUNG.png, id=162, 596.9502pt x 436.5108pt>
+<tables_figures/Temperate conifer YOUNG.png, id=165, 596.9502pt x 436.5108pt>
 File: tables_figures/Temperate conifer YOUNG.png Graphic file (type png)
 <use tables_figures/Temperate conifer YOUNG.png>
 Package pdftex.def Info: tables_figures/Temperate conifer YOUNG.png  used on in
-put line 677.
+put line 682.
 (pdftex.def)             Requested size: 596.95784pt x 436.51637pt.
 [17 <./tables_figures/Temperate broadleaf YOUNG.png>]
 Overfull \vbox (5.30136pt too high) has occurred while \output is active []
 
 [18 <./tables_figures/Temperate conifer YOUNG.png>]
-<tables_figures/Boreal conifer YOUNG.png, id=176, 592.8549pt x 430.9701pt>
+<tables_figures/Boreal conifer YOUNG.png, id=179, 592.8549pt x 430.9701pt>
 File: tables_figures/Boreal conifer YOUNG.png Graphic file (type png)
 <use tables_figures/Boreal conifer YOUNG.png>
 Package pdftex.def Info: tables_figures/Boreal conifer YOUNG.png  used on input
- line 686.
+ line 691.
 (pdftex.def)             Requested size: 592.85345pt x 430.96904pt.
 [19 <./tables_figures/Boreal conifer YOUNG.png>]
 No file ERL_global_C_review.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 742.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 747.
 [20
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 742.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 747.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 742.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 742.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 747.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 747.
 Package rerunfilecheck Info: File `ERL_global_C_review.out' has not changed.
 (rerunfilecheck)             Checksum: 80BD74DC86549028A1B0A8FCDA4040FC;785.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 742.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 747.
  ) 
 Here is how much of TeX's memory you used:
- 15858 strings out of 492616
- 234035 string characters out of 6129482
- 399534 words of memory out of 5000000
- 19382 multiletter control sequences out of 15000+600000
- 60607 words of font info for 106 fonts, out of 8000000 for 9000
+ 16098 strings out of 492616
+ 237828 string characters out of 6129482
+ 402918 words of memory out of 5000000
+ 19610 multiletter control sequences out of 15000+600000
+ 66442 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,41p,982b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,14n,41p,982b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-d
@@ -968,14 +991,15 @@ ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive
 /2019/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/lm/lmri7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10
-.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ERL_global_C_review.pdf (20 pages, 39290459 bytes).
+c/lm/lmri7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmss8.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on ERL_global_C_review.pdf (20 pages, 39305566 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
+ 277 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
  43 named destinations out of 1000 (max. 500000)
  14443 words of extra memory for PDF output out of 17280 (max. 10000000)
 
