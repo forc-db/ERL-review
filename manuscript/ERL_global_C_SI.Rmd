@@ -1,0 +1,46 @@
+---
+title: ""
+output: 
+  pdf_document:
+    fig_caption: yes
+bibliography: references.bib
+csl: environmental-research-letters.csl
+
+header-includes:  \usepackage{float}
+                  \usepackage{caption}
+                  \captionsetup[table]{font=footnotesize}
+                  \captionsetup[figure]{font=footnotesize}
+                  \captionsetup[figure]{labelformat=empty}
+                  \captionsetup[table]{labelformat=empty}
+                  \usepackage{pdflscape}
+                  \newcommand{\blandscape}{\begin{landscape}}
+                  \newcommand{\elandscape}{\end{landscape}}
+
+                  \usepackage{setspace}\onehalfspacing
+                  \usepackage{lineno}\linenumbers
+
+---
+\raggedright
+
+**Title:** Supplement for: Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database 
+
+
+Kristina J. Anderson-Teixeira,
+Valentine Herrmann,
+Becky Banbury Morgan,
+Ben Bond-Lamberty,
+Susan Cook-Patton,
+Abigail Ferson,
+Jennifer McGarvey,
+Helene C. Muller-Landau,
+Maria Wang,
+
+
+\newpage
+## Appendix A. Duplicates and Conflicting Records within ForC
+
+### Status of duplicates and conflicting records within ForC
+
+
+### Generating ForC_simplified
+Replicate measurements (*i.e.*, replicates from within a single study) were averaged. Records that subsumed others— **i.e.**, the time period included that of $\ge$ 2 other records or dates were unknown and therefore conflicted with $\ge$ 2 other records—were removed. For each group of duplicate records—*i.e.*, measurements of the same variable in the same plot at the same time—one record was assigned precedence (recorded in D.precedence field). When measurement periods overlapped or were not specified, precedence was given first to records representing longer measurement periods (*i.e.*, end.date - start.date) and then to more recently published values. We manually reviewed duplicates that differed only in methodology, assigning precedence to the record employing a more comprehensive approach (*e.g.*, inclusion of understory, lianas, or bamboo as opposed to just trees) or using a favored methodology.
