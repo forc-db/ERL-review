@@ -25,6 +25,7 @@ header-includes:  \usepackage{float}
 **Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database 
 
 **Authors:** 
+
 Kristina J. Anderson-Teixeira^1,2^*
 
 Valentine Herrmann^1^
@@ -63,9 +64,9 @@ Maria Wang
 
 *Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon ## records from ## geographic locations representing ## C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
 
-*Review Results/ Synthesis.*  The rate of C cycling generally increased from boreal to tropical regions, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, and the rate of increase again tended to increase from boreal to tropical regions.
+*Review Results/ Synthesis.*  ForC v.XX yielded a fairly comprehensive picture of C cycling in the world's major forest biomes, with broad closure of C budgets. The rate of C cycling generally increased from boreal to tropical regions, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, and the rate of increase again tended to increase from boreal to tropical regions.
 
-*Discussion.* *[Discussion section will interpret results, highlighting new and significant findings, and discuss implications. Tentative headings are “Stand level C cycling in forests globally”, “Age trends in C cycling”, and “Implications for climate change mitigation”.]*
+*Discussion.* This analysis yields a comprehensive, largely consistent picture of C cycling across the world's forests.   *[Discussion section will interpret results, highlighting new and significant findings, and discuss implications. Tentative headings are “Stand level C cycling in forests globally”, “Age trends in C cycling”, and “Implications for climate change mitigation”.]*
  
 *Key words*: forest ecosystems; carbon cycle; stand age; productivity; respiration; biomass; global 
 
@@ -82,11 +83,13 @@ Despite the centrality of forest C cycling in regulating both atmospheric CO~2~ 
 
 Tens of thousands of ground-based forest C measurements have been published, but their distribution across literally thousands of scientific articles-- along with variation in data formats, units, measurement methods, *etc.*--have made them effectively inaccessible for many global-scale analyses, including those attempting to quantify the role of forests in the global C cycle (*e.g.*, Pan et al 2011), and model evaluation (Clark et al 2017, Luo et al 2012). Important progress has been made in synthesizing data to address how C cycling varies across forest biomes (Luyssaert et al. 2007; REFS) and stand ages (REFS), yet generally consider only a limited set of C variables [but see @anderson-teixeira_carbon_2016 for the tropics] and do not consider age-by-biome interactions. To address the need for global-scale analyses of forest C cycling, we have developed an open-access Global Forest Carbon database, ForC (@anderson-teixeira_carbon_2016, @anderson-teixeira_forc:_2018). ForC contains data on forest ecosystem C stocks and annual fluxes (>50 variables) and associated data required for interpretation (*e.g.*, stand history, measurement methods) amalgamated from numerous previous data compilations and directly from original publications. ForC currently contains **#** records from **#** plots and **#** distinct geographic areas representing all forested biogeographic and climate zones.
 
-Here, we synthesize ForC data to provide a macroscopic overview of stand-level carbon cycling of the world’s major forest biomes and how it varies with stand age. We address two broad questions: 
+Here, we synthesize ForC data to provide a macroscopic overview of stand-level carbon cycling of the world’s major forest biomes and how it varies with stand age. We address three broad questions: 
 
-1. How do C cycling vary across the worlds major forest biomes (*i.e.*, tropical, temperate broadleaf and deciduous, boreal)?
+1. To what extent can we fully represent, and "close", C budgets for each of the world's major forest biomes (*i.e.*, tropical, temperate broadleaf and deciduous, boreal) based on the current ForC data?
 
-2. How does C cycling vary with stand age? 
+2. How do C cycling vary across the worlds major forest biomes?
+
+3. How does C cycling vary with stand age? 
 
 While components of these questions have been previously addressed [@luyssaert_co2_2007; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc:_2018, @banbury_morgan_global_nodate], our analysis represents by far the most comprehensive analysis of C cycling in global forests, and thereby stands to serve as a foundation for improved understanding of global forest C cycling.
 
@@ -233,20 +236,62 @@ There were less distinct trends in C stocks across biomes (Fig. 7). Biome means 
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
 
-Carbon cycling rates generally increased from boreal to tropical regions and with stand age. Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests—a pattern that generally held for regrowth as well as mature forests (Figs. 6-7). In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7). The majority of flux variables, together with most live biomass pools, increased significantly with stand age (Figs. 6-7). Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks of mature forests are influenced by a different set of drivers. 
+ForC v.XX yielded a fairly comprehensive picture of C cycling in the world's major forest biomes. 
+Carbon cycling rates generally increased from boreal to tropical regions and with stand age. 
+Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. 6-7). 
+In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7). 
+The majority of flux variables, together with most live biomass pools, increased significantly with stand age (Figs. 6-7). 
+Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks of mature forests are influenced by a different set of drivers. 
+
+*C variable coverage and budget closure*
+
+Coverage:
+
+* We have fairly good coverage of most major variables
+* (note how this improves upon previous data compilations/ for which variables does ForC make the greatest difference (e.g., not AGB or NEE/GPP/Reco, but by far the latest data compilation for dead wood, [variables])
+* Noteable holes include: fluxes: R_auto_ag, woody mortality, folivary/ herbivory and respiration of herbivores (and therefore total R_het), ANPP_repro; also fluxes in tropical regrowth forests
+* for the C stocks considered here, the most poorly covered is dead wood (none in E hemisphere!), despite a focused effort on this variable that has resulted in ForC being by far the largest collection of these data.
+* all variables poorly covered in Africa
+
+Thus, overall, we're lacking coverage of fluxes to herbivores and higher consumers, along with the woody mortality and dead wood. 
+
+Closure:
+
+* C cycle closure is fairly good. 
+* However, SD's are often large, reflective of significant within-biome variation. This makes the standard for closure relatively loose.
+* Lack of closure, in the few instances where it occurs, is probably more reflective of differences in the representation of forest types (e.g., disproportionate representation of US Pacific NW for aboveground woody biomass relative to AGB; Fig. 3) than of methodological accuracy.
+
+Thus, overall, a high degree of closure implies that ForC gives a consistent picture of C cycling within biomes. 
+While these means are unlikely to be accurate representations of C cycling within any particular forest, they provide a useful baseline for comparison. 
+
 
 *C cycling across biomes*
+
+@banbury_morgan_global_nodate
 
 *Age trends in C cycling*
 
 A relative dearth of data on C cycling in secondary forests, particularly in the tropics (Anderson-Teixeira et al 2016), is problematic in that almost 2/3 of the world’s forests were secondary as of 2010 (FAO 2010), implying an under-filled need to characterize age-related trends in forest C cycling. 
 
+*Relevance for climate change modeling and mitigation*
+
+Importance of forest C in climate change modeling and mitigation...
+
+For C can help models by serving as benchmark data.
+* (cite Dietze paper that we reviewed)
+
+For some variables, such as AGB of mature forests, we sources other than ForC can provide the best available data.
+However, for others, ForC provides by far the most comprehensive source:
+* agb age trends (GROA; Cook-Patton et al. 2020)
+* dead wood (cite need for this)
+* fluxes 
 
 ### Acknowledgements
 All researchers whose data is included in ForC and this analysis.
-Thanks to Norbert Kunert for helpful discussion.
+Thanks to Norbert Kunert and [Helene's intern] for helpful input at an earlier phase.
 A Smithsonian Scholarly Studies grant to KAT and HML. 
 
+### References
 
 ```{r eval=FALSE, echo=FALSE}
 # All references should be presented in alphabetical order and should also be bundled in ways that will help the reader to find those that are germane to each of the themes, topics or issues that the authors have used to organize the review. Such a matrix will be included as supplementary material. ERL has no standardized format for subdividing references by cross-cutting themes, but guidance from editors will be helpful to authors.
