@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 SEP 2020 07:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 SEP 2020 07:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,7 +943,7 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 832.
 Here is how much of TeX's memory you used:
  16003 strings out of 492616
  238071 string characters out of 6129482
- 405763 words of memory out of 5000000
+ 406763 words of memory out of 5000000
  19483 multiletter control sequences out of 15000+600000
  66609 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -970,7 +970,7 @@ pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ERL_global_C_review.pdf (22 pages, 39310669 bytes).
+Output written on ERL_global_C_review.pdf (22 pages, 39310461 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  244 compressed objects within 3 object streams
