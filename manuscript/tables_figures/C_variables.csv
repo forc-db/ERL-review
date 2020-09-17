@@ -1,5 +1,5 @@
 Variable,Description,records,plots,geographic areas,biome differences,age trend
-$NEE$,net ecosystem exchange or net ecosystem production (- indicates C sink),n,n,n,n.s.,-
+$NEP$,net ecosystem production or net ecosystem exchange (+ indicates C sink),n,n,n,n.s.,-
 $GPP$,gross primary production ($NPP + R_{auto}$ or $R_{eco}-NEE$),n,n,n,Tr > TeB = TeN > B,+
 $NPP$,net primary production ($ANPP$ + $BNPP$),n,n,n,Tr > TeB = TeN > B,+
 $ANPP$,aboveground $NPP$,n,n,n,Tr > TeB $\ge$ TeN $\ge$ B,"+, xB"
