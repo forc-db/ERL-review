@@ -1,5 +1,5 @@
 Variable,Description,records,plots,geographic areas,biome differences,age trend
-$NEE$,net ecosystem exchange or net ecosystem production (- indicates C sink),n,n,n,n.s.,-
+$NEP$,net ecosystem production or net ecosystem exchange (+ indicates C sink),n,n,n,n.s.,-
 $GPP$,gross primary production ($NPP + R_{auto}$ or $R_{eco}-NEE$),n,n,n,Tr > TeB = TeN > B,+
 $NPP$,net primary production ($ANPP$ + $BNPP$),n,n,n,Tr > TeB = TeN > B,+
 $ANPP$,aboveground $NPP$,n,n,n,Tr > TeB $\ge$ TeN $\ge$ B,"+, xB"
@@ -16,7 +16,7 @@ $BNPP_{coarse}$,coarse root production,n,n,n,,
 $BNPP_{fine}$ ,fine root production,n,n,n,,
 $R_{eco}$,ecosystem respiration ($R_{auto}$+ $R_{het}$),n,n,n,,
 $R_{auto}$,autotrophic respiration ($R_{auto-ag}+ R_{root}$),n,n,n,,
-$R_{auto-ag}$,"aboveground autotrophic respiration (*i.e.*, leaves and stems)",n,n,n,,
+$R_{auto-ag}$,"aboveground autotrophic respiration (i.e., leaves and stems)",n,n,n,,
 $R_{root}$,root respiration,n,n,n,,
 $R_{soil}$,soil respiration ($R_{het-soil} + R_{root}$),n,n,n,,
 $R_{het-soil}$,soil heterotrophic respiration,n,n,n,,
