@@ -256,7 +256,7 @@ There were less distinct trends in C stocks across biomes (Fig. 6). Biome means 
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
 
-ForC v.XX yielded a fairly comprehensive picture of C cycling in the world's major forest biomes. 
+ForC v.XX yielded a fairly comprehensive and internally consistent picture of C cycling in the world's major forest biomes. 
 Carbon cycling rates generally increased from boreal to tropical regions and with stand age. 
 Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. 5-6). 
 In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 1-4, 6). 
@@ -308,7 +308,9 @@ However, for others, ForC provides by far the most comprehensive source:
 
 * dead wood (cite need for this)
 
-* fluxes 
+* fluxes
+
+NEP increases with log(age) to 100 --> strongest C sinks are established secondary forests
 
 ### Acknowledgements
 All researchers whose data is included in ForC and this analysis.
