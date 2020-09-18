@@ -155,7 +155,7 @@ For mature forests, to obtain the values reported in the C cycle schematics, we 
 Values were then averaged across plots clustered within 25 km of one another (geographic.area field of SITES table, sensu Anderson-Teixeira et al 2018), weighting by area.sampled (MEASUREMENTS table) or plot.area (PLOTS table) if available for all records. 
 This step was taken to avoid pseudo-replication and to combine any records from sites with more than one name in ForC. 
 Finally, for figures 6 and 7, the original values were analyzed via a linear mixed effects model ('lmer' function in 'lme4' R package) with biome as fixed effect and plot nested within geographic.area as random effects on the intercept. 
-When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
+When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. There were enough data to run this analysis for all focal variables but **biomass_ag_understory, BNPP_root.turnover_fine, deadwood_down, total.ecosystem_2.**
 
 For young (<100yrs) forest types, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept. 
 When the effect of stand.age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome - stand.age interaction was included in the model. 
