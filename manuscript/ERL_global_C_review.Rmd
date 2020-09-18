@@ -281,6 +281,8 @@ Thus, overall, a high degree of closure implies that ForC gives a consistent pic
 While these means are unlikely to be accurate representations of C cycling within any particular forest, they provide a useful baseline for comparison. 
 
 
+* note that our equations are unlikely to be the best possible for any given flux
+
 *C cycling across biomes*
 
 @banbury_morgan_global_nodate
