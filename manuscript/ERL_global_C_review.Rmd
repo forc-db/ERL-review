@@ -54,7 +54,7 @@ Maria Wang
 
 \newpage
 
-### Summary
+## Summary
 ```{r eval=FALSE, echo=FALSE}
 # The Summary should be no longer than 300 words and divided into the following sections: Background, Methods/Design, Review results/ Synthesis and Discussion. Up to 7 Keywords should also be provided. The total length of the article is flexible.
 ```
@@ -62,7 +62,7 @@ Maria Wang
 
 *Background.* The fate of Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate through their influential role in the global carbon (C) cycle. Synthetic understanding of global forest C cycles is needed to constrain model estimates of forest feedbacks to climate change and to more accurately quantify the influence of land use decisions on climate.
 
-*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon ## records from ## geographic locations representing ## C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
+*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon *##* records from *##* geographic locations representing *##* C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
 
 *Review Results/ Synthesis.*  ForC v.XX yielded a fairly comprehensive picture of C cycling in the world's major forest biomes, with broad closure of C budgets. The rate of C cycling generally increased from boreal to tropical regions, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, and the rate of increase again tended to increase from boreal to tropical regions.
 
@@ -70,26 +70,41 @@ Maria Wang
  
 *Key words*: forest ecosystems; carbon cycle; stand age; productivity; respiration; biomass; global 
 
-### Background
+## Background
 ```{r eval=FALSE, echo=FALSE}
 # The Background section needs to present the rationale for why a systematic review of this topic is needed along with a history of what has been done to date and an expectation of what new will emerge from the review, especially if quantitative meta-analyses of studies are being considered.
 ```
 
-Carbon (C) cycling in forests is central to sustaining life on Earth. Forest ecosystems globally influence climate through their vital role in regulating atmospheric carbon dioxide (CO~2~). Their annual gross CO~2~ sequestration (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ (Bagdley et al. 2019), or >7 times average annual fossil fuel emissions from 2007-2016 (9.4 ± 0.5 Gt C yr-1; Le Quéré et al 2017) (**update**). While most of this enormous C flux is couterbalanced by CO~2~ releases to the atmosphere through ecosystem respiration ($R_{eco}$) or fire, a small portion was retained in ecosystems over recent decades. The resulting in C sink averaged 3.0 ± 0.8 Gt C yr-1 from 2007-2016, offsetting 32% of anthropogenic fossil fuel emissions (Le Quéré et al 2017) (**update, give range**). Moreover, forests contain substantial C stocks: an estimated 92% of terrestrial biomass  (Pan et al 2013) and 45% of terrestrial C (biomass and soils; Bonan 2008). Globally, net deforestation (*i.e.*, gross deforestation - regrowth) has been a source of CO~2~ emissions, estimated at ~1.1 Gt C yr-1 from YEAR-YEAR (Pan et al 2011), resulting in net C sink of ~1.2-1.7 Gt C yr^-1^ across Earth's forests [Le Quéré et al 2017, @schimel_observing_2015] (**update, give range**). The future of this sink is dependent both upon forest responses to a broad suite of global change drivers and to future land use decisions, and will strongly influence the course of climate change. Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thereby central to efforts to mitigate climate change [@grassi_key_2017] (Friedlingstein et al 2006, Cavaleri et al 2015, Griscom et al 2017; IPCC1.5).
+Forest ecosystems globally play a critical role in regulating atmospheric carbon dioxide (CO~2~), and thereby will shape the course of climate change (IPCC1.5). 
+Their annual gross CO~2~ sequestration (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2007-2016 (9.4 ± 0.5 Gt C yr-1; Le Quéré et al 2017) (**update**). 
+While most of this enormous C flux is couterbalanced by CO~2~ releases to the atmosphere through ecosystem respiration ($R_{eco}$) or fire, a small portion was retained in ecosystems over recent decades. 
+The resulting CO~2~ sink averaged 3.0 ± 0.8 Gt C yr-1 from 2007-2016, offsetting 32% of anthropogenic fossil fuel emissions (Le Quéré et al 2017) (**update, give range**). 
+Moreover, forests contain substantial carbon (C) stocks: an estimated 92% of terrestrial biomass (Pan et al 2013) and 45% of terrestrial C [biomass and soils; @bonan_forests_2008]. 
+Globally, net deforestation (*i.e.*, gross deforestation - regrowth) has been a source of CO~2~ emissions, estimated at ~1.1 Gt C yr-1 from YEAR-YEAR (Pan et al 2011), resulting in net C sink of ~1.2-1.7 Gt C yr^-1^ across Earth's forests [Le Quéré et al 2017, @schimel_observing_2015] (**update, give range**). 
+The future of this sink is dependent both upon forest responses to a broad suite of global change drivers and to future land use decisions, and will strongly influence the course of climate change. 
+Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thereby central to efforts to mitigate climate change [@grassi_key_2017; Cavaleri et al 2015, Griscom et al 2017].
 
-Despite the centrality of forest C cycling in regulating both atmospheric CO~2~ and ecosystem function and diversity, we lack a comprehensive understanding of how C cycling varies with across biomes and with stand age. While remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS), the remainder of C fluxes and stocks can only be quantified by ground-based measurements. Moreover, data on stand characteristics--including species composition, age, and disturbance history--are critical to interpreting and projecting into the future, but [usually rely on ground-based measurements]. Thus, ground-based measurements are, and will continue to be, central to characterizing forest C cycling. 
+Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [Friedlingstein et al 2006; @krause_large_2018; REFS] and CO~2~ accounting frameworks [Pan, REFS] can be traced to lack of accessible, comprehensive data on how C cycling varies across forest types and in relation to stand history. 
+These require large-scale databases with global coverage, which runs contrary to the nature in which forest C stocks and fluxes are measured and published. 
+While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [@li_mapping_2019; **REFS for biomass, biomass change, net CO2 flux**], measurement of most forest C stocks and fluxes require intensive on-the-ground data collection. 
+Original studies typically cover only a small numbers of sites at a time, with rare exceptions spanning regions or continents [e.g., @lutz_global_2018; FLUXNET_REF), typically coordinated through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015] or FLUXNET [@baldocchi_fluxnet_2001].
+The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles --often behind paywalls-- along with variation in data formats, units, measurement methods, *etc.*. 
+In this format, the data are effectively inaccessible for many global-scale analyses, including those attempting to benchmark model performance with global data (Clark et al 2017, Luo et al 2012), quantify the the role of forests in the global C cycle (*e.g.*, Pan et al 2011), or use book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere (REFS).  
 
-Tens of thousands of ground-based forest C measurements have been published, but their distribution across literally thousands of scientific articles-- along with variation in data formats, units, measurement methods, *etc.*--have made them effectively inaccessible for many global-scale analyses, including those attempting to quantify the role of forests in the global C cycle (*e.g.*, Pan et al 2011), and model evaluation (Clark et al 2017, Luo et al 2012). Important progress has been made in synthesizing data to address how C cycling varies across forest biomes (Luyssaert et al. 2007; REFS) and stand ages (REFS), yet generally consider only a limited set of C variables [but see @anderson-teixeira_carbon_2016 for the tropics] and do not consider age-by-biome interactions. To address the need for global-scale analyses of forest C cycling, we have developed an open-access Global Forest Carbon database, ForC (@anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018). ForC contains data on forest ecosystem C stocks and annual fluxes (>50 variables) and associated data required for interpretation (*e.g.*, stand history, measurement methods) amalgamated from numerous previous data compilations and directly from original publications. ForC currently contains **#** (~49,000!) records from **#** plots and **#** distinct geographic areas representing all forested biogeographic and climate zones.
+To address the need for global-scale analyses of forest C cycling, we recently developed an open-access Global Forest Carbon database, ForC (@anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018). 
+ForC contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables) based on ground-based measurements, along with associated data required for interpretation (*e.g.*, stand history, measurement methods).
+These data have been amalgamated from original peer-reviewed publications, either directly or via intermediary data compilations, with notable recent additions of the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020]. 
+ForC currently contains **#** (~49,000!) records from **#** plots and **#** distinct geographic areas representing all forested biogeographic and climate zones.
 
 Here, we synthesize ForC data (Fig. 1) to provide a macroscopic overview of stand-level carbon cycling of the world’s major forest biomes and how it varies with stand age. We address three broad questions: 
 
 1. To what extent can we fully represent, and "close", C budgets for each of the world's major forest biomes (*i.e.*, tropical, temperate broadleaf and deciduous, boreal) based on the current ForC data?
 
-2. How do C cycling vary across the worlds major forest biomes?
+2. How do C cycling vary across the world's major forest biomes?
 
-3. How does C cycling vary with stand age? 
+3. How does C cycling vary with stand age (in interaction with biome)? 
 
-While components of these questions have been previously addressed [@luyssaert_co2_2007; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018, @banbury_morgan_global_nodate], our analysis represents by far the most comprehensive analysis of C cycling in global forests, and thereby stands to serve as a foundation for improved understanding of global forest C cycling.
+While components of these questions have been previously addressed [@luyssaert_co2_2007; @anderson-teixeira_carbon_2016; @cook-patton_mapping_2020; @banbury_morgan_global_nodate], our analysis represents by far the most comprehensive analysis of C cycling in global forests, and thereby stands to serve as a foundation for improved understanding of global forest C cycling.
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Map of sites included in this analysis. Symbols are colored according to the number of records at each site. Underlying map shows coverage of evergreen, deciduous, and mixed forests (from SYNMAP; Jung et al. 2006) and biomes. Distribution of sites, plots, and records among biomes is shown in the inset.", out.width='100%', fig.pos='H'}
 
@@ -97,16 +112,17 @@ While components of these questions have been previously addressed [@luyssaert_c
 ```
 
 
-### Methods/ Design
+## Methods/ Design
 ```{r eval=FALSE, echo=FALSE}
 # The Methods/Design section needs to describe how articles in the reviews were identified and what criteria were used for justifying inclusion in the review. While traditional reviews relying on past experience and expert knowledge are acceptable, editors should encourage reviews that are set up as so-called ‘systematic reviews’ (see the Cochrane Review procedure which initiated the process in the medical and health science: http://community.cochrane.org/ about-us/evidence-based-health-care).
 ```
 
 
-This review synthesizes data from the ForC database [Fig. 1; https://github.com/forc-db/ForC; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018]. ForC amalgamates numerous intermediary data sets (*e.g.*, REFS) and original studies. 
+This review synthesizes data from the ForC database [Fig. 1; https://github.com/forc-db/ForC; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018]. 
+ForC amalgamates numerous intermediary data sets (*e.g.*, REFS) and original studies. 
 Original publications were referenced to check values and obtain information not contained in intermediary data sets, although this process has not been completed for all records. 
 The database was developed with goals of understanding how C cycling in forests varies across broad geographic scales and as a function of stand age. 
-As such, there has been a focus on incorporating data from regrowth forests (*e.g.*, Anderson et al 2006, Martin et al 2013, Bonner et al 2013) and obtaining stand age data when possible (83% of records in v.2.0; Anderson-Teixeira et al 2018). 
+As such, there has been a focus on incorporating data from regrowth forests (*e.g.*, Anderson et al 2006, Martin et al 2013, Bonner et al 2013) and obtaining stand age data when possible [83% of records in v.2.0; @anderson-teixeira_forc_2018]. 
 Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], yet these represented only approximately one-third of records in ForC v.2.0 [@anderson-teixeira_forc_2018]. 
 Since publication of ForC v.2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [SRDB v.##; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database (GROA v1.0; Cook-Patton et al. in press; ZenodoDOI), and data from several publications (Taylor et al. 2017, Lutz et al. 2018, Johnson_2018_csss; see GitHub repo for complete list) ([GitHub list](https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv)). 
 We note that there remains a significant amount of relevant data that is not yet included in ForC, particularly biomass data from national forest inventories (*e.g.*,: REFS). 
@@ -172,16 +188,16 @@ All database manipulation, analyses, and figure production were fully automated 
 Materials required to fully reproduce these analyses, including data, R scripts, and image files, are archived in Zenodo (DOI: TBD]. 
 Data, scripts, and results presented here are also available through the open-access ForC GitHub repository (https://github.com/forc-db/ForC), where many will be updated as the database develops.
 
-### Review Results/ Synthesis
+## Review Results/ Synthesis
 ```{r eval=FALSE, echo=FALSE}
 # The Review Results/Synthesis section presents the findings of the analyses.
 ```
-*Data Coverage*
+### Data Coverage
 
 Of the *#* records in ForC v.#, *#* met the criteria for inclusion in this study (Fig. 1). 
 *(Give some stats on coverage by age and biome)*
 
-*C cycling in mature forests*
+### C cycling in mature forests
 
 Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5, and statistics for each biome type are also summarized at: [GitHub URL]. 
 Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, *#* fluxes and *#* stocks in temperate broadleaf forests, *#* fluxes and *#* stocks in temperate conifer forests, and fluxes and *#* stocks in boreal forests. 
@@ -234,7 +250,7 @@ There were some statistically significant biome differences in less frequently s
 ```
 
 
-*C cycling in young forests* 
+### C cycling in young forests 
 
 (**check paragraph with latest data**) Average C cycles for forests <100 years old are presented in Figures 8-11. In general, ForC contained roughly comparable information on C fluxes in regrowth vs mature forests, with the notable exception of tropical forests, for which there were no fluxes that had been measured in $\ge$ 7 different geographic areas. C stocks were better documented for regrowth stands, with a total of # records from # distinct geographic areas. Both C stocks and fluxes commonly displayed significant trends with stand age for within-biome analyses (Fig. 5-10; detailed below). Differences across biomes typically paralleled those observed for mature forests, with C cycling generally most rapid in the tropics and slowest in boreal forests (Figs. 6-7).  
 
@@ -263,7 +279,7 @@ There were some statistically significant biome differences in less frequently s
 ```
 \elandscape
 
-### Discussion 
+## Discussion 
 ```{r eval=FALSE, echo=FALSE}
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
@@ -275,7 +291,7 @@ In contrast to C fluxes, there was little directional variation in mature forest
 The majority of flux variables, together with most live biomass pools, increased significantly with stand age (Figs. 6-11). 
 Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks of mature forests are influenced by a different set of drivers. 
 
-*C variable coverage and budget closure*
+### C variable coverage and budget closure
 
 ForC provides fairly good coverage of most major variables.
 *(discuss  how this improves upon previous data compilations/ for which variables does ForC make the greatest difference (e.g., not AGB or NEP/GPP/Reco, but by far the latest data compilation for dead wood, [variables])*
@@ -290,25 +306,31 @@ Lack of closure, in the few instances where it occurs, is probably more reflecti
 Thus, overall, a high degree of closure implies that ForC gives a consistent picture of C cycling within biomes. 
 While these means are unlikely to be accurate representations of C cycling within any particular forest, they provide a useful baseline for comparison. 
 
-*C cycling across biomes*
+### C cycling across biomes
 
-THere is a general acceleration of carbon cycling from the tropics to the high latitudes. 
-For mature forests, this is consistent with lots of previous work, most recently @banbury_morgan_global_nodate.
-For regrowth forests, we see faster C accumulation in the tropics (*I assume!- analysis not yet complete*), consistent with the observation that biomass accumulation decreases with latitude (Anderson 2006, Cook-Patton et al. 2020).
+Our analysis reveals a general acceleration of carbon cycling from the tropics to the high latitudes. 
+For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude [e.g.,  @banbury_morgan_global_nodate].
+For regrowth forests, more rapid accumulation of biomass at lower latitudes has been well-established [@anderson_temperature-dependence_2006; @cook-patton_mapping_2020], whereas this is the first study to compare age trends in deadwood and organic layer across biomes [but see @cook-patton_mapping_2020].
 For most C flux variables, this analysis is the first to examine flux trends in regrowth forests across biomes  (i.e., age x biome interaction).
 Data remain sparse, but for better-represented variables, we often see faster acceleration of C cycling in the warmer climates.
 Further work will be required to explore age x climate interactions, but our broad-brush overview indicates that C cycling of regrowth forests is not only higher in the tropics, parallel to fluxes in mature forests [ @banbury_morgan_global_nodate], but also that it accelerates more rapidly with stand age in the tropics, consistent with more rapid biomass accumulation.
 
-*Age trends in C cycling*  (Just some rough notes at this point)
+In contrast to C fluxes and accumulation rates in regrowth forests, stocks...
+
+### Age trends in C cycling  
+
+*(Just some rough notes at this point)*
 
 A relative dearth of data on C cycling in secondary forests, particularly in the tropics (Anderson-Teixeira et al 2016), is problematic in that almost 2/3 of the world’s forests were secondary as of 2010 (FAO 2010), implying an under-filled need to characterize age-related trends in forest C cycling. 
 
-Moreover, as disturbances increase, understanding the carbon dynamics of regrowth forests will be increasingly important.
+Moreover, as disturbances increase [@andela_human-driven_2017; @mcdowell_pervasive_2020], understanding the carbon dynamics of regrowth forests will be increasingly important.
+
+It's also important to understand secondary forest C sequestration to reduce uncertainty regarding the potential for carbon uptake by regrowth forests [@kruase_large_2018; @cook-patton_mapping_2020].
 
 NEP increases with log(age) to 100 --> strongest C sinks are established secondary forests.
 
 
-*Relevance for climate change prediction and mitigation*
+### Relevance for climate change prediction and mitigation
 
 The future of forest C cycling will shape trends in atmospheric CO~2~ and the course of climate change.
 For a human society seeking to understand and mitigate climate change, the data contained in ForC and summarized here can help to meet two major challenges. 
@@ -323,14 +345,16 @@ Second, ForC can serve as a pipeline through which forest science can inform for
 Such efforts will be most effective when informed by the best available data, yet it is not feasible for the individuals and organizations designing such efforts to sort through literature, often behind paywalls, with data reported in varying units, terminology, etc. 
 One goal for ForC is to serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales.
 This is already happening! 
-ForC has already contributed to updating the IPCC guidelines for carbon accounting in forests (IPCC 2019, Requena-Suarez et al 2019, Rozendaal et al in prep), mapping C accumulation potential from natural forest regrowth globally (Cook-Patton et al. 2020), and informing ecosystem conservation priorities (Goldstein et al. 2020).
+ForC has already contributed to updating the IPCC guidelines for carbon accounting in forests [IPCC 2019; @requena_suarez_estimating_2019; Rozendaal et al in prep], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
 
 There remain numerous data needs for improved accounting of forest carbon stocks and fluxes in GHG accounting.
 AGB is the largest stock, and most of the emphasis is on this variable. 
-Remote sensing, with calibration based on high-quality ground-based data (Schepaschenko et al. 2019, Chave et al. 2019), is the best approach for mapping forest carbon (REFS).
-However, it is limited in that it is not associated with stand age and disturbance history, except in recent decades (e.g., Hansen et al.; REFS).
-ForC  is therefore valuable in defining age-based trajectories in biomass, as in Cook-Patton et al. 2020.
+Remote sensing, with calibration based on high-quality ground-based data [@schepaschenko_forest_2019; @chave_ground_2019], is the best approach for mapping forest carbon (REFS).
+However, it is limited in that it is not associated with stand age and disturbance history, except in recent decades when satellite data can be used to detect forest loss, gain, and some of their dominant drivers [@hansen_high-resolution_2013; @song_global_2018; @curtis_classifying_2018].
+ForC  is therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020.
 
+ *remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS),*
+ 
 Other variables cannot be remotely sensed.
 In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?). 
 These can be significant.
@@ -339,7 +363,7 @@ ForC does not include soil carbon, which is covered by other efforts (REFS).
 For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and SRDB remains the authority on soil respiration (REFS). ForC includes recent data from both, but is not continuously integrated.
 For C is the best source for most of the subsidiary fluxes: NPP, woody mortality...
 
-We recommend that use of ForC data go to the original database, as opposed to useing "off-the-shelf" values from this publication. 
+We recommend that use of ForC data go to the original database, as opposed to using "off-the-shelf" values from this publication. 
 This is because
 (1) ForC is constantly being updated,
 (2) analyses should be designed to match the application,
@@ -348,13 +372,13 @@ This is because
 As climate change accelerates, understanding and managing the carbon dynamics of forests will be critical to forecasting, mitigation, and adaptation.
 The C data in ForC, as summarized here, will be valuable to these efforts.
 
-### Acknowledgements
+## Acknowledgements
 All researchers whose data is included in ForC and this analysis.
 Thanks to Norbert Kunert and [Helene's intern] for helpful input at an earlier phase.
 A Smithsonian Scholarly Studies grant to KAT and HML. 
 WLS grant to KAT.
 
-### References
+## References
 
 ```{r eval=FALSE, echo=FALSE}
 # All references should be presented in alphabetical order and should also be bundled in ways that will help the reader to find those that are germane to each of the themes, topics or issues that the authors have used to organize the review. Such a matrix will be included as supplementary material. ERL has no standardized format for subdividing references by cross-cutting themes, but guidance from editors will be helpful to authors.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  18 SEP 2020 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  19 SEP 2020 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,32 +829,32 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 175.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 176.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2]
-<tables_figures/World_Map_records_in_Biomes.png, id=28, 480.8364pt x 284.5029pt
+<tables_figures/World_Map_records_in_Biomes.png, id=29, 480.8364pt x 284.5029pt
 >
 File: tables_figures/World_Map_records_in_Biomes.png Graphic file (type png)
 <use tables_figures/World_Map_records_in_Biomes.png>
 Package pdftex.def Info: tables_figures/World_Map_records_in_Biomes.png  used o
-n input line 264.
+n input line 269.
 (pdftex.def)             Requested size: 469.77107pt x 277.95572pt.
 [3] [4 <./tables_figures/World_Map_records_in_Biomes.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 400.
+(Font)              <12> on input line 405.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 400.
+(Font)              <8> on input line 405.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 400.
+(Font)              <6> on input line 405.
 
-Overfull \hbox (4.58968pt too wide) in paragraph at lines 400--400
+Overfull \hbox (4.58968pt too wide) in paragraph at lines 405--405
 []|\T1/lmr/m/n/12 (-20) records|  
  []
 
 
-Overfull \hbox (2.52153pt too wide) in paragraph at lines 400--400
+Overfull \hbox (2.52153pt too wide) in paragraph at lines 405--405
 []|\T1/lmr/m/n/12 (-20) geographic 
  []
 
@@ -862,11 +862,11 @@ Overfull \hbox (2.52153pt too wide) in paragraph at lines 400--400
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5] [6] [7]
-<tables_figures/Tropical broadleaf MATURE.png, id=77, 602.25pt x 481.8pt>
+<tables_figures/Tropical broadleaf MATURE.png, id=81, 602.25pt x 481.8pt>
 File: tables_figures/Tropical broadleaf MATURE.png Graphic file (type png)
 <use tables_figures/Tropical broadleaf MATURE.png>
 Package pdftex.def Info: tables_figures/Tropical broadleaf MATURE.png  used on 
-input line 499.
+input line 506.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 [8
 
@@ -874,58 +874,58 @@ input line 499.
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [9 <./tables_figures/Tropical broadleaf MATURE.png (PNG copy)>]
-<tables_figures/Temperate broadleaf MATURE.png, id=89, 602.25pt x 481.8pt>
+<tables_figures/Temperate broadleaf MATURE.png, id=93, 602.25pt x 481.8pt>
 File: tables_figures/Temperate broadleaf MATURE.png Graphic file (type png)
 <use tables_figures/Temperate broadleaf MATURE.png>
 Package pdftex.def Info: tables_figures/Temperate broadleaf MATURE.png  used on
- input line 508.
+ input line 515.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [10 <./tables_figures/Temperate broadleaf MATURE.png (PNG copy)>]
-<tables_figures/Temperate conifer MATURE.png, id=95, 602.25pt x 481.8pt>
+<tables_figures/Temperate conifer MATURE.png, id=99, 602.25pt x 481.8pt>
 File: tables_figures/Temperate conifer MATURE.png Graphic file (type png)
 <use tables_figures/Temperate conifer MATURE.png>
 Package pdftex.def Info: tables_figures/Temperate conifer MATURE.png  used on i
-nput line 517.
+nput line 524.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [11 <./tables_figures/Temperate conifer MATURE.png (PNG copy)>]
-<tables_figures/Boreal conifer MATURE.png, id=101, 602.25pt x 481.8pt>
+<tables_figures/Boreal conifer MATURE.png, id=105, 602.25pt x 481.8pt>
 File: tables_figures/Boreal conifer MATURE.png Graphic file (type png)
 <use tables_figures/Boreal conifer MATURE.png>
 Package pdftex.def Info: tables_figures/Boreal conifer MATURE.png  used on inpu
-t line 526.
+t line 533.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [12 <./tables_figures/Boreal conifer MATURE.png (PNG copy)>]
-<tables_figures/Flux_age_trends.png, id=108, 481.8pt x 481.8pt>
+<tables_figures/Flux_age_trends.png, id=112, 481.8pt x 481.8pt>
 File: tables_figures/Flux_age_trends.png Graphic file (type png)
 <use tables_figures/Flux_age_trends.png>
 Package pdftex.def Info: tables_figures/Flux_age_trends.png  used on input line
- 555.
+ 562.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 [13
 
 ]
-<tables_figures/Stock_age_trends.png, id=115, 481.8pt x 481.8pt>
+<tables_figures/Stock_age_trends.png, id=119, 481.8pt x 481.8pt>
 File: tables_figures/Stock_age_trends.png Graphic file (type png)
 <use tables_figures/Stock_age_trends.png>
 Package pdftex.def Info: tables_figures/Stock_age_trends.png  used on input lin
-e 579.
+e 586.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 [14 <./tables_figures/Flux_age_trends.png>] [15 <./tables_figures/Stock_age_tre
 nds.png>] [16]
-<tables_figures/Tropical broadleaf YOUNG.png, id=134, 602.25pt x 481.8pt>
+<tables_figures/Tropical broadleaf YOUNG.png, id=140, 602.25pt x 481.8pt>
 File: tables_figures/Tropical broadleaf YOUNG.png Graphic file (type png)
 <use tables_figures/Tropical broadleaf YOUNG.png>
 Package pdftex.def Info: tables_figures/Tropical broadleaf YOUNG.png  used on i
-nput line 622.
+nput line 631.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 [17
 
@@ -933,58 +933,58 @@ nput line 622.
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [18 <./tables_figures/Tropical broadleaf YOUNG.png (PNG copy)>]
-<tables_figures/Temperate broadleaf YOUNG.png, id=144, 602.25pt x 481.8pt>
+<tables_figures/Temperate broadleaf YOUNG.png, id=150, 602.25pt x 481.8pt>
 File: tables_figures/Temperate broadleaf YOUNG.png Graphic file (type png)
 <use tables_figures/Temperate broadleaf YOUNG.png>
 Package pdftex.def Info: tables_figures/Temperate broadleaf YOUNG.png  used on 
-input line 631.
+input line 640.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [19 <./tables_figures/Temperate broadleaf YOUNG.png (PNG copy)>]
-<tables_figures/Temperate conifer YOUNG.png, id=151, 602.25pt x 481.8pt>
+<tables_figures/Temperate conifer YOUNG.png, id=157, 602.25pt x 481.8pt>
 File: tables_figures/Temperate conifer YOUNG.png Graphic file (type png)
 <use tables_figures/Temperate conifer YOUNG.png>
 Package pdftex.def Info: tables_figures/Temperate conifer YOUNG.png  used on in
-put line 640.
+put line 649.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [20 <./tables_figures/Temperate conifer YOUNG.png (PNG copy)>]
-<tables_figures/Boreal conifer YOUNG.png, id=157, 602.25pt x 481.8pt>
+<tables_figures/Boreal conifer YOUNG.png, id=164, 602.25pt x 481.8pt>
 File: tables_figures/Boreal conifer YOUNG.png Graphic file (type png)
 <use tables_figures/Boreal conifer YOUNG.png>
 Package pdftex.def Info: tables_figures/Boreal conifer YOUNG.png  used on input
- line 649.
+ line 658.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [21 <./tables_figures/Boreal conifer YOUNG.png (PNG copy)>] [22
 
-] [23] [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 888.
-[25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 888.
+] [23] [24] [25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 985.
+[26]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 985.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 888.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 888.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 985.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 985.
  ) 
 Here is how much of TeX's memory you used:
- 16008 strings out of 492616
- 238352 string characters out of 6129482
- 404112 words of memory out of 5000000
- 19485 multiletter control sequences out of 15000+600000
- 62388 words of font info for 110 fonts, out of 8000000 for 9000
+ 16044 strings out of 492616
+ 239069 string characters out of 6129482
+ 404489 words of memory out of 5000000
+ 19499 multiletter control sequences out of 15000+600000
+ 62518 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,14n,41p,818b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/
-dvips/lm/lm-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
+ist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc
+/dvips/lm/lm-ec.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
 mbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/
@@ -1001,10 +1001,10 @@ c/lm/lmss8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ERL_global_C_review.pdf (25 pages, 22264887 bytes).
+Output written on ERL_global_C_review.pdf (26 pages, 22277187 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 14448 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 304 compressed objects within 4 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 14504 words of extra memory for PDF output out of 17280 (max. 10000000)
 
