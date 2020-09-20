@@ -1,8 +1,10 @@
 ---
-title: ""
+title: "Supplement for: Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database"
 output: 
   pdf_document:
-    fig_caption: yes
+    fig_caption: yes    
+    toc: true # table of content true
+    toc_depth: 2  
 bibliography: references.bib
 csl: environmental-research-letters.csl
 
@@ -22,25 +24,227 @@ header-includes:  \usepackage{float}
 ---
 \raggedright
 
-**Title:** Supplement for: Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database 
-
-
-Kristina J. Anderson-Teixeira,
-Valentine Herrmann,
-Becky Banbury Morgan,
-Ben Bond-Lamberty,
-Susan Cook-Patton,
-Abigail Ferson,
-Jennifer McGarvey,
-Helene C. Muller-Landau,
-Maria Wang,
-
-
 \newpage
-## Appendix A. Duplicates and Conflicting Records within ForC
+## Appendix S1. Duplicates and Conflicting Records within ForC
 
 ### Status of duplicates and conflicting records within ForC
 
 
 ### Generating ForC_simplified
 Replicate measurements (*i.e.*, replicates from within a single study) were averaged. Records that subsumed others— **i.e.**, the time period included that of $\ge$ 2 other records or dates were unknown and therefore conflicted with $\ge$ 2 other records—were removed. For each group of duplicate records—*i.e.*, measurements of the same variable in the same plot at the same time—one record was assigned precedence (recorded in D.precedence field). When measurement periods overlapped or were not specified, precedence was given first to records representing longer measurement periods (*i.e.*, end.date - start.date) and then to more recently published values. We manually reviewed duplicates that differed only in methodology, assigning precedence to the record employing a more comprehensive approach (*e.g.*, inclusion of understory, lianas, or bamboo as opposed to just trees) or using a favored methodology.
+
+\newpage
+
+## Table S#(variable mapping)) 
+
+[this table](https://github.com/forc-db/ForC/blob/master/figures/C_cycle_diagrams/ForC_variables_mapping_for_C_cycle_diagrams.csv))
+
+\newpage
+## Figure S1. Age trends and biome differences for $NEP$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S1 | Age trends and biome differences for $NEP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/NEP.png")
+```
+
+\newpage
+## Figure S2. Age trends and biome differences for $GPP$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S2 | Age trends and biome differences for $GPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/GPP.png")
+```
+
+
+\newpage
+## Figure S3. Age trends and biome differences for $NPP$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S3 | Age trends and biome differences for $NPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/NPP.png")
+```
+
+\newpage
+## Figure S4. Age trends and biome differences for $ANPP$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S4 | Age trends and biome differences for $ANPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP.png")
+```
+
+
+\newpage
+## Figure S5. Age trends and biome differences for $ANPP_{woody}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S5 | Age trends and biome differences for $ANPP_{woody}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_woody.png")
+```
+
+\newpage
+## Figure S6. Age trends and biome differences for $ANPP_{stem}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S6 | Age trends and biome differences for $ANPP_{stem}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_woody_stem.png")
+```
+
+\newpage
+## Figure S7. Age trends and biome differences for $ANPP_{foliage}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S7 | Age trends and biome differences for $ANPP_{foliage}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_foliage.png")
+```
+
+\newpage
+## Figure S8. Age trends and biome differences for $ANPP_{litterfall}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S8 | Age trends and biome differences for $ANPP_{litterfall}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_litterfall.png")
+```
+
+\newpage
+## Figure S9. Age trends and biome differences for $BNPP$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S9 | Age trends and biome differences for $BNPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/BNPP_root.png")
+```
+
+\newpage
+## Figure S10. Age trends and biome differences for $BNPP_{coarse}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S10 | Age trends and biome differences for $BNPP_{coarse}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/BNPP_root_coarse.png")
+```
+
+\newpage
+## Figure S11. Age trends and biome differences for $BNPP_{fine}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S11 | Age trends and biome differences for $BNPP_{fine}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/BNPP_root_fine.png")
+```
+
+\newpage
+## Figure S12. Age trends and biome differences for $R_{eco}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S12 | Age trends and biome differences for $R_{eco}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_eco.png")
+```
+
+\newpage
+## Figure S13. Age trends and biome differences for $R_{root}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S13 | Age trends and biome differences for $R_{root}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_auto_root.png")
+```
+
+\newpage
+## Figure S14. Age trends and biome differences for $R_{soil}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S14 | Age trends and biome differences for $R_{soil}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_soil.png")
+```
+
+\newpage
+## Figure S15. Age trends and biome differences for $R_{het-soil}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S15 | Age trends and biome differences for $R_{het-soil}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_het_soil.png")
+```
+
+\newpage
+## Figure S16. Age trends and biome differences for $B_{tot}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S16 | Age trends and biome differences for $B_{tot}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass.png")
+```
+
+\newpage
+## Figure S17. Age trends and biome differences for $B_{ag}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S17 | Age trends and biome differences for $B_{ag}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_ag.png")
+```
+
+\newpage
+## Figure S18. Age trends and biome differences for $B_{ag-wood}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S18 | Age trends and biome differences for $B_{ag-wood}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_ag_woody.png")
+```
+
+\newpage
+## Figure S19. Age trends and biome differences for $B_{foliage}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S19 | Age trends and biome differences for $B_{foliage}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_ag_foliage.png")
+```
+
+\newpage
+## Figure S20. Age trends and biome differences for $B_{root}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S20 | Age trends and biome differences for $B_{root}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_root.png")
+```
+
+\newpage
+## Figure S21. Age trends and biome differences for $B_{root-coarse}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S21 | Age trends and biome differences for $B_{root-coarse}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_root_coarse.png")
+```
+
+\newpage
+## Figure S22. Age trends and biome differences for $B_{root-fine}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S22 | Age trends and biome differences for $B_{root-fine}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_root_fine.png")
+```
+
+\newpage
+## Figure S23. Age trends and biome differences for $DW_{tot}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S23 | Age trends and biome differences for $DW_{tot}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/deadwood.png")
+```
+
+\newpage
+## Figure S24. Age trends and biome differences for $DW_{standing}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S24 | Age trends and biome differences for $DW_{standing}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/deadwood_standing.png")
+```
+
+\newpage
+## Figure S25. Age trends and biome differences for $DW_{down}$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S25 | Age trends and biome differences for $DW_{down}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/deadwood_down.png")
+```
+
+\newpage
+## Figure S26. Age trends and biome differences for $OL$
+
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S26 | Age trends and biome differences for $OL$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/organic.layer.png")
+```
