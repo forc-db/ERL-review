@@ -1,5 +1,3 @@
 x
-delta.agb
 R_auto_ag
-total.ecosystem
 deadwood_down
