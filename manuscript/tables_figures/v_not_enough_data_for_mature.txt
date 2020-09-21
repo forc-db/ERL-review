@@ -1,5 +1,5 @@
 x
-biomass_ag_understory
-BNPP_root.turnover_fine
+delta.agb
+R_auto_ag
+total.ecosystem
 deadwood_down
-total.ecosystem_2
