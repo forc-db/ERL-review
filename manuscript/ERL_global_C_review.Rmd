@@ -321,7 +321,7 @@ Carbon cycling rates generally increased from boreal to tropical regions and wit
 Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. 6-7). 
 In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7). 
 The majority of flux variables, together with most live biomass pools, increased significantly with stand age (Figs. 6-11). 
-Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks of mature forests are influenced by a different set of drivers. 
+Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks and $NEP$ of mature forests are influenced by a different set of drivers. 
 
 ### C variable coverage and budget closure
 
