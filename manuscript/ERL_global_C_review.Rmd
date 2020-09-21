@@ -409,6 +409,7 @@ The C data in ForC, as summarized here, will be valuable to these efforts.
 
 ## Acknowledgements
 All researchers whose data is included in ForC and this analysis.
+Ian McGregor for help with the database.
 Thanks to Norbert Kunert and [Helene's intern] for helpful input at an earlier phase.
 A Smithsonian Scholarly Studies grant to KAT and HML. 
 WLS grant to KAT.
