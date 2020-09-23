@@ -34,7 +34,7 @@ Becky Banbury Morgan
 
 Ben Bond-Lamberty
 
-Susan Cook-Patton
+Susan C. Cook-Patton^5^
 
 Abigail Ferson
 
@@ -49,6 +49,11 @@ Maria Wang
 
 1. Conservation Ecology Center; Smithsonian Conservation Biology Institute; National Zoological Park, Front Royal, VA 22630, USA
 2. Center for Tropical Forest Science-Forest Global Earth Observatory; Smithsonian Tropical Research Institute; Panama, Republic of Panama
+3.
+4.
+5. The Nature Conservancy, Arlington VA 22203
+6.
+
 
 *corresponding author: teixeirak@si.edu; +1 540 635 6546
 
