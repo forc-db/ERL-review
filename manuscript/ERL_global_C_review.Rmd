@@ -58,6 +58,20 @@ Maria M. H. Wang^1,7^
 
 *corresponding author: teixeirak@si.edu; +1 540 635 6546
 
+
+```{r eval = TRUE, echo=FALSE, warning=FALSE}
+#READING IN TABLES TO GET STATS FOR TEXT
+#Table 1 for this manuscript
+T1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
+n_records <- sum(T1[,"records"])
+
+#ForC measurements
+ForC_measurements <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_measurements.csv", stringsAsFactors = FALSE, check.names = FALSE)
+ForC_plots <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_plots.csv", stringsAsFactors = FALSE, check.names = FALSE)
+ForC_sites <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_sites.csv", stringsAsFactors = FALSE, check.names = FALSE)
+n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
+```
+
 \newpage
 
 ## Summary
@@ -68,7 +82,7 @@ Maria M. H. Wang^1,7^
 
 *Background.* The fate of Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate through their influential role in the global carbon (C) cycle. Synthetic understanding of global forest C cycles is needed to constrain model estimates of forest feedbacks to climate change and to more accurately quantify the influence of land use decisions on climate.
 
-*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon *##* records from *##* geographic locations representing *##* C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
+*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon `r n_records` records from *##* geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
 
 *Review Results/ Synthesis.*  ForC v.XX yielded a fairly comprehensive picture of C cycling in the world's major forest biomes, with broad closure of C budgets. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, *and the rate of increase again tended to increase from boreal to tropical regions*.
 
@@ -102,7 +116,7 @@ To address the need for global-scale analyses of forest C cycling, we recently d
 ForC contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables) based on ground-based measurements, along with associated data required for interpretation (*e.g.*, stand history, measurement methods).
 These data have been amalgamated from original peer-reviewed publications, either directly or via intermediary data compilations.
 Since the its most recent publication [@anderson-teixeira_forc_2018], ForC has been integrated with two large databases: the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020], both of which have also synthesized published forest C data. 
-Following these additions, ForC currently contains **#** (~49,000!) records from **#** plots and **#** distinct geographic areas representing all forested biogeographic and climate zones.
+Following these additions, ForC currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones.
 
 Here, we synthesize ForC data (Fig. 1) to provide a macroscopic overview of stand-level carbon cycling of the world’s major forest biomes and how it varies with stand age. Our primary goal is to provide a data-based summary of our current state of knowledge on broad trends in forest C cycling. We address three broad questions: 
 
@@ -205,7 +219,7 @@ Data, scripts, and results presented here are also available through the open-ac
 
 ### Data Coverage
 
-Of the *#* records in ForC v.#, *#* met the criteria for inclusion in this study (Fig. 1). 
+Of the `r nrow(ForC_measurements)` in ForC v.#, `r n_records` met the criteria for inclusion in this study (Fig. 1). 
 These records were distributed across *#* plots in *#* distinct geographic areas. 
 Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, *#* fluxes and *#* stocks in temperate broadleaf forests, *#* fluxes and *#* stocks in temperate conifer forests, and fluxes and *#* stocks in boreal forests. 
 For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, *#* fluxes and *#* stocks in temperate broadleaf forests, *#* fluxes and *#* stocks in temperate conifer forests, and fluxes and *#* stocks in boreal forests. 
