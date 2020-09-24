@@ -61,15 +61,61 @@ Maria M. H. Wang^1,7^
 
 ```{r eval = TRUE, echo=FALSE, warning=FALSE}
 #READING IN TABLES TO GET STATS FOR TEXT
+
 #Table 1 for this manuscript
 T1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
 n_records <- sum(T1[,"records"])
 
-#ForC measurements
+#ForC raw
 ForC_measurements <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_measurements.csv", stringsAsFactors = FALSE, check.names = FALSE)
 ForC_plots <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_plots.csv", stringsAsFactors = FALSE, check.names = FALSE)
 ForC_sites <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_sites.csv", stringsAsFactors = FALSE, check.names = FALSE)
 n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
+
+#ForC simplified
+ForC_simplified <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/ForC_simplified/ForC_simplified.csv", stringsAsFactors = FALSE, check.names = FALSE)
+n_no_history <- sum(ForC_simplified[,"history.no.info"]) #(relative to ForC_simplified)
+n_managed_in_ForC_simplified <- sum(ForC_simplified[,"managed"])
+n_disturbed_in_ForC_simplified <- sum(ForC_simplified[,"disturbed"])
+records_eligible_for_inclusion <- NA  #number in ForC_simplified that are not disturbed, managed, or no.history
+
+#stats I haven't yet acquired:
+n_records_age_unk <- NA  #total n records no age info
+n_records_coord_unk <- NA  #total n records no geographic coordinates
+
+#total numbers of plots and areas (all variables combined)
+n_plots_tot <- NA
+n_areas_tot <- NA
+
+# percent eligible for inclusion in analysis
+
+n_focal_variable_records_eligible_for_inclusion <- NA #This is prior to assigning biome groupings
+ 
+# records by biome grouping
+n_records_BoB <- NA
+n_records_Bomixed <- NA
+n_records_Te_mixed <- NA
+
+#numbers of variables with records from ≥7 geographic areas, by biomes/ age class:
+n_fluxes_matureTrB_with_ge7_areas <- NA
+n_stocks_matureTrB_with_ge7_areas <- NA
+n_fluxes_matureTeB_with_ge7_areas <- NA
+n_stocks_matureTeB_with_ge7_areas <- NA
+n_fluxes_matureTeN_with_ge7_areas <- NA
+n_stocks_matureTeN_with_ge7_areas <- NA
+n_fluxes_matureBoN_with_ge7_areas <- NA
+n_stocks_matureBoN_with_ge7_areas <- NA
+
+n_fluxes_youngTrB_with_ge7_areas <- NA
+n_stocks_youngTrB_with_ge7_areas <- NA
+n_fluxes_youngTeB_with_ge7_areas <- NA
+n_stocks_youngTeB_with_ge7_areas <- NA
+n_fluxes_youngTeN_with_ge7_areas <- NA
+n_stocks_youngTeN_with_ge7_areas <- NA
+n_fluxes_youngBoN_with_ge7_areas <- NA
+n_stocks_youngBoN_with_ge7_areas <- NA
+
+
 ```
 
 \newpage
@@ -82,7 +128,7 @@ n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
 
 *Background.* The fate of Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate through their influential role in the global carbon (C) cycle. Synthetic understanding of global forest C cycles is needed to constrain model estimates of forest feedbacks to climate change and to more accurately quantify the influence of land use decisions on climate.
 
-*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon `r n_records` records from *##* geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
+*Methods/Design.* Here, we draw from the Global Forest C Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we draw upon `r n_records` records from `r n_areas_tot` geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
 
 *Review Results/ Synthesis.*  ForC v.XX yielded a fairly comprehensive picture of C cycling in the world's major forest biomes, with broad closure of C budgets. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, *and the rate of increase again tended to increase from boreal to tropical regions*.
 
@@ -150,17 +196,19 @@ Since publication of ForC v.2.0, we added the following data to ForC: the Global
 We note that there remains a significant amount of relevant data that is not yet included in ForC, particularly biomass data from national forest inventories (*e.g.*,: REFS). 
 The database version used for this analysis has been tagged as a new release on Github (XX) and assigned a DOI through Zenodo (DOI: TBD).
 
-For this analysis, we grouped forests into four broad biome types (tropical broadleaf, temperate broadleaf, temperate needleleaf, and boreal needleleaf) and two age classifications (young and mature). 
-Climate zones (Fig. 1) were defined based on site geographic coordinates according to Köppen-Geiger zones (Rubel and Kottek 2010).
-Tropical climates were defined to include all equatorial (A) zones, temperate climates were defined to include all warm temperate (C) zones and warmer snow climates (Dsa, Dsb, Dwa, Dwb, Dfa, and Dfb), and boreal climates were defined to include the colder snow climates (Dsc, Dsd, Dwc, Dwd, Dfc, and Dfd). 
-Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis. 
-Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006]. 
-Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication). 
-Records for which stand age was unknown (#% of total database) were excluded from the analysis. 
-These groupings covered *#%* of the primary variable records for forests of known age, or *#%* of total records. 
-The most well-represented forest types excluded were boreal broadleaf and boreal and temperate mixed broadleaf-needleleaf, each with *#* records total.
+Analyses drew from ForC-simplified (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which is a rearrangement of ForC intended to facilitate analyses. 
+In generating ForC-simplified, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ (IPCC 2006). 
+Duplicate or otherwise conflicting records were reconciled as described in *APPENDIX S1*, resulting in a total of `r nrow(ForC_simplified)` records (`r round(nrow(ForC_simplified)/nrow(ForC_measurements)*100,digits=1)`% size of total database). 
+Records were filtered to remove plots that had undergone significant anthropogenic management or major disturbance since the most recent stand initiation event. 
+Specifically, we removed all plots flagged as managed in ForC-simplified (`r round(n_managed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%). 
+This included plots with any record of managements manipulating CO~2~, temperature, hydrology, nutrients, or biota, as well as any plots whose site or plot name contained the terms “plantation”, "planted", “managed”, “irrigated”, or “fertilized”.
+Plots flagged as disturbed in ForC-simplified (`r round(n_disturbed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%) included stands that had undergone anthropogenic thinning or partial harvest unless this was very minor. 
+We retained sites that were grazed or had undergone low severity natural disturbances (<10% mortality) including droughts, major storms, fires, and floods.
+We removed all plots for which no stand history information had been retrieved (`r round(n_no_history/nrow(ForC_simplified)*100,digits=1)`%). 
+In total, this resulted in `r records_eligible_for_inclusion` records (`r round(records_eligible_for_inclusion/nrow(ForC_measurements)*100,digits=1)`% of the records in the database) being eligible for inclusion in the analysis. 
 
-We selected 23 annual flux and 11 C stock variables for inclusion in the analysis, although two flux variables ($R_{het-ag}$ and $R_{het}$) were included for conceptual completeness but had no records in ForC  (Table 1). 
+We selected 23 annual flux and 11 C stock variables for inclusion in the analysis, although two flux variables ($R_{het-ag}$ and $R_{het}$) were included for conceptual completeness but had no records in ForC (Table 1). 
+Records for these variables represented `r round(n_focal_variable_records_eligible_for_inclusion/records_eligible_for_inclusion*100,digits=1)`% of the total records eligible for inclusion.
 For this analysis, we combined some of ForC’s specific variables (*e.g.*, multiple variables for net primary productivity including various components) into more broadly defined variables (Tables 1, S#(variable mapping)). 
 Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), the minimum stem diameter sampled was $\le$ 10cm. All records were measured directly or derived from field measurements (as opposed to modeled). 
 
@@ -184,15 +232,15 @@ kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. Carbon cycle va
 kableExtra::footnote(symbol = c("Tr: Tropical, TeB: Temperate Broadleaf, TeN: Temperate Needleleaf, B: Boreal, n.s.: no significant differences", "+ or -: significant positive or negative trend, xB: significant age x biome interaction, n.s.: no significant age trend"), footnote_as_chunk = FALSE)
 ```
 
-Analyses drew from ForC-simplified (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which is a rearrangement of ForC intended to facilitate analyses. 
-In generating ForC-simplified, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ (IPCC 2006). 
-Duplicate or otherwise conflicting records were reconciled as described in *APPENDIX S1*. 
-Records were filtered to remove plots that had undergone significant anthropogenic management or major disturbance since the most recent stand establishment (*i.e.*, that reflected by stand.age). 
-Specifically, we removed all plots flagged as managed in ForC-simplified (managed field). 
-This included plots with any record of managements manipulating CO~2~, temperature, hydrology, nutrients, or biota, as well as any plots whose site or plot name contained the terms “plantation”, "planted", “managed”, “irrigated”, or “fertilized”.  
-Plots flagged as disturbed in ForC-simplified included stands that had undergone anthropogenic thinning or partial harvest (“Cut” or “Harvest” codes) unless this was very minor (percent.mortality= “minor”). 
-We retained sites that were grazed or had undergone low severity natural disturbances (<10% mortality) including droughts, major storms, fires, and floods. 
-We also removed all plots for which no stand history information had been retrieved. 
+For this analysis, we grouped forests into four broad biome types (tropical broadleaf, temperate broadleaf, temperate needleleaf, and boreal needleleaf) and two age classifications (young and mature). 
+Climate zones (Fig. 1) were defined based on site geographic coordinates according to Köppen-Geiger zones (Rubel and Kottek 2010).
+Tropical climates were defined to include all equatorial (A) zones, temperate climates were defined to include all warm temperate (C) zones and warmer snow climates (Dsa, Dsb, Dwa, Dwb, Dfa, and Dfb), and boreal climates were defined to include the colder snow climates (Dsc, Dsd, Dwc, Dwd, Dfc, and Dfd). 
+Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis. 
+Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006]. 
+Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication). 
+Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of total database), or geographic coordinates (n=`r round(n_records_coord_unk/nrow(ForC_measurements)*100, digits=1)`% of total database). 
+In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age. 
+The most well-represented forest types excluded were boreal broadleaf (`r n_records_BoB` records) and boreal and temperate mixed broadleaf-needleleaf (`r n_records_Bomixed` and `r n_records_Te_mixed` records, respectively).
  
 Data were analyzed to produce basic summaries of C cycle patterns across biomes and stand ages. **(this par & following are confusing/ incomplete--needs work)**
 For mature forests, to obtain the values reported in the C cycle schematics, we first averaged any repeated measurements within a plot. 
@@ -220,9 +268,9 @@ Data, scripts, and results presented here are also available through the open-ac
 ### Data Coverage
 
 Of the `r nrow(ForC_measurements)` in ForC v.#, `r n_records` met the criteria for inclusion in this study (Fig. 1). 
-These records were distributed across *#* plots in *#* distinct geographic areas. 
-Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, *#* fluxes and *#* stocks in temperate broadleaf forests, *#* fluxes and *#* stocks in temperate conifer forests, and fluxes and *#* stocks in boreal forests. 
-For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for *#* fluxes and *#* stocks in tropical broadleaf forests, *#* fluxes and *#* stocks in temperate broadleaf forests, *#* fluxes and *#* stocks in temperate conifer forests, and fluxes and *#* stocks in boreal forests. 
+These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas. 
+Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_matureTrB_with_ge7_areas` fluxes and `r n_stocks_matureTrB_with_ge7_areas` stocks in tropical broadleaf forests, `r n_fluxes_matureTeB_with_ge7_areas` fluxes and `r n_stocks_matureTeB_with_ge7_areas` stocks in temperate broadleaf forests, `r n_fluxes_matureTeN_with_ge7_areas` fluxes and `r n_stocks_matureTeN_with_ge7_areas` stocks in temperate conifer forests, and `r n_fluxes_matureBoN_with_ge7_areas` fluxes and `r n_stocks_matureBoN_with_ge7_areas` stocks in boreal forests. 
+For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_youngTrB_with_ge7_areas` fluxes and `r n_stocks_youngTrB_with_ge7_areas` stocks in tropical broadleaf forests, `r n_fluxes_youngTeB_with_ge7_areas` fluxes and `r n_stocks_youngTeB_with_ge7_areas` stocks in temperate broadleaf forests, `r n_fluxes_youngTeN_with_ge7_areas` fluxes and `r n_stocks_youngTeN_with_ge7_areas` stocks in temperate conifer forests, and `r n_fluxes_youngBoN_with_ge7_areas` fluxes and `r n_stocks_youngBoN_with_ge7_areas` stocks in boreal forests. 
 
 ### C cycling in mature forests
 
@@ -256,7 +304,7 @@ Within this biome, $B_{ag}<B_{ag-wood}+B_{foliage}$ and $B_{root}<B_{root-coarse
 \elandscape
 
 **(The following covers only the variables with age trends figures; there maybe a few more without much age data)**
-With only # exceptions, C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests (Table 1, Figs. 6, S1-S15).
+With only ## exceptions, C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests (Table 1, Figs. 6, S1-S15).
 In this majority of cases, differences between tropical and boreal forests were always significant, with temperate forests intermediate and significantly different from one or both. 
 Fluxes tended to be greater in temperate broadleaf than conifer forests, but the difference was never significant.
 This pattern held for the following variables: $GPP$, $NPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{stem}$, $ANPP_{foliage}$, $ANPP_{litterfall}$, $BNPP$, $BNPP_fine$, $R_{eco}$, $R_{root}$, $R_{soil}$, and $R_{het-soil}$.  
@@ -272,7 +320,7 @@ Thus, C cycling rates generally decreased from tropical to temperate to boreal f
 ```
 
 There were fewer distinct trends in C stocks across biomes (Figs. 7, S16-S26). 
-Specifically, there were significant differences for only *#* of *#* variables: *LIST*. 
+Specifically, there were significant differences for only *##* of *##* variables: *LIST*. 
 In all of these cases, temperate conifer forests were in the highest significance grouping, and boreal forests in the lowest. 
 Tropical and temperate broadleaf forests fell in between--most commonly being significantly different from temperate conifer but not boreal forests.
 Once again, the high values for the temperate conifer biome were driven by the very high-biomass forests of the US Pacific Northwest, which are disproportionately represented in the current version of ForC. 
@@ -297,7 +345,7 @@ Differences in C fluxes across biomes typically paralleled those observed for ma
 The single exception was $ANPP_{stem}$, for which temperate broadleaf forests and temperate conifer forests of age >*~30* had slightly higher flux rates than tropical forests (*represented by a single chronosequence*).
 Notably, the trend of tropical > temperate > boreal held for $NEP$ in regrowth forests, in contrast to the lack of biome differences in $NEP$ for mature forests (Fig. 6). 
 
-There were only *#* flux variables with sufficient data to test for biome x age interactions: $ANPP$, $ANPP_{woody}$, $ANPP_{stem}$, $ANPP_{litterfall}$, and $BNPP$. **(more could be added if age trends become significant after outliers are resolved)** 
+There were only *##* flux variables with sufficient data to test for biome x age interactions: $ANPP$, $ANPP_{woody}$, $ANPP_{stem}$, $ANPP_{litterfall}$, and $BNPP$. **(more could be added if age trends become significant after outliers are resolved)** 
 For three of these ($ANPP$, $ANPP_{litterfall}$, $BNPP$), the increase in C flux with age was steepest increase in tropical forests, followed by temperate and then boreal forests (Figs S#). 
 Similarly, $ANPP_{woody}$ displayed a steeper increase with age in temperate than boreal boreal forests (no tropical data for this variable).
 In contrast, for $ANPP_{stem}$,  tropical and temperate broadleaf forests had the highest flux rates at young ages, but were surpassed by temperate conifer forests between ages 20 and 50 (Fig. S6).
