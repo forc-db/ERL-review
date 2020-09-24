@@ -68,9 +68,11 @@ n_records <- sum(T1[,"records"])
 
 #ForC raw
 ForC_measurements <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_measurements.csv", stringsAsFactors = FALSE, check.names = FALSE)
+  n_records_age_unk <- sum(is.na(as.numeric(ForC_measurements[, "stand.age"])))  #total n records no age info
 ForC_plots <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_plots.csv", stringsAsFactors = FALSE, check.names = FALSE)
 ForC_sites <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_sites.csv", stringsAsFactors = FALSE, check.names = FALSE)
-n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
+  n_sites_coord_unk <- sum(is.na(as.numeric(ForC_sites[, "lat"])))  #total n records no geographic coordinates
+  n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
 
 #ForC simplified
 ForC_simplified <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/ForC_simplified/ForC_simplified.csv", stringsAsFactors = FALSE, check.names = FALSE)
@@ -78,10 +80,6 @@ n_no_history <- sum(ForC_simplified[,"history.no.info"]) #(relative to ForC_simp
 n_managed_in_ForC_simplified <- sum(ForC_simplified[,"managed"])
 n_disturbed_in_ForC_simplified <- sum(ForC_simplified[,"disturbed"])
 records_eligible_for_inclusion <- NA  #number in ForC_simplified that are not disturbed, managed, or no.history
-
-#stats I haven't yet acquired:
-n_records_age_unk <- NA  #total n records no age info
-n_records_coord_unk <- NA  #total n records no geographic coordinates
 
 #total numbers of plots and areas (all variables combined)
 n_plots_tot <- NA
@@ -140,6 +138,8 @@ n_stocks_youngBoN_with_ge7_areas <- NA
 ```{r eval=FALSE, echo=FALSE}
 # The Background section needs to present the rationale for why a systematic review of this topic is needed along with a history of what has been done to date and an expectation of what new will emerge from the review, especially if quantitative meta-analyses of studies are being considered.
 ```
+
+*(Abby has offered to update stats in this paragraph:)*
 
 Forest ecosystems will play a critical role in shaping the course of climate change (IPCC1.5) through their influence on atmospheric carbon dioxide (CO~2~). 
 Their annual gross CO~2~ sequestration (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2007-2016 (9.4 ± 0.5 Gt C yr-1; Le Quéré et al 2017) (**update**). 
@@ -238,7 +238,7 @@ Tropical climates were defined to include all equatorial (A) zones, temperate cl
 Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis. 
 Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006]. 
 Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication). 
-Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of total database), or geographic coordinates (n=`r round(n_records_coord_unk/nrow(ForC_measurements)*100, digits=1)`% of total database). 
+Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (n=`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). 
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age. 
 The most well-represented forest types excluded were boreal broadleaf (`r n_records_BoB` records) and boreal and temperate mixed broadleaf-needleleaf (`r n_records_Bomixed` and `r n_records_Te_mixed` records, respectively).
  
