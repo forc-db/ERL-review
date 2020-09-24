@@ -1,7 +1,7 @@
 ---
 title: ""
 output: 
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -267,7 +267,7 @@ Data, scripts, and results presented here are also available through the open-ac
 
 ### Data Coverage
 
-Of the `r nrow(ForC_measurements)` in ForC v.#, `r n_records` met the criteria for inclusion in this study (Fig. 1). 
+Of the `r nrow(ForC_measurements)` records in ForC v.#, `r n_records` met the criteria for inclusion in this study (Fig. 1). 
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas. 
 Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_matureTrB_with_ge7_areas` fluxes and `r n_stocks_matureTrB_with_ge7_areas` stocks in tropical broadleaf forests, `r n_fluxes_matureTeB_with_ge7_areas` fluxes and `r n_stocks_matureTeB_with_ge7_areas` stocks in temperate broadleaf forests, `r n_fluxes_matureTeN_with_ge7_areas` fluxes and `r n_stocks_matureTeN_with_ge7_areas` stocks in temperate conifer forests, and `r n_fluxes_matureBoN_with_ge7_areas` fluxes and `r n_stocks_matureBoN_with_ge7_areas` stocks in boreal forests. 
 For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_youngTrB_with_ge7_areas` fluxes and `r n_stocks_youngTrB_with_ge7_areas` stocks in tropical broadleaf forests, `r n_fluxes_youngTeB_with_ge7_areas` fluxes and `r n_stocks_youngTeB_with_ge7_areas` stocks in temperate broadleaf forests, `r n_fluxes_youngTeN_with_ge7_areas` fluxes and `r n_stocks_youngTeN_with_ge7_areas` stocks in temperate conifer forests, and `r n_fluxes_youngBoN_with_ge7_areas` fluxes and `r n_stocks_youngBoN_with_ge7_areas` stocks in boreal forests. 
