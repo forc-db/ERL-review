@@ -84,11 +84,6 @@ records_eligible_for_inclusion <- NA  #number in ForC_simplified that are not di
 # limiting to variables and biomes of interest:
 n_focal_variable_records_eligible_for_inclusion <- NA # records_eligible_for_inclusion, limited to focal variables
 
-# records for excluded biome groupings ? 
-n_records_BoB <- NA
-n_records_Bomixed <- NA
-n_records_Te_mixed <- NA
-
 #Records included in the analysis
 T1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
   n_records <- sum(T1[,"records"])
@@ -243,9 +238,8 @@ Leaf type (broadleaf / needleleaf) was defined based on descriptions in original
 Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication). 
 Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (n=`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). 
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age. 
-The most well-represented forest types excluded were boreal broadleaf (`r n_records_BoB` records) and boreal and temperate mixed broadleaf-needleleaf (`r n_records_Bomixed` and `r n_records_Te_mixed` records, respectively).
 
-Data were analyzed to produce ...
+Data were analyzed to produce 
 *Schematics:* 
 Data were summarized to produce schematics of C cycling across the eight biome - age group combinations identified above.
 For mature forests, to obtain the values reported in the C cycle schematics, we first averaged any repeated measurements within a plot. 
