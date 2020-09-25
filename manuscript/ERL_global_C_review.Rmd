@@ -61,60 +61,56 @@ Maria M. H. Wang^1,7^
 
 ```{r eval = TRUE, echo=FALSE, warning=FALSE}
 #READING IN TABLES TO GET STATS FOR TEXT
-
+path_to_ForC <- paste0(dirname(dirname(getwd())), "/ForC/") # this is to allow anybody to knit (assuming current working direcoty is in forc-db/ERL-review/manuscript and its "nesting" withing the ForC repo does not change)
 
 #ForC raw
-ForC_measurements <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_measurements.csv", stringsAsFactors = FALSE, check.names = FALSE)
+ForC_measurements <- read.csv(paste0(path_to_ForC, "/data/ForC_measurements.csv"), stringsAsFactors = FALSE, check.names = FALSE)
   n_records_age_unk <- sum(is.na(as.numeric(ForC_measurements[, "stand.age"])))  #total n records no age info
-  n_SRDB=NA
-  n_GROA=NA
-ForC_plots <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_plots.csv", stringsAsFactors = FALSE, check.names = FALSE)
-ForC_sites <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_sites.csv", stringsAsFactors = FALSE, check.names = FALSE)
-  n_sites_coord_unk <- sum(is.na(as.numeric(ForC_sites[, "lat"])))  #total n records no geographic coordinates
-  n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
+  n_records_age_0 <- sum(as.numeric(ForC_measurements[, "stand.age"]) %in% 0)
+  
+  n_SRDB <- sum(ForC_measurements$ForC.investigator %in% "Ben Bond-Lamberty")
+  n_GROA <- sum(ForC_measurements$ForC.investigator %in% "Dr. Susan Cook-Patton")
+
+  ForC_plots <- read.csv(paste0(path_to_ForC, "/data/ForC_plots.csv"), stringsAsFactors = FALSE, check.names = FALSE)
+ForC_sites <- read.csv(paste0(path_to_ForC, "/data/ForC_sites.csv"), stringsAsFactors = FALSE, check.names = FALSE)
+  
+n_sites_coord_unk <- sum(is.na(as.numeric(ForC_sites[, "lat"])))  #total n records no geographic coordinates
+  
+n_areas <- length(unique(na.omit(ForC_sites[,"geographic.area"])))
 
 
 #ForC simplified
-ForC_simplified <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/ForC_simplified/ForC_simplified.csv", stringsAsFactors = FALSE, check.names = FALSE)
+ForC_simplified <- read.csv(paste0(path_to_ForC, "ForC_simplified/ForC_simplified.csv"), stringsAsFactors = FALSE, check.names = FALSE)
+
 n_no_history <- sum(ForC_simplified[,"history.no.info"]) #(relative to ForC_simplified)
 n_managed_in_ForC_simplified <- sum(ForC_simplified[,"managed"])
 n_disturbed_in_ForC_simplified <- sum(ForC_simplified[,"disturbed"])
-records_eligible_for_inclusion <- NA  #number in ForC_simplified that are not disturbed, managed, or no.history
+records_eligible_for_inclusion <- sum(ForC_simplified$managed ==0 & ForC_simplified$disturbed ==0 & ForC_simplified$history.no.info == 0)  #number in ForC_simplified that are not disturbed, managed, or no.history
+
 
 # limiting to variables and biomes of interest:
-n_focal_variable_records_eligible_for_inclusion <- NA # records_eligible_for_inclusion, limited to focal variables
+ Biomes_n_records <- read.csv("tables_figures/Biomes_n_records_variables_of_interest.csv", check.names = F)
+n_focal_variable_records_eligible_for_inclusion <- sum(Biomes_n_records$n_records) # n records_eligible_for_inclusion, limited to focal variables
 
-# records for excluded biome groupings ? 
-n_records_BoB <- NA
-n_records_Bomixed <- NA
-n_records_Te_mixed <- NA
 
 #Records included in the analysis
 T1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
-  n_records <- sum(T1[,"records"])
+n_records <- sum(T1[,"records"])
   
-n_plots_tot <- NA #total numbers of plots used in the analysis (all variables combined)
-n_areas_tot <- NA #total numbers of areas used in the analysis (all variables combined)
+global_counts <- read.csv("tables_figures/Count_n_record_n_plot_n_area.csv", check.names = FALSE)
+n_records - global_counts$n_records # one count difference... not sure why. probably the filter thing... will ignore dor now.
+n_plots_tot <- global_counts$n_plots #total numbers of plots used in the analysis (all variables combined)
+n_areas_tot <- global_counts$n_areas #total numbers of areas used in the analysis (all variables combined)
 
 
 #numbers of variables with records from ≥7 geographic areas, by biomes/ age class:
-n_fluxes_matureTrB_with_ge7_areas <- NA
-n_stocks_matureTrB_with_ge7_areas <- NA
-n_fluxes_matureTeB_with_ge7_areas <- NA
-n_stocks_matureTeB_with_ge7_areas <- NA
-n_fluxes_matureTeN_with_ge7_areas <- NA
-n_stocks_matureTeN_with_ge7_areas <- NA
-n_fluxes_matureBoN_with_ge7_areas <- NA
-n_stocks_matureBoN_with_ge7_areas <- NA
+ForC_biome_averages <- read.csv(paste0(path_to_ForC, "numbers_and_facts/ForC_variable_averages_per_Biome.csv"), stringsAsFactors = F)
 
-n_fluxes_youngTrB_with_ge7_areas <- NA
-n_stocks_youngTrB_with_ge7_areas <- NA
-n_fluxes_youngTeB_with_ge7_areas <- NA
-n_stocks_youngTeB_with_ge7_areas <- NA
-n_fluxes_youngTeN_with_ge7_areas <- NA
-n_stocks_youngTeN_with_ge7_areas <- NA
-n_fluxes_youngBoN_with_ge7_areas <- NA
-n_stocks_youngBoN_with_ge7_areas <- NA
+idx_fluxes <- ForC_biome_averages$n.areas >= 7 & ForC_biome_averages$variable.type %in% "flux"
+idx_stocks <- ForC_biome_averages$n.areas >= 7 & ForC_biome_averages$variable.type %in% "stock"
+
+n_fluxes_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_fluxes])
+n_stocks_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_stocks])
 
 
 ```
@@ -241,11 +237,10 @@ Tropical climates were defined to include all equatorial (A) zones, temperate cl
 Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis. 
 Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006]. 
 Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication). 
-Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (n=`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). 
+Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (n=`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). We also excluded records of stand age = 0 year (n=`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age. 
-The most well-represented forest types excluded were boreal broadleaf (`r n_records_BoB` records) and boreal and temperate mixed broadleaf-needleleaf (`r n_records_Bomixed` and `r n_records_Te_mixed` records, respectively).
 
-Data were analyzed to produce ...
+Data were analyzed to produce
 *Schematics:* 
 Data were summarized to produce schematics of C cycling across the eight biome - age group combinations identified above.
 For mature forests, to obtain the values reported in the C cycle schematics, we first averaged any repeated measurements within a plot. 
@@ -275,8 +270,8 @@ Data, scripts, and results presented here are also available through the open-ac
 
 Of the `r nrow(ForC_measurements)` records in ForC v.#, `r n_records` met the criteria for inclusion in this study (Fig. 1). 
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas. 
-Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_matureTrB_with_ge7_areas` fluxes and `r n_stocks_matureTrB_with_ge7_areas` stocks in tropical broadleaf forests, `r n_fluxes_matureTeB_with_ge7_areas` fluxes and `r n_stocks_matureTeB_with_ge7_areas` stocks in temperate broadleaf forests, `r n_fluxes_matureTeN_with_ge7_areas` fluxes and `r n_stocks_matureTeN_with_ge7_areas` stocks in temperate conifer forests, and `r n_fluxes_matureBoN_with_ge7_areas` fluxes and `r n_stocks_matureBoN_with_ge7_areas` stocks in boreal forests. 
-For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_youngTrB_with_ge7_areas` fluxes and `r n_stocks_youngTrB_with_ge7_areas` stocks in tropical broadleaf forests, `r n_fluxes_youngTeB_with_ge7_areas` fluxes and `r n_stocks_youngTeB_with_ge7_areas` stocks in temperate broadleaf forests, `r n_fluxes_youngTeN_with_ge7_areas` fluxes and `r n_stocks_youngTeN_with_ge7_areas` stocks in temperate conifer forests, and `r n_fluxes_youngBoN_with_ge7_areas` fluxes and `r n_stocks_youngBoN_with_ge7_areas` stocks in boreal forests. 
+Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests. 
+For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests. 
 
 ### C cycling in mature forests
 
@@ -290,22 +285,22 @@ Within this biome, $B_{ag}<B_{ag-wood}+B_{foliage}$ and $B_{root}<B_{root-coarse
 \blandscape
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | C cycle diagram for mature tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrows are scaled as the **square root of flux divided by 5**.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Tropical broadleaf MATURE.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Tropical broadleaf MATURE.png"))
 ```
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature temperate broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Temperate broadleaf MATURE.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Temperate broadleaf MATURE.png"))
 ```
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 4 | C cycle diagram for mature temperate conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Temperate conifer MATURE.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Temperate conifer MATURE.png"))
 ```
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 5 | C cycle diagram for mature boreal conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Boreal conifer MATURE.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Boreal conifer MATURE.png"))
 ```
 \elandscape
 
@@ -366,22 +361,22 @@ In terms of C stocks, *10* variables had sufficient data to test for age trends.
 \blandscape
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 8 | C cycle diagram for young tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are observed ranges, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Tropical broadleaf YOUNG.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Tropical broadleaf YOUNG.png"))
 ```
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 9 | C cycle diagram for young temperate broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are observed ranges, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Temperate broadleaf YOUNG.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Temperate broadleaf YOUNG.png"))
 ```
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 10 | C cycle diagram for young temperate conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are observed ranges, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Temperate conifer YOUNG.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Temperate conifer YOUNG.png"))
 ```
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 11 | C cycle diagram for young boreal conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$. Presented are observed ranges, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data.", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/Boreal conifer YOUNG.png")
+  knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Boreal conifer YOUNG.png"))
 ```
 \elandscape
 
