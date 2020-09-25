@@ -62,17 +62,17 @@ Maria M. H. Wang^1,7^
 ```{r eval = TRUE, echo=FALSE, warning=FALSE}
 #READING IN TABLES TO GET STATS FOR TEXT
 
-#Table 1 for this manuscript
-T1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
-n_records <- sum(T1[,"records"])
 
 #ForC raw
 ForC_measurements <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_measurements.csv", stringsAsFactors = FALSE, check.names = FALSE)
   n_records_age_unk <- sum(is.na(as.numeric(ForC_measurements[, "stand.age"])))  #total n records no age info
+  n_SRDB=NA
+  n_GROA=NA
 ForC_plots <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_plots.csv", stringsAsFactors = FALSE, check.names = FALSE)
 ForC_sites <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/data/ForC_sites.csv", stringsAsFactors = FALSE, check.names = FALSE)
   n_sites_coord_unk <- sum(is.na(as.numeric(ForC_sites[, "lat"])))  #total n records no geographic coordinates
   n_areas <- max(ForC_sites[,"geographic.area"], na.rm = TRUE )
+
 
 #ForC simplified
 ForC_simplified <- read.csv("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/ForC_simplified/ForC_simplified.csv", stringsAsFactors = FALSE, check.names = FALSE)
@@ -81,18 +81,21 @@ n_managed_in_ForC_simplified <- sum(ForC_simplified[,"managed"])
 n_disturbed_in_ForC_simplified <- sum(ForC_simplified[,"disturbed"])
 records_eligible_for_inclusion <- NA  #number in ForC_simplified that are not disturbed, managed, or no.history
 
-#total numbers of plots and areas (all variables combined)
-n_plots_tot <- NA
-n_areas_tot <- NA
+# limiting to variables and biomes of interest:
+n_focal_variable_records_eligible_for_inclusion <- NA # records_eligible_for_inclusion, limited to focal variables
 
-# percent eligible for inclusion in analysis
-
-n_focal_variable_records_eligible_for_inclusion <- NA #This is prior to assigning biome groupings
- 
-# records by biome grouping
+# records for excluded biome groupings ? 
 n_records_BoB <- NA
 n_records_Bomixed <- NA
 n_records_Te_mixed <- NA
+
+#Records included in the analysis
+T1 <- read.csv("tables_figures/C_variables.csv", stringsAsFactors = FALSE, check.names = FALSE)
+  n_records <- sum(T1[,"records"])
+  
+n_plots_tot <- NA #total numbers of plots used in the analysis (all variables combined)
+n_areas_tot <- NA #total numbers of areas used in the analysis (all variables combined)
+
 
 #numbers of variables with records from ≥7 geographic areas, by biomes/ age class:
 n_fluxes_matureTrB_with_ge7_areas <- NA
@@ -192,7 +195,7 @@ Original publications were referenced to check values and obtain information not
 The database was developed with goals of understanding how C cycling in forests varies across broad geographic scales and as a function of stand age. 
 As such, there has been a focus on incorporating data from regrowth forests (*e.g.*, Anderson et al 2006, Martin et al 2013, Bonner et al 2013) and obtaining stand age data when possible [83% of records in v.2.0; @anderson-teixeira_forc_2018]. 
 Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], yet these represented only approximately one-third of records in ForC v.2.0 [@anderson-teixeira_forc_2018]. 
-Since publication of ForC v.2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [SRDB v.##; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [GROA v1.0; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020], and data from several publications [e.g., @taylor_temperature_2017, @lutz_global_2018, @johnson_climate_2018; detailed list at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv]. 
+Since publication of ForC v.2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [SRDB v.##, `r n_SRDB` records; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [GROA v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020], and data from several publications [e.g., @taylor_temperature_2017, @lutz_global_2018, @johnson_climate_2018; detailed list at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv]. 
 We note that there remains a significant amount of relevant data that is not yet included in ForC, particularly biomass data from national forest inventories (*e.g.*,: REFS). 
 The database version used for this analysis has been tagged as a new release on Github (XX) and assigned a DOI through Zenodo (DOI: TBD).
 
@@ -241,18 +244,21 @@ Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 
 Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (n=`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (n=`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). 
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age. 
 The most well-represented forest types excluded were boreal broadleaf (`r n_records_BoB` records) and boreal and temperate mixed broadleaf-needleleaf (`r n_records_Bomixed` and `r n_records_Te_mixed` records, respectively).
- 
-Data were analyzed to produce basic summaries of C cycle patterns across biomes and stand ages. **(this par & following are confusing/ incomplete--needs work)**
+
+Data were analyzed to produce ...
+*Schematics:* 
+Data were summarized to produce schematics of C cycling across the eight biome - age group combinations identified above.
 For mature forests, to obtain the values reported in the C cycle schematics, we first averaged any repeated measurements within a plot. 
 Values were then averaged across plots clustered within 25 km of one another [*sensu* @anderson-teixeira_forc_2018], weighting by area sampled if available for all records. 
 This step was taken to avoid pseudo-replication and to combine any records from sites with more than one name in ForC. 
+
+*FIgs 6-7*
 Finally, for figures 6 and 7, the original values were analyzed via a linear mixed effects model ('lmer' function in 'lme4' R package) with biome as fixed effect and plot nested within geographic.area as random effects on the intercept. 
 When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. There were enough data to run this analysis for all focal variables but $DW_{down}$.
 
 For young (<100yrs) forest types, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept. 
 When the effect of stand.age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome - stand.age interaction was included in the model. 
-In the C cycle schematics for young forests, we report equations based on these models. 
-In cases where there was no significant effect of stand.age, records were averaged as for mature stands. 
+
 
 All database manipulation, analyses, and figure production were fully automated in R (version, citation). 
 Materials required to fully reproduce these analyses, including data, R scripts, and image files, are archived in Zenodo (DOI: TBD]. 
