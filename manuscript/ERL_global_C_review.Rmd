@@ -91,6 +91,10 @@ records_eligible_for_inclusion <- sum(ForC_simplified$managed ==0 & ForC_simplif
 # limiting to variables and biomes of interest:
  Biomes_n_records <- read.csv("tables_figures/Biomes_n_records_variables_of_interest.csv", check.names = F)
 n_focal_variable_records_eligible_for_inclusion <- sum(Biomes_n_records$n_records) # n records_eligible_for_inclusion, limited to focal variables
+# # records for excluded biome groupings ? 
+# n_records_BoB <- NA #Biomes_n_records$n_records[Biomes_n_records$Biome %in% "Boreal broadleaf"] # for all n, subset by Age if needed
+# n_records_Bomixed <- NA
+# n_records_Te_mixed <- NA
 
 
 #Records included in the analysis
@@ -101,6 +105,9 @@ global_counts <- read.csv("tables_figures/Count_n_record_n_plot_n_area.csv", che
 n_records - global_counts$n_records # one count difference... not sure why. probably the filter thing... will ignore dor now.
 n_plots_tot <- global_counts$n_plots #total numbers of plots used in the analysis (all variables combined)
 n_areas_tot <- global_counts$n_areas #total numbers of areas used in the analysis (all variables combined)
+
+
+
 
 
 #numbers of variables with records from ≥7 geographic areas, by biomes/ age class:
