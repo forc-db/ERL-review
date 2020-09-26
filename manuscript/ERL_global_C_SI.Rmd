@@ -40,6 +40,27 @@ Replicate measurements (*i.e.*, replicates from within a single study) were aver
 [this table](https://github.com/forc-db/ForC/blob/master/figures/C_cycle_diagrams/ForC_variables_mapping_for_C_cycle_diagrams.csv))
 
 \newpage
+## Table S2. Model parameter estimates for age trends and biome differences in young forests
+
+```{r eval = TRUE, echo=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+table_pt <- read.csv("tables_figures/SI_age_trend_model_summaries.csv", 
+                     #colClasses=c("NULL", NA, NA, NA, NA), 
+                     #col.names=c("NULL", "Parameter", "Estimate", "SE", "$t_{value}$"), 
+                     stringsAsFactors = FALSE, check.names = FALSE)
+kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F, linesep = c('\\addlinespace'))%>%
+  pack_rows("NEP", 1, 5, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("GPP", 6, 10, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("NPP", 11, 15, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("ANPP", 16, 23, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("ANPP_woody", 24, 28, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("ANPP_stem", 29, 36, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("ANPP_branch", 37, 40, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  kable_styling(latex_options =c("repeat_header"), protect_latex = T, font_size = 7)
+```
+
+\newpage
 ## Figure S1. Age trends and biome differences for $NEP$
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S1 | Age trends and biome differences for $NEP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). Left plot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. Solid lines indicate signficant effect of age, non-pareallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating signifant differences between biomes.", out.width='100%', fig.pos='H'}
