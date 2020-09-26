@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -267,10 +267,7 @@ There were enough data to run this analysis for all focal variables but **$DW_{d
 To test for age trends in young (<100yrs) forests, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept.
 When the effect of stand.age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome * stand.age interaction was included in the model.
 
-
 All database manipulation, analyses, and figure production were fully automated in R (**version, citation**).
-Materials required to fully reproduce these analyses, including data, R scripts, and image files, are archived in Zenodo (DOI: TBD].
-Data, scripts, and results presented here are also available through the open-access ForC GitHub repository (https://github.com/forc-db/ForC), where many will be updated as the database develops.
 
 ## Review Results/ Synthesis
 ```{r eval=FALSE, echo=FALSE}
@@ -396,7 +393,7 @@ In terms of C stocks, *10* variables had sufficient data to test for age trends.
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
 
-ForC v.XX yielded a fairly comprehensive and internally consistent picture of C cycling in the world's major forest biomes.
+ForC v.XX brought together an unprecedented amount of data to yield an internally consistent picture of C cycling in the world's major forest biomes.
 Carbon cycling rates generally increased from boreal to tropical regions and with stand age.
 Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. 6-7).
 In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7).
@@ -428,6 +425,14 @@ http://dx.doi.org/10.1038/nature02619
 
 Mention consistency (or lack of) with e.g. GOLUM-CNP?
 http://dx.doi.org/10.5194/gmd-11-3903-2018
+
+
+In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
+These can be significant. (**Note that we've given a lot of emphasis to dead wood (work by Abby, and also Jenny), and as a result this work really advances knowledge of dead wood. We'll want to highlight that here.**)
+*(give some stats/ cite figures)*.
+ForC does not include soil carbon, which is covered by other efforts (REFS).
+For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and SRDB remains the authority on soil respiration (REFS). ForC includes recent data from both, but is not continuously integrated.
+For C is the best source for most of the subsidiary fluxes: NPP, woody mortality...
 
 
 The C cycle budgets for mature forests (Figs. 2-5) generally "close"--that is, the sums of component variables do not differ significantly from the larger fluxes.
@@ -481,22 +486,15 @@ One goal for ForC is to serve as a pipeline through which information can flow e
 This is already happening!
 ForC has already contributed to updating the IPCC guidelines for carbon accounting in forests [IPCC 2019; @requena_suarez_estimating_2019; Rozendaal et al in prep], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
 
-There remain numerous data needs for improved accounting of forest carbon stocks and fluxes in GHG accounting.
+**ForC can complement remote sensing to provide a comprehensive picture of global forest C cycling.** (*here, discuss what is well-covered by remote sesnsing, where ForC is useful for calibrating remote sensing, and what ForC can get that remote sensing can't.*)
 AGB is the largest stock, and most of the emphasis is on this variable.
 Remote sensing, with calibration based on high-quality ground-based data [@schepaschenko_forest_2019; @chave_ground_2019], is the best approach for mapping forest carbon (REFS).
 However, it is limited in that it is not associated with stand age and disturbance history, except in recent decades when satellite data can be used to detect forest loss, gain, and some of their dominant drivers [@hansen_high-resolution_2013; @song_global_2018; @curtis_classifying_2018].
 ForC  is therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020.
 
- *remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS),*
+*Remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS).*
+Other variables, in particular respiration fluxes, cannot be remotely sensed (@bond-Lamberty_estimating_2016), and efforts such as the Global Carbon Project (**le quere REF**) and NASA CMS (**citation: https://carbon.nasa.gov/pdfs/CMS_Phase-1_Report_Final_optimized.pdf but maybe better to cite open literature, one of the papers listed at https://cmsflux.jpl.nasa.gov/get-data/publication-data-sets**) typically compute them as residuals only. (**Ben, it woudl be particularly helpful if you could flesh this out some more.**)
 
-Other variables, in particular respiration fluxes, cannot be remotely sensed (@bond-Lamberty_estimating_2016), and efforts such as the Global Carbon Project (**le quere REF**) and NASA CMS (**citation: https://carbon.nasa.gov/pdfs/CMS_Phase-1_Report_Final_optimized.pdf but maybe better to cite open literature, one of the papers listed at https://cmsflux.jpl.nasa.gov/get-data/publication-data-sets**) typically compute them as residuals only. 
-
-In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
-These can be significant. (**Note that we've given a lot of emphasis to dead wood (work by Abby, and also Jenny), and as a result this work really advances knowledge of dead wood. We'll want to highlight that here.**)
-*(give some stats/ cite figures)*.
-ForC does not include soil carbon, which is covered by other efforts (REFS).
-For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and SRDB remains the authority on soil respiration (REFS). ForC includes recent data from both, but is not continuously integrated.
-For C is the best source for most of the subsidiary fluxes: NPP, woody mortality...
 
 **Move to data availability statement, or methods?**:
 We recommend that use of ForC data go to the original database, as opposed to using "off-the-shelf" values from this publication.
@@ -514,6 +512,12 @@ Ian McGregor for help with the database.
 Thanks to Norbert Kunert and [Helene's intern] for helpful input at an earlier phase.
 A Smithsonian Scholarly Studies grant to KAT and HML.
 WLS grant to KAT.
+
+## Data availability statement
+Materials required to fully reproduce these analyses, including data, R scripts, and image files, are archived in Zenodo (DOI: TBD].
+Data, scripts, and results presented here are also available through the open-access ForC GitHub repository (https://github.com/forc-db/ForC), where many will be updated as the database develops.
+
+## ORCID iD
 
 ## References
 
