@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -262,7 +262,7 @@ This step was taken to avoid pseudo-replication and to combine any records from 
 
 To test for differences across mature forest biomes, the original values were analyzed via a linear mixed effects model ['lmer' function in 'lme4' R package version **x.xx**; **REF**] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
 When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
-There were enough data to run this analysis for all focal variables but **$DW_{down}$**.
+There were enough data to run this analysis for all focal variables but **$R_{auto-ag}$ and $DW_{down}$**.
 
 To test for age trends in young (<100yrs) forests, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept.
 When the effect of stand.age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome * stand.age interaction was included in the model.
