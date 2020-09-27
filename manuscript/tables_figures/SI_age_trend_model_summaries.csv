@@ -1,196 +1,168 @@
 "Variable","Parameter","Estimate","SE","$t_{value}$"
-"$NEP$","log10(stand.age)",2.12,0.35,6
-"$NEP$","BiomeTropical broadleaf",1.56,1.6,0.97
-"$NEP$","BiomeTemperate broadleaf",-1.01,0.67,-1.51
-"$NEP$","BiomeTemperate conifer",-0.2,0.6,-0.33
-"$NEP$","BiomeBoreal conifer",-2.4,0.75,-3.22
-"$GPP$","log10(stand.age)",4.27,1,4.28
-"$GPP$","BiomeTropical broadleaf",26.47,3.7,7.16
-"$GPP$","BiomeTemperate broadleaf",7.96,1.91,4.16
-"$GPP$","BiomeTemperate conifer",9.99,1.54,6.47
-"$GPP$","BiomeBoreal conifer",1.48,2.02,0.73
-"$NPP$","log10(stand.age)",0.82,0.48,1.71
-"$NPP$","BiomeTropical broadleaf",10.37,1.53,6.78
-"$NPP$","BiomeTemperate broadleaf",5.62,0.96,5.84
-"$NPP$","BiomeTemperate conifer",4.49,0.95,4.73
-"$NPP$","BiomeBoreal conifer",2.35,1.2,1.95
-"$ANPP$","log10(stand.age)",5.58,0.93,6.01
-"$ANPP$","BiomeTropical broadleaf",-1.42,1.53,-0.92
-"$ANPP$","BiomeTemperate broadleaf",2.28,0.98,2.34
-"$ANPP$","BiomeTemperate conifer",1.72,0.91,1.89
-"$ANPP$","BiomeBoreal conifer",0.9,1.21,0.74
-"$ANPP$","log10(stand.age):BiomeTemperate broadleaf",-4.09,1.09,-3.75
-"$ANPP$","log10(stand.age):BiomeTemperate conifer",-4.55,1.09,-4.19
-"$ANPP$","log10(stand.age):BiomeBoreal conifer",-4.68,1.16,-4.04
-"$ANPP_{woody}$","log10(stand.age)",1.62,0.53,3.07
-"$ANPP_{woody}$","BiomeTropical broadleaf",0.54,1.55,0.35
-"$ANPP_{woody}$","BiomeTemperate broadleaf",0.03,1.06,0.03
-"$ANPP_{woody}$","BiomeTemperate conifer",0.36,0.79,0.45
-"$ANPP_{woody}$","BiomeBoreal conifer",-1.03,0.97,-1.06
-"$ANPP_{stem}$","log10(stand.age)",-0.03,0.8,-0.03
-"$ANPP_{stem}$","BiomeTropical broadleaf",2.38,1.24,1.92
-"$ANPP_{stem}$","BiomeTemperate broadleaf",2.86,0.66,4.33
-"$ANPP_{stem}$","BiomeTemperate conifer",-0.83,0.75,-1.1
-"$ANPP_{stem}$","BiomeBoreal conifer",-0.37,1.64,-0.23
-"$ANPP_{stem}$","log10(stand.age):BiomeTemperate broadleaf",-0.03,0.9,-0.04
-"$ANPP_{stem}$","log10(stand.age):BiomeTemperate conifer",2.28,0.93,2.45
-"$ANPP_{stem}$","log10(stand.age):BiomeBoreal conifer",0.78,1.28,0.61
-"$ANPP_{branch}$","log10(stand.age)",0.16,0.17,0.93
-"$ANPP_{branch}$","BiomeTemperate broadleaf",0.4,0.34,1.17
-"$ANPP_{branch}$","BiomeTemperate conifer",0.06,0.28,0.22
-"$ANPP_{branch}$","BiomeBoreal conifer",0.1,0.4,0.24
-"$ANPP_{foliage}$","log10(stand.age)",1.33,0.16,8.4
-"$ANPP_{foliage}$","BiomeTropical broadleaf",0.67,0.54,1.23
-"$ANPP_{foliage}$","BiomeTemperate broadleaf",-0.14,0.32,-0.43
-"$ANPP_{foliage}$","BiomeTemperate conifer",-0.48,0.3,-1.61
-"$ANPP_{foliage}$","BiomeBoreal conifer",-1.52,0.38,-3.98
-"$ANPP_{litterfall}$","log10(stand.age)",1.42,0.86,1.64
-"$ANPP_{litterfall}$","BiomeTropical broadleaf",1.85,1.34,1.37
-"$ANPP_{litterfall}$","BiomeTemperate broadleaf",-0.51,1.6,-0.32
-"$ANPP_{litterfall}$","BiomeTemperate conifer",-0.66,1.93,-0.34
-"$ANPP_{litterfall}$","BiomeBoreal conifer",-2.08,1.89,-1.1
-"$ANPP_{repro}$","log10(stand.age)",1.42,0.86,1.64
-"$ANPP_{repro}$","BiomeTropical broadleaf",1.85,1.34,1.37
-"$ANPP_{repro}$","BiomeTemperate broadleaf",-0.51,1.6,-0.32
-"$ANPP_{repro}$","BiomeTemperate conifer",-0.66,1.93,-0.34
-"$ANPP_{repro}$","BiomeBoreal conifer",-2.08,1.89,-1.1
-"$ANPP_{folivory}$","log10(stand.age)",1.42,0.86,1.64
-"$ANPP_{folivory}$","BiomeTropical broadleaf",1.85,1.34,1.37
-"$ANPP_{folivory}$","BiomeTemperate broadleaf",-0.51,1.6,-0.32
-"$ANPP_{folivory}$","BiomeTemperate conifer",-0.66,1.93,-0.34
-"$ANPP_{folivory}$","BiomeBoreal conifer",-2.08,1.89,-1.1
-"$M_{woody}$","log10(stand.age)",1.42,0.86,1.64
-"$M_{woody}$","BiomeTropical broadleaf",1.85,1.34,1.37
-"$M_{woody}$","BiomeTemperate broadleaf",-0.51,1.6,-0.32
-"$M_{woody}$","BiomeTemperate conifer",-0.66,1.93,-0.34
-"$M_{woody}$","BiomeBoreal conifer",-2.08,1.89,-1.1
-"$BNPP$","log10(stand.age)",0.84,0.25,3.41
-"$BNPP$","BiomeTropical broadleaf",3.05,0.7,4.37
-"$BNPP$","BiomeTemperate broadleaf",0.9,0.46,1.95
-"$BNPP$","BiomeTemperate conifer",0.84,0.45,1.85
-"$BNPP$","BiomeBoreal conifer",0.09,0.6,0.15
-"$BNPP_{coarse}$","log10(stand.age)",0.09,0.09,1
-"$BNPP_{coarse}$","BiomeTropical broadleaf",0.31,0.39,0.8
-"$BNPP_{coarse}$","BiomeTemperate broadleaf",0.31,0.16,1.99
-"$BNPP_{coarse}$","BiomeTemperate conifer",0.59,0.15,3.92
-"$BNPP_{coarse}$","BiomeBoreal conifer",0.09,0.18,0.5
-"$BNPP_{fine}$ ","log10(stand.age)",0.9,0.24,3.77
-"$BNPP_{fine}$ ","BiomeTropical broadleaf",3.24,0.54,5.97
-"$BNPP_{fine}$ ","BiomeTemperate broadleaf",0.04,0.4,0.1
-"$BNPP_{fine}$ ","BiomeTemperate conifer",0.21,0.39,0.54
-"$BNPP_{fine}$ ","BiomeBoreal conifer",-0.06,0.51,-0.12
-"$R_{eco}$","log10(stand.age)",1.4,0.56,2.49
-"$R_{eco}$","BiomeTropical broadleaf",25.78,2.62,9.84
-"$R_{eco}$","BiomeTemperate broadleaf",9.63,1.19,8.08
-"$R_{eco}$","BiomeTemperate conifer",10.01,0.99,10.14
-"$R_{eco}$","BiomeBoreal conifer",5.09,1.37,3.71
-"$R_{auto}$","log10(stand.age)",1.4,0.56,2.49
-"$R_{auto}$","BiomeTropical broadleaf",25.78,2.62,9.84
-"$R_{auto}$","BiomeTemperate broadleaf",9.63,1.19,8.08
-"$R_{auto}$","BiomeTemperate conifer",10.01,0.99,10.14
-"$R_{auto}$","BiomeBoreal conifer",5.09,1.37,3.71
-"$R_{auto-ag}$","log10(stand.age)",1.4,0.56,2.49
-"$R_{auto-ag}$","BiomeTropical broadleaf",25.78,2.62,9.84
-"$R_{auto-ag}$","BiomeTemperate broadleaf",9.63,1.19,8.08
-"$R_{auto-ag}$","BiomeTemperate conifer",10.01,0.99,10.14
-"$R_{auto-ag}$","BiomeBoreal conifer",5.09,1.37,3.71
-"$R_{root}$","log10(stand.age)",4.47,1.42,3.15
-"$R_{root}$","BiomeTropical broadleaf",2.98,1.68,1.78
-"$R_{root}$","BiomeTemperate broadleaf",2.6,1.21,2.15
-"$R_{root}$","BiomeTemperate conifer",2.91,0.92,3.14
-"$R_{root}$","BiomeBoreal conifer",0.89,1.81,0.49
-"$R_{root}$","log10(stand.age):BiomeTemperate broadleaf",-3.65,1.61,-2.26
-"$R_{root}$","log10(stand.age):BiomeTemperate conifer",-4.03,1.54,-2.61
-"$R_{root}$","log10(stand.age):BiomeBoreal conifer",-4.07,1.75,-2.32
-"$R_{soil}$","log10(stand.age)",2.84,1.03,2.77
-"$R_{soil}$","BiomeTropical broadleaf",10.11,1.31,7.71
-"$R_{soil}$","BiomeTemperate broadleaf",7.23,0.73,9.85
-"$R_{soil}$","BiomeTemperate conifer",8.93,0.62,14.34
-"$R_{soil}$","BiomeBoreal conifer",4.56,1.17,3.89
-"$R_{soil}$","log10(stand.age):BiomeTemperate broadleaf",-1.41,1.11,-1.27
-"$R_{soil}$","log10(stand.age):BiomeTemperate conifer",-3.33,1.09,-3.06
-"$R_{soil}$","log10(stand.age):BiomeBoreal conifer",-2.59,1.19,-2.17
-"$R_{het-soil}$","log10(stand.age)",0.32,0.36,0.9
-"$R_{het-soil}$","BiomeTropical broadleaf",5.45,0.69,7.95
-"$R_{het-soil}$","BiomeTemperate broadleaf",3.92,0.63,6.25
-"$R_{het-soil}$","BiomeTemperate conifer",3.73,0.58,6.44
-"$R_{het-soil}$","BiomeBoreal conifer",2.51,0.77,3.28
-"$B_{tot}$","log10(stand.age)",45.83,9.46,4.85
-"$B_{tot}$","BiomeTropical broadleaf",-0.49,19.16,-0.03
-"$B_{tot}$","BiomeTemperate broadleaf",2.83,35.92,0.08
-"$B_{tot}$","BiomeTemperate conifer",-18.87,23.78,-0.79
-"$B_{tot}$","BiomeBoreal conifer",-116.99,36.6,-3.2
-"$B_{tot}$","log10(stand.age):BiomeTemperate broadleaf",17.12,22.24,0.77
-"$B_{tot}$","log10(stand.age):BiomeTemperate conifer",24.21,16.52,1.47
-"$B_{tot}$","log10(stand.age):BiomeBoreal conifer",52.7,21.34,2.47
-"$B_{ag}$","log10(stand.age)",53.45,2.71,19.69
-"$B_{ag}$","BiomeTropical broadleaf",-13.27,5.57,-2.38
-"$B_{ag}$","BiomeTemperate broadleaf",-48.27,5.6,-8.62
-"$B_{ag}$","BiomeTemperate conifer",-58.38,5.56,-10.51
-"$B_{ag}$","BiomeBoreal conifer",-46.06,12.55,-3.67
-"$B_{ag}$","log10(stand.age):BiomeTemperate broadleaf",11.42,4.29,2.66
-"$B_{ag}$","log10(stand.age):BiomeTemperate conifer",13.66,4.31,3.17
-"$B_{ag}$","log10(stand.age):BiomeBoreal conifer",-3.97,7.37,-0.54
-"$B_{ag-wood}$","log10(stand.age)",43.04,19.12,2.25
-"$B_{ag-wood}$","BiomeTropical broadleaf",-9.96,31.58,-0.32
-"$B_{ag-wood}$","BiomeTemperate broadleaf",-49.19,40.47,-1.22
-"$B_{ag-wood}$","BiomeTemperate conifer",-180.05,30.71,-5.86
-"$B_{ag-wood}$","BiomeBoreal conifer",-89.11,62.5,-1.43
-"$B_{ag-wood}$","log10(stand.age):BiomeTemperate broadleaf",37.51,32.42,1.16
-"$B_{ag-wood}$","log10(stand.age):BiomeTemperate conifer",131.73,27.05,4.87
-"$B_{ag-wood}$","log10(stand.age):BiomeBoreal conifer",29.8,39.34,0.76
-"$B_{foliage}$","log10(stand.age)",2.42,0.34,7.23
-"$B_{foliage}$","BiomeTropical broadleaf",1.45,0.81,1.79
-"$B_{foliage}$","BiomeTemperate broadleaf",0.93,0.77,1.22
-"$B_{foliage}$","BiomeTemperate conifer",-4.39,1.16,-3.77
-"$B_{foliage}$","BiomeBoreal conifer",-2.1,2.04,-1.03
-"$B_{foliage}$","log10(stand.age):BiomeTemperate broadleaf",-1.69,0.51,-3.31
-"$B_{foliage}$","log10(stand.age):BiomeTemperate conifer",3.79,0.77,4.94
-"$B_{foliage}$","log10(stand.age):BiomeBoreal conifer",0.12,1.12,0.11
-"$B_{root}$","log10(stand.age)",10.72,1.11,9.62
-"$B_{root}$","BiomeTropical broadleaf",-1.22,2.66,-0.46
-"$B_{root}$","BiomeTemperate broadleaf",-6.25,1.95,-3.21
-"$B_{root}$","BiomeTemperate conifer",-9.75,1.74,-5.61
-"$B_{root}$","BiomeBoreal conifer",-10.91,4.19,-2.6
-"$B_{root}$","log10(stand.age):BiomeTemperate broadleaf",1.33,1.62,0.82
-"$B_{root}$","log10(stand.age):BiomeTemperate conifer",1.08,1.54,0.7
-"$B_{root}$","log10(stand.age):BiomeBoreal conifer",2.08,2.56,0.81
-"$B_{root-coarse}$","log10(stand.age)",9.76,5.25,1.86
-"$B_{root-coarse}$","BiomeTropical broadleaf",-4.86,8.62,-0.56
-"$B_{root-coarse}$","BiomeTemperate broadleaf",0.13,6.68,0.02
-"$B_{root-coarse}$","BiomeTemperate conifer",-39.75,7.29,-5.45
-"$B_{root-coarse}$","BiomeBoreal conifer",-20.38,12.4,-1.64
-"$B_{root-coarse}$","log10(stand.age):BiomeTemperate broadleaf",-1.29,6.69,-0.19
-"$B_{root-coarse}$","log10(stand.age):BiomeTemperate conifer",28.58,6.96,4.11
-"$B_{root-coarse}$","log10(stand.age):BiomeBoreal conifer",5.93,8.08,0.73
-"$B_{root-fine}$","log10(stand.age)",-0.07,0.19,-0.38
-"$B_{root-fine}$","BiomeTropical broadleaf",2.8,2.44,1.15
-"$B_{root-fine}$","BiomeTemperate broadleaf",2.67,1.11,2.41
-"$B_{root-fine}$","BiomeTemperate conifer",2.72,1.12,2.43
-"$B_{root-fine}$","BiomeBoreal conifer",10.63,2.69,3.96
-"$DW_{tot}$","log10(stand.age)",1.89,0.97,1.95
-"$DW_{tot}$","BiomeTropical broadleaf",2.68,3.33,0.8
-"$DW_{tot}$","BiomeTemperate broadleaf",13.88,6.53,2.13
-"$DW_{tot}$","BiomeTemperate conifer",26.69,7.77,3.44
-"$DW_{tot}$","BiomeBoreal conifer",4.87,13.29,0.37
-"$DW_{standing}$","log10(stand.age)",5.07,1.1,4.62
-"$DW_{standing}$","BiomeTropical broadleaf",-5.09,46.76,-0.11
-"$DW_{standing}$","BiomeTemperate broadleaf",21.96,20.49,1.07
-"$DW_{standing}$","BiomeTemperate conifer",-5.64,24.65,-0.23
-"$DW_{standing}$","BiomeBoreal conifer",-6.64,33.11,-0.2
-"$DW_{down}$","log10(stand.age)",6.03,2.38,2.53
-"$DW_{down}$","BiomeTropical broadleaf",-2.22,5.48,-0.41
-"$DW_{down}$","BiomeTemperate broadleaf",15.16,12,1.26
-"$DW_{down}$","BiomeTemperate conifer",45.18,6.77,6.67
-"$DW_{down}$","BiomeBoreal conifer",45.21,11.04,4.1
-"$DW_{down}$","log10(stand.age):BiomeTemperate broadleaf",-12.19,7.93,-1.54
-"$DW_{down}$","log10(stand.age):BiomeTemperate conifer",-16.97,3.89,-4.36
-"$DW_{down}$","log10(stand.age):BiomeBoreal conifer",-25.53,7.25,-3.52
-"$OL$","log10(stand.age)",0.58,1.05,0.55
-"$OL$","BiomeTropical broadleaf",3.24,3.42,0.95
-"$OL$","BiomeTemperate broadleaf",14.75,3.88,3.8
-"$OL$","BiomeTemperate conifer",1.49,3.23,0.46
-"$OL$","BiomeBoreal conifer",37.24,6.84,5.45
-"$OL$","log10(stand.age):BiomeTemperate broadleaf",-3.45,2.45,-1.41
-"$OL$","log10(stand.age):BiomeTemperate conifer",5.85,1.88,3.11
-"$OL$","log10(stand.age):BiomeBoreal conifer",1.34,4.57,0.29
+"$NEP$","log10(stand.age)","1.73","0.64","2.7"
+"$NEP$","BiomeTemperate broadleaf","-0.46","1.07","-0.43"
+"$NEP$","BiomeTemperate conifer","-1.53","0.67","-2.29"
+"$NEP$","BiomeBoreal conifer","0.52","1.07","0.49"
+"$NEP$","log10(stand.age):BiomeTemperate conifer","1.58","0.76","2.09"
+"$NEP$","log10(stand.age):BiomeBoreal conifer","-1.51","0.89","-1.7"
+"$GPP$","log10(stand.age)","3.4","2.1","1.62"
+"$GPP$","BiomeTemperate broadleaf","9.4","3.59","2.62"
+"$GPP$","BiomeTemperate conifer","9.49","1.91","4.98"
+"$GPP$","BiomeBoreal conifer","2.31","3.61","0.64"
+"$GPP$","log10(stand.age):BiomeTemperate conifer","1.25","2.37","0.53"
+"$GPP$","log10(stand.age):BiomeBoreal conifer","0.34","3","0.11"
+"$NPP$","log10(stand.age)","0.82","0.48","1.71"
+"$NPP$","BiomeTropical broadleaf","10.37","1.53","6.78"
+"$NPP$","BiomeTemperate broadleaf","5.62","0.96","5.84"
+"$NPP$","BiomeTemperate conifer","4.49","0.95","4.73"
+"$NPP$","BiomeBoreal conifer","2.35","1.2","1.95"
+"$ANPP$","log10(stand.age)","5.58","0.93","6.01"
+"$ANPP$","BiomeTropical broadleaf","-1.42","1.53","-0.92"
+"$ANPP$","BiomeTemperate broadleaf","2.28","0.98","2.34"
+"$ANPP$","BiomeTemperate conifer","1.72","0.91","1.89"
+"$ANPP$","BiomeBoreal conifer","0.9","1.21","0.74"
+"$ANPP$","log10(stand.age):BiomeTemperate broadleaf","-4.09","1.09","-3.75"
+"$ANPP$","log10(stand.age):BiomeTemperate conifer","-4.55","1.09","-4.19"
+"$ANPP$","log10(stand.age):BiomeBoreal conifer","-4.68","1.16","-4.04"
+"$ANPP_{woody}$","log10(stand.age)","2.96","3.89","0.76"
+"$ANPP_{woody}$","BiomeTemperate broadleaf","-2.34","6.94","-0.34"
+"$ANPP_{woody}$","BiomeTemperate conifer","-0.05","0.89","-0.06"
+"$ANPP_{woody}$","BiomeBoreal conifer","0.71","1.9","0.37"
+"$ANPP_{woody}$","log10(stand.age):BiomeTemperate conifer","-1.03","3.9","-0.26"
+"$ANPP_{woody}$","log10(stand.age):BiomeBoreal conifer","-2.36","4.04","-0.59"
+"$ANPP_{stem}$","log10(stand.age)","-0.03","0.8","-0.03"
+"$ANPP_{stem}$","BiomeTropical broadleaf","2.38","1.24","1.92"
+"$ANPP_{stem}$","BiomeTemperate broadleaf","2.86","0.66","4.33"
+"$ANPP_{stem}$","BiomeTemperate conifer","-0.83","0.75","-1.1"
+"$ANPP_{stem}$","BiomeBoreal conifer","-0.37","1.64","-0.23"
+"$ANPP_{stem}$","log10(stand.age):BiomeTemperate broadleaf","-0.03","0.9","-0.04"
+"$ANPP_{stem}$","log10(stand.age):BiomeTemperate conifer","2.28","0.93","2.45"
+"$ANPP_{stem}$","log10(stand.age):BiomeBoreal conifer","0.78","1.28","0.61"
+"$ANPP_{branch}$","log10(stand.age)","0.22","0.13","1.62"
+"$ANPP_{branch}$","BiomeTemperate broadleaf","0.31","0.29","1.07"
+"$ANPP_{branch}$","BiomeTemperate conifer","-0.02","0.23","-0.08"
+"$ANPP_{foliage}$","log10(stand.age)","1.33","0.16","8.4"
+"$ANPP_{foliage}$","BiomeTropical broadleaf","0.67","0.54","1.23"
+"$ANPP_{foliage}$","BiomeTemperate broadleaf","-0.14","0.32","-0.43"
+"$ANPP_{foliage}$","BiomeTemperate conifer","-0.48","0.3","-1.61"
+"$ANPP_{foliage}$","BiomeBoreal conifer","-1.52","0.38","-3.98"
+"$ANPP_{litterfall}$","log10(stand.age)","1.42","0.86","1.64"
+"$ANPP_{litterfall}$","BiomeTropical broadleaf","1.85","1.34","1.37"
+"$ANPP_{litterfall}$","BiomeTemperate broadleaf","-0.51","1.6","-0.32"
+"$ANPP_{repro}$","-","-","-","-"
+"$ANPP_{folivory}$","-","-","-","-"
+"$M_{woody}$","-","-","-","-"
+"$BNPP$","log10(stand.age)","0.84","0.25","3.41"
+"$BNPP$","BiomeTropical broadleaf","3.05","0.7","4.37"
+"$BNPP$","BiomeTemperate broadleaf","0.9","0.46","1.95"
+"$BNPP$","BiomeTemperate conifer","0.84","0.45","1.85"
+"$BNPP$","BiomeBoreal conifer","0.09","0.6","0.15"
+"$BNPP_{coarse}$","log10(stand.age)","0.09","0.09","1"
+"$BNPP_{coarse}$","BiomeTemperate broadleaf","0.31","0.16","1.99"
+"$BNPP_{coarse}$","BiomeTemperate conifer","0.59","0.15","3.92"
+"$BNPP_{coarse}$","BiomeBoreal conifer","0.09","0.18","0.5"
+"$BNPP_{fine}$ ","log10(stand.age)","0.9","0.24","3.77"
+"$BNPP_{fine}$ ","BiomeTropical broadleaf","3.24","0.54","5.97"
+"$BNPP_{fine}$ ","BiomeTemperate broadleaf","0.04","0.4","0.1"
+"$BNPP_{fine}$ ","BiomeTemperate conifer","0.21","0.39","0.54"
+"$BNPP_{fine}$ ","BiomeBoreal conifer","-0.06","0.51","-0.12"
+"$R_{eco}$","log10(stand.age)","2.47","1.29","1.91"
+"$R_{eco}$","BiomeTemperate broadleaf","7.89","2.22","3.55"
+"$R_{eco}$","BiomeTemperate conifer","10.94","1.16","9.47"
+"$R_{eco}$","BiomeBoreal conifer","4.24","2.18","1.95"
+"$R_{eco}$","log10(stand.age):BiomeTemperate conifer","-1.8","1.42","-1.26"
+"$R_{eco}$","log10(stand.age):BiomeBoreal conifer","-0.55","1.76","-0.31"
+"$R_{auto}$","-","-","-","-"
+"$R_{auto-ag}$","-","-","-","-"
+"$R_{root}$","log10(stand.age)","0.92","0.44","2.11"
+"$R_{root}$","BiomeTropical broadleaf","6.63","0.95","6.95"
+"$R_{root}$","BiomeTemperate broadleaf","2.44","0.78","3.13"
+"$R_{root}$","BiomeTemperate conifer","2.24","0.74","3.03"
+"$R_{root}$","BiomeBoreal conifer","0.04","1.01","0.04"
+"$R_{soil}$","log10(stand.age)","2.84","1.03","2.77"
+"$R_{soil}$","BiomeTropical broadleaf","10.11","1.31","7.71"
+"$R_{soil}$","BiomeTemperate broadleaf","7.23","0.73","9.85"
+"$R_{soil}$","BiomeTemperate conifer","8.93","0.62","14.34"
+"$R_{soil}$","BiomeBoreal conifer","4.56","1.17","3.89"
+"$R_{soil}$","log10(stand.age):BiomeTemperate broadleaf","-1.41","1.11","-1.27"
+"$R_{soil}$","log10(stand.age):BiomeTemperate conifer","-3.33","1.09","-3.06"
+"$R_{soil}$","log10(stand.age):BiomeBoreal conifer","-2.59","1.19","-2.17"
+"$R_{het-soil}$","log10(stand.age)","0.32","0.36","0.9"
+"$R_{het-soil}$","BiomeTropical broadleaf","5.45","0.69","7.95"
+"$R_{het-soil}$","BiomeTemperate broadleaf","3.92","0.63","6.25"
+"$R_{het-soil}$","BiomeTemperate conifer","3.73","0.58","6.44"
+"$R_{het-soil}$","BiomeBoreal conifer","2.51","0.77","3.28"
+"$B_{tot}$","log10(stand.age)","45.83","9.46","4.85"
+"$B_{tot}$","BiomeTropical broadleaf","-0.49","19.16","-0.03"
+"$B_{tot}$","BiomeTemperate broadleaf","2.83","35.92","0.08"
+"$B_{tot}$","BiomeTemperate conifer","-18.87","23.78","-0.79"
+"$B_{tot}$","BiomeBoreal conifer","-116.99","36.6","-3.2"
+"$B_{tot}$","log10(stand.age):BiomeTemperate broadleaf","17.12","22.24","0.77"
+"$B_{tot}$","log10(stand.age):BiomeTemperate conifer","24.21","16.52","1.47"
+"$B_{tot}$","log10(stand.age):BiomeBoreal conifer","52.7","21.34","2.47"
+"$B_{ag}$","log10(stand.age)","53.45","2.71","19.69"
+"$B_{ag}$","BiomeTropical broadleaf","-13.27","5.57","-2.38"
+"$B_{ag}$","BiomeTemperate broadleaf","-48.27","5.6","-8.62"
+"$B_{ag}$","BiomeTemperate conifer","-58.38","5.56","-10.51"
+"$B_{ag}$","BiomeBoreal conifer","-46.06","12.55","-3.67"
+"$B_{ag}$","log10(stand.age):BiomeTemperate broadleaf","11.42","4.29","2.66"
+"$B_{ag}$","log10(stand.age):BiomeTemperate conifer","13.66","4.31","3.17"
+"$B_{ag}$","log10(stand.age):BiomeBoreal conifer","-3.97","7.37","-0.54"
+"$B_{ag-wood}$","log10(stand.age)","43.04","19.12","2.25"
+"$B_{ag-wood}$","BiomeTropical broadleaf","-9.96","31.58","-0.32"
+"$B_{ag-wood}$","BiomeTemperate broadleaf","-49.19","40.47","-1.22"
+"$B_{ag-wood}$","BiomeTemperate conifer","-180.05","30.71","-5.86"
+"$B_{ag-wood}$","BiomeBoreal conifer","-89.11","62.5","-1.43"
+"$B_{ag-wood}$","log10(stand.age):BiomeTemperate broadleaf","37.51","32.42","1.16"
+"$B_{ag-wood}$","log10(stand.age):BiomeTemperate conifer","131.73","27.05","4.87"
+"$B_{ag-wood}$","log10(stand.age):BiomeBoreal conifer","29.8","39.34","0.76"
+"$B_{foliage}$","log10(stand.age)","2.42","0.34","7.23"
+"$B_{foliage}$","BiomeTropical broadleaf","1.45","0.81","1.79"
+"$B_{foliage}$","BiomeTemperate broadleaf","0.93","0.77","1.22"
+"$B_{foliage}$","BiomeTemperate conifer","-4.39","1.16","-3.77"
+"$B_{foliage}$","BiomeBoreal conifer","-2.1","2.04","-1.03"
+"$B_{foliage}$","log10(stand.age):BiomeTemperate broadleaf","-1.69","0.51","-3.31"
+"$B_{foliage}$","log10(stand.age):BiomeTemperate conifer","3.79","0.77","4.94"
+"$B_{foliage}$","log10(stand.age):BiomeBoreal conifer","0.12","1.12","0.11"
+"$B_{root}$","log10(stand.age)","10.72","1.11","9.62"
+"$B_{root}$","BiomeTropical broadleaf","-1.22","2.66","-0.46"
+"$B_{root}$","BiomeTemperate broadleaf","-6.25","1.95","-3.21"
+"$B_{root}$","BiomeTemperate conifer","-9.75","1.74","-5.61"
+"$B_{root}$","BiomeBoreal conifer","-10.91","4.19","-2.6"
+"$B_{root}$","log10(stand.age):BiomeTemperate broadleaf","1.33","1.62","0.82"
+"$B_{root}$","log10(stand.age):BiomeTemperate conifer","1.08","1.54","0.7"
+"$B_{root}$","log10(stand.age):BiomeBoreal conifer","2.08","2.56","0.81"
+"$B_{root-coarse}$","log10(stand.age)","9.76","5.25","1.86"
+"$B_{root-coarse}$","BiomeTropical broadleaf","-4.86","8.62","-0.56"
+"$B_{root-coarse}$","BiomeTemperate broadleaf","0.13","6.68","0.02"
+"$B_{root-coarse}$","BiomeTemperate conifer","-39.75","7.29","-5.45"
+"$B_{root-coarse}$","BiomeBoreal conifer","-20.38","12.4","-1.64"
+"$B_{root-coarse}$","log10(stand.age):BiomeTemperate broadleaf","-1.29","6.69","-0.19"
+"$B_{root-coarse}$","log10(stand.age):BiomeTemperate conifer","28.58","6.96","4.11"
+"$B_{root-coarse}$","log10(stand.age):BiomeBoreal conifer","5.93","8.08","0.73"
+"$B_{root-fine}$","log10(stand.age)","-0.07","0.19","-0.38"
+"$B_{root-fine}$","BiomeTropical broadleaf","2.8","2.44","1.15"
+"$B_{root-fine}$","BiomeTemperate broadleaf","2.67","1.11","2.41"
+"$B_{root-fine}$","BiomeTemperate conifer","2.72","1.12","2.43"
+"$B_{root-fine}$","BiomeBoreal conifer","10.63","2.69","3.96"
+"$DW_{tot}$","log10(stand.age)","2.9","0.95","3.04"
+"$DW_{tot}$","BiomeTropical broadleaf","1.69","2.78","0.61"
+"$DW_{tot}$","BiomeTemperate broadleaf","16.83","7.58","2.22"
+"$DW_{tot}$","log10(stand.age):BiomeTemperate broadleaf","-1.07","3.31","-0.32"
+"$DW_{standing}$","-","-","-","-"
+"$DW_{down}$","log10(stand.age)","6.03","2.38","2.53"
+"$DW_{down}$","BiomeTropical broadleaf","-2.22","5.48","-0.41"
+"$DW_{down}$","BiomeTemperate broadleaf","15.16","12","1.26"
+"$DW_{down}$","BiomeTemperate conifer","45.18","6.77","6.67"
+"$DW_{down}$","BiomeBoreal conifer","45.21","11.04","4.1"
+"$DW_{down}$","log10(stand.age):BiomeTemperate broadleaf","-12.19","7.93","-1.54"
+"$DW_{down}$","log10(stand.age):BiomeTemperate conifer","-16.97","3.89","-4.36"
+"$DW_{down}$","log10(stand.age):BiomeBoreal conifer","-25.53","7.25","-3.52"
+"$OL$","log10(stand.age)","0.58","1.05","0.55"
+"$OL$","BiomeTropical broadleaf","3.24","3.42","0.95"
+"$OL$","BiomeTemperate broadleaf","14.75","3.88","3.8"
+"$OL$","BiomeTemperate conifer","1.49","3.23","0.46"
+"$OL$","BiomeBoreal conifer","37.24","6.84","5.45"
+"$OL$","log10(stand.age):BiomeTemperate broadleaf","-3.45","2.45","-1.41"
+"$OL$","log10(stand.age):BiomeTemperate conifer","5.85","1.88","3.11"
+"$OL$","log10(stand.age):BiomeBoreal conifer","1.34","4.57","0.29"

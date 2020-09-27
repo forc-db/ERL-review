@@ -3,7 +3,7 @@
 "Boreal conifer","MATURE",691
 "Boreal Other","MATURE",53
 "Other broadleaf","MATURE",8
-"Other conifer","MATURE",42
+"Other conifer","MATURE",30
 "Other Other","MATURE",6
 "Temperate broadleaf","MATURE",1015
 "Temperate conifer","MATURE",878
@@ -14,8 +14,8 @@
 "Boreal broadleaf","YOUNG",420
 "Boreal conifer","YOUNG",1548
 "Boreal Other","YOUNG",335
-"Other broadleaf","YOUNG",142
-"Other conifer","YOUNG",89
+"Other broadleaf","YOUNG",129
+"Other conifer","YOUNG",68
 "Other Other","YOUNG",41
 "Temperate broadleaf","YOUNG",3662
 "Temperate conifer","YOUNG",3519
@@ -26,8 +26,8 @@
 "Boreal broadleaf",NA,9
 "Boreal conifer",NA,12
 "Boreal Other",NA,2
-"Other broadleaf",NA,14
-"Other conifer",NA,6
+"Other broadleaf",NA,3
+"Other conifer",NA,3
 "Other Other",NA,2
 "Temperate broadleaf",NA,250
 "Temperate conifer",NA,173
