@@ -68,13 +68,13 @@ table_pt <- read.csv("tables_figures/SI_age_trend_model_summaries.csv",
                      #col.names=c("NULL", "Parameter", "Estimate", "SE", "$t_{value}$"), 
                      stringsAsFactors = FALSE, check.names = FALSE)
 kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F, linesep = c('\\addlinespace'))%>%
-  pack_rows("NEP", 1, 5, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  pack_rows("GPP", 6, 10, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  pack_rows("NPP", 11, 15, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  pack_rows("ANPP", 16, 23, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  pack_rows("ANPP_woody", 24, 28, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  pack_rows("ANPP_stem", 29, 36, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  pack_rows("ANPP_branch", 37, 40, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("NEP", 1, 5, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("GPP", 6, 10, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("NPP", 11, 15, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("ANPP", 16, 23, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("ANPP_woody", 24, 28, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("ANPP_stem", 29, 36, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  #pack_rows("ANPP_branch", 37, 40, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
   kable_styling(latex_options =c("repeat_header"), protect_latex = T, font_size = 7)
 ```
 

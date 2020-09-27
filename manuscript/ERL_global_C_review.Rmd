@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -248,6 +248,7 @@ Climate zones (Fig. 1) were defined based on site geographic coordinates accordi
 Tropical climates were defined to include all equatorial (A) zones, temperate climates were defined to include all warm temperate (C) zones and warmer snow climates (Dsa, Dsb, Dwa, Dwb, Dfa, and Dfb), and boreal climates were defined to include the colder snow climates (Dsc, Dsd, Dwc, Dwd, Dfc, and Dfd).
 Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis.
 Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006].
+For young tropical forests imported from GROA but not yet classified by leaf type, we assumed that all were broadleaf, consistent with the rarity of naturally regenerating needleleaf forests in the tropics (**REF**).
 Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication).
 Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). We also excluded records of stand age = 0 year (`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age.
