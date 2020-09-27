@@ -260,7 +260,8 @@ This step was taken to avoid pseudo-replication and to combine any records from 
 
 To test for differences across mature forest biomes, the original values were analyzed via a linear mixed effects model ['lmer' function in 'lme4' R package version **x.xx**; **REF**] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
 When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
-*This analysis was run for variables with records for $\ge$7 distinct geographic areas in each biome, excluding any biomes that failed this criteria and dropping variable where less than two biomes met the criteria (Table 1).* **([issue 40](https://github.com/forc-db/ERL-review/issues/40)])**
+*This analysis was run for variables with records for $\ge$ 7 distinct geographic areas in each biome, excluding any biomes that failed this criteria and dropping variable where less than two biomes met the criteria (Table 1).* 
+**([issue 40](https://github.com/forc-db/ERL-review/issues/40)])**
 
 To test for age trends in young (<100yrs) forests, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept.
 When the effect of stand.age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome * stand.age interaction was included in the model.
@@ -312,11 +313,13 @@ For variables with records from $\ge$ 7 distinct geographic areas, these ensembl
 ```
 \elandscape
 
-**(The following covers only the variables with age trends figures; there maybe a few more without much age data)**
-With only ## exceptions, C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests (Table 1, Figs. 6, S1-S15).
-In this majority of cases, differences between tropical and boreal forests were always significant, with temperate forests intermediate and significantly different from one or both.
+**check this with final data (based on Table 1):**
+There were sufficient data to assess mature forest biome differences for **20** flux variables, and significant differences among biomes were detected for **14** variables (Table 1).
+With only **one** exception ($R_{auto}$, which had low sample size; **[issue 40](https://github.com/forc-db/ERL-review/issues/40)**), C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests (Table 1, Figs. 6, S1-S15).
+Differences between tropical and boreal forests were always significant, with temperate forests intermediate and significantly different from one or both.
 Fluxes tended to be numerically greater in temperate broadleaf than conifer forests, but the difference was never statistically significant.
-This pattern held for the following variables: ** $GPP$, $NPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{stem}$, $ANPP_{foliage}$, $ANPP_{litterfall}$, $BNPP$, $BNPP_fine$, $R_{eco}$, $R_{root}$, $R_{soil}$, and $R_{het-soil}$**.  
+This pattern held for the following variables: ** $GPP$, $NPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{stem}$,$ANPP_{branch}$, $ANPP_{foliage}$, $ANPP_{litterfall}$, $M_{woody}$, $BNPP$, $R_{eco}$, $R_{soil}$, and $R_{het-soil}$**. 
+For variables without significant differences among biomes, the same general trends applied.
 
 The most notable exception to this pattern was $NEP$, with no significant differences across biomes but with the largest average in temperate broadleaf forests, followed by temperate conifer, boreal, and tropical forests (Figs. 5,S1).
 Another exception was for $BNPP_{root-coarse}$, where all records came from high-biomass forests in the US Pacific Northwest, resulting in high values for the temperate conifer biome and no significant differences across biomes (Fig. S10).  
@@ -328,10 +331,12 @@ Thus, C cycling rates generally decreased from tropical to temperate to boreal f
   knitr::include_graphics("tables_figures/Flux_age_trends.png")
 ```
 
-There were fewer distinct trends in C stocks across biomes (Figs. 7, S16-S26).
-Specifically, there were significant differences for only **##** of **##** variables: **LIST**.
-In all of these cases, temperate conifer forests were in the highest significance grouping, and boreal forests in the lowest.
-Tropical and temperate broadleaf forests fell in between--most commonly being significantly different from temperate conifer but not boreal forests.
+**check this with final data (based on Table 1):**
+There were sufficient data to assess mature forest biome differences for **9** stock variables, and significant differences among biomes were detected for **6** variables (**$B_{tot}$, $B_{ag}$, $B_{ag-wood}$, $B_{foliage}$, $B_{root-coarse}$, $DW_{tot}$**; Table 1).
+C stocks had less consistent patterns across biomes (Figs. 7, S16-S26).
+In **four of the six** cases (**$B_{tot}$, $B_{ag-wood}$,  $B_{root-coarse}$, $DW_{tot}$**), temperate conifer forests were in the highest significance grouping, and boreal forests in the lowest, with tropical and temperate broadleaf forests  in between--most commonly being significantly different from temperate conifer but not boreal forests.
+For $B_{ag}$, which had by far the highest sample size, tropical forests exceeded temperate conifer forests (but not significantly). 
+For $B_{foliage}$,temperate broadleaf forests were lowest (again, not significantly).
 Once again, the high values for the temperate conifer biome were driven by the very high-biomass forests of the US Pacific Northwest, which are disproportionately represented in the current version of ForC.
 Thus, biome differences should be interpreted more as driven more by geographic distribution of sampling than by true differences.
 
