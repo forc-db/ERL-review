@@ -35,9 +35,27 @@ Replicate measurements (*i.e.*, replicates from within a single study) were aver
 
 \newpage
 
-## Table S#(variable mapping)) 
-
-[this table](https://github.com/forc-db/ForC/blob/master/figures/C_cycle_diagrams/ForC_variables_mapping_for_C_cycle_diagrams.csv))
+## Table S1. Numbers of records by biome and age class
+```{r eval = TRUE, echo=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+table <- read.csv("tables_figures/Biomes_n_records_variables_of_interest.csv",stringsAsFactors = FALSE, check.names = FALSE)
+table_noAgeNA <- subset(table, Age != 'NA') # remove records with age unknown
+table_wide <- reshape(table_noAgeNA, idvar = "Biome", timevar = "Age", direction = "wide")
+colnames(table_wide)[2] <- "Mature"
+colnames(table_wide)[3] <- "Young"
+kable(table_wide, format = "latex", booktabs = TRUE, escape = F)%>%
+  add_header_above(c(" ", "n records" = 2)) %>%
+  pack_rows("Boreal climate zones", 1, 3, latex_gap_space = "1em", colnum = 3, hline_before = FALSE) %>%
+  pack_rows("Excluded climate zones", 4, 6, latex_gap_space = "1em", colnum = 3, hline_before = FALSE) %>%
+  pack_rows("Temperate climate zones", 7, 9, latex_gap_space = "1em", colnum = 3, hline_before = FALSE) %>%
+  pack_rows("Tropical climate zones", 10, 12, latex_gap_space = "1em", colnum = 3, hline_before = FALSE) %>%
+  row_spec(2, bold = T) %>%
+  row_spec(7:8, bold = T) %>%
+  row_spec(10, bold = T) %>%
+  kable_styling( protect_latex = T, font_size = 10)
+```
+Sample sizes refer to data set after merging of duplicates, removal of stands with no age or history data, and removal of managed and disturbed stands. For vegetation type, "Other" refers to stands that are mixed broadleaf/ conifer or that have not been classified. Focal biomes are indicated in bold. 
 
 \newpage
 ## Table S2. Model parameter estimates for age trends and biome differences in young forests
