@@ -260,7 +260,7 @@ This step was taken to avoid pseudo-replication and to combine any records from 
 
 To test for differences across mature forest biomes, the original values were analyzed via a linear mixed effects model ['lmer' function in 'lme4' R package version **x.xx**; **REF**] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
 When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
-There were enough data to run this analysis for all focal variables but **$R_{auto-ag}$ and $DW_{down}$**.
+*This analysis was run for variables with records for $\ge$7 distinct geographic areas in each biome, excluding any biomes that failed this criteria and dropping variable where less than two biomes met the criteria (Table 1).* **([issue 40](https://github.com/forc-db/ERL-review/issues/40)])**
 
 To test for age trends in young (<100yrs) forests, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept.
 When the effect of stand.age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome * stand.age interaction was included in the model.
@@ -278,33 +278,35 @@ Of the `r nrow(ForC_measurements)` records in ForC v3.0, `r n_records` met the c
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas.
 Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
 For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
+**([issue 29](https://github.com/forc-db/ERL-review/issues/29#issuecomment-699633801))**
 
 ### C cycling in mature forests
 
-Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5 (and available in tabular format in the ForC release accompanying this publication).
+Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5 (and available in tabular format in the ForC release accompanying this publication:  `ForC/numbers_and_facts/ForC_variable_averages_per_Biome.csv`).
 
 For variables with records from $\ge$ 7 distinct geographic areas, these ensemble C budgets were generally consistent.
-That is, component fluxes and stocks summed to within one standard deviation of more inclusive fluxes in all but two instances, both for living C stocks in temperate conifer forests (Fig. 5). **(check this with final results: https://github.com/forc-db/ForC/blob/master/numbers_and_facts/C_cycle_closure.csv) **
-Within this biome, $B_{ag}<B_{ag-wood}+B_{foliage}$ and $B_{root}<B_{root-coarse}+B_{root-fine}$ because $B_{ag-wood}$ and $B_{root-coarse}$ were very high, with strongly disproportionate numbers of records from the high-biomass forests of the US Pacific Northwest (Figs. S18, S21).
+*That is, component fluxes and stocks summed to within one standard deviation of more inclusive fluxes in all but* **two** *instances, both in temperate conifer forests (Fig. 5).* 
+**(check this with final results: https://github.com/forc-db/ForC/blob/master/numbers_and_facts/C_cycle_closure.csv) ** 
+*Within this biome, $B_{ag}<B_{ag-wood}+B_{foliage}$ and $B_{root}<B_{root-coarse}+B_{root-fine}$ because $B_{ag-wood}$ and $B_{root-coarse}$ were very high, with strongly disproportionate numbers of records from the high-biomass forests of the US Pacific Northwest (Figs. S18, S21).*
 
 
 \blandscape
-```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | C cycle diagram for mature tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux.", out.width='100%', fig.pos='H'}
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | C cycle diagram for mature tropical broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Tropical broadleaf MATURE.png"))
 ```
 
-```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature temperate broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux.", out.width='100%', fig.pos='H'}
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature temperate broadleaf forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Temperate broadleaf MATURE.png"))
 ```
 
-```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 4 | C cycle diagram for mature temperate conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux.", out.width='100%', fig.pos='H'}
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 4 | C cycle diagram for mature temperate conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Temperate conifer MATURE.png"))
 ```
 
-```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 5 | C cycle diagram for mature boreal conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux.", out.width='100%', fig.pos='H'}
+```{r echo=FALSE, fig.align = "center", fig.cap = "Figure 5 | C cycle diagram for mature boreal conifer forests. All units are Mg C ha$^{-1}$ yr$^{-1}$ (fluxes) or Mg C ha$^{-1}$ (stocks), presented as mean ± std, where geographically distinct areas are treated as the unit of replication.  Arrows indicate fluxes, boxes indicate stocks. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. Arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics(paste0(path_to_ForC, "figures/C_cycle_diagrams/Diagrams/Boreal conifer MATURE.png"))
 ```
@@ -433,9 +435,9 @@ For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and
 For C is the best source for most of the subsidiary fluxes: NPP, woody mortality...
 
 
-The C cycle budgets for mature forests (Figs. 2-5) generally "close"--that is, the sums of component variables do not differ significantly from the larger fluxes.
+The C cycle budgets for mature forests (Figs. 2-5) generally "close"--that is, the sums of component variables do not differ from the larger fluxes by more than one standard deviation.
 However, standard deviations are often large, reflective of significant within-biome variation. This makes the standard for closure relatively loose.
-Lack of closure, in the few instances where it occurs, is probably more reflective of differences in the representation of forest types (e.g., disproportionate representation of US Pacific NW for aboveground woody biomass relative to AGB; Fig. 4) than of methodological accuracy.
+*Lack of closure, in the few instances where it occurs, is probably more reflective of differences in the representation of forest types (e.g., disproportionate representation of US Pacific NW for aboveground woody biomass relative to AGB; Fig. 4) than of methodological accuracy.*
 Thus, overall, a high degree of closure implies that ForC gives a consistent picture of C cycling within biomes.
 While these means are unlikely to be accurate representations of C cycling within any particular forest, they provide a useful baseline for comparison, always keeping in mind that sample means do not necessarily represent the true mean of the entire biome.
 
