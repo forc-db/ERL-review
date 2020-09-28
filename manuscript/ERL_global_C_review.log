@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  27 SEP 2020 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  28 SEP 2020 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -872,14 +872,14 @@ LaTeX Warning: Text page 7 contains only floats.
 
 [7] [8]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Tropical broadleaf MATURE.png, id=93, 602.25pt x 481.8pt>
+grams/Diagrams/Tropical broadleaf MATURE.png, id=92, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Tropical broadleaf MATURE.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Tropical broadleaf MATURE.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Tropical broadleaf MATURE.png  used on i
-nput line 558.
+nput line 557.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 [9
 
@@ -889,14 +889,14 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [10 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Tropical broadleaf MATURE.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate broadleaf MATURE.png, id=105, 602.25pt x 481.8pt>
+grams/Diagrams/Temperate broadleaf MATURE.png, id=104, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Temperate broadleaf MATURE.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate broadleaf MATURE.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Temperate broadleaf MATURE.png  used on 
-input line 567.
+input line 566.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (48.05647pt too high) has occurred while \output is active []
@@ -904,14 +904,14 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [11 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate broadleaf MATURE.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate conifer MATURE.png, id=111, 602.25pt x 481.8pt>
+grams/Diagrams/Temperate conifer MATURE.png, id=110, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Temperate conifer MATURE.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate conifer MATURE.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Temperate conifer MATURE.png  used on in
-put line 576.
+put line 575.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (48.05647pt too high) has occurred while \output is active []
@@ -919,45 +919,55 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [12 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate conifer MATURE.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Boreal conifer MATURE.png, id=117, 602.25pt x 481.8pt>
+grams/Diagrams/Boreal conifer MATURE.png, id=116, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Boreal conifer MATURE.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Boreal conifer MATURE.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Boreal conifer MATURE.png  used on input
- line 585.
+ line 584.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.55647pt too high) has occurred while \output is active []
 
 [13 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Boreal conifer MATURE.png (PNG copy)>]
-<tables_figures/Flux_age_trends.png, id=125, 722.7pt x 650.43pt>
-File: tables_figures/Flux_age_trends.png Graphic file (type png)
-<use tables_figures/Flux_age_trends.png>
-Package pdftex.def Info: tables_figures/Flux_age_trends.png  used on input line
- 625.
+</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/
+for_ERL_review/Flux_age_trends.png, id=124, 722.7pt x 650.43pt>
+File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tr
+ends/for_ERL_review/Flux_age_trends.png Graphic file (type png)
+<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
+nds/for_ERL_review/Flux_age_trends.png>
+Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
+ForC/figures/age_trends/for_ERL_review/Flux_age_trends.png  used on input line 
+624.
 (pdftex.def)             Requested size: 469.76045pt x 422.78441pt.
 [14
 
-] [15 <./tables_figures/Flux_age_trends.png (PNG copy)>]
-<tables_figures/Stock_age_trends.png, id=136, 722.7pt x 650.43pt>
-File: tables_figures/Stock_age_trends.png Graphic file (type png)
-<use tables_figures/Stock_age_trends.png>
-Package pdftex.def Info: tables_figures/Stock_age_trends.png  used on input lin
-e 655.
+] [15 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_t
+rends/for_ERL_review/Flux_age_trends.png (PNG copy)>]
+</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/
+for_ERL_review/Stock_age_trends.png, id=135, 722.7pt x 650.43pt>
+File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tr
+ends/for_ERL_review/Stock_age_trends.png Graphic file (type png)
+<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
+nds/for_ERL_review/Stock_age_trends.png>
+Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
+ForC/figures/age_trends/for_ERL_review/Stock_age_trends.png  used on input line
+ 654.
 (pdftex.def)             Requested size: 469.76045pt x 422.78441pt.
-[16 <./tables_figures/Stock_age_trends.png (PNG copy)>] [17]
+[16 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
+nds/for_ERL_review/Stock_age_trends.png (PNG copy)>] [17]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Tropical broadleaf YOUNG.png, id=148, 602.25pt x 481.8pt>
+grams/Diagrams/Tropical broadleaf YOUNG.png, id=147, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Tropical broadleaf YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Tropical broadleaf YOUNG.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Tropical broadleaf YOUNG.png  used on in
-put line 721.
+put line 720.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 [18
 
@@ -967,14 +977,14 @@ Overfull \vbox (38.51645pt too high) has occurred while \output is active []
 [19 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Tropical broadleaf YOUNG.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate broadleaf YOUNG.png, id=160, 602.25pt x 481.8pt>
+grams/Diagrams/Temperate broadleaf YOUNG.png, id=159, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Temperate broadleaf YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate broadleaf YOUNG.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Temperate broadleaf YOUNG.png  used on i
-nput line 730.
+nput line 729.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.51645pt too high) has occurred while \output is active []
@@ -982,14 +992,14 @@ Overfull \vbox (38.51645pt too high) has occurred while \output is active []
 [20 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate broadleaf YOUNG.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate conifer YOUNG.png, id=166, 602.25pt x 481.8pt>
+grams/Diagrams/Temperate conifer YOUNG.png, id=165, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Temperate conifer YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate conifer YOUNG.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Temperate conifer YOUNG.png  used on inp
-ut line 739.
+ut line 738.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.51645pt too high) has occurred while \output is active []
@@ -997,14 +1007,14 @@ Overfull \vbox (38.51645pt too high) has occurred while \output is active []
 [21 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate conifer YOUNG.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Boreal conifer YOUNG.png, id=172, 602.25pt x 481.8pt>
+grams/Diagrams/Boreal conifer YOUNG.png, id=171, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Boreal conifer YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Boreal conifer YOUNG.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/C_cycle_diagrams/Diagrams/Boreal conifer YOUNG.png  used on input 
-line 748.
+line 747.
 (pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
 
 Overfull \vbox (38.51645pt too high) has occurred while \output is active []
@@ -1013,21 +1023,21 @@ Overfull \vbox (38.51645pt too high) has occurred while \output is active []
 _diagrams/Diagrams/Boreal conifer YOUNG.png (PNG copy)>] [23
 
 ] [24] [25] [26] [27] [28] [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1293.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1292.
 [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1292.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1293.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1293.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1292.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1292.
  ) 
 Here is how much of TeX's memory you used:
- 16143 strings out of 492616
- 243096 string characters out of 6129482
- 405012 words of memory out of 5000000
+ 16145 strings out of 492616
+ 243740 string characters out of 6129482
+ 405380 words of memory out of 5000000
  19546 multiletter control sequences out of 15000+600000
- 69627 words of font info for 122 fonts, out of 8000000 for 9000
+ 69711 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,41p,896b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,14n,41p,1080b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-d
@@ -1049,10 +1059,10 @@ c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (30 pages, 24377349 bytes).
+Output written on ERL_global_C_review.pdf (30 pages, 24461809 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
+ 449 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
  117 named destinations out of 1000 (max. 500000)
  14520 words of extra memory for PDF output out of 17280 (max. 10000000)
 
