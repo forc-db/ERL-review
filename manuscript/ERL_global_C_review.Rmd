@@ -227,11 +227,14 @@ We retained sites that were grazed or had undergone low severity natural disturb
 We removed all plots for which no stand history information had been retrieved (`r round(n_no_history/nrow(ForC_simplified)*100,digits=1)`%).
 In total, this resulted in `r records_eligible_for_inclusion` records (`r round(records_eligible_for_inclusion/nrow(ForC_measurements)*100,digits=1)`% of the records in the database) being eligible for inclusion in the analysis.
 
-We selected 23 annual flux and 11 C stock variables for inclusion in the analysis, although two flux variables ($R_{het-ag}$ and $R_{het}$) were included for conceptual completeness but had no records in *ForC* (Table 1).
+We selected 23 annual flux and 11 C stock variables for inclusion in the analysis.
+These different flux and stock variables (Table 1) represent different pools (e.g., aboveground biomass, dead wood, ecosystem total) and levels of combination (e.g., total aboveground net primary productivity ($ANPP$) versus the ANPP of individual elements such as foliage, roots, and branches. 
+Note that two flux variables, aboveground heterotropic ($R_{het-ag}$) and total ($R_{het}$) respiration, were included for conceptual completeness but had no records in *ForC* (Table 1).
 Records for these variables represented `r round(n_focal_variable_records_eligible_for_inclusion/records_eligible_for_inclusion*100,digits=1)`% of the total records eligible for inclusion.
-For this analysis, we combined some of ForC’s specific variables (*e.g.*, multiple variables for net primary productivity including various components) into more broadly defined variables. Specifically, net ecosystem exchange (measured by eddy-covariance; **FLUXNET REF**) and biometric estimates of $NEP$ were combined into the single variable $NEP$ (Table 1).
+For this analysis, we combined some of ForC’s specific variables (*e.g.*, multiple variables for net primary productivity, such as measurements including or excluding fruit and flower production and herbivory) into more broadly defined variables. 
+Specifically, net ecosystem exchange (measured by eddy-covariance; **FLUXNET REF**) and biometric estimates of $NEP$ were combined into the single variable $NEP$ (Table 1).
 Furthermore, for $NPP$, $ANPP$, and $ANPP_{litterfall}$, *ForC* variables specifying inclusion of different components were combined.
-Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), the minimum threshold for tree census was $\le$ 10cm. 
+Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), the minimum diameter breast height (DBH) threshold for tree census was $\le$ 10cm. 
 All records were measured directly or derived from field measurements (as opposed to modeled).
 
 ```{r eval = TRUE, echo=FALSE, warning=FALSE}
@@ -254,30 +257,32 @@ kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. Carbon cycle va
 kableExtra::footnote(symbol = c("Tr: Tropical, TeB: Temperate Broadleaf, TeN: Temperate Needleleaf, B: Boreal, n.s.: no significant differences", "+ or -: significant positive or negative trend, xB: significant age x biome interaction, n.s.: no significant age trend"), footnote_as_chunk = FALSE)
 ```
 
-For this analysis, we grouped forests into four broad biome types (tropical broadleaf, temperate broadleaf, temperate needleleaf, and boreal needleleaf) and two age classifications (young and mature).
+For this analysis, we grouped forests into four broad biome types based on climate zones and dominant vegetation type (tropical broadleaf, temperate broadleaf, temperate needleleaf, and boreal needleleaf) and two age classifications (young and mature).
 Climate zones (Fig. 1) were defined based on site geographic coordinates according to Köppen-Geiger zones (Rubel and Kottek 2010).
-Tropical climates were defined to include all equatorial (A) zones, temperate climates were defined to include all warm temperate (C) zones and warmer snow climates (Dsa, Dsb, Dwa, Dwb, Dfa, and Dfb), and boreal climates were defined to include the colder snow climates (Dsc, Dsd, Dwc, Dwd, Dfc, and Dfd).
+We defined the tropical biome as including all equatorial (A) zones, temperate biomes as including all warm temperate (C) zones and warmer snow climates (Dsa, Dsb, Dwa, Dwb, Dfa, and Dfb), and the boreal biome as including the colder snow climates (Dsc, Dsd, Dwc, Dwd, Dfc, and Dfd).
 Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis.
-Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006].
+We defined leaf type (broadleaf / needleleaf) was based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006].
 For young tropical forests imported from *GROA* but not yet classified by leaf type, we assumed that all were broadleaf, consistent with the rarity of naturally regenerating needleleaf forests in the tropics (**REF**).
-Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication).
-Assigning stands to these groupings required the exclusion of records for which *ForC* lacked records of stand age (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). We also excluded records of stand age = 0 year (`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
+We also classified forests as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication).
+Assigning stands to these groupings required the exclusion of records for which *ForC* lacked geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database) or records of stand age (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database). 
+We also excluded records of stand age = 0 year (`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age.
 Numbers of records by biome and age class are given in Table S1. 
 
-Data were summarized to produce schematics of C cycling across the eight biome - age group combinations identified above.
+Data were summarized to produce schematics of C cycling across the eight biome by age group combinations identified above.
 To obtain the values reported in the C cycle schematics, we first averaged any repeated measurements within a plot.
 Values were then averaged across plots clustered within 25 km of one another [*sensu* @anderson-teixeira_forc_2018], weighting by area sampled if available for all records.
 This step was taken to avoid pseudo-replication and to combine any records from sites with more than one name in ForC.
 
-To test for differences across mature forest biomes, the original values were analyzed via a linear mixed effects model ['lmer' function in 'lme4' R package version **x.xx**; **REF**] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
+To test for differences across mature forest biomes, we also examined how stand age impacted fluxes and stocks, employing a mixed effects model ['lmer' function in 'lme4' R package version **x.xx**; **REF**] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
 When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
 This analysis was run for variables with records for at least seven distinct geographic areas in more than one biome, excluding any biomes that failed this criteria (Table 1). 
 
 To test for age trends in young (<100yrs) forests, we employed a mixed effects model with biome and log10[stand.age] as fixed effects and plot nested within geographic.area as a random effect on the intercept.
 This analysis was run for variables with records for at least three distinct geographic areas in more than one biome, excluding any biomes that failed this criteria (Table 1). 
-When the effect of stand age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome * stand.age interaction was included in the model.
-All database manipulation, analyses, and figure production were fully automated in R (**version, citation**).
+When the effect of stand age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome $\times$ stand.age interaction was included in the model.
+
+To facilitate the accessibility of our results and data, and to allow for rapid updates as additional data become available, we have automated all database manipulation, analyses, and figure production in R (**version, citation**).
 
 ## Review Results/ Synthesis
 ```{r eval=FALSE, echo=FALSE}
