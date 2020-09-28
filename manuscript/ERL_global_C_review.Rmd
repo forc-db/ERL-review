@@ -106,11 +106,15 @@ n_areas_tot <- global_counts$n_areas #total numbers of areas used in the analysi
 #numbers of variables with records from ≥7 geographic areas, by biomes/ age class:
 ForC_biome_averages <- read.csv(paste0(path_to_ForC, "numbers_and_facts/ForC_variable_averages_per_Biome.csv"), stringsAsFactors = F)
 
-idx_fluxes <- ForC_biome_averages$n.areas >= 7 & ForC_biome_averages$variable.type %in% "flux"
-idx_stocks <- ForC_biome_averages$n.areas >= 7 & ForC_biome_averages$variable.type %in% "stock"
+idx_fluxes7 <- ForC_biome_averages$n.areas >= 7 & ForC_biome_averages$variable.type %in% "flux"
+idx_stocks7 <- ForC_biome_averages$n.areas >= 7 & ForC_biome_averages$variable.type %in% "stock"
+idx_fluxes3 <- ForC_biome_averages$n.areas >= 3 & ForC_biome_averages$variable.type %in% "flux"
+idx_stocks3 <- ForC_biome_averages$n.areas >= 3 & ForC_biome_averages$variable.type %in% "stock"
 
-n_fluxes_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_fluxes])
-n_stocks_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_stocks])
+n_fluxes_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_fluxes7])  
+n_stocks_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_stocks7])  
+n_fluxes_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_fluxes3])  
+n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])  
 ```
 
 
@@ -291,11 +295,10 @@ To facilitate the accessibility of our results and data, and to allow for rapid 
 
 ### Data Coverage
 
-Of the `r nrow(ForC_measurements)` records in *ForC* v3.0, `r n_records` met the criteria for inclusion in this study (Fig. 1).
+Of the `r nrow(ForC_measurements)` records in *ForC* v3.0, `r n_records` met our strict criteria for inclusion in this study (Fig. 1).
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas.
-Of the 23 flux and 11 stock variables mapped in these diagrams, *ForC* contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
-For regrowth forests (<100 yrs), *ForC* contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
-**([issue 29](https://github.com/forc-db/ERL-review/issues/29#issuecomment-699633801))**
+Of the 23 flux and 11 stock variables mapped in these diagrams, *ForC* contained sufficient mature forest data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ 7 distinct geographic areas) for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
+For regrowth forests (<100 yrs), *ForC* contained sufficient data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ **3** distinct geographic areas) for `r n_fluxes_with_ge3_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge3_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
 
 ### C cycling in mature forests
 
