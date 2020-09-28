@@ -117,7 +117,7 @@ n_stocks_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_stocks])
 
 *NOTES TO COAUTHORS: *
 
-- We're still finalizing the data (and adding some data). Outliers in plots will all be checked/ resolved, and we'll be able to pull in more data (GROA needs classification by dominant vegetation before it can be pulled in, and we're working on that)
+- We're still finalizing the data (and adding some data). Outliers in plots will all be checked/ resolved, and we'll be able to pull in more data (*GROA* needs classification by dominant vegetation before it can be pulled in, and we're working on that)
 - "**???**" indicates a reference that we have entered in the .Rmd file, but not yet in the bibliography file. Don't worry about those. (However, places with "REF" need references)
 - bold/ italic text indicates places where I know we need to go back and revisit/ fill in info
 
@@ -129,11 +129,11 @@ n_stocks_with_ge7_areas <- table(ForC_biome_averages$Biome[idx_stocks])
 ```
 
 
-*Background.* Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO2) and climate by their impact  on the global carbon (C) cycle. However, efforts to incorporate forests into climate models and CO2 accounting frameworks have been constrained by a lack of accessible, global-scale data on how C cycling varies across forest types and stand ages. 
+*Background.* Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate by their impact  on the global carbon (C) cycle. However, efforts to incorporate forests into climate models and CO2 accounting frameworks have been constrained by a lack of accessible, global-scale data on how C cycling varies across forest types and stand ages. 
 
-*Methods/Design.* Here, we draw from the Global Forest Carbon Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we use `r n_records` ForC records from `r n_areas_tot` geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
+*Methods/Design.* Here, we draw from the Global Forest Carbon Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we use `r n_records` *ForC* records from `r n_areas_tot` geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
 
-*Review Results/ Synthesis.*  ForC v3.0 yielded a fairly comprehensive picture of C cycling in the world's major forest biomes, with broad closure of C budgets. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, *and the rate of increase again tended to increase from boreal to tropical regions*.
+*Review Results/ Synthesis.*  *ForC v3.0* yielded a fairly comprehensive picture of C cycling in the world's major forest biomes, with broad closure of C budgets. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age, *and the rate of increase again tended to increase from boreal to tropical regions*.
 
 *Discussion.*  **NEED TO WRITE THIS!!!**
 
@@ -173,19 +173,19 @@ The result of decades of research on forest C cycling is that tens of thousands 
 In this format, the data are effectively inaccessible for many global-scale analyses, including those attempting to benchmark model performance with global data (Clark et al 2017, Luo et al 2012), quantify the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], or use book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; **REFS**].
 Scattered data are not conducive for advancing science nor for making decisions about how to best manage our forests as a tool for constraining the climate crisis.
 
-To address the need for global-scale analyses of forest C cycling, we recently developed ForC [@anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018].
-ForC contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with the different variables capturing the unique ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
-These data are ground-based measurements, and ForC contains associated data required for interpretation (*e.g.*, stand history, measurement methods).
+To address the need for global-scale analyses of forest C cycling, we recently developed *ForC* [@anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018].
+*ForC* contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with the different variables capturing the unique ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
+These data are ground-based measurements, and *ForC* contains associated data required for interpretation (*e.g.*, stand history, measurement methods).
 These data have been amalgamated from original peer-reviewed publications, either directly or via intermediary data compilations.
-Since the its most recent publication [@anderson-teixeira_forc_2018], ForC has grown to include two additional large databases: the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020] that also synthesized published forest C data.
-Following these additions, ForC currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones.
+Since the its most recent publication [@anderson-teixeira_forc_2018], *ForC* has grown to include two additional large databases: the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020] that also synthesized published forest C data.
+Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones.
 This represents an `r round((nrow(ForC_measurements) - 17367)/17367*100, digits=0)`% increase in records from the prior publication [@anderson-teixeira_forc_2018].
 
-Here, we analyze the more extensive ForC data (Fig. 1) to provide a robust overview of stand-level carbon cycling of the world’s major forest biomes and how it varies with stand age.
+Here, we analyze the more extensive *ForC* data (Fig. 1) to provide a robust overview of stand-level carbon cycling of the world’s major forest biomes and how it varies with stand age.
 Our primary goal is to provide a data-driven summary of our current state of knowledge on broad trends in forest C cycling. 
 Specifically, we address three broad questions:
 
-1. How thoroughly can we represent C budgets for each of the world's major forest biomes (*i.e.*, tropical, temperate broadleaf and deciduous, boreal) based on the current ForC data?
+1. How thoroughly can we represent C budgets for each of the world's major forest biomes (*i.e.*, tropical, temperate broadleaf and deciduous, boreal) based on the current *ForC* data?
 
 2. How do C cycling vary across the world's major forest biomes?
 
@@ -205,32 +205,32 @@ While components of these questions have been previously addressed [@luyssaert_c
 ```
 
 
-This review synthesizes data from the ForC database [Fig. 1; https://github.com/forc-db/ForC; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018].
-ForC amalgamates numerous intermediary data sets (*e.g.*, **REFS**) and original studies.
+This review synthesizes data from the *ForC* database [Fig. 1; https://github.com/forc-db/ForC; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018].
+*ForC* amalgamates numerous intermediary data sets [*e.g.*, @luyssaert_co2_2007; @bond-lamberty_global_2010; @cook-patton_mapping_2020] and original studies.
 Original publications were referenced to check values and obtain information not contained in intermediary data sets, although this process has not been completed for all records.
 The database was developed with goals of understanding how C cycling in forests varies across broad geographic scales and as a function of stand age.
 As such, there has been a focus on incorporating data from regrowth forests (*e.g.*, Anderson et al 2006, Martin et al 2013, Bonner et al 2013) and obtaining stand age data when possible [83% of records in v.2.0; @anderson-teixeira_forc_2018].
-Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016].
-Since publication of ForC v.2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [SRDB v.##, `r n_SRDB` records; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [GROA v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020].
+Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], which represented roughly one-third of records in *ForC* v.2.0* [@anderson-teixeira_forc_2018].
+Since publication of ForC v.2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [*SRDB* v.##, `r n_SRDB` records; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [*GROA* v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020].
 We've also added data from individual publications (detailed list at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv), with a particular focus on productivity [@banbury_morgan_global_nodate; e.g., @taylor_temperature_2017], dead wood, and ForestGEO sites [e.g., @lutz_global_2018, @johnson_climate_2018].
 We note that there remains a significant amount of relevant data that is not yet included in ForC, particularly biomass data from national forest inventories (*e.g.*,: **REFS**).
 The database version used for this analysis has been tagged as a new release on Github (**XX**) and assigned a DOI through Zenodo (DOI: TBD).
 
-Analyses drew from ForC-simplified (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which is a rearrangement of ForC intended to facilitate analyses.
-In generating ForC-simplified, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ (IPCC 2006).
+To facilitate analyses, we created a simplified version of ForC, *ForC-simplified* (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which we analyzed here.
+In generating *ForC-simplified*, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ (IPCC 2006).
 Duplicate or otherwise conflicting records were reconciled as described in *APPENDIX S1*, resulting in a total of `r nrow(ForC_simplified)` records (`r round(nrow(ForC_simplified)/nrow(ForC_measurements)*100,digits=1)`% size of total database).
 Records were filtered to remove plots that had undergone significant anthropogenic management or major disturbance since the most recent stand initiation event.
 Specifically, we removed all plots flagged as managed in ForC-simplified (`r round(n_managed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%).
 This included plots with any record of managements manipulating CO~2~, temperature, hydrology, nutrients, or biota, as well as any plots whose site or plot name contained the terms “plantation”, "planted", “managed”, “irrigated”, or “fertilized”.
-Plots flagged as disturbed in ForC-simplified (`r round(n_disturbed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%) included stands that had undergone anthropogenic thinning or partial harvest unless this was very minor.
+Plots flagged as disturbed in ForC-simplified (`r round(n_disturbed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%) included stands that had undergone any notable anthropogenic thinning or partial harvest.
 We retained sites that were grazed or had undergone low severity natural disturbances (<10% mortality) including droughts, major storms, fires, and floods.
 We removed all plots for which no stand history information had been retrieved (`r round(n_no_history/nrow(ForC_simplified)*100,digits=1)`%).
 In total, this resulted in `r records_eligible_for_inclusion` records (`r round(records_eligible_for_inclusion/nrow(ForC_measurements)*100,digits=1)`% of the records in the database) being eligible for inclusion in the analysis.
 
-We selected 23 annual flux and 11 C stock variables for inclusion in the analysis, although two flux variables ($R_{het-ag}$ and $R_{het}$) were included for conceptual completeness but had no records in ForC (Table 1).
+We selected 23 annual flux and 11 C stock variables for inclusion in the analysis, although two flux variables ($R_{het-ag}$ and $R_{het}$) were included for conceptual completeness but had no records in *ForC* (Table 1).
 Records for these variables represented `r round(n_focal_variable_records_eligible_for_inclusion/records_eligible_for_inclusion*100,digits=1)`% of the total records eligible for inclusion.
 For this analysis, we combined some of ForC’s specific variables (*e.g.*, multiple variables for net primary productivity including various components) into more broadly defined variables. Specifically, net ecosystem exchange (measured by eddy-covariance; **FLUXNET REF**) and biometric estimates of $NEP$ were combined into the single variable $NEP$ (Table 1).
-Furthermore, for $NPP$, $ANPP$, and $ANPP_{litterfall}$, ForC variables specifying inclusion of different components were combined.
+Furthermore, for $NPP$, $ANPP$, and $ANPP_{litterfall}$, *ForC* variables specifying inclusion of different components were combined.
 Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), the minimum threshold for tree census was $\le$ 10cm. 
 All records were measured directly or derived from field measurements (as opposed to modeled).
 
@@ -259,9 +259,9 @@ Climate zones (Fig. 1) were defined based on site geographic coordinates accordi
 Tropical climates were defined to include all equatorial (A) zones, temperate climates were defined to include all warm temperate (C) zones and warmer snow climates (Dsa, Dsb, Dwa, Dwb, Dfa, and Dfb), and boreal climates were defined to include the colder snow climates (Dsc, Dsd, Dwc, Dwd, Dfc, and Dfd).
 Any forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the analysis.
 Leaf type (broadleaf / needleleaf) was defined based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP; @jung_exploiting_2006].
-For young tropical forests imported from GROA but not yet classified by leaf type, we assumed that all were broadleaf, consistent with the rarity of naturally regenerating needleleaf forests in the tropics (**REF**).
+For young tropical forests imported from *GROA* but not yet classified by leaf type, we assumed that all were broadleaf, consistent with the rarity of naturally regenerating needleleaf forests in the tropics (**REF**).
 Forests were classified as “young” (< 100 years) or “mature” ($\ge$ 100 years or classified as “mature”, “old growth”, “intact”, or “undisturbed” in original publication).
-Assigning stands to these groupings required the exclusion of records for which ForC lacked records of stand age (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). We also excluded records of stand age = 0 year (`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
+Assigning stands to these groupings required the exclusion of records for which *ForC* lacked records of stand age (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database), or geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database). We also excluded records of stand age = 0 year (`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
 In total, our analysis retained `r round(n_records/n_focal_variable_records_eligible_for_inclusion*100, digits=1)` of the focal variable records for forests of known age.
 Numbers of records by biome and age class are given in Table S1. 
 
@@ -286,15 +286,15 @@ All database manipulation, analyses, and figure production were fully automated 
 
 ### Data Coverage
 
-Of the `r nrow(ForC_measurements)` records in ForC v3.0, `r n_records` met the criteria for inclusion in this study (Fig. 1).
+Of the `r nrow(ForC_measurements)` records in *ForC* v3.0, `r n_records` met the criteria for inclusion in this study (Fig. 1).
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas.
-Of the 23 flux and 11 stock variables mapped in these diagrams, ForC contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
-For regrowth forests (<100 yrs), ForC contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
+Of the 23 flux and 11 stock variables mapped in these diagrams, *ForC* contained mature forest estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
+For regrowth forests (<100 yrs), *ForC* contained estimates from $\ge$ 7 distinct geographic areas for `r n_fluxes_with_ge7_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
 **([issue 29](https://github.com/forc-db/ERL-review/issues/29#issuecomment-699633801))**
 
 ### C cycling in mature forests
 
-Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5 (and available in tabular format in the ForC release accompanying this publication:  `ForC/numbers_and_facts/ForC_variable_averages_per_Biome.csv`).
+Average C cycles for tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major disturbance or significant anthropogenic management are presented in Figures 2-5 (and available in tabular format in the *ForC* release accompanying this publication:  `ForC/numbers_and_facts/ForC_variable_averages_per_Biome.csv`).
 
 For variables with records from $\ge$ 7 distinct geographic areas, these ensemble C budgets were generally consistent.
 *That is, component fluxes and stocks summed to within one standard deviation of more inclusive fluxes in all but* **two** *instances, both in temperate conifer forests (Fig. 5).* 
@@ -362,7 +362,7 @@ Thus, biome differences should be interpreted more as driven more by geographic 
 Average C cycles for forests <100 years old are presented in Figures 8-11.  
 Both C stocks and fluxes commonly displayed significant trends with stand age for within-biome analyses (Tables 1, S2, Figs. 6-11, S1-S26; detailed below).
 
-ForC contained *14* flux variables with sufficient data for cross-biome analyses of age trends in regrowth forests (see Methods) (Fig. 6-7 and **S#- SI figures including plots for all variables**).
+*ForC* contained *14* flux variables with sufficient data for cross-biome analyses of age trends in regrowth forests (see Methods) (Fig. 6-7 and **S#- SI figures including plots for all variables**).
 Of these, *9* increased significantly with log10[stand.age]: $GPP$, $NPP$, $ANPP$, $ANPP_{foliage}$, $ANPP_{woody}$, $ANPP_{woody-stem}$, $BNPP$, $BNPP_{root-fine}$, $R_{eco}$, and net C sequestration ($NEP$).
 The remaining five--$ANPP_{woody-branch}$, $BNPP_{root-coarse}$, $R_{soil-het}$, and $R_{soil-het}$-–displayed no significant relationship to stand age, although all displayed a positive trend.
 
@@ -409,7 +409,7 @@ In terms of C stocks, *10* variables had sufficient data to test for age trends.
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
 
-ForC v3.0 brought together an unprecedented amount of data to yield an internally consistent picture of C cycling in the world's major forest biomes.
+*ForC* v3.0 brought together an unprecedented amount of data to yield an internally consistent picture of C cycling in the world's major forest biomes.
 Carbon cycling rates generally increased from boreal to tropical regions and with stand age.
 Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. 6-7).
 In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7).
@@ -418,7 +418,7 @@ Together, these results indicate that, moving from cold to tropical climates and
 
 ### C variable coverage and budget closure
 
-ForC provides provides unprecedented coverage of most major variables.
+*ForC* provides provides unprecedented coverage of most major variables.
 *(discuss  how this improves upon previous data compilations/ for which variables does ForC make the greatest difference (e.g., not AGB or NEP/GPP/Reco, but by far the latest data compilation for dead wood, [variables])*
 *(Noteable holes include: fluxes: R_auto_ag, woody mortality, folivary/ herbivory and respiration of herbivores (and therefore total R_het), ANPP_repro; also fluxes in tropical regrowth forests)*
 *For the C stocks considered here, the most poorly covered is dead wood (none in E hemisphere!), despite a focused effort on this variable that has resulted in ForC being by far the largest collection of these data.*
@@ -446,15 +446,15 @@ http://dx.doi.org/10.5194/gmd-11-3903-2018
 In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
 These can be significant. (**Note that we've given a lot of emphasis to dead wood (work by Abby, and also Jenny), and as a result this work really advances knowledge of dead wood. We'll want to highlight that here.**)
 *(give some stats/ cite figures)*.
-ForC does not include soil carbon, which is covered by other efforts (REFS).
-For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and SRDB remains the authority on soil respiration (REFS). ForC includes recent data from both, but is not continuously integrated.
+*ForC* does not include soil carbon, which is covered by other efforts (REFS).
+For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and *SRDB* remains the authority on soil respiration (REFS). *ForC* includes recent data from both, but is not continuously integrated.
 For C is the best source for most of the subsidiary fluxes: NPP, woody mortality...
 
 
 The C cycle budgets for mature forests (Figs. 2-5) generally "close"--that is, the sums of component variables do not differ from the larger fluxes by more than one standard deviation.
 However, standard deviations are often large, reflective of significant within-biome variation. This makes the standard for closure relatively loose.
 *Lack of closure, in the few instances where it occurs, is probably more reflective of differences in the representation of forest types (e.g., disproportionate representation of US Pacific NW for aboveground woody biomass relative to AGB; Fig. 4) than of methodological accuracy.*
-Thus, overall, a high degree of closure implies that ForC gives a consistent picture of C cycling within biomes.
+Thus, overall, a high degree of closure implies that *ForC* gives a consistent picture of C cycling within biomes.
 While these means are unlikely to be accurate representations of C cycling within any particular forest, they provide a useful baseline for comparison, always keeping in mind that sample means do not necessarily represent the true mean of the entire biome.
 
 
@@ -489,33 +489,33 @@ NEP increases with log(age) to 100 --> strongest C sinks are established seconda
 ### Relevance for climate change prediction and mitigation
 
 The future of forest C cycling [@song_meta-analysis_2019] will shape trends in atmospheric CO~2~ and the course of climate change.
-For a human society seeking to understand and mitigate climate change, the data contained in ForC and summarized here can help to meet two major challenges.
+For a human society seeking to understand and mitigate climate change, the data contained in *ForC* and summarized here can help to meet two major challenges.
 
 First, improved representation of forest C cycling in models is essential to improving predictions of the future course of climate change.
 To ensure that models are giving the right answers for the right reasons, it is important to benchmark against multiple components of the C cycle that are internally consistent with each other.
-By making tens of thousands of records readily available in standardized format, ForC makes it feasible for the modeling community to draw upon these data to benchmark models.
-Integration of ForC with models is a goal (Fer et al., in revision).
+By making tens of thousands of records readily available in standardized format, *ForC* makes it feasible for the modeling community to draw upon these data to benchmark models.
+Integration of *ForC* with models is a goal (Fer et al., in revision).
 
-Second, ForC can serve as a pipeline through which forest science can inform forest-based climate change mitigation efforts.
+Second, *ForC* can serve as a pipeline through which forest science can inform forest-based climate change mitigation efforts.
 Such efforts will be most effective when informed by the best available data, yet it is not feasible for the individuals and organizations designing such efforts to sort through literature, often behind paywalls, with data reported in varying units, terminology, etc.
-One goal for ForC is to serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales.
+One goal for *ForC* is to serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales.
 This is already happening!
-ForC has already contributed to updating the IPCC guidelines for carbon accounting in forests [IPCC 2019; @requena_suarez_estimating_2019; Rozendaal et al in prep], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
+*ForC* has already contributed to updating the IPCC guidelines for carbon accounting in forests [IPCC 2019; @requena_suarez_estimating_2019; Rozendaal et al in prep], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
 
-**ForC can complement remote sensing to provide a comprehensive picture of global forest C cycling.** (*here, discuss what is well-covered by remote sesnsing, where ForC is useful for calibrating remote sensing, and what ForC can get that remote sensing can't.*)
+***ForC* can complement remote sensing to provide a comprehensive picture of global forest C cycling.** (*here, discuss what is well-covered by remote sesnsing, where ForC is useful for calibrating remote sensing, and what ForC can get that remote sensing can't.*)
 AGB is the largest stock, and most of the emphasis is on this variable.
 Remote sensing, with calibration based on high-quality ground-based data [@schepaschenko_forest_2019; @chave_ground_2019], is the best approach for mapping forest carbon (REFS).
 However, it is limited in that it is not associated with stand age and disturbance history, except in recent decades when satellite data can be used to detect forest loss, gain, and some of their dominant drivers [@hansen_high-resolution_2013; @song_global_2018; @curtis_classifying_2018].
-ForC  is therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020.
+*ForC*  is therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020.
 
 *Remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS).*
 Other variables, in particular respiration fluxes, cannot be remotely sensed (@bond-Lamberty_estimating_2016), and efforts such as the Global Carbon Project (**le quere REF**) and NASA CMS (**citation: https://carbon.nasa.gov/pdfs/CMS_Phase-1_Report_Final_optimized.pdf but maybe better to cite open literature, one of the papers listed at https://cmsflux.jpl.nasa.gov/get-data/publication-data-sets**) typically compute them as residuals only. (**Ben, it woudl be particularly helpful if you could flesh this out some more.**)
 
 
 **Move to data availability statement, or methods?**:
-We recommend that use of ForC data go to the original database, as opposed to using "off-the-shelf" values from this publication.
+We recommend that use of *ForC* data go to the original database, as opposed to using "off-the-shelf" values from this publication.
 This is because
-(1) ForC is constantly being updated,
+(1) *ForC* is constantly being updated,
 (2) analyses should be designed to match the application,
 (3) age equations presented here all fit a single functional form that is not necessarily the best possible for all the variables.
 
@@ -523,7 +523,7 @@ As climate change accelerates, understanding and managing the carbon dynamics of
 The C data in ForC, as summarized here, will be valuable to these efforts.
 
 ## Acknowledgements
-All researchers whose data is included in ForC and this analysis.
+All researchers whose data is included in *ForC* and this analysis.
 Ian McGregor for help with the database.
 Thanks to Norbert Kunert and [Helene's intern] for helpful input at an earlier phase.
 A Smithsonian Scholarly Studies grant to KAT and HML.
@@ -531,7 +531,7 @@ WLS grant to KAT.
 
 ## Data availability statement
 Materials required to fully reproduce these analyses, including data, R scripts, and image files, are archived in Zenodo (DOI: TBD].
-Data, scripts, and results presented here are also available through the open-access ForC GitHub repository (https://github.com/forc-db/ForC), where many will be updated as the database develops.
+Data, scripts, and results presented here are also available through the open-access *ForC* GitHub repository (https://github.com/forc-db/ForC), where many will be updated as the database develops.
 
 ## ORCID iD
 Kristina J. Anderson-Teixeira: https://orcid.org/0000-0001-8461-9713
