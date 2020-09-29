@@ -99,7 +99,7 @@ table_pt <- read.csv("tables_figures/SI_age_trend_model_summaries.csv",
                      #colClasses=c("NULL", NA, NA, NA, NA), 
                      #col.names=c("NULL", "Parameter", "Estimate", "SE", "$t_{value}$"), 
                      stringsAsFactors = FALSE, check.names = FALSE)
-kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F, linesep = c('\\addlinespace'))%>%
+kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F)%>%
   #pack_rows("NEP", 1, 5, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
   #pack_rows("GPP", 6, 10, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
   #pack_rows("NPP", 11, 15, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%

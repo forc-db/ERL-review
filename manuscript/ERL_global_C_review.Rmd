@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -121,7 +121,7 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 
 *NOTES TO COAUTHORS: * 
 
-- We're still finalizing the data (and adding some data). Outliers in plots will all be checked/ resolved, and we'll be able to pull in more data (*GROA* needs classification by dominant vegetation before it can be pulled in, and we're working on that)
+
 - "**???**" indicates a reference that we have entered in the .Rmd file, but not yet in the bibliography file. Don't worry about those. (However, places with "REF" need references)
 - bold/ italic text indicates places where I know we need to go back and revisit/ fill in info
 
@@ -300,18 +300,17 @@ To facilitate the accessibility of our results and data, and to allow for rapid 
 
 Of the `r nrow(ForC_measurements)` records in *ForC* v3.0, `r n_records` met our strict criteria for inclusion in this study (Fig. 1).
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas.
-Of the 23 flux and 11 stock variables mapped in these diagrams, *ForC* contained sufficient mature forest data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ 7 distinct geographic areas, and number of distinct plots < number of observations) for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
-For regrowth forests (<100 yrs), *ForC* contained sufficient data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ **3** distinct geographic areas, and number of distinct plots < number of observations) for `r n_fluxes_with_ge3_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge3_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
+Of the 23 flux and 11 stock variables mapped in these diagrams, *ForC* contained sufficient mature forest data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ 7 distinct geographic areas) for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
+For regrowth forests (<100 yrs), *ForC* contained sufficient data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ **3** distinct geographic areas) for `r n_fluxes_with_ge3_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge3_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
 
 ### C cycling in mature forests
 
 Average C cycles for mature tropical broadleaf, temperate broadleaf, temperate conifer, and boreal forests $\ge$ 100 years old and with no known major natural or anthropogenic disturbance are presented in Figures 2-5 (and available in tabular format in the *ForC* release accompanying this publication:  `ForC/numbers_and_facts/ForC_variable_averages_per_Biome.csv`).
 
 For variables with records from $\ge$ 7 distinct geographic areas, these ensemble C budgets were generally consistent.
-*That is, component variables summed to within one standard deviation of their respective aggregate variables in all but* **two** *instances, both in temperate conifer forests (Fig. 5).* 
-**(check all this with final results: https://github.com/forc-db/ForC/blob/master/numbers_and_facts/C_cycle_closure.csv, and be sure to write out variable names at first occurance, and provide a bit more detail) ** 
-*For the temperate conifer biome, the average composite measure of aboveground biomass (Bag) was less than the combined average value of woody biomass (Bag-wood) and foliage biomass (Bfoliage), partly due to the very high estimates of Bag-wood.*
-*Within this biome, $B_{ag}<B_{ag-wood}+B_{foliage}$ and $B_{root}<B_{root-coarse}+B_{root-fine}$ because $B_{ag-wood}$ and $B_{root-coarse}$ were very high, with strongly disproportionate numbers of records from the high-biomass forests of the US Pacific Northwest (Figs. S18, S21).*
+That is, component variables summed to within one standard deviation of their respective aggregate variables in all but one instance.
+In the temperate conifer biome, the average composite measure of root biomass ($B_{root}$) was less than the combined average value of coarse and fine root biomass ($B_{root-coarse}$ and $B_{root-fine}$, respectively).
+This lack of closure was driven by very high estimates of $B_{root-coarse}$ from high-biomass forests of the US Pacific Northwest.
 
 
 \blandscape
