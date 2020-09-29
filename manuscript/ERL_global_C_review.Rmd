@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -424,7 +424,7 @@ In terms of C stocks, *10* variables had sufficient data to test for age trends.
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
 
-*ForC* v3.0 brought together an unprecedented amount of data to yield an internally consistent picture of C cycling in the world's major forest biomes.
+*ForC* v3.0 provided unprecedented coverage of most major variables, yielding an internally consistent picture of C cycling in the world's major forest biomes.
 Carbon cycling rates generally increased from boreal to tropical regions and with stand age.
 Specifically, the major C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. 6-7).
 In contrast to C fluxes, there was little directional variation in mature forest C stocks across biomes (Figs. 2-5, 7).
@@ -433,44 +433,19 @@ Together, these results indicate that, moving from cold to tropical climates and
 
 ### C variable coverage and budget closure
 
-*ForC* provides provides unprecedented coverage of most major variables.
-*(discuss  how this improves upon previous data compilations/ for which variables does ForC make the greatest difference (e.g., not AGB or NEP/GPP/Reco, but by far the latest data compilation for dead wood, [variables])*
-*(Noteable holes include: fluxes: R_auto_ag, woody mortality, folivary/ herbivory and respiration of herbivores (and therefore total R_het), ANPP_repro; also fluxes in tropical regrowth forests)*
-*For the C stocks considered here, the most poorly covered is dead wood (none in E hemisphere!), despite a focused effort on this variable that has resulted in ForC being by far the largest collection of these data.*
-Thus, overall, we're lacking coverage of fluxes to herbivores and higher consumers, along with the woody mortality and dead wood.
-Geographically, all variables poorly covered in Africa and Siberia.
+The large number of C cycle variables covered by ForC, and the general consistency between them, provide confidence that our overall reported means provide accurate and useful baselines for analysis (with the caveats that they are unlikely to be accurate representations of C cycling for any particular forest, and that these sample means almost certainly do not represent true biome means). 
 
-**notes from Ben on the above par:**
-Pregitzer and Euskirchen 2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x "Aggregated biome-level estimates of NPP and NEP were higher in intermediate-aged forests (e.g., 30–120 years), while older forests (e.g., 4120 years) were generally less productive. The mean NEP in the youngest forests (0–10 years) was negative (source to the atmosphere) in both boreal and temperate biomes…Forest age is a highly significant source of variability in NEP at the biome scale”
+There are of course notable holes in the ForC variable coverage, as discussed by Anderson-Teixeira et al. (xxxx), that limit the scope of our inferences here. Notably, ForC lacks coverage of fluxes to herbivores and higher consumers, along with the woody mortality and dead wood stocks. 
+Geographically, all variables are poorly covered in Africa and Siberia, a common problem in the carbon-cycle community (Xu and Shang 2016 10.1016/j.jplph.2016.08.007, Schimel et al. 2015 10.1073/pnas.1407302112). 
+ForC does not include soil carbon, which is covered by other efforts (e.g. Köchy et al. 2015 10.5194/soil-1-351-2015). 
+ForC is not intended to replace databases that are specialized for particular parts of the C cycle analyses, e.g., aboveground biomass (REFS), land-atmosphere fluxes (Baldocchi et al. 2001 10.1175/1520-0477(2001)082<2415:FANTTS>2.3.CO;2), soil respiration (Jian et al. 2020 10.5194/essd-2020-136), or the human footprint in global forests (Magnani et al. 2007 10.1038/nature05847).
 
-Amiro et al. 2010 http://dx.doi.org/10.1029/2010JG001390
-Houghton et al. 2020 https://doi.org/10.1111/gcb.15050
-
-Turnover:
-Pugh et al. 2020 http://dx.doi.org/10.5194/bg-2019-491
-Yu et al. 2019 http://dx.doi.org/10.1073/pnas.1821387116
-
-Human footprint in global forests
-http://dx.doi.org/10.1038/nature05847
-http://dx.doi.org/10.1038/nature02619
-
-Mention consistency (or lack of) with e.g. GOLUM-CNP?
-http://dx.doi.org/10.5194/gmd-11-3903-2018
-
-
-In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
-These can be significant. (**Note that we've given a lot of emphasis to dead wood (work by Abby, and also Jenny), and as a result this work really advances knowledge of dead wood. We'll want to highlight that here.**)
-*(give some stats/ cite figures)*.
-*ForC* does not include soil carbon, which is covered by other efforts (REFS).
-For fluxes, Fluxnet is the keeper of the best data on NEE, GPP, Reco (REFS), and *SRDB* remains the authority on soil respiration (REFS). *ForC* includes recent data from both, but is not continuously integrated.
-For C is the best source for most of the subsidiary fluxes: NPP, woody mortality...
-
-
-The C cycle budgets for mature forests (Figs. 2-5) generally "close"--that is, the sums of component variables do not differ from the larger fluxes by more than one standard deviation.
-However, standard deviations are often large, reflective of significant within-biome variation. This makes the standard for closure relatively loose.
-*Lack of closure, in the few instances where it occurs, is probably more reflective of differences in the representation of forest types (e.g., disproportionate representation of US Pacific NW for aboveground woody biomass relative to AGB; Fig. 4) than of methodological accuracy.*
-Thus, overall, a high degree of closure implies that *ForC* gives a consistent picture of C cycling within biomes.
-While these means are unlikely to be accurate representations of C cycling within any particular forest, they provide a useful baseline for comparison, always keeping in mind that sample means do not necessarily represent the true mean of the entire biome.
+In this analysis, the C cycle budgets for mature forests (Figs. 2-5) generally “close”–that is, the sums of component variables do not differ from the larger fluxes by more than one standard deviation. 
+On the one hand, this reflects the general fact that ecosystem-scale measurements tend to close the C budget more easily and consistently than, for example, for energy balance (Stoy et al. 2013 10.1016/j.agrformet.2012.11.004). 
+On the other, however, as noted above ForC derives data from multiple heterogeneous sources, often with large errors (standard deviations); as a result, the standard for C closure is relatively loose (cf Houghton 2020 10.1111/gcb.15050). 
+Nonetheless, the lack of closure, in the few instances where it occurs, is probably more reflective of differences in the representation of forest types (e.g., disproportionate representation of US Pacific NW for aboveground woody biomass relative to AGB; Fig. 4) than of methodological accuracy. 
+The overall high degree of closure implies that ForC gives a consistent picture of C cycling within biomes. 
+This is an important and useful test, because it allows for consistency checks within the C cycle, for example leveraging separate and independently-measured fluxes to constrain errors in another (Phillips et al. 2017 10.1007/s11104-016-3084-x, Williams et al. 2014 10.1016/j.rse.2013.10.034, Harmon et al. 2011 10.1029/2010JG001495), or producing internally consistent global data products (Wang et al. 2018 10.5194/gmd-11-3903-2018). 
 
 
 ### C cycling across biomes
@@ -483,6 +458,8 @@ Data remain sparse, but for better-represented variables, we often see faster ac
 Further work will be required to explore age x climate interactions, but our broad-brush overview indicates that C cycling of regrowth forests is not only higher in the tropics, parallel to fluxes in mature forests [ @banbury_morgan_global_nodate], but also that it accelerates more rapidly with stand age in the tropics, consistent with more rapid biomass accumulation.
 
 In contrast to C fluxes and accumulation rates in regrowth forests, stocks...
+Patterns are consistent with others studies.
+Highest biomass forests are found in temperate oceanic climates (REF- Keith, something in GEB, some global forest C map).
 
 Thus, biome differences should be interpreted more as driven more by geographic distribution of sampling than by true differences.
 
@@ -502,6 +479,8 @@ It's also important to understand secondary forest C sequestration to reduce unc
 
 (discuss NEP well, including)
 NEP increases with log(age) to 100 --> strongest C sinks are established secondary forests. (But presumably this exact number is an artifact; don’t over-emphasize.)
+
+Our findings are largely consistent with, but built from a far larger dataset than, those of Pregitzer and Euskirchen (2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x), who found that NPP and NEP to be higher in intermediate-aged forests than older forests, and emphasize the importance of forest age at the biome scale. Quickly-changing and age-dependent fluxes were also found in a number of previous syntheses (Amiro et al. 2010 10.1029/2010JG001390, Magnani et al. 2007 10.1038/nature05847). 
 
 
 ### Relevance for climate change prediction and mitigation
@@ -529,6 +508,9 @@ However, it is limited in that it is not associated with stand age and disturban
 *Remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS).*
 Other variables, in particular respiration fluxes, cannot be remotely sensed (@bond-Lamberty_estimating_2016), and efforts such as the Global Carbon Project (**le quere REF**) and NASA CMS (**citation: https://carbon.nasa.gov/pdfs/CMS_Phase-1_Report_Final_optimized.pdf but maybe better to cite open literature, one of the papers listed at https://cmsflux.jpl.nasa.gov/get-data/publication-data-sets**) typically compute them as residuals only. (**Ben, it woudl be particularly helpful if you could flesh this out some more.**)
 
+In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
+These can be significant. (**Note that we've given a lot of emphasis to dead wood (work by Abby, and also Jenny), and as a result this work really advances knowledge of dead wood. We'll want to highlight that here.**)
+*(give some stats/ cite figures)*.
 
 **Move to data availability statement, or methods?**:
 We recommend that use of *ForC* data go to the original database, as opposed to using "off-the-shelf" values from this publication.
