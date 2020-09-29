@@ -153,7 +153,7 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 Forest ecosystems are shaping the course of climate change (IPCC1.5) through their influence on atmospheric carbon dioxide (CO~2~).
 Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climate-carbon_2006; @krause_large_2018; @bonan_model_2019; @devittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011] can be traced to lack of accessible, comprehensive data on how C cycling varies across forest types and in relation to stand history.
 These require large-scale databases with global coverage, which runs contrary to the nature in which forest C stocks and fluxes are measured and published.
-While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [@li_mapping_2019; **REFS for biomass, biomass change, net CO2 flux**], measurement of most forest C stocks and fluxes require intensive on-the-ground data collection.
+While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass: @hu_mapping_2016; **REF**; gross primary productivity, $GPP$: @li_mapping_2019; **REFS for biomass change, net CO2 flux**], measurement of most forest C stocks and fluxes require intensive on-the-ground data collection.
 Here, we provide a robust and comprehensive analysis of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (ForC; Fig. 1).
 
 A robust understanding of forest impacts on global C cycling is essential. 
@@ -448,21 +448,35 @@ This is an important and useful test, because it allows for consistency checks w
 ### C cycling across biomes
 
 Our analysis reveals a general acceleration of carbon cycling from the tropics to the high latitudes.
-For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude [e.g.,  @banbury_morgan_global_nodate].
-For regrowth forests, more rapid accumulation of biomass at lower latitudes has been well-established [@anderson_temperature-dependence_2006; @cook-patton_mapping_2020], whereas this is the first study to compare age trends in deadwood and organic layer across biomes [but see @cook-patton_mapping_2020].
-For most C flux variables, this analysis is the first to examine flux trends in regrowth forests across biomes  (i.e., age x biome interaction).
+For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate].
+The consistency with which this occurs across numerous fluxes is not surprising, but has never been simultaneously assessed across such a large number of variables [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
+Thus, our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
+
+The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$ (Fig. 6f), which showed no significant differences across biomes.
+Unlike the other C flux variables, $NEP$ does not represent the rapidity with which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem.
+$NEP$ tends to be relatively small in mature forest stands [@Luyssaert_old-growth_2008, **MORE REFS?**; discussed further below], which accumulate carbon slowly relative to younger stands [@Luyssaert_old-growth_2008; **REFS**), if at all (**REFS**).
+It is therefore unsurprising that there are no pronounced differences across biomes, suggesting that variation in $NEP$ of mature forests is controlled less by climate and more by other factors including moderate disturbances (**REFS**) or disequilibrium of $R_{soil}$ relative to C inputs [e.g., in peatlands where anoxic conditions inhibit decomposition; **REFS**].
+
+In contrast to the patterns observed for $NEP$ in mature stands, $NEP$ of young forests ...
+(discuss NEP well- intuition for some would be that NEP is higher in tropics. Note biome differences for young mut not mature forests, link to latitudinal differences in C sequestration potential [@anderson_temperature-dependence_2006; @cook-patton_mapping_2020]
+Lack of synthesis comparing deadwood and organic layer across biomes, but see @cook-patton_mapping_2020 for age trends.
+
+More rapid accumulation of biomass at lower latitudes has been well-established [@anderson_temperature-dependence_2006; @cook-patton_mapping_2020].
+
+For regrowth forests, far less is known about cross-biome differences in carbon cycling. 
+However, for most C flux variables, this analysis is the first to examine flux trends in regrowth forests across biomes  (i.e., age x biome interaction).
 Data remain sparse, but for better-represented variables, we often see faster acceleration of C cycling in the warmer climates.
 Further work will be required to explore age x climate interactions, but our broad-brush overview indicates that C cycling of regrowth forests is not only higher in the tropics, parallel to fluxes in mature forests [ @banbury_morgan_global_nodate], but also that it accelerates more rapidly with stand age in the tropics, consistent with more rapid biomass accumulation.
 
-In contrast to C fluxes and accumulation rates in regrowth forests, stocks...
-Patterns are consistent with others studies.
-Highest biomass forests are found in temperate oceanic climates (REF- Keith, something in GEB, some global forest C map).
+In contrast to C fluxes and biomass accumulation rates in regrowth forests, stocks showed less systematic variation across biomes.
+For aboveground biomass, this Patterns are consistent with others studies showing that variation in forest biomass across broad climatic gradients is modest and constrained more by moisture than temperature [@stegen_variation_2011].
+@hu_mapping_2016, using spaceborne lidar, showed a decline in aboveground biomass (all forests, including secondary) with latitude in the N hemisphere, but values exceeding tropical forests in coastal climates of both the southern and northern hemisphere. 
+Highest biomass forests are found in temperate oceanic climates (REF- , something in GEB, some global forest C map) [@keith_re-evaluation_2009].
+Lack of synthesis comparing deadwood and organic layer across biomes, but see @cook-patton_mapping_2020 for age trends.
 
 Thus, biome differences should be interpreted more as driven more by geographic distribution of sampling than by true differences.
 
-Higher NEP in temperate forests – implications? Invariant NEP in older forests? This could be built out a bit; thinking of Luyssaert 2008 http://dx.doi.org/10.1038/nature07276 and following papers arguing about this.
 
-(discuss NEP well- intuition for some would be that NEP is higher in tropics. Note biome differences for young mut not mature forests, link to latitudinal differences in C sequestration potential (Anderson 2006, @cook-patton_mapping_2020)
 
 ### Age trends in C cycling  
 
@@ -477,8 +491,10 @@ It's also important to understand secondary forest C sequestration to reduce unc
 (discuss NEP well, including)
 NEP increases with log(age) to 100 --> strongest C sinks are established secondary forests. (But presumably this exact number is an artifact; don’t over-emphasize.)
 
-Our findings are largely consistent with, but built from a far larger dataset than, those of Pregitzer and Euskirchen (2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x), who found that NPP and NEP to be higher in intermediate-aged forests than older forests, and emphasize the importance of forest age at the biome scale. Quickly-changing and age-dependent fluxes were also found in a number of previous syntheses (Amiro et al. 2010 10.1029/2010JG001390, Magnani et al. 2007 10.1038/nature05847). 
+Our findings are largely consistent with, but built from a far larger dataset than, those of Pregitzer and Euskirchen (2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x), who found that NPP and NEP to be higher in intermediate-aged forests than older forests, and emphasize the importance of forest age at the biome scale. 
+Quickly-changing and age-dependent fluxes were also found in a number of previous syntheses (Amiro et al. 2010 10.1029/2010JG001390, Magnani et al. 2007 10.1038/nature05847). 
 
+In contrast to most fluxes, $NEP$ is highest at intermediate ages
 
 ### Relevance for climate change prediction and mitigation
 
@@ -502,7 +518,7 @@ Remote sensing, with calibration based on high-quality ground-based data [@schep
 However, it is limited in that it is not associated with stand age and disturbance history, except in recent decades when satellite data can be used to detect forest loss, gain, and some of their dominant drivers [@hansen_high-resolution_2013; @song_global_2018; @curtis_classifying_2018].
 *ForC*  is therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020.
 
-*Remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ (Bagdley et al. 2019, [@li_mapping_2019]), aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS).*
+*Remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ [@bagdley_terrestrial_2019; @li_mapping_2019], aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS).*
 Other variables, in particular respiration fluxes, cannot be remotely sensed (@bond-Lamberty_estimating_2016), and efforts such as the Global Carbon Project (**le quere REF**) and NASA CMS (**citation: https://carbon.nasa.gov/pdfs/CMS_Phase-1_Report_Final_optimized.pdf but maybe better to cite open literature, one of the papers listed at https://cmsflux.jpl.nasa.gov/get-data/publication-data-sets**) typically compute them as residuals only. (**Ben, it woudl be particularly helpful if you could flesh this out some more.**)
 
 In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
