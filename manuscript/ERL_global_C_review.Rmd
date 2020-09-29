@@ -156,15 +156,12 @@ These require large-scale databases with global coverage, which runs contrary to
 While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [@li_mapping_2019; **REFS for biomass, biomass change, net CO2 flux**], measurement of most forest C stocks and fluxes require intensive on-the-ground data collection.
 Here, we provide a robust and comprehensive analysis of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (ForC; Fig. 1).
 
-
-*(Abby has offered to update stats in this paragraph:)*
-
 A robust understanding of forest impacts on global C cycling is essential. 
-Annual gross CO~2~ sequestration in forests (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2007-2016 (9.4 ± 0.5 Gt C yr-1; Le Quéré et al 2017) (**update**).
+Annual gross CO~2~ sequestration in forests (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2009-2018 [9.5 $\pm$ 0.5 Gt C yr^-1^; @friedlingstein_global_2019].
 Most of this enormous C sequestration is counterbalanced by CO~2~ releases to the atmosphere through ecosystem respiration ($R_{eco}$) *or fire*, with forests globally dominant as sources of both soil respiration [@warner_spatial_2019] *and fire emissions (REF)*. (**check if deforestation statistic below includes natural fire, exclude here if it does.**)
-In recent years, the remaining CO~2~ sink averaged 3.0 ± 0.8 Gt C yr^{-1} from 2007-2016, offsetting 32% of anthropogenic fossil fuel emissions (Le Quéré et al 2017) (**update, give range**).
+In recent years, the remaining CO~2~ sink averaged 3.2 $\pm$ 0.6 GtC yr^−1^ from 2009-2018, offsetting 29% of anthropogenic fossil fuel emissions [@friedlingstein_global_2019].
 Yet, this sink is reduced by *deforestation/ forest losses to anthropogenic and natural disturbances*.
-Recent net deforestation (*i.e.*, gross deforestation minus regrowth) has been a source of CO~2~ emissions, estimated at ~1.1 Gt C yr-1 from YEAR-YEAR (Pan et al 2011), reducing the net forest sink to ~1.2-1.7 Gt C yr^-1^ across Earth's forests [Le Quéré et al 2017, @schimel_observing_2015] (**update, give range**).
+Recent net deforestation (*i.e.*, gross deforestation minus regrowth) has been a source of CO~2~ emissions, estimated at ~1.1 Gt C yr^-1^ from YEAR-YEAR (Pan et al 2011; **UPDATE**), reducing the net forest sink to ~1.1-2.2 Gt C yr^-1^ across Earth's forests [@friedlingstein_global_2019].
 
 The future of the current forest C sink is dependent both upon forest responses to climate change itself and human land use decisions, which will feedback and strongly influence the course of climate change. 
 Regrowing forests in particular will play an important role [@pugh_role_2019], as these represent a large (**~#%**) and growing proportion of Earth's forests [@mcdowell_pervasive_2020].
