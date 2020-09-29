@@ -59,7 +59,7 @@ Maria M. H. Wang^1,7^
 *corresponding author: teixeirak@si.edu; +1 540 635 6546
 
 
-```{r eval = TRUE, echo=FALSE, warning=FALSE}
+```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
 #READING IN TABLES TO GET STATS FOR TEXT
 path_to_ForC <- paste0(dirname(dirname(getwd())), "/ForC/") # this is to allow anybody to knit (assuming current working directory is in forc-db/ERL-review/manuscript and its "nesting" withing the ForC repo does not change)
 
