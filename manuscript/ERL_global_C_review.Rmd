@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -366,24 +366,19 @@ For three variables that had been disproportionately sampled in the high-biomass
 Average C cycles for forests <100 years old are presented in Figures 8-11.  
 Both C stocks and fluxes commonly increased significantly with stand age (Tables 1, S2, Figs. 6-11, S1-S26; detailed below).
 
-*ForC* contained *14* flux variables with sufficient data for cross-biome analyses of age trends in regrowth forests (see Methods) (Fig. 6-7 and **S#- SI figures including plots for all variables**).
-Of these, *9* increased significantly with age: $GPP$, $NPP$, $ANPP$, $ANPP_{foliage}$, $ANPP_{woody}$, $ANPP_{woody-stem}$, $BNPP$, $BNPP_{root-fine}$, $R_{eco}$, and net C sequestration ($NEP$).
-The remaining five--$ANPP_{woody-branch}$, $BNPP_{root-coarse}$, $R_{soil-het}$, and $R_{soil-het}$-–displayed no significant relationship to stand age, although all displayed a positive trend.
+*ForC* contained 16 C flux variables with sufficient data for analyses of age trends in young forests (see Methods) (Figs. 6, S1-S15).
+Of these, ten increased significantly with age: $NEP$, $GPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{foliage}$, $ANPP_{litterfal}$, $BNPP$, $BNPP_{fine}$, $R_{eco}$, and $R_{root}$.
+The remaining six--$NPP$, $ANPP_{stem}$, $ANPP_{branch}$, $BNPP_{coarse}$, $R_{soil-het}$, and $R_{soil-het}$-–displayed no significant relationship to stand age.
 
 Differences in C fluxes across biomes typically paralleled those observed for mature forests, with C cycling generally most rapid in the tropics and slowest in boreal forests.  
-The single exception was $ANPP_{stem}$, for which temperate broadleaf forests and temperate conifer forests of age >*~30* had slightly higher flux rates than tropical forests (*represented by a single chronosequence*).
-Notably, the trend of tropical > temperate > boreal held for $NEP$ in regrowth forests, in contrast to the lack of biome differences in $NEP$ for mature forests (Fig. 6).
+The single exception was $ANPP_{stem}$, for which temperate broadleaf and conifer forests had similar flux rates than tropical forests.
+Notably, and in contrast to the lack of biome differences in $NEP$ for mature forests (Fig. 6), the tendency for temperate forests to have greater fluxes than boreal forests held for $NEP$ in regrowth forests (tropical forests excluded because of insufficient data).
 
-There were only *##* flux variables with sufficient data to test for biome x age interactions: $ANPP$, $ANPP_{woody}$, $ANPP_{stem}$, $ANPP_{litterfall}$, and $BNPP$ (Table S2). **(more could be added if age trends become significant after outliers are resolved)**
-For three of these ($ANPP$, $ANPP_{litterfall}$, $BNPP$), the increase in C flux with age was steepest increase in tropical forests, followed by temperate and then boreal forests (Figs S#).
-Similarly, $ANPP_{woody}$ displayed a steeper increase with age in temperate than boreal boreal forests (no tropical data for this variable).
-In contrast, for $ANPP_{stem}$,  tropical and temperate broadleaf forests had the highest flux rates at young ages, but were surpassed by temperate conifer forests between ages 20 and 50 (Fig. S6).
-
-(**this needs to be updated with latest data**)
-In terms of C stocks, *10* variables had sufficient data to test for age trends.
-*Six* of these—*total biomass, aboveground biomass, aboveground woody biomass, foliage biomass, root biomass, and coarse root biomass*— increased significantly with $log10[stand.age]$.
-*The remaining four displayed non-significant positive trends:  fine root biomass, total dead wood, standing dead wood, and organic layer.*
-*(discuss rates of increase)*
+In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. 7, S16-26).
+All of these increased significantly with $log10[stand.age]$.
+There were sufficient data to model age x biome interactions were also significant for all ten of these C stock variables (Table S2). 
+(**return here after Valentine checks whether differences in Table 1 were signficant! **)
+In the case of two non-living C stocks ($DW_{down}$ and $OL$)
 
 \newpage
 \blandscape
