@@ -38,7 +38,7 @@ Susan C. Cook-Patton^5^
 
 Abigail E. Ferson^1,6^
 
-Helene C. Muller-Landau^1^
+Helene C. Muller-Landau^2^
 
 Maria M. H. Wang^1,7^
 
@@ -434,13 +434,13 @@ The consistency with which this occurs across numerous fluxes is not surprising,
 Thus, our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
 
 The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$ (Fig. 6f), which showed no significant differences across biomes.
-Unlike the other C flux variables, $NEP$ does not represent the rapidity with which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem.
+Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem.
 $NEP$ tends to be relatively small in mature forest stands (discussed further below), which accumulate carbon slowly relative to younger stands, if at all [@luyssaert_old-growth_2008; @amiro_ecosystem_2010; @besnard_quantifying_2018].
 It is therefore unsurprising that there are no pronounced differences across biomes, suggesting that variation in $NEP$ of mature forests is controlled less by climate and more by other factors including moderate disturbances [@curtis_forest_2018] or disequilibrium of $R_{soil}$ relative to C inputs [e.g., in peatlands where anoxic conditions inhibit decomposition; @wilson_stability_2016].
 
 In contrast to the patterns observed for $NEP$ in mature stands, $NEP$ of stands between 20 and 100 years of age varied across biomes, being lowest in boreal forests, intermediate in temperate broadleaf forests, and highest in temperate conifer forests (with insufficient data to assess tropical forests; Figs. 6f, S1).
-This is consistent with findings that live biomass accumulation rates (*e.g.*, $\Delta B_{ag}$ or $\Delta B_{tot}$) during early secondary succession decrease with latitude [@anderson_temperature-dependence_2006; @cook-patton_mapping_2020; Figs. 7a, S16-S22]. 
-Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon, and biome differences in the accumulation rates of these variables have not been detected, in part because these variables do not consistently increase with stand age [@cook-patton_mapping_2020; Figs. 7, S23-S26; see discussion below].
+This is consistent with findings that live biomass accumulation rates (*e.g.*, $\Delta B_{ag}$ or $\Delta B_{tot}$) during early secondary succession decrease with latitude [Figs. 7a, S16-S22; @anderson_temperature-dependence_2006; @cook-patton_mapping_2020]. 
+Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon, and biome differences in the accumulation rates of these variables have not been detected, in part because these variables do not consistently increase with stand age [Figs. 7, S23-S26, and see discussion below; @cook-patton_mapping_2020].
 
 For regrowth forests, little is known about cross-biome differences in carbon fluxes, and we are not aware of any previous large-scale comparisons of C fluxes that have been limited to regrowth forests. 
 Thus, this analysis was the first to examine flux trends in regrowth forests across biomes.
@@ -453,7 +453,7 @@ Disproportionate representation of forests in one such region--the US Pacific No
 Thus, biome differences should always be interpreted relative to the geographic distribution of sampling, which only rarely covers the majority of forested area within a biome. 
 
 Whereas biomass can be remotely sensed and receives significant research attention, far less is known about geographical variation in deadwood and organic layer ($OL$) across biomes, which has proved a limitation for C accounting efforts [@pan_large_2011].
-Although these stocks can be important--exceeding 100 t C ha^-1^ in some stands (Figs. 7d-e, S23-S25), this study is the first to synthesize deadwood data on a global scale [but see @cook-patton_mapping_2020 for young forests].
+Although these stocks can be important--exceeding 100 Mg C ha^-1^ in some stands (Figs. 7d-e, S23-S25), this study is the first to synthesize deadwood data on a global scale [but see @cook-patton_mapping_2020 for young forests].
 Unfortunately, data remain too sparse for statistical comparison across biomes (Figs. 7, S23-S25; but see below for age trends), pointing to a need for more widespread quantification of both standing and downed deadwood.
 *ForC* coverage of $OL$ stocks is more comprehensive, revealing no significant differences across temperate and tropical biomes, but a tendency towards higher $OL$ in boreal forests, consistent with the idea that slower decomposition in colder climates results in more buildup of organic matter [@allen_global_2002]. 
 Further research on non-living C stocks in the world's forests will be essential to completing the picture.
@@ -485,9 +485,7 @@ First, improved representation of forest C cycling in models is essential to imp
 To ensure that models are giving the right answers for the right reasons [@sulman_multiple_2018], it is important to benchmark against multiple components of the C cycle that are internally consistent with each other [@collier_international_2018; @wang_golum-cnp_2018]. 
 *ForC*’s tens of thousands of records are readily available in a standardized format, and our analyses here indicate their internal consistency is reasonably high. Integration of *ForC* with models will be valuable to improving the accuracy and reliability of models. 
 
-Second, *ForC* can serve as a pipeline through which forest science can inform forest-based climate change mitigation efforts. 
-Such efforts will be most effective when informed by the best available data, yet it is not feasible for the individuals and organizations designing such efforts to sort through literature, often behind paywalls, with data reported in varying units, terminology, etc. 
-One goal for *ForC* is to serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales. 
+Second, *ForC* can serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales. 
 This is already happening: *ForC* has contributed to updating the IPCC guidelines for carbon accounting in forests [@ipcc_2019_2019; @requena_suarez_estimating_2019], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
 
 It is also interesting to consider the complementary utility of global-scale but spatially discontinuous databases such as ForC and remote wall-to-wall remote sensing products. The latter provide unparalleled insight into aboveground carbon stocks, but less constraint on belowground stocks or carbon fluxes in general [@bondlamberty_estimating_2016; @anav_spatiotemporal_2015]. 
@@ -505,7 +503,7 @@ For example, @konings_global_2019 produced a unique top-down estimate of global 
 ### Conclusions
 As climate change accelerates, understanding and managing the carbon dynamics of forests--notably including dynamics and fluxes that cannot be observed by satellites--is critical to forecasting, mitigation, and adaptation.
 The C data in *ForC*, as summarized here, will be valuable to these efforts.
-Notably, the fact that tropical forests tend to have both the highest rates of C sequestration in young stands [Fig. 7; @cook-patton_mapping_2020], fueled by their generally high C flux rates (Table 1; Fig. 6), and the highest mean biomass [Fig. 7; Table 1; @hu_mapping_2016; @jian_restructured_2020] reinforces the concept that conservation and restoration of these forests is a priority for climate change mitigation [@grassi_key_2017], along with high-biomass old-growth temperate stands [@goldstein_protecting_2020].
+Notably, the fact that tropical forests tend to have both the highest rates of C sequestration in young stands [Fig. 7; @cook-patton_mapping_2020], fueled by their generally high C flux rates (Table 1; Fig. 6), and the highest mean biomass [Fig. 7; Table 1; @hu_mapping_2016; @jian_restructured_2020] reinforces the concept that conservation and restoration of these forests is a priority for climate change mitigation, along with high-biomass old-growth temperate stands [@grassi_key_2017; @goldstein_protecting_2020].
 It is also important to note the trade-off in climate mitigation potential of restoration of young forests, with high rates of CO~2~ sequestration [$NEP$; @cook-patton_mapping_2020], versus conservation and management of mature forests, with low $NEP$ but high C stocks that could not be recovered on a time scale relevant to climate change mitigation [@goldstein_protecting_2020].
 Generally speaking, the conservation of mature forests will yield greater climate benefits [@anderson-teixeira_greenhouse_2011], but both approaches are critical to avoiding catastrophic climate change [@ipcc_global_2018].
 
