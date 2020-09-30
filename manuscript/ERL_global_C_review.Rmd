@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -22,7 +22,7 @@ header-includes:  \usepackage{float}
 ---
 \raggedright
 
-**Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database
+**Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the Global Forest Carbon (ForC) database
 
 **Authors:**
 
@@ -30,7 +30,7 @@ Kristina J. Anderson-Teixeira^1,2^*
 
 Valentine Herrmann^1^
 
-Becky Banbury Morgan^3^
+Becky Banbury Morgan^1,3^
 
 Ben Bond-Lamberty^4^
 
@@ -79,11 +79,12 @@ n_areas <- length(unique(na.omit(ForC_sites[,"geographic.area"])))
 
 #ForC simplified
 ForC_simplified <- read.csv(paste0(path_to_ForC, "ForC_simplified/ForC_simplified.csv"), stringsAsFactors = FALSE, check.names = FALSE)
+ForC_simplified_duplicates_removed <- sum(ForC_simplified$suspected.duplicate ==0) 
 
-n_no_history <- sum(ForC_simplified[,"history.no.info"]) #(relative to ForC_simplified)
-n_managed_in_ForC_simplified <- sum(ForC_simplified[,"managed"])
-n_disturbed_in_ForC_simplified <- sum(ForC_simplified[,"disturbed"])
-records_eligible_for_inclusion <- sum(ForC_simplified$managed ==0 & ForC_simplified$disturbed ==0 & ForC_simplified$history.no.info == 0)  #number in ForC_simplified that are not disturbed, managed, or no.history
+n_no_history <- sum(ForC_simplified$suspected.duplicate ==0 & ForC_simplified$history.no.info ==1) #(relative to ForC_simplified)
+n_managed_in_ForC_simplified <- sum(ForC_simplified$suspected.duplicate ==0 & ForC_simplified$managed ==1)
+n_disturbed_in_ForC_simplified <- sum(ForC_simplified$suspected.duplicate ==0 & ForC_simplified$disturbed ==1)
+records_eligible_for_inclusion <- sum(ForC_simplified$suspected.duplicate ==0 & ForC_simplified$managed ==0 & ForC_simplified$disturbed ==0 & ForC_simplified$history.no.info == 0)  #number in ForC_simplified that are not disturbed, managed, or no.history
 
 # limiting to variables and biomes of interest:
  Biomes_n_records <- read.csv("tables_figures/Biomes_n_records_variables_of_interest.csv", check.names = F)
@@ -116,13 +117,6 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 ```
 
 
-
-*NOTES TO COAUTHORS: * 
-
-
-- "**???**" indicates a reference that we have entered in the .Rmd file, but not yet in the bibliography file. Don't worry about those. (However, places with "REF" need references)
-- bold/ italic text indicates places where I know we need to go back and revisit/ fill in info
-
 \newpage
 
 ## Summary
@@ -133,11 +127,11 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 
 *Background.* Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate by their impact  on the global carbon (C) cycle. However, efforts to incorporate forests into climate models and CO~2~ accounting frameworks have been constrained by a lack of accessible, global-scale data on how C cycling varies across forest types and stand ages. 
 
-*Methods/Design.* Here, we draw from the Global Forest Carbon Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we use `r n_records` *ForC* records from `r n_areas_tot` geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables.
+*Methods/Design.* Here, we draw from the Global Forest Carbon Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we use `r n_records` *ForC* records from `r n_areas_tot` geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables with sufficient data.
 
 *Review Results/ Synthesis.*  *ForC v3.0* yielded a comprehensive picture of C cycling in the world's major forest biomes. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age. Importantly, there was generally good closure of C budgets, *i.e.,* internal consistency in the *ForC* data.
 
-*Discussion.* As climate change accelerates, understanding and managing the carbon dynamics of forests is critical to forecasting, mitigation, and adaptation. The synthetic and internally consistent overview of C stocks and fluxes across biomes and stand ages will help to advance these efforts. 
+*Discussion.* As climate change accelerates, understanding and managing the carbon dynamics of forests is critical to forecasting, mitigation, and adaptation. This synthetic and internally consistent global overview of C stocks and fluxes across biomes and stand ages will help to advance these efforts. 
 
 *Key words*: forest ecosystems; carbon cycle; stand age; productivity; respiration; biomass; global
 
@@ -148,36 +142,34 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 # The Background section needs to present the rationale for why a systematic review of this topic is needed along with a history of what has been done to date and an expectation of what new will emerge from the review, especially if quantitative meta-analyses of studies are being considered.
 ```
 
-Forest ecosystems are shaping the course of climate change [@ipcc_global_2018] through their influence on atmospheric carbon dioxide (CO~2~).
+Forest ecosystems are shaping the course of climate change through their influence on atmospheric carbon dioxide [CO~2~; @bonan_forests_2008; @friedlingstein_global_2019; @ipcc_global_2018].
 Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climatecarbon_2006; @krause_large_2018; @bonan_model_2019; @di_vittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011] can be traced to lack of accessible, comprehensive data on how C cycling varies across forest types and in relation to stand history.
 These require large-scale databases with global coverage, which runs contrary to the nature in which forest C stocks and fluxes are measured and published.
 While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass: @hu_mapping_2016; @spawn_harmonized_2020; gross primary productivity, $GPP$: @li_mapping_2019; @saatchi_benchmark_2011], measurement and validation of most forest C stocks and fluxes require intensive on-the-ground data collection.
-
-The future of the current forest C sink is dependent both upon forest responses to climate change itself and human land use decisions, which will feedback and strongly influence the course of climate change. 
-Regrowing forests in particular will play an important role [@pugh_role_2019], as almost two-thirds of the world’s forests were secondary as of 2010 [@fao_global_2010].
-As anthropogenic and climate-driven disturbances impact an growing proportion of Earth's forests [@andela_human-driven_2017; @mcdowell_pervasive_2020], understanding the carbon dynamics of regrowth forests is increasingly important.
-Although age trends in aboveground biomass have been relatively well-studied and synthesized globally [@cook-patton_mapping_2020], a relative dearth of data and synthesis on other C stocks and fluxes in secondary forests points to an under-filled need to characterize age-related trends in forest C cycling.
-Such understanding is particularly critical for reducing uncertainty regarding the potential for carbon uptake and climate change mitigation by regrowth forests [@krause_large_2018; @cook-patton_mapping_2020].
-Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thus central to efforts to mitigate climate change [@grassi_key_2017; @griscom_natural_2017; @cavaleri_urgent_2015].
 
 A robust understanding of forest impacts on global C cycling is essential. 
 Annual gross CO~2~ sequestration in forests (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2009-2018 [9.5 $\pm$ 0.5 Gt C yr^-1^; @friedlingstein_global_2019].
 Most of this enormous C sequestration is counterbalanced by CO~2~ releases to the atmosphere through ecosystem respiration ($R_{eco}$) or fire, with forests globally dominant as sources of both soil respiration [@warner_spatial_2019] and fire emissions [@van_der_werf_global_2017].
 In recent years, the remaining CO~2~ sink averaged 3.2 $\pm$ 0.6 GtC yr^-1^ from 2009-2018, offsetting 29% of anthropogenic fossil fuel emissions [@friedlingstein_global_2019].
-Yet, this sink is reduced by deforestation, estimated at 3.7 Gt CO~2~ yr-1 ranging from 1990-2020
-Recent net deforestation (*i.e.*, gross deforestation minus regrowth) has been a source of CO~2~ emissions, estimated at ~1 Gt C yr^-1^ in recent decades [@pan_large_2011; @tubiello_carbon_2020], reducing the net forest sink to ~1.1-2.2 Gt C yr^-1^ across Earth's forests [@friedlingstein_global_2019].
+Yet, this sink is reduced by deforestation, estimated at ~1 Gt C yr^-1^ in recent decades [@pan_large_2011; @tubiello_carbon_2020], reducing the net forest sink to ~1.1-2.2 Gt C yr^-1^ across Earth's forests [@friedlingstein_global_2019].
+
+The future of the current forest C sink is dependent both upon forest responses to climate change itself and human land use decisions, which will feedback and strongly influence the course of climate change. 
+Regrowing forests in particular will play an important role [@pugh_role_2019], as almost two-thirds of the world’s forests were secondary as of 2010 [@fao_global_2010].
+As anthropogenic and climate-driven disturbances impact an growing proportion of Earth's forests [@andela_human-driven_2017; @mcdowell_pervasive_2020], understanding the carbon dynamics of regrowth forests is increasingly important [@andersonteixeira_altered_2013].
+Although age trends in aboveground biomass have been relatively well-studied and synthesized globally [@cook-patton_mapping_2020], a relative dearth of data and synthesis on other C stocks and fluxes in secondary forests points to an under-filled need to characterize age-related trends in forest C cycling.
+Such understanding is particularly critical for reducing uncertainty regarding the potential for carbon uptake and climate change mitigation by regrowth forests [@krause_large_2018; @cook-patton_mapping_2020].
+Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thus central to efforts to mitigate climate change [@grassi_key_2017; @griscom_natural_2017; @cavaleri_urgent_2015].
 
 Despite the importance of forests, comprehensive global studies have historically been limited by the scattered and more local nature of research studies. 
 Primary research articles typically cover only a small numbers of sites at a time.
-The rare exceptions that span regions or continents with rare exceptions spanning regions or continents are typically coordinated through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015
-], NEON [@schimel_neon_2007], or FLUXNET [@baldocchi_fluxnet_2001; e.g., @novick_ameriflux_2018].
-The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles --often behind paywalls-- along with variation in data formats, units, measurement methods, *etc.*.
+The rare exceptions that span regions or continents with rare exceptions spanning regions or continents are typically coordinated through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015, e.g., @lutz_global_2018], NEON [@schimel_neon_2007], or FLUXNET [@baldocchi_fluxnet_2001; e.g., @novick_ameriflux_2018].
+The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles --often behind paywalls-- along with variation in data formats, units, measurement methods, *etc.*
 In this format, the data are effectively inaccessible for many global-scale analyses, including those attempting to benchmark model performance with global data (Clark et al 2017, Luo et al 2012), quantify the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], or use book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
 
-To address the need for global-scale analyses of forest C cycling, we recently developed *ForC* [@anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018].
+To address the need for global-scale analyses of forest C cycling, we recently developed *ForC* [@anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018].
 *ForC* contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with the different variables capturing the unique ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
 These data are ground-based measurements, and *ForC* contains associated data required for interpretation (*e.g.*, stand history, measurement methods).
-These data have been amalgamated from original peer-reviewed publications, either directly or via intermediary data compilations.
+Data have been amalgamated from original peer-reviewed publications, either directly or via intermediary data compilations.
 Since the its most recent publication [@anderson-teixeira_forc_2018], *ForC* has grown to include two additional large databases: the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020] that also synthesized published forest C data.
 Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones.
 This represents an `r round((nrow(ForC_measurements) - 17367)/17367*100, digits=0)`% increase in records from the prior publication [@anderson-teixeira_forc_2018].
@@ -207,25 +199,25 @@ While components of these questions have been previously addressed [@luyssaert_c
 ```
 
 
-This review synthesizes data from the *ForC* database [Fig. 1; https://github.com/forc-db/ForC; @anderson-teixeira_carbon_2016, @anderson-teixeira_forc_2018].
+This review synthesizes data from the *ForC* database [Fig. 1; https://github.com/forc-db/ForC; @anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018].
 *ForC* amalgamates numerous intermediary data sets [*e.g.*, @luyssaert_co2_2007; @bond-lamberty_global_2010; @cook-patton_mapping_2020] and original studies.
 Original publications were referenced to check values and obtain information not contained in intermediary data sets, although this process has not been completed for all records.
 The database was developed with goals of understanding how C cycling in forests varies across broad geographic scales and as a function of stand age.
 As such, there has been a focus on incorporating data from regrowth forests (*e.g.*, Anderson et al 2006, Martin et al 2013, Bonner et al 2013) and obtaining stand age data when possible [83% of records in v.2.0; @anderson-teixeira_forc_2018].
-Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], which represented roughly one-third of records in *ForC* v.2.0* [@anderson-teixeira_forc_2018].
-Since publication of ForC v.2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [*SRDB* v.##, `r n_SRDB` records; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [*GROA* v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020].
-We've also added data from individual publications (detailed list at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv), with a particular focus on productivity [@banbury_morgan_global_nodate; e.g., @taylor_temperature_2017], dead wood, and ForestGEO sites [e.g., @lutz_global_2018, @johnson_climate_2018].
+Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], which represented roughly one-third of records in *ForC* v2.0 [@anderson-teixeira_forc_2018].
+Since publication of ForC v2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [*SRDB* v4, `r n_SRDB` records; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [*GROA* v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020].
+We have also added data from individual publications, with a particular focus on productivity [@banbury_morgan_global_nodate; e.g., @taylor_temperature_2017], dead wood, and ForestGEO sites [e.g., @lutz_global_2018, @johnson_climate_2018].
 The database version used for this analysis has been tagged as a new release on Github (v3.0) and assigned a DOI through Zenodo (DOI: TBD).
 
 To facilitate analyses, we created a simplified version of ForC, *ForC-simplified* (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which we analyzed here.
 In generating *ForC-simplified*, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ [@ipcc_global_2018].
-Duplicate or otherwise conflicting records were reconciled as described in *APPENDIX S1*, resulting in a total of `r nrow(ForC_simplified)` records (`r round(nrow(ForC_simplified)/nrow(ForC_measurements)*100,digits=1)`% size of total database).
+Duplicate or otherwise conflicting records were reconciled as described in Appendix S1, resulting in a total of `r ForC_simplified_duplicates_removed` records (`r round(ForC_simplified_duplicates_removed/nrow(ForC_measurements)*100,digits=1)`% size of total database).
 Records were filtered to remove plots that had undergone significant anthropogenic management or major disturbance since the most recent stand initiation event.
-Specifically, we removed all plots flagged as managed in ForC-simplified (`r round(n_managed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%).
+Specifically, we removed all plots flagged as managed in ForC-simplified (`r round(n_managed_in_ForC_simplified/ForC_simplified_duplicates_removed*100,digits=1)`%).
 This included plots with any record of managements manipulating CO~2~, temperature, hydrology, nutrients, or biota, as well as any plots whose site or plot name contained the terms “plantation”, "planted", “managed”, “irrigated”, or “fertilized”.
-Plots flagged as disturbed in ForC-simplified (`r round(n_disturbed_in_ForC_simplified/nrow(ForC_simplified)*100,digits=1)`%) included stands that had undergone any notable anthropogenic thinning or partial harvest.
+Plots flagged as disturbed in ForC-simplified (`r round(n_disturbed_in_ForC_simplified/ForC_simplified_duplicates_removed*100,digits=1)`%) included stands that had undergone any notable anthropogenic thinning or partial harvest.
 We retained sites that were grazed or had undergone low severity natural disturbances (<10% mortality) including droughts, major storms, fires, and floods.
-We removed all plots for which no stand history information had been retrieved (`r round(n_no_history/nrow(ForC_simplified)*100,digits=1)`%).
+We removed all plots for which no stand history information had been retrieved (`r round(n_no_history/ForC_simplified_duplicates_removed*100,digits=1)`%).
 In total, this resulted in `r records_eligible_for_inclusion` records (`r round(records_eligible_for_inclusion/nrow(ForC_measurements)*100,digits=1)`% of the records in the database) being eligible for inclusion in the analysis.
 
 We selected 23 annual flux and 11 C stock variables for inclusion in the analysis.
@@ -281,7 +273,7 @@ Specifically, we first defined relationships among variables: for example, $NEP 
 Henceforth, we refer to the variables on the left side of the equation as "aggregate" fluxes or stocks, and those that are summed as "component" fluxes or stocks, noting that the same variable can take both aggregate and component positions in different relationships.
 We considered the C budget for a given relationship "closed" when component variables summed to within one standard deviation of the aggregate variable. 
 
-To test for differences across mature forest biomes, we also examined how stand age impacted fluxes and stocks, employing a mixed effects model ['lmer' function in 'lme4' R package version **x.xx**; @bates_fitting_2015] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
+To test for differences across mature forest biomes, we also examined how stand age impacted fluxes and stocks, employing a mixed effects model ['lmer' function in 'lme4' R; @bates_fitting_2015] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
 When Biome had a significant effect, we looked at a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
 This analysis was run for variables with records for at least seven distinct geographic areas in more than one biome, excluding any biomes that failed this criteria (Table 1). 
 
@@ -289,7 +281,7 @@ To test for age trends in young (<100yrs) forests, we employed a mixed effects m
 This analysis was run for variables with records for at least three distinct geographic areas in more than one biome, excluding any biomes that failed this criteria (Table 1). 
 When the effect of stand age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome $\times$ stand.age interaction was included in the model.
 
-To facilitate the accessibility of our results and data, and to allow for rapid updates as additional data become available, we have automated all database manipulation, analyses, and figure production in R (**version, citation**).
+To facilitate the accessibility of our results and data, and to allow for rapid updates as additional data become available, we have automated all database manipulation, analyses, and figure production in R [@r_core_team_r_2020].
 
 ## Review Results/ Synthesis
 ```{r eval=FALSE, echo=FALSE}
@@ -301,7 +293,7 @@ To facilitate the accessibility of our results and data, and to allow for rapid 
 Of the `r nrow(ForC_measurements)` records in *ForC* v3.0, `r n_records` met our strict criteria for inclusion in this study (Fig. 1).
 These records were distributed across `r n_plots_tot` plots in `r n_areas_tot` distinct geographic areas.
 Of the 23 flux and 11 stock variables mapped in these diagrams, *ForC* contained sufficient mature forest data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ 7 distinct geographic areas) for `r n_fluxes_with_ge7_areas[["Tropical broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Tropical broadleaf MATURE"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate broadleaf MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate broadleaf MATURE"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge7_areas[["Temperate conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Temperate conifer MATURE"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge7_areas[["Boreal conifer MATURE"]]` fluxes and `r n_stocks_with_ge7_areas[["Boreal conifer MATURE"]]` stocks in boreal forests.
-For regrowth forests (<100 yrs), *ForC* contained sufficient data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ **3** distinct geographic areas) for `r n_fluxes_with_ge3_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge3_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
+For regrowth forests (<100 yrs), *ForC* contained sufficient data for inclusion in our statistical analyses (*i.e.*, records from $\ge$ 3 distinct geographic areas) for `r n_fluxes_with_ge3_areas[["Tropical broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Tropical broadleaf YOUNG"]]` stocks in tropical broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate broadleaf YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate broadleaf YOUNG"]]` stocks in temperate broadleaf forests, `r n_fluxes_with_ge3_areas[["Temperate conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Temperate conifer YOUNG"]]` stocks in temperate conifer forests, and `r n_fluxes_with_ge3_areas[["Boreal conifer YOUNG"]]` fluxes and `r n_stocks_with_ge3_areas[["Boreal conifer YOUNG"]]` stocks in boreal forests.
 
 ### C cycling in mature forests
 
@@ -464,7 +456,7 @@ Thus, biome differences should always be interpreted relative to the geographic 
 Whereas biomass can be remotely sensed and receives significant research attention, far less is known about geographical variation in deadwood and organic layer ($OL$) across biomes, which has proved a limitation for C accounting efforts [@pan_large_2011].
 Although these stocks can be important--exceeding 100 t C ha^-1^ in some stands (Figs. 7d-e, S23-S25), this study is the first to synthesize deadwood data on a global scale [but see @cook-patton_mapping_2020 for young forests].
 Unfortunately, data remain too sparse for statistical comparison across biomes (Figs. 7, S23-S25; but see below for age trends), pointing to a need for more widespread quantification of both standing and downed deadwood.
-*ForC* coverage of $OL$ stocks is more comprehensive, revealing no significant differences across temperate and tropical biomes, but a tendency towards higher $OL$ in boreal forests, consistent with the idea that slower decomposition in colder climates results in more buildup of organic matter [@allen_global_2005]. 
+*ForC* coverage of $OL$ stocks is more comprehensive, revealing no significant differences across temperate and tropical biomes, but a tendency towards higher $OL$ in boreal forests, consistent with the idea that slower decomposition in colder climates results in more buildup of organic matter [@allen_global_2002]. 
 Further research on non-living C stocks in the world's forests will be essential to completing the picture.
 
 ### Age trends in C cycling  
@@ -472,7 +464,7 @@ Further research on non-living C stocks in the world's forests will be essential
 Our study reveals that most C fluxes quickly increase to a plateau as stands age (Fig. 6), consistent with current understanding of age trends in forest C cycling [e.g., @andersonteixeira_altered_2013; @amiro_ecosystem_2010; @magnani_human_2007].
 While limited records in very young (*i.e.*, <5 year old) stands resulted in poor resolution of the earliest phases of this increase for many variables (sometimes detecting no age trend; Table 1), any autotrophic C flux (e.g., $GPP$, $NPP$ and its components, $R_auto$) would be minimal immediately following a stand-clearing disturbance.
 These would be expected to increase rapidly with the most metabolically active components of biomass, foliage and fine roots, which also increase rapidly with stand age (Fig. 7).
-In contrast, soil heterotrophic respiration ($R_{het-soil}$) and total soil respiration ($R_{soil}$) are expected to be non-zero following stand-clearing disturbance, although these may decrease with a reduction of root respiration ($R_{soil}$ only) and C exudates or increase in response to an influx of dead roots and litter [@ribeiro-kumara_how_2020; @maurer_carbon_2020; @bond-lamberty_contribution_2004].
+In contrast, soil heterotrophic respiration ($R_{het-soil}$) and total soil respiration ($R_{soil}$) are expected to be non-zero following stand-clearing disturbance, although these may decrease with a reduction of root respiration ($R_{soil}$ only) and C exudates or increase in response to an influx of dead roots and litter [@ribeiro-kumara_how_2020; @maurer_carbon_2016; @bond-lamberty_contribution_2004].
 In this study, we detect no significant age trends in either variable.
 
 Notably, net carbon sequestration ($NEP$) increases with age up to the 100-yr threshold examined here, with more pronounced patterns in temperate than boreal forests (Fig. 6f). 
@@ -480,7 +472,7 @@ This finding is largely consistent with, but built from a far larger dataset tha
 However, $NEP$ has been observed to decline from intermediate to old stands [@luyssaert_old-growth_2008], and the $NEP$ estimated by our model for 100-year-old temperate conifer stands (~5 Mg C ha^-1^ yr^-1^) exceeds the mean of mature forests in the same biome (0.7 Mg C ha^-1^ yr^-1^; Fig.4).
 A decrease in $NEP$ is consistent with the observed deceleration of biomass accumulation as stands age, although both biomass and non-living C stocks will often continue to increase well beyond the 100-yr threshold used here to delimit young and mature stands [@luyssaert_old-growth_2008; @mcgarvey_carbon_2014; @lichstein_biomass_2009].
 
-In terms of stocks, our study reveals consistent increases in live biomass stocks with stand age--a pattern that is well-known and expected [e.g., @lichstein_biomass_2009; @yang_global_2011]--and more variable age trends in deadwood and $OL$.
+In terms of stocks, our study reveals consistent increases in live biomass stocks with stand age--a pattern that is well-known and expected [e.g., @lichstein_biomass_2009; @yang_carbon_2011]--and more variable age trends in deadwood and $OL$.
 The latter are particularly sensitive to the type of disturbance, where disturbances that remove most organic material (e.g., logging, agriculture) result in negligible deadwood in young stands, followed by a buildup over time [tropical stands in Fig. 7e; e.g., @vargas_biomass_2008].
 In contrast, natural disturbances (e.g., fire, drought) can produce large amounts of deadwood (mostly $DW_{standing}$) that slowly decomposes as the stand recovers, resulting in declines across young stand ages [e.g., temperate and boreal stands in Fig. 7e; e.g., @carmona_coarse_2002].
 Again, further study and synthesis of non-living C stocks across biomes and stand ages will be valuable to giving a more comprehensive picture. 
