@@ -104,13 +104,35 @@ table_pt <- read.csv("tables_figures/SI_age_trend_model_summaries_manually_edite
                      #col.names=c("NULL", "Parameter", "Estimate", "SE", "$t_{value}$"), 
                      stringsAsFactors = FALSE, check.names = FALSE)
 kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F)%>%
-  #pack_rows("NEP", 1, 5, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  #pack_rows("GPP", 6, 10, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  #pack_rows("NPP", 11, 15, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  #pack_rows("ANPP", 16, 23, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  #pack_rows("ANPP_woody", 24, 28, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  #pack_rows("ANPP_stem", 29, 36, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
-  #pack_rows("ANPP_branch", 37, 40, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>%
+  pack_rows("", 1, 6, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #NEP
+  pack_rows("", 7, 12, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #GPP
+  pack_rows("", 13, 17, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #NPP
+  pack_rows("", 18, 25, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #ANPP
+  pack_rows("", 26, 29, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #ANPP_woody
+  pack_rows("", 30, 34, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #ANPP_stem
+  pack_rows("", 35, 37, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #ANPP_branch
+  pack_rows("", 38, 42, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #ANPP_foliage
+  pack_rows("", 43, 45, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #ANPP_litterfall
+  pack_rows("", 46, 48, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #skipped variables
+  pack_rows("", 49, 53, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 54, 57, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 58, 62, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 63, 67, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 68, 69, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 2 skipped
+  pack_rows("", 70, 74, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 75, 79, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 80, 84, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
+  pack_rows("", 85, 92, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #B_tot
+  pack_rows("", 93, 100, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # B_ag
+  pack_rows("", 101, 108, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 109, 116, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 117, 124, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 125, 132, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 133, 140, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 141, 144, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 145, 145, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 146, 153, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% # 
+  pack_rows("", 154, 161, latex_gap_space = "1em", colnum = 4, hline_before = FALSE) %>% #
   kable_styling(latex_options =c("repeat_header"), protect_latex = T, font_size = 7)
 ```
 

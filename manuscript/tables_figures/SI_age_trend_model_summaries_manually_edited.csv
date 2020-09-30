@@ -44,9 +44,9 @@ $ANPP_{foliage}$,log10(stand.age),1.66,0.2,8.12
 $ANPP_{litterfall}$,log10(stand.age),0.74,1.84,0.4
 ,BiomeTropical broadleaf,2.97,2.88,1.03
 ,BiomeTemperate broadleaf,0.68,3.34,0.2
-,-,-,-,-
-,-,-,-,-
-,-,-,-,-
+$ANPP_{repro}$,-,-,-,-
+$ANPP_{folivory}$,-,-,-,-
+$M_{woody}$,-,-,-,-
 $BNPP$,log10(stand.age),0.97,0.39,2.5
 ,BiomeTropical broadleaf,2.85,0.88,3.24
 ,BiomeTemperate broadleaf,0.66,0.7,0.94
@@ -66,8 +66,8 @@ $R_{eco}$,log10(stand.age),0.91,0.6,1.52
 ,BiomeTemperate broadleaf,10.5,1.36,7.71
 ,BiomeTemperate conifer,11.08,1.17,9.5
 ,BiomeBoreal conifer,6.02,1.56,3.87
-,-,-,-,-
-,-,-,-,-
+$R_{auto}$,-,-,-,-
+$R_{auto-ag}$,-,-,-,-
 $R_{root}$,log10(stand.age),1.04,0.5,2.07
 ,BiomeTropical broadleaf,6.31,1.01,6.27
 ,BiomeTemperate broadleaf,2,0.89,2.25
@@ -143,7 +143,7 @@ $DW_{tot}$,log10(stand.age),2.6,2.86,0.91
 ,BiomeTropical broadleaf,2.1,4.04,0.52
 ,BiomeTemperate broadleaf,18.37,9.48,1.94
 ,log10(stand.age):BiomeTemperate broadleaf,-1.49,5.38,-0.28
-,-,-,-,-
+$DW_{standing}$,-,-,-,-
 $DW_{down}$,log10(stand.age),2.87,1.72,1.67
 ,BiomeTropical broadleaf,4.26,3.59,1.19
 ,BiomeTemperate broadleaf,15.46,12.05,1.28
