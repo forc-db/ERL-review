@@ -471,17 +471,17 @@ Further research on non-living C stocks in the world's forests will be essential
 
 ### Age trends in C cycling  
 
-**Our study reveals that most C fluxes quickly increase to a plateau as stands age...**
-@anderson-teixeira_altered_2013
+Our study reveals that most C fluxes quickly increase to a plateau as stands age (Fig. 6), consistent with current understanding of age trends in forest C cycling [e.g., @anderson-teixeira_altered_2013].
+*Quickly-changing and age-dependent fluxes were also found in a number of previous syntheses (Amiro et al. 2010 10.1029/2010JG001390, Magnani et al. 2007 10.1038/nature05847).*
+While limited records in very young (*i.e.*, <5 year old) stands resulted in poor resolution of the earliest phases of this increase for many variables (sometimes detecting no age trend; Table 1), any autotrophic C flux (e.g., $GPP$, $NPP$ and its components, $R_auto$) would be minimal immediately following a stand-clearing disturbance.
+These would be expected to increase rapidly with the most metabolically active components of biomass, foliage and fine roots, which also increase rapidly with stand age (Fig. 7).
+In contrast, soil heterotrophic respiration ($R_{het-soil}$) and total soil respiration ($R_{soil}$) are expected to be non-zero following stand-clearing disturbance, although these may decrease with a reduction of root respiration ($R_{soil}$ only) and C exudates or increase in response to an influx of dead roots and litter [@ribeiro-kumara_how_2020; @mauer_carbon_2020; @bond-lamberty_contribution_2004].
+In this study, we detect no significant age trends in either variable.
 
-**(paragraph on NEP): **
-
-NEP increases with log(age) to 100 --> strongest C sinks are established secondary forests. (But presumably this exact number is an artifact; don’t over-emphasize.)
-
-Our findings are largely consistent with, but built from a far larger dataset than, those of Pregitzer and Euskirchen (2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x), who found that NPP and NEP to be higher in intermediate-aged forests than older forests, and emphasize the importance of forest age at the biome scale. 
-Quickly-changing and age-dependent fluxes were also found in a number of previous syntheses (Amiro et al. 2010 10.1029/2010JG001390, Magnani et al. 2007 10.1038/nature05847). 
-
-In contrast to most fluxes, $NEP$ is highest at intermediate ages
+Notably, net carbon sequestration ($NEP$) increases with age up to the 100-yr threshold examined here, with more pronounced patterns in temperate than boreal forests (Fig. 6f). 
+This finding is largely consistent with, but built from a far larger dataset than, previous studies showing an increase in $NEP$ across relatively young stand ages [**Pregitzer and Euskirchen (2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x); Baldocchi; Luyssaert**].
+However, $NEP$ has been observed to decline from intermediate to old stands **[Luyssaert 2008]**, and the $NEP$ estimated by our model for 100-year-old temperate conifer stands (~5 Mg C ha^-1^ yr^-1^) exceeds the mean of mature forests in the same biome (0.7 Mg C ha^-1^ yr^-1^; Fig.4).
+A decrease in $NEP$ is consistent with the observed decelleration of biomass accumulation as stands age, although both biomass and non-living C stocks will often continue to increase well beyond the 100-yr threshold used here to delimit young and mature stands (**REFS**).
 
 In terms of stocks, our study reveals consistent increases in live biomass stocks with stand age--a pattern that is well-known and expected [e.g., **REFS**]--and more variable age trends in deadwood and $OL$.
 The latter are particularly sensitive to the type of disturbance, where disturbances that remove deadwood (e.g., logging, agriculture) result in negligible deadwood in young stands, followed by a buildup over time [e.g., tropical stands in Fig. 7e **REFS**].
