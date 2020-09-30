@@ -162,7 +162,10 @@ Yet, this sink is reduced by *deforestation/ forest losses to anthropogenic and 
 Recent net deforestation (*i.e.*, gross deforestation minus regrowth) has been a source of CO~2~ emissions, estimated at ~1.1 Gt C yr^-1^ from YEAR-YEAR (Pan et al 2011; **UPDATE**), reducing the net forest sink to ~1.1-2.2 Gt C yr^-1^ across Earth's forests [@friedlingstein_global_2019].
 
 The future of the current forest C sink is dependent both upon forest responses to climate change itself and human land use decisions, which will feedback and strongly influence the course of climate change. 
-Regrowing forests in particular will play an important role [@pugh_role_2019], as these represent a large (**~#%**) and growing proportion of Earth's forests [@mcdowell_pervasive_2020].
+Regrowing forests in particular will play an important role [@pugh_role_2019], as almost two-thirds of the world’s forests were secondary as of 2010 (**FAO 2010**)
+As anthropogenic and climate-driven disturbances impact an growing proportion of Earth's forests [@andela_human-driven_2017; @mcdowell_pervasive_2020], understanding the carbon dynamics of regrowth forests is increasingly important.
+Although age trends in aboveground biomass have been relatively well-studied and recently synthesized globally [@cook-patton_mapping_2020], a relative dearth of data and synthesis on other C stocks and fluxes in secondary forests points to an under-filled need to characterize age-related trends in forest C cycling.
+Such understanding is particularly critical for reducing uncertainty regarding the potential for carbon uptake and climate change mitigation by regrowth forests [@kruase_large_2018; @cook-patton_mapping_2020].
 Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thus central to efforts to mitigate climate change [@grassi_key_2017; @griscom_natural_2017; **Cavaleri et al 2015**].
 
 Despite the importance of forests, comprehensive global studies have historically been limited by the scattered and more local nature of research studies. 
@@ -468,15 +471,11 @@ Further research on non-living C stocks in the world's forests will be essential
 
 ### Age trends in C cycling  
 
-*(Just some rough notes at this point)*
+**Our study reveals that most C fluxes quickly increase to a plateau as stands age...**
+@anderson-teixeira_altered_2013
 
-A relative dearth of data on C cycling in secondary forests, particularly in the tropics (Anderson-Teixeira et al 2016), is problematic in that almost 2/3 of the world’s forests were secondary as of 2010 (FAO 2010), implying an under-filled need to characterize age-related trends in forest C cycling.
+**(paragraph on NEP): **
 
-Moreover, as disturbances increase [@andela_human-driven_2017; @mcdowell_pervasive_2020], understanding the carbon dynamics of regrowth forests will be increasingly important.
-
-It's also important to understand secondary forest C sequestration to reduce uncertainty regarding the potential for carbon uptake by regrowth forests [@kruase_large_2018; @cook-patton_mapping_2020].
-
-(discuss NEP well, including)
 NEP increases with log(age) to 100 --> strongest C sinks are established secondary forests. (But presumably this exact number is an artifact; don’t over-emphasize.)
 
 Our findings are largely consistent with, but built from a far larger dataset than, those of Pregitzer and Euskirchen (2004 http://dx.doi.org/10.1111/j.1365-2486.2004.00866.x), who found that NPP and NEP to be higher in intermediate-aged forests than older forests, and emphasize the importance of forest age at the biome scale. 
@@ -491,42 +490,32 @@ Again, further study and synthesis of non-living C stocks across biomes and stan
 
 ### Relevance for climate change prediction and mitigation
 
-The future of forest C cycling [@song_meta-analysis_2019] will shape trends in atmospheric CO~2~ and the course of climate change.
-For a human society seeking to understand and mitigate climate change, the data contained in *ForC* and summarized here can help to meet two major challenges.
+The future of forest C cycling [@song_meta-analysis_2019] will shape trends in atmospheric CO~2~ and the course of climate change (**Schimel et al. 2015 10.1073/pnas.1407302112**).
+Our findings, and more generally the data contained in *ForC* and summarized here, can help to meet two major challenges.
 
-First, improved representation of forest C cycling in models is essential to improving predictions of the future course of climate change.
-To ensure that models are giving the right answers for the right reasons, it is important to benchmark against multiple components of the C cycle that are internally consistent with each other.
-By making tens of thousands of records readily available in standardized format, *ForC* makes it feasible for the modeling community to draw upon these data to benchmark models.
-Integration of *ForC* with models is a goal (Fer et al., in revision).
+First, improved representation of forest C cycling in models is essential to improving predictions of the future course of climate change, for the simple reason that by definition future projections extend our existing observations and understanding to conditions that do not currently exist on Earth (**https://doi.org/10.1016/j.tree.2017.10.002, https://doi.org/10.1126/science.aam8328, https://link.springer.com/article/10.1186/s13717-018-0142-8**). 
+To ensure that models are giving the right answers for the right reasons (Sulman et al. 2018 10.1007/s10533-018-0509-z), it is important to benchmark against multiple components of the C cycle that are internally consistent with each other (Collier et al. 2018 10.1029/2018MS001354, Wang et al. 2018 10.5194/gmd-11-3903-2018). 
+*ForC*’s tens of thousands of records are readily available in a standardized format, and our analyses here indicate their internal consistency is reasonably high. Integration of ForC with models is a goal (Fer et al., in revision).
 
-Second, *ForC* can serve as a pipeline through which forest science can inform forest-based climate change mitigation efforts.
-Such efforts will be most effective when informed by the best available data, yet it is not feasible for the individuals and organizations designing such efforts to sort through literature, often behind paywalls, with data reported in varying units, terminology, etc.
-One goal for *ForC* is to serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales.
-This is already happening!
-*ForC* has already contributed to updating the IPCC guidelines for carbon accounting in forests [IPCC 2019; @requena_suarez_estimating_2019; Rozendaal et al in prep], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
+**(Ben would remove this paragraph:)**
+Second, *ForC* can serve as a pipeline through which forest science can inform forest-based climate change mitigation efforts. 
+Such efforts will be most effective when informed by the best available data, yet it is not feasible for the individuals and organizations designing such efforts to sort through literature, often behind paywalls, with data reported in varying units, terminology, etc. 
+One goal for *ForC* is to serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales. 
+This is already happening: *ForC* has contributed to updating the IPCC guidelines for carbon accounting in forests [**IPCC 2019**; @requena_suarez_estimating_2019], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
 
-***ForC* can complement remote sensing to provide a comprehensive picture of global forest C cycling.** (*here, discuss what is well-covered by remote sesnsing, where ForC is useful for calibrating remote sensing, and what ForC can get that remote sensing can't.*)
-AGB is the largest stock, and most of the emphasis is on this variable.
-Remote sensing, with calibration based on high-quality ground-based data [@schepaschenko_forest_2019; @chave_ground_2019], is the best approach for mapping forest carbon (REFS).
-However, it is limited in that it is not associated with stand age and disturbance history, except in recent decades when satellite data can be used to detect forest loss, gain, and some of their dominant drivers [@hansen_high-resolution_2013; @song_global_2018; @curtis_classifying_2018].
-*ForC*  is therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020.
+It is also interesting to consider the complementary utility of global-scale but spatially discontinuous databases such as ForC and remote wall-to-wall remote sensing products. The latter provide unparalleled insight into aboveground carbon stocks, but less constraint on belowground stocks or carbon fluxes in general (Bond-Lamberty et al. 2016, http://dx.doi.org/10.1002/ecs2.1380, Anav et al. 2015 http://dx.doi.org/10.1002/2015RG000483). 
+Combining observational data and remote observations may provide a much more comprehensive and accurate picture of global forest C cycling, particularly when used in formal data assimilation systems (Konings et all 2019 10.5194/bg-16-2269-2019, Liu et al. 2018 10.1088/1748-9326/aad5ef). 
+biomass is the largest stock, and most of the emphasis has traditionally been on this variable. 
+Remote-sensing driven biomass estimates (e.g. Saatchi et al. 2011 http://dx.doi.org/10.1073/pnas.1019576108), calibrated based on high-quality ground-based data [@schepaschenko_forest_2019; @chave_ground_2019], are well suited for this task. Note however that factors such as stand age and disturbance history (except in very recent decades are important but difficult to detect this way [@hansen_high-resolution_2013; @song_global_2018; @curtis_classifying_2018]. 
+Ground-based data such as *ForC* are therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020, and thus constraining variables such as carbon sink potential (Luyssaert et al. 2007 http://dx.doi.org/10.1038/nature07276).
 
-*Remote sensing measurements are increasingly useful for global- or regional-scale estimates of forest $GPP$ [@bagdley_terrestrial_2019; @li_mapping_2019], aboveground biomass ($B_{ag}$) (REFS), woody mortality (*i.e.*, $B_{ag}$ losses to mortality $M_{woody}$) [@clark_quantifying_2004; @leitold_nino_2018], and to some extent net ecosystem exchange ($NEP$) (REFS).*
-Other variables, in particular respiration fluxes, cannot be remotely sensed (@bond-lamberty_estimating_2016), and efforts such as the Global Carbon Project (**le quere REF**) and NASA CMS (**citation: https://carbon.nasa.gov/pdfs/CMS_Phase-1_Report_Final_optimized.pdf but maybe better to cite open literature, one of the papers listed at https://cmsflux.jpl.nasa.gov/get-data/publication-data-sets**) typically compute them as residuals only. (**Ben, it woudl be particularly helpful if you could flesh this out some more.**)
-
-In terms of C stocks, there is a paucity of data on dead wood and organic layer (Pan et al. ?).
-These can be significant. (**Note that we've given a lot of emphasis to dead wood (work by Abby), and as a result this work really advances knowledge of dead wood. We'll want to highlight that here.**)
-*(give some stats/ cite figures)*.
-
-**Move to data availability statement, or methods?**:
-We recommend that use of *ForC* data go to the original database, as opposed to using "off-the-shelf" values from this publication.
-This is because
-(1) *ForC* is constantly being updated,
-(2) analyses should be designed to match the application,
-(3) age equations presented here all fit a single functional form that is not necessarily the best possible for all the variables.
+In contrast, respiration fluxes cannot be remotely sensed. 
+Efforts such as the Global Carbon Project (le quere http://dx.doi.org/10.5194/essd-11-1783-2019) and NASA’s Carbon Monitoring System (**Liu et al. 2018 10.1088/1748-9326/aad5ef**) typically compute respiration as residuals of all other terms [@bond-lamberty_estimating_2016;  Harmon et al. 2011 http://dx.doi.org/10.1029/2010JG001495]. 
+This means that the errors on respiration outputs are likely to be large and certainly poorly constrained, offering a unique opportunity for databases such as ForC and SRDB [@jian_restructured_2020] to provide observational benchmarks. 
+For example, **Konings et al. (2019 http://dx.doi.org/10.5194/bg-16-2269-2019)** produced a unique top-down estimate of global heterotrophic respiration that can both be compared with extant bottom-up estimates **(Bond-Lamberty et al. 2018 http://dx.doi.org/10.1029/2018EF000866)** and used as an internal consistency check on other parts of the carbon cycle **(Phillips et al. 2016)**.
 
 As climate change accelerates, understanding and managing the carbon dynamics of forests will be critical to forecasting, mitigation, and adaptation.
-The C data in ForC, as summarized here, will be valuable to these efforts.
+The C data in *ForC*, as summarized here, will be valuable to these efforts.
 
 ## Acknowledgements
 Thanks to all researchers whose data are included in *ForC* and this analysis, to Jennifer McGarvey and Ian McGregor for help with the database, and to Norbert Kunert for helpful discussion.
