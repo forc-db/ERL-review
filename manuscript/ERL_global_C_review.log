@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 SEP 2020 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 SEP 2020 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,12 +1020,12 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 _diagrams/Diagrams/Boreal conifer YOUNG.png (PNG copy)>] [24
 
 ] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1815.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1813.
 [38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1815.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1813.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1815.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1815.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1813.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1813.
  ) 
 Here is how much of TeX's memory you used:
  16215 strings out of 492616
@@ -1056,7 +1056,7 @@ c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (38 pages, 23715741 bytes).
+Output written on ERL_global_C_review.pdf (38 pages, 24463249 bytes).
 PDF statistics:
  613 PDF objects out of 1000 (max. 8388607)
  534 compressed objects within 6 object streams

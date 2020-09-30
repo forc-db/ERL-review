@@ -428,10 +428,9 @@ This is an important and useful test, because it allows for consistency checks w
 
 ### C cycling across biomes
 
-Our analysis reveals a general deceleration of carbon cycling from the tropics to boreal regions.
+Our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
 For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate].
 The consistency with which this occurs across numerous fluxes is not surprising, but has never been simultaneously assessed across such a large number of variables [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
-Thus, our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
 
 The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$ (Fig. 6f), which showed no significant differences across biomes.
 Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem.
@@ -448,7 +447,7 @@ The observed tendency for young forest fluxes to decrease from tropical to borea
 
 In contrast to C fluxes and biomass accumulation rates in regrowth forests, stocks showed less systematic variation across biomes.
 For aboveground biomass, which is the variable in *ForC* with broadest geographical representation, the modest trend of declining biomass from tropical to boreal regions mirrors observations from spaceborne lidar that reveal a decline in aboveground biomass (for all forests, including secondary) with latitude across the N hemisphere [@hu_mapping_2016]. 
-The highest- biomass forests on Earth are however found in coastal temperate climates of both the southern and northern hemisphere [@keith_re-evaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
+The highest- biomass forests on Earth are, however, found in coastal temperate climates of both the southern and northern hemisphere [@keith_re-evaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
 Disproportionate representation of forests in one such region--the US Pacific Northwest--inflated estimates of temperate conifer fluxes and stocks for some variables and was responsible for all of the anomalous results described here (e.g., lack of complete C budget closure, anomalous trend across biomes for $BNPP_{coarse}$). 
 Thus, biome differences should always be interpreted relative to the geographic distribution of sampling, which only rarely covers the majority of forested area within a biome. 
 
@@ -483,7 +482,7 @@ Our findings, and more generally the data contained in *ForC* and summarized her
 
 First, improved representation of forest C cycling in models is essential to improving predictions of the future course of climate change, for the simple reason that by definition future projections extend our existing observations and understanding to conditions that do not currently exist on Earth [@mcdowell_predicting_2018; @bonan_climate_2018; @gustafson_extrapolating_2018]. 
 To ensure that models are giving the right answers for the right reasons [@sulman_multiple_2018], it is important to benchmark against multiple components of the C cycle that are internally consistent with each other [@collier_international_2018; @wang_golum-cnp_2018]. 
-*ForC*’s tens of thousands of records are readily available in a standardized format, and our analyses here indicate their internal consistency is reasonably high. Integration of *ForC* with models will be valuable to improving the accuracy and reliability of models. 
+*ForC*’s tens of thousands of records are readily available in a standardized format, and our analyses here indicate that their internal consistency is reasonably high. Integration of *ForC* with models will be valuable to improving the accuracy and reliability of models. 
 
 Second, *ForC* can serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales. 
 This is already happening: *ForC* has contributed to updating the IPCC guidelines for carbon accounting in forests [@ipcc_2019_2019; @requena_suarez_estimating_2019], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
