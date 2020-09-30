@@ -29,41 +29,45 @@ header-includes:  \usepackage{float}
 
 ### Status of duplicates and conflicting records within ForC
 
-ForC v3.0 contains potential duplicates that have arisen from importing intermediary data sets with overlap in data. 
-In particular, the recent imports of SRDB and GROA resulted in the introduction of numerous potential duplicates. 
-SRDB and ForC were developed independently (but with different foci), resulting in numerous duplicates.
-The GROA database incorporated ForC data. 
-For records retaining the same site names, GROA duplicates were not imported into ForC (although they were checked against corresponding ForC records, and differences reconciled).
-There were, however, some records entered into GROA independently of ForC, resulting in mismatched names.
+*ForC* v3.0 contains potential duplicates that have arisen from importing intermediary data sets with overlap in data. 
+In particular, the recent imports of *SRDB* and *GROA* resulted in the introduction of numerous potential duplicates. 
+*SRDB* and *ForC* were developed independently (but with different foci), resulting in numerous duplicates.
+The *GROA* database was developed semi-independently, incorporating *ForC* data partway through its development. 
+For records retaining the same site names, *GROA* duplicates were not imported into *ForC* (although they were checked against corresponding *ForC* records, and differences reconciled).
+There were, however, some records entered into *GROA* independently of *ForC*, resulting in mismatched names.
 
-Prior to the merging of the three databases (ForC v2.0, SRDB, and GROA), there were potential duplicates within the ForC and SRDB portions, the latter an artifact of how data were recorded in SRDB and imported into ForC.
-GROA has no known duplicates, with several steps having been taken to ensure independence of the records within the database. 
+Prior to the merging of the three databases (*ForC* v2.0, *SRDB*, and *GROA*), there were potential duplicates within the *ForC* and *SRDB* portions, the latter an artifact of how data were recorded in *SRDB* and imported into *ForC.*
+*GROA* has no known duplicates, with several steps having been taken to ensure independence of the records within the database. 
 
+To the extent possible, we used automated scripts in R to detect and remove duplicate records in the creation of *ForC-simplified*.
 
-### Detecting and reconciling duplicate sites
+### Handling within-plot duplicates
 
-To the extent possible, we used automated scripts in R to detect duplicate records.
-Potential duplicates were defined as geographically proximate records for stands of **similar age** with the same variable measured in the same year (if known).
-In cases where site name, plot name, and stand age matched, duplicate status could be automatically detected and reconciled (see below).
-In cases where site and plot names or reported age differed, our script detected potential duplicate sites that were **geographically proximate**.
-When all such potential duplicate sites were within GROA, they were assumed independent. 
-
-Suspected duplicates require manual review and merging of records, and this process has not been completed for all records. 
-To handle potential duplicates at sites that have yet to be reviewed, we implemented the following procedure. 
-In cases where a single location -- generally an established research site where multiple investigators have worked -- contained multiple plots in nested or unknown relation to one another, we grouped multiple sites into a "supersite" (e.g., Harvard Forest, Barro Colorado Island, Pasoh Forest Reserve), and duplicates within a supersite were handled in the same way as records with matching site and plot names. (**VALENTINE, IS THIS ACCURATE?**)
-For suspected duplicate groups that were not flagged as supersites and had not yet been reviewed, we retained only one potential duplicate record, assigning precedence as follows: (1) original GROA record(s), (2) record(s) in ForC prior to SRDB and GROA import, (3) SRDB record(s). 
-
-Finally, ....
-https://github.com/forc-db/ERL-review/issues/34
-
-### Generating ForC_simplified
-Detected duplicates were reconciled as follows.
+Duplicate records within a plot and taken in the same year were reconciled as follows.
 Replicate measurements (*i.e.*, replicates from within a single study) were averaged. 
-Records that subsumed others— **i.e.**, the time period included that of $\ge$ 2 other records or dates were unknown and therefore conflicted with $\ge$ 2 other records—were removed. 
-For each group of duplicate records—*i.e.*, measurements of the same variable in the same plot at the same time—one record was assigned precedence (recorded in D.precedence field). 
-If duplicates were exact matches, **one was dropped**. 
-When measurement periods overlapped or were not specified, precedence was given first to records representing longer measurement periods (*i.e.*, end.date - start.date) and then to more recently published values. 
+Records that subsumed others—- *i.e.*, the time period included that of $\ge$ 2 other records or dates were unknown and therefore conflicted with $\ge$ 2 other records—were removed. 
+For each group of duplicate records—*i.e.*, measurements of the same variable in the same plot at the same time—one record was assigned precedence as follows. 
+If duplicates were exact matches, one was dropped. 
+When measurement periods overlapped or were not specified, precedence was given first to records representing longer measurement periods (*i.e.*, multi-year mean over a single year) and then to more recently published values. 
 We manually reviewed duplicates that differed only in methodology, assigning precedence to the record employing a more comprehensive approach (*e.g.*, inclusion of understory, lianas, or bamboo as opposed to just trees) or using a favored methodology.
+
+### Handling duplicate sites
+
+To handle cases where duplicate records had different site and/or plot names (and often slightly different geographic coordinates), we detected potential duplicates and, for those that had not yet been resolved, included only one in *ForC-simplified* and the analyses that were based on it. 
+Potential duplicates were defined as records for the same variable made in the same year (when known) on stands of similar age and in the same geographic area (see Methods).
+Because records of stand age often lack precision and  were sometimes recorded differently in different intermediary databases, we considered records to be potential duplicates when ages fell within one of several broad age groups: <10, 10-50, 50-100, and >100 years (or mature and of undefined age). 
+We then generated groups of potential duplicates grouped by variable, geographic area, stand age grouping, and measurement year.
+
+Within each group, we flagged records as potential duplicates--and excluded them from *ForC-simplified* until they can be reconciled--as follows.
+Because *GROA* is believed to contain no duplicates, all records originating from *GROA* were assumed independent, and any other records within the group flagged as potential duplicates.
+If all records originated from *ForC v2.0* or *SRDB*, we gave precedence to *ForC* records, flagging *SRDB* records as potential duplicates.
+If duplicates remained (within *ForC v2.0* or *SRDB*), we selected a record for retention based on citation year, keeping the oldest (presumably original) citations for most variables. 
+For eddy-covariance variables ($NEP$, $GPP$, $R_{eco}$), we retained the record associated with the most recent publication, as these data are commonly re-assessed using new analysis methods.
+If publication years were the same, we randomly selected one record.
+
+This approach was conservative in that it removed some legitimately independent records. 
+Future refinement of this process and manual review of potential duplicates will be needed to include legitimately-independent records in ForC-simplified and in analyses.
+
 
 \newpage
 
@@ -95,7 +99,7 @@ Sample sizes refer to data set after merging of duplicates, removal of stands wi
 ```{r eval = TRUE, echo=FALSE, warning=FALSE}
 library(knitr)
 library(kableExtra)
-table_pt <- read.csv("tables_figures/SI_age_trend_model_summaries.csv", 
+table_pt <- read.csv("tables_figures/SI_age_trend_model_summaries_manually_edited.csv", 
                      #colClasses=c("NULL", NA, NA, NA, NA), 
                      #col.names=c("NULL", "Parameter", "Estimate", "SE", "$t_{value}$"), 
                      stringsAsFactors = FALSE, check.names = FALSE)
