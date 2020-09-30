@@ -448,20 +448,23 @@ In contrast to the patterns observed for $NEP$ in mature stands, $NEP$ of stands
 This is consistent with findings that live biomass accumulation rates (*e.g.*, $\Delta B_{ag}$ or $\Delta B_{tot}$) during early secondary succession decrease with latitude [@anderson_temperature-dependence_2006; @cook-patton_mapping_2020; Figs. 7a, S16-S22]. 
 Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon, and biome differences in the accumulation rates of these variables have not been detected, in part because these variables do not consistently increase with stand age [@cook-patton_mapping_2020; Figs. 7, S23-S26; see discussion below].
 
-For regrowth forests, little is known about cross-biome differences in carbon fluxes, and we are not aware of any previous large-scale comparisons of C fluxes that have been limited to regrowth forests [although they're commonly mixed in with mature forests; e.g., **REFS**]. 
+For regrowth forests, little is known about cross-biome differences in carbon fluxes, and we are not aware of any previous large-scale comparisons of C fluxes that have been limited to regrowth forests [although they're commonly mixed in with mature forests; e.g., @luyssaert_co_2007 **REFS**]. 
 Thus, this analysis was the first to examine flux trends in regrowth forests across biomes.
 The observed tendency for young forest fluxes to decrease from tropical to boreal regions paralleled patterns in mature forests (Figs. 6, S1-S15), suggesting that regrowth forests follow latitudinal trends in carbon cycling similar to those of mature forests [e.g., @banbury_morgan_global_nodate].
 
 In contrast to C fluxes and biomass accumulation rates in regrowth forests, stocks showed less systematic variation across biomes.
 This is consistent with others studies showing that variation in forest biomass across broad climatic gradients is modest and constrained more by moisture than temperature [@stegen_variation_2011].
 Yet, differences across biomes did exist.
-@hu_mapping_2016, using spaceborne lidar, showed a decline in aboveground biomass (all forests, including secondary) with latitude in the N hemisphere, but values exceeding tropical forests in coastal climates of both the southern and northern hemisphere. 
-Highest biomass forests are found in temperate oceanic climates (REF- , something in GEB, some global forest C map) [@keith_re-evaluation_2009].
-Lack of synthesis comparing deadwood and organic layer across biomes, but see @cook-patton_mapping_2020 for age trends.
+For aboveground biomass, which is the variable in *ForC* with broadest geographical representation, the trend of declining biomass from tropical to boreal regions mirrors observations from spaceborne lidar that reveal a decline in aboveground biomass (for all forests, including secondary) with latitude across the N hemisphere [@hu_mapping_2016]. 
+Yet, the highest- biomass forests on Earth are found in coastal temperate climates of both the southern and northern hemisphere [@keith_re-evaluation_2009; @smithwick_potential_2002; **REF??**; @hu_mapping_2016]. 
+Disproportionate representation of forests in one such region--the US Pacific Northwest--inflated estimates of temperate conifer fluxes and stocks for some variables and was responsible for all of the anomalous results described here (e.g., lack of complete C budget closure, anomalous trend across biomes for $BNPP_{coarse}$). 
+Thus, biome differences should always be interpreted relative to the geographic distribution of sampling, which only rarely covers the majority of forested area within a biome. 
 
-Thus, biome differences should be interpreted more as driven more by geographic distribution of sampling than by true differences.
-
-
+Whereas biomass can be remotely sensed and receives a lot of research attention, far less is known about geographical variation in deadwood and organic layer ($OL$) across biomes, which has proved a limitation for C accounting efforts [@pan_large_2011].
+Although these stocks can be important--exceeding 100 t C ha^-1^ in some stands (Figs. 7d-e, S23-S25), this study is the first to synthesize deadwood data on a global scale [but see @cook-patton_mapping_2020 for young forests].
+Unfortunately, data remain too sparse for statistical comparison across biomes (Figs. 7, S23-S25; but see below for age trends), pointing to a need for more widespread quantification of both standing and downed deadwood.
+*ForC* coverage of $OL$ stocks is more comprehensive, revealing no significant differences across temperate and tropical biomes, but a tendency towards higher $OL$ in boreal forests, consistent with the idea that slower decomposition in colder climates results in more buildup of organic matter [@allen_2015]. 
+Further research on non-living C stocks in the world's forests will be essential to completing the picture.
 
 ### Age trends in C cycling  
 
@@ -480,6 +483,11 @@ Our findings are largely consistent with, but built from a far larger dataset th
 Quickly-changing and age-dependent fluxes were also found in a number of previous syntheses (Amiro et al. 2010 10.1029/2010JG001390, Magnani et al. 2007 10.1038/nature05847). 
 
 In contrast to most fluxes, $NEP$ is highest at intermediate ages
+
+In terms of stocks, our study reveals consistent increases in live biomass stocks with stand age--a pattern that is well-known and expected [e.g., **REFS**]--and more variable age trends in deadwood and $OL$.
+The latter are particularly sensitive to the type of disturbance, where disturbances that remove deadwood (e.g., logging, agriculture) result in negligible deadwood in young stands, followed by a buildup over time [e.g., tropical stands in Fig. 7e **REFS**].
+In contrast, natural disturbances (e.g., fire, drought) can produce large amounts of deadwood (mostly $DW_{standing}$) that slowly decomposes as the stand recovers, resulting in declines across young stand ages [e.g., temperate and boreal stands in Fig. 7e; **REF**].
+Again, further study and synthesis of non-living C stocks across biomes and stand ages will be valuable to giving a more comprehensive picture. 
 
 ### Relevance for climate change prediction and mitigation
 
