@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 SEP 2020 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 SEP 2020 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,7 +930,7 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [14 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Boreal conifer MATURE.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/
-for_ERL_review/Flux_age_trends.png, id=121, 3011.25pt x 2710.125pt>
+for_ERL_review/Flux_age_trends.png, id=121, 722.7pt x 650.43pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tr
 ends/for_ERL_review/Flux_age_trends.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
@@ -938,12 +938,12 @@ nds/for_ERL_review/Flux_age_trends.png>
 Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
 ForC/figures/age_trends/for_ERL_review/Flux_age_trends.png  used on input line 
 646.
-(pdftex.def)             Requested size: 469.72556pt x 422.75299pt.
+(pdftex.def)             Requested size: 469.76045pt x 422.78441pt.
 [15
 
 ]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/
-for_ERL_review/Stock_age_trends.png, id=127, 3011.25pt x 2710.125pt>
+for_ERL_review/Stock_age_trends.png, id=126, 3011.25pt x 2710.125pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tr
 ends/for_ERL_review/Stock_age_trends.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
@@ -953,11 +953,11 @@ ForC/figures/age_trends/for_ERL_review/Stock_age_trends.png  used on input line
  668.
 (pdftex.def)             Requested size: 469.72556pt x 422.75299pt.
 [16 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
-nds/for_ERL_review/Flux_age_trends.png>] [17 </Users/kteixeira/Dropbox (Smithso
-nian)/GitHub/ForC-db/ForC/figures/age_trends/for_ERL_review/Stock_age_trends.pn
-g>] [18]
+nds/for_ERL_review/Flux_age_trends.png (PNG copy)>] [17 </Users/kteixeira/Dropb
+ox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/for_ERL_review/Stock_ag
+e_trends.png>] [18]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Tropical broadleaf YOUNG.png, id=147, 602.25pt x 481.8pt>
+grams/Diagrams/Tropical broadleaf YOUNG.png, id=146, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Tropical broadleaf YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
@@ -974,7 +974,7 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [20 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Tropical broadleaf YOUNG.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate broadleaf YOUNG.png, id=158, 602.25pt x 481.8pt>
+grams/Diagrams/Temperate broadleaf YOUNG.png, id=157, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Temperate broadleaf YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
@@ -989,7 +989,7 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [21 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate broadleaf YOUNG.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate conifer YOUNG.png, id=165, 602.25pt x 481.8pt>
+grams/Diagrams/Temperate conifer YOUNG.png, id=164, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Temperate conifer YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
@@ -1004,7 +1004,7 @@ Overfull \vbox (48.05647pt too high) has occurred while \output is active []
 [22 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
 _diagrams/Diagrams/Temperate conifer YOUNG.png (PNG copy)>]
 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Boreal conifer YOUNG.png, id=171, 602.25pt x 481.8pt>
+grams/Diagrams/Boreal conifer YOUNG.png, id=170, 602.25pt x 481.8pt>
 File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
 e_diagrams/Diagrams/Boreal conifer YOUNG.png Graphic file (type png)
 <use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
@@ -1056,9 +1056,9 @@ c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (38 pages, 24463249 bytes).
+Output written on ERL_global_C_review.pdf (38 pages, 24793960 bytes).
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
+ 612 PDF objects out of 1000 (max. 8388607)
  534 compressed objects within 6 object streams
  185 named destinations out of 1000 (max. 500000)
  14520 words of extra memory for PDF output out of 17280 (max. 10000000)
