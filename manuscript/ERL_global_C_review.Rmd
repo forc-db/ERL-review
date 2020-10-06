@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -56,7 +56,7 @@ Maria M. H. Wang^1,7^
 
 *corresponding author: teixeirak@si.edu; +1 540 635 6546
 ```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
-generate_figures=FALSE
+generate_figures=TRUE
 ```
 
 ```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
