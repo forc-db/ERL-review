@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  6 OCT 2020 08:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  7 NOV 2020 10:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,12 +485,6 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grffile.sty
-Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
-Package grffile Info: Option `multidot' is set to `true'.
-Package grffile Info: Option `extendedchars' is set to `false'.
-Package grffile Info: Option `space' is set to `true'.
-Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count117
@@ -663,36 +657,38 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen172
 \c@nlinenum=\count146
 \TeXr@lab=\toks35
-) (./ERL_global_C_review.aux)
+)
+\cslhangindent=\skip60
+No file ERL_global_C_review.aux.
 \openout1 = `ERL_global_C_review.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 89.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 79.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 89.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 79.
+LaTeX Info: Redefining \microtypecontext on input line 89.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -734,7 +730,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 79.
+Package hyperref Info: Link coloring OFF on input line 89.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -742,9 +738,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
+LaTeX Info: Redefining \nameref on input line 89.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -787,41 +783,41 @@ Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 86.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 96.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 99.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 89.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 99.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 89.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 99.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 89.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 99.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 89.
+(Font)              <10> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 89.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 89.
-LaTeX Font Info:    Try loading font information for U+msa on input line 89.
+(Font)              <5> on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 89.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -834,26 +830,26 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 File: tables_figures/World_Map_records_in_Biomes.png Graphic file (type png)
 <use tables_figures/World_Map_records_in_Biomes.png>
 Package pdftex.def Info: tables_figures/World_Map_records_in_Biomes.png  used o
-n input line 317.
+n input line 327.
 (pdftex.def)             Requested size: 469.77107pt x 277.95572pt.
 [4] [5 <./tables_figures/World_Map_records_in_Biomes.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 457.
+(Font)              <12> on input line 467.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 457.
+(Font)              <8> on input line 467.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 457.
+(Font)              <6> on input line 467.
 
-Overfull \hbox (4.58968pt too wide) in paragraph at lines 457--457
+Overfull \hbox (4.58968pt too wide) in paragraph at lines 467--467
  []|\T1/lmr/m/n/12 (-20) records|
  []
 
 
-Overfull \hbox (2.52153pt too wide) in paragraph at lines 457--457
+Overfull \hbox (2.52153pt too wide) in paragraph at lines 467--467
  []|\T1/lmr/m/n/12 (-20) geographic
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 457.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 467.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -862,204 +858,23 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6] [7]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 566.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 576.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [8] [9]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Tropical broadleaf MATURE.jpeg, id=90, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Tropical broadleaf MATURE.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Tropical broadleaf MATURE.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Tropical broadleaf MATURE.jpeg  used on 
-input line 581.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-[10
-
-]
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[11 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Tropical broadleaf MATURE.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate broadleaf MATURE.jpeg, id=102, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Temperate broadleaf MATURE.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate broadleaf MATURE.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Temperate broadleaf MATURE.jpeg  used on
- input line 590.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[12 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate broadleaf MATURE.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate conifer MATURE.jpeg, id=108, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Temperate conifer MATURE.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate conifer MATURE.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Temperate conifer MATURE.jpeg  used on i
-nput line 599.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[13 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate conifer MATURE.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Boreal conifer MATURE.jpeg, id=115, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Boreal conifer MATURE.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Boreal conifer MATURE.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Boreal conifer MATURE.jpeg  used on inpu
-t line 608.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[14 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Boreal conifer MATURE.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/
-for_ERL_review/Flux_age_trends.jpeg, id=121, 385.44pt x 361.35pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tr
-ends/for_ERL_review/Flux_age_trends.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
-nds/for_ERL_review/Flux_age_trends.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/age_trends/for_ERL_review/Flux_age_trends.jpeg  used on input line
- 646.
-(pdftex.def)             Requested size: 385.43906pt x 361.34912pt.
-[15
-
-]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/
-for_ERL_review/Stock_age_trends.jpeg, id=126, 385.44pt x 361.35pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tr
-ends/for_ERL_review/Stock_age_trends.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
-nds/for_ERL_review/Stock_age_trends.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/age_trends/for_ERL_review/Stock_age_trends.jpeg  used on input lin
-e 668.
-(pdftex.def)             Requested size: 385.43906pt x 361.34912pt.
-[16 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_tre
-nds/for_ERL_review/Flux_age_trends.jpeg>] [17 </Users/kteixeira/Dropbox (Smiths
-onian)/GitHub/ForC-db/ForC/figures/age_trends/for_ERL_review/Stock_age_trends.j
-peg>] [18]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Tropical broadleaf YOUNG.jpeg, id=144, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Tropical broadleaf YOUNG.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Tropical broadleaf YOUNG.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Tropical broadleaf YOUNG.jpeg  used on i
-nput line 721.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-[19
-
-]
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[20 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Tropical broadleaf YOUNG.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate broadleaf YOUNG.jpeg, id=155, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Temperate broadleaf YOUNG.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate broadleaf YOUNG.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Temperate broadleaf YOUNG.jpeg  used on 
-input line 730.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[21 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate broadleaf YOUNG.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Temperate conifer YOUNG.jpeg, id=162, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Temperate conifer YOUNG.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate conifer YOUNG.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Temperate conifer YOUNG.jpeg  used on in
-put line 739.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[22 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Temperate conifer YOUNG.jpeg>]
-</Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle_dia
-grams/Diagrams/Boreal conifer YOUNG.jpeg, id=168, 602.25pt x 481.8pt>
-File: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycl
-e_diagrams/Diagrams/Boreal conifer YOUNG.jpeg Graphic file (type jpg)
-<use /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Boreal conifer YOUNG.jpeg>
-Package pdftex.def Info: /Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/
-ForC/figures/C_cycle_diagrams/Diagrams/Boreal conifer YOUNG.jpeg  used on input
- line 748.
-(pdftex.def)             Requested size: 587.21436pt x 469.77148pt.
-
-Overfull \vbox (48.05647pt too high) has occurred while \output is active []
-
-[23 </Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/C_cycle
-_diagrams/Diagrams/Boreal conifer YOUNG.jpeg>] [24
-
-] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1813.
-[38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1813.
-(./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1813.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1813.
- ) 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.591 ...grams/Diagrams/Tropical broadleaf MATURE}
+                                                   
 Here is how much of TeX's memory you used:
- 16215 strings out of 492616
- 245376 string characters out of 6129482
- 409355 words of memory out of 5000000
- 19540 multiletter control sequences out of 15000+600000
- 64481 words of font info for 126 fonts, out of 8000000 for 9000
+ 15886 strings out of 492616
+ 234848 string characters out of 6129482
+ 399269 words of memory out of 5000000
+ 19403 multiletter control sequences out of 15000+600000
+ 62240 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,41p,1193b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
-/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
-019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist
-/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc
-/dvips/lm/lm-ec.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
-mbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/lm/lmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/lm/lmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/lo
-cal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/texmf-d
-ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/lm/lmss8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
-.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (38 pages, 4772463 bytes).
-PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 185 named destinations out of 1000 (max. 500000)
- 14520 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 37i,14n,41p,818b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
