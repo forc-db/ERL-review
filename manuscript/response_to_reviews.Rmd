@@ -77,6 +77,8 @@ b. No, this is not a critical and authoritative review of the carbon cycle; and
 
 c. The authors reference many other publications and datasets, but they do not critically evaluate their own dataset or other datasets.
 
+*This requires careful consideration and response*
+
 # Referee: 3
 
 COMMENTS TO THE AUTHOR(S)
@@ -85,11 +87,19 @@ This papers uses a database recently created and updated by the author team – 
 
 There were several things I really liked about this paper. First, I applaud the author’s ambition in creating (and maintaining) this database, which has already been used in multiple high-profile papers. It is a novel idea to curate all the C fluxes and pools together in one virtual location, and the carbon cycle budgets illustrated in Figures 2-5, and 8-11, will likely function as useful “reality checks” against which both empirical and modeling results can be assessed. I also appreciated the focus on understanding how carbon cycles varies with stand age, as this is an important unknown that limits understanding of the usefulness of reforestation as a natural climate solution (among other unknowns). Overall I found the manuscript to be clearly written.
 
+**Thank you**
+
 However, I also found that many aspects of the paper gave me considerable pause.
 
 First, the paper covers an awful lot of ground. It strikes me that each of the three research questions (bottom of page 4) could easily motivate an entire paper on their own. By attempting to address all three in one (relatively short) manuscript, it is not possible to discuss in any detail the mechanisms and processes that determine the results. There are no process-oriented hypotheses or frameworks against which the results are evaluated.
 
+(*add some broad-brush hypotheses/ frameworks*)
+
 For example, concerning expectations about how various C cycles and pools vary with stand age? There is a fairly extensive literature on this topic … Odum’s classic paper on the topic (“The Strategy of Ecosystem Development, 1969) has been cited thousands of times. But this literature is not referenced or cited in the current manuscript. Odum’s hypothesis suggests that NEP (arguably the most important flux, at least from a climate mitigation perspective) should increase initially with stand age and then eventually decrease as forests continue to mature. However, this framework/literature is not referenced, and the way the results are presented make it difficult to understand whether those expectations were borne out in the data. On that note, I didn’t understand why the authors chose to show flux trends explicitly as a function of age up to 100 years (Figure 6), but then group all the forests >100 years old into a single “bar). Why not plot the mature forests explicitly on the flux versus age axis? This would allow a clearer assessment of whether flux trends with age are really linear.  It would also help the reader understand better one of the most striking results from this manuscript: that NEP of mature forests is indistinguishable across biomes. The authors describe this as unsurprising, but I think it is a bit unexpected, especially given the results of some of the more synthetic work from FLUXNET (e.g. Luyssaert et al. 2007). The authors explain this result in a couple of sentences (Page 25, lines 22-26), speculating that the result is driver by “moderate disturbances” or “disequilibrium of Rsoil relative to C inputs). A deeper dive into the results, combined with some mechanistic grounding, might reveal to what extent this result represents a climate-age interaction that is predicted from the existing theory.
+
+**Regarding reference to Odum, ...**, *add citation to Odum*
+
+**Regarding the question of showing flux trends as a function of age beyond 100 years, this unfortunately doesn't make sense within the context of the database because tropical forests can rarely be aged beyond 100 years (if that). This is because tropical trees do not form annual rings. ...**
 
 Finally, I wondered about the interacting effects of changing climate (rising CO2, warming temperatures) and stand age, especially in determining trends in the pools. Mature forests will have experienced a much wider range of climate conditions than younger stands. How does this complicate the comparison of live biomass across forest of different age?
 
