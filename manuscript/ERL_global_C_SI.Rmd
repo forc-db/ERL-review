@@ -19,23 +19,50 @@ header-includes:  \usepackage{float}
                   \newcommand{\elandscape}{\end{landscape}}
 
                   \usepackage{setspace}\onehalfspacing
-                  \usepackage{lineno}\linenumbers
+
 
 ---
 
 ```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
+path_to_dir <- dirname(dirname(getwd())) # get path to repo 
 
-# KNIT IN FIGURES? 
-generate_figures=TRUE
-#note: table fails when knitting in word
+# MOVE FIGURE FILES (Need to do this because I got an error when using the absolute path to call figures. However, it's not working at the moment, so did manual copy paste. )
+
+#C cycle diagrams
+#do.call(file.remove, list(list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/C_cycle_diagrams/", full.names = TRUE))) # first remove old files
+
+#flist <- list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/EcoClimLab/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/", full.names = TRUE)
+#file.copy(flist, "/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/C_cycle_diagrams/")
+
+#Age diagrams
+#do.call(file.remove, list(list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/age_trends/", full.names = TRUE))) # first remove old files
+
+#flist <- list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/EcoClimLab/ForC-db/ForC/figures/age_trends/", full.names = TRUE)
+#file.copy(flist, "/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/age_trends/")
 
 # FIGURE NUMBERS
 
 #SI
-diagram_TrB_young= S1
-diagram_TeB_young= S2
-diagram_TeN_young= S3
-diagram_BoN_young= S4
+diagram_TrB_young= "S1"
+diagram_TeB_young= "S2"
+diagram_TeN_young= "S3"
+diagram_BoN_young= "S4"
+NEP_fig= "S5"
+GPP_fig= "S6"
+NPP_fig= "S7"
+ANPP_fig= "S8"
+ANPP_woody_fig= "S9"
+ANPP_stem_fig= "S10"
+ANPP_foliage_fig= "S11"
+ANPP_litterfall_fig= "S12"
+BNPP_fig= "S13"
+BNPP_coarse_fig= "S14"
+BNPP_fine_fig= "S15"
+R_eco_fig= "S16"
+R_root_fig= "S17"
+R_soil_fig= "S18"
+R_het_soil_fig= "S19"
+
 ```
 
 \raggedright
@@ -153,11 +180,11 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 ```
 
 \newpage
-## Figure S1. Age trends and biome differences for $NEP$
+## Figure `r NEP_fig`. Age trends and biome differences for $NEP$
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S1 | Age trends and biome differences for $NEP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/NEP.png")
+  knitr::include_graphics("tables_figures/age_trends/NEP.png")
 ```
 
 \newpage
@@ -165,7 +192,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S2 | Age trends and biome differences for $GPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/GPP.png")
+  knitr::include_graphics("tables_figures/age_trends/GPP.png")
 ```
 
 
@@ -174,7 +201,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S3 | Age trends and biome differences for $NPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/NPP.png")
+  knitr::include_graphics("tables_figures/age_trends/NPP.png")
 ```
 
 \newpage
@@ -182,7 +209,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S4 | Age trends and biome differences for $ANPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP.png")
+  knitr::include_graphics("tables_figures/age_trends/ANPP.png")
 ```
 
 
@@ -191,7 +218,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S5 | Age trends and biome differences for $ANPP_{woody}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_woody.png")
+  knitr::include_graphics("tables_figures/age_trends/ANPP_woody.png")
 ```
 
 \newpage
@@ -199,7 +226,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S6 | Age trends and biome differences for $ANPP_{stem}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_stem.png")
+  knitr::include_graphics("tables_figures/age_trends/ANPP_stem.png")
 ```
 
 \newpage
@@ -207,7 +234,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S7 | Age trends and biome differences for $ANPP_{foliage}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_foliage.png")
+  knitr::include_graphics("tables_figures/age_trends/ANPP_foliage.png")
 ```
 
 \newpage
@@ -215,7 +242,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S8 | Age trends and biome differences for $ANPP_{litterfall}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/ANPP_litterfall.png")
+  knitr::include_graphics("tables_figures/age_trends/ANPP_litterfall.png")
 ```
 
 \newpage
@@ -223,7 +250,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S9 | Age trends and biome differences for $BNPP$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/BNPP.png")
+  knitr::include_graphics("tables_figures/age_trends/BNPP.png")
 ```
 
 \newpage
@@ -231,7 +258,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S10 | Age trends and biome differences for $BNPP_{coarse}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/BNPP_coarse.png")
+  knitr::include_graphics("tables_figures/age_trends/BNPP_coarse.png")
 ```
 
 \newpage
@@ -239,7 +266,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S11 | Age trends and biome differences for $BNPP_{fine}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/BNPP_fine.png")
+  knitr::include_graphics("tables_figures/age_trends/BNPP_fine.png")
 ```
 
 \newpage
@@ -247,7 +274,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S12 | Age trends and biome differences for $R_{eco}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_eco.png")
+  knitr::include_graphics("tables_figures/age_trends/R_eco.png")
 ```
 
 \newpage
@@ -255,7 +282,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S13 | Age trends and biome differences for $R_{root}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_root.png")
+  knitr::include_graphics("tables_figures/age_trends/R_root.png")
 ```
 
 \newpage
@@ -263,7 +290,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S14 | Age trends and biome differences for $R_{soil}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_soil.png")
+  knitr::include_graphics("tables_figures/age_trends/R_soil.png")
 ```
 
 \newpage
@@ -271,7 +298,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S15 | Age trends and biome differences for $R_{het-soil}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/R_het_soil.png")
+  knitr::include_graphics("tables_figures/age_trends/R_het_soil.png")
 ```
 
 \newpage
@@ -279,7 +306,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S16 | Age trends and biome differences for $B_{tot}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass.png")
 ```
 
 \newpage
@@ -287,7 +314,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S17 | Age trends and biome differences for $B_{ag}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_ag.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass_ag.png")
 ```
 
 \newpage
@@ -295,7 +322,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S18 | Age trends and biome differences for $B_{ag-wood}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_ag_woody.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass_ag_woody.png")
 ```
 
 \newpage
@@ -303,7 +330,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S19 | Age trends and biome differences for $B_{foliage}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_foliage.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass_foliage.png")
 ```
 
 \newpage
@@ -311,7 +338,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S20 | Age trends and biome differences for $B_{root}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_root.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass_root.png")
 ```
 
 \newpage
@@ -319,7 +346,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S21 | Age trends and biome differences for $B_{root-coarse}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_root_coarse.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass_root_coarse.png")
 ```
 
 \newpage
@@ -327,7 +354,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S22 | Age trends and biome differences for $B_{root-fine}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/biomass_root_fine.png")
+  knitr::include_graphics("tables_figures/age_trends/biomass_root_fine.png")
 ```
 
 \newpage
@@ -335,7 +362,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S23 | Age trends and biome differences for $DW_{tot}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/deadwood.png")
+  knitr::include_graphics("tables_figures/age_trends/deadwood.png")
 ```
 
 \newpage
@@ -343,7 +370,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S24 | Age trends and biome differences for $DW_{standing}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/deadwood_standing.png")
+  knitr::include_graphics("tables_figures/age_trends/deadwood_standing.png")
 ```
 
 \newpage
@@ -351,7 +378,7 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S25 | Age trends and biome differences for $DW_{down}$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/deadwood_down.png")
+  knitr::include_graphics("tables_figures/age_trends/deadwood_down.png")
 ```
 
 \newpage
@@ -359,5 +386,5 @@ kable(table_pt, format = "latex", booktabs = TRUE, longtable = TRUE,  escape = F
 
 ```{r echo=FALSE, fig.align = "center", fig.cap = "Figure S26 | Age trends and biome differences for $OL$. Map shows data sources ($x$ and $o$ indicate young and mature stands, respectively). In each panel, the left scatterplot shows age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of age and biome. The fitted line indicates the effect of age on flux (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant age x biome interaction. Boxplot illustrates distribution across mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or test of differences across biomes (mature forests).", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC/figures/age_trends/organic.layer.png")
+  knitr::include_graphics("tables_figures/age_trends/organic_layer.png")
 ```
