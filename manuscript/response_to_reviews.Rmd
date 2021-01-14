@@ -17,7 +17,7 @@ header-includes:  \usepackage{float}
                   \newcommand{\elandscape}{\end{landscape}}
 
                   \usepackage{setspace}\onehalfspacing
-                  \usepackage{lineno}\linenumbers
+
 
 ---
 \raggedright
@@ -27,9 +27,23 @@ header-includes:  \usepackage{float}
 Re: "Carbon cycling in mature and regrowth forests globally" by Anderson-Teixeira, Kristina; Herrmann, Valentine; Banbury Morgan , Rebecca ; Bond-Lamberty, Benjamin; Cook-Patton, Susan; Ferson , Abigail; Muller-Landau, Helene; Wang, Maria
 Article reference: ERL-109898
 
+## LETTER TO EDITOR:
 
+We have made the following substantive changes:
 
-## REFEREE REPORT(S):
+- Changed the figure set in accordance with comments from R3. Specifically, 
+(1) moved C cycle diagrams for young forests to SI; 
+(2) removed maps from age trend diagrams (available in SI) from age trend diagrams, which makes the figures less busy/ easier to read;
+(3) added figures showing changes in fluxes through time
+(4) added a Odum-esque schematic, for framing review
+
+- Improved conceptual framework and reference to previous literature (e.g., Odum)
+
+- Shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness
+
+\newpage
+
+## REFEREE REPORT(S) & RESPONSES:
 
 # Referee: 2
 
@@ -227,7 +241,7 @@ Smith I. A., Hutyra L. R., Reinmann A. B. & Thompson J. R. (2019). Evidence for 
 
 
 
-
+\newpage
 ## References
 
 ```{r eval=FALSE, echo=FALSE}
