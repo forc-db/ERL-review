@@ -22,6 +22,22 @@ header-includes:  \usepackage{float}
                   \usepackage{lineno}\linenumbers
 
 ---
+
+```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
+
+# KNIT IN FIGURES? 
+generate_figures=TRUE
+#note: table fails when knitting in word
+
+# FIGURE NUMBERS
+
+#SI
+diagram_TrB_young= S1
+diagram_TeB_young= S2
+diagram_TeN_young= S3
+diagram_BoN_young= S4
+```
+
 \raggedright
 
 \newpage
