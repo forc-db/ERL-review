@@ -30,16 +30,20 @@ biome_names={'tropical', 'temperate', 'boreal'};
 %FLUXES
 % 1. by age
 %for stacked plot
-NEP=2*log10(age)-.037*(age-1); %placeholder
-GPP= 4* log10(age)+NEP;
-R_auto = 0.5*GPP;
-NPP = GPP-R_auto;
-R_het=GPP-R_auto;
+NEP=2*log10(age)-.037*(age-1); %placeholder (peaks around 2 at 23 yrs age)
+GPP= 11.15 + (1.99+1.44)* log10(age)+NEP;
+ANPP_foliage = 1.66* log10(age) +.18;
+ANPP_woody = 2.31* log10(age) -.76;
+ANPP_woody_turnover=ANPP_woody-NEP;
+BNPP=0.97*log10(age)+.67;
+NPP=ANPP_foliage+ANPP_woody+BNPP;
+R_auto = NPP.*(1+.001*age); %insufficient data
+R_het=ANPP_foliage+ANPP_woody_turnover+BNPP;
 
 
 %categorize by "in" (GPP components, including NEP) and "out" (Reco components)
-in_fluxes = [R_auto; NPP; NEP]; %matrix with all fluxes for stacked plot
-in_flux_names = {'R_{auto}', 'NPP', 'NEP'};
+in_fluxes = [R_auto; BNPP; ANPP_foliage;  ANPP_woody_turnover; NEP]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{auto}', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody.turnover}',  'NEP'};
 out_fluxes = [R_auto; R_het];
 out_flux_names = {'R_{auto}', 'R_{het}'};
 
