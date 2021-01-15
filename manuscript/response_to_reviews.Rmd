@@ -87,7 +87,11 @@ I understand that the data comes from many different sources and so may not alwa
 
 a. Line 58: The authors say GPP is estimated to be >69 Gt C/year, and cite Badgley et al. (2019). This statement is factually correct, but is quite misleading. Badgley et al. "estimate global annual terrestrial photosynthesis to be 147 Pg C/year (95% credible interval 131-163 Pg C/year)". The value of 69 Gt C is less than one-half that reported by Badgley. What are the authors trying to say? Such a large discrepancy does not instill confidence in the other numbers reported in the manuscript.
 
+**The 147 refers to *total* annual terrestrial photosynthesis, including non-forests. Table S4 breaks this down by biome. The >69 Gt C/yr figure was obtained by summing the forest biomes, not including savannas.**
+
 b. Line 81: "rare exceptions that span regions or continents" is repeated twice.
+
+**Fixed.**
 
 c. Figure 1: Explain the gray scale for "forest cover". It seems like this refers to gradations of the various biomes, but the figure caption does not provide an explanation.
 
@@ -179,11 +183,11 @@ Introduction:
 
 L81: “exceptions” in sentence twice.
 
-*text edit*
+**Fixed.**
 
 L97: Typo “Since the its most”
 
-*text edit*
+**Fixed.**
 
 Methods:
 
@@ -195,7 +199,7 @@ Results:
 
 L243-245: I think this is per unit forest area, correct? If so, I think it would be helpful to specify that here. Also, the reader should be referred to Figs 2-5, not just 5, right?
 
-*straightforward--just a bit of text edit.*
+**Fixed.**
 
 L270-271: The wording of the sentence “There were sufficient data to model….” Seems a bit awkward. Should it read “…WHICH were also significant…”?
 
