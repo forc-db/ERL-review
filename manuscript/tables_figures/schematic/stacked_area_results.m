@@ -67,21 +67,21 @@ for b =3:3
 
 figure (b)
  
-
 subplot (2,4,1:3)
 %flux plot:
 h=area (age, in_fluxes'); %, 'LineStyle','-'); 
 hold on;
+h=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
+hold on;
 plot(age, in_sum, '-b', 'LineWidth', 3); hold on;
 plot(age, GPP, '--b', 'LineWidth', 3); hold on;
-%plot(age, out_sum, '-r', 'LineWidth', 3);
+plot(age, NEP, '-w', 'LineWidth', 3);
 t = title(biomes(b));
+ylabel ('C  stocks (Mg C ha^{-1})')
 
 subplot (2,4,4) %mature C fluxes
-bar(mature_stocks, 'stacked');
+bar(mature_stocks(b,:), 'stacked');
 legend (stock_names);
-xlabel ('biome');
-ylabel ('C  stocks (Mg C ha^{-1})')
 
 
 subplot (2,4,5:7)
@@ -90,12 +90,12 @@ h=area (age, stocks'); %, 'LineStyle','-');
 hold on;
 plot(age, biomass, '-k', 'LineWidth', 3);
 xlabel ('stand age');
-
+ylabel ('C  stocks (Mg C ha^{-1})')
 
 subplot (2,4,8) %mature C stocks
 bar(mature_stocks, 'stacked');
 legend (stock_names);
-xlabel ('biome');
-ylabel ('C  stocks (Mg C ha^{-1})')
+xlabel ('mature stands');
+
 
 end
