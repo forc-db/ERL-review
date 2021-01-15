@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl

@@ -31,10 +31,10 @@ biome_names={'tropical', 'temperate', 'boreal'};
 % 1. by age
 %for stacked plot
 NEP=2*log10(age)-.037*(age-1); %placeholder (peaks around 2 at 23 yrs age)
-GPP= 11.15 + (1.99+1.44)* log10(age)+NEP;
+GPP= NEP + (1.99+1.44)* log10(age);
 ANPP_foliage = 1.66* log10(age) +.18;
 ANPP_woody = 2.31* log10(age) -.76;
-ANPP_woody_turnover=ANPP_woody-NEP;
+ANPP_woody_turnover=max(0,ANPP_woody-NEP);
 BNPP=0.97*log10(age)+.67;
 NPP=ANPP_foliage+ANPP_woody+BNPP;
 R_auto = NPP.*(1+.001*age); %insufficient data
@@ -71,15 +71,14 @@ DW= 2.6*log10(age);
 stocks = [biomass; DW]; %matrix with all stocks for stacked plot
 stock_names = {'B_{tot}', 'DW'};
 
-%others
 
 
 
 % 2. mature forests
 Stock_ratio_temp_trop=0.9;
-Stock_ratio_boreaal_trop=0.7;
+Stock_ratio_boreal_trop=0.7;
 
-mature_stocks = [stocks(:,end)'; Stock_ratio_temp_trop*stocks(:,end)' ; Stock_ratio_boreaal_trop*stocks(:,end)'];
+mature_stocks = [stocks(:,end)'; Stock_ratio_temp_trop*stocks(:,end)' ; Stock_ratio_boreal_trop*stocks(:,end)'];
 
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
