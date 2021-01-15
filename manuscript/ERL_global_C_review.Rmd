@@ -206,6 +206,10 @@ Despite the centrality of forest C cycling in regulating atmospheric CO~2~, impo
 These require large-scale databases with global coverage, which runs contrary to the nature in which forest C stocks and fluxes are measured and published.
 While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass: @hu_mapping_2016; @spawn_harmonized_2020; gross primary productivity, $GPP$: @li_mapping_2019; @saatchi_benchmark_2011], measurement and validation of most forest C stocks and fluxes require intensive on-the-ground data collection.
 
+*including those attempting to benchmark model performance with global data (Clark et al 2017, Luo et al 2012), quantify the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], or use book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].*
+
+### Forests in the global C cycle: current and future
+
 A robust understanding of forest impacts on global C cycling is essential. 
 Annual gross CO~2~ sequestration in forests (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2009-2018 [9.5 $\pm$ 0.5 Gt C yr^-1^; @friedlingstein_global_2019].
 Most of this enormous C sequestration is counterbalanced by CO~2~ releases to the atmosphere through ecosystem respiration ($R_{eco}$) or fire, with forests globally dominant as sources of both soil respiration [@warner_spatial_2019] and fire emissions [@van_der_werf_global_2017].
@@ -219,11 +223,20 @@ Although age trends in aboveground biomass have been relatively well-studied and
 Such understanding is particularly critical for reducing uncertainty regarding the potential for carbon uptake and climate change mitigation by regrowth forests [@krause_large_2018; @cook-patton_mapping_2020].
 Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thus central to efforts to mitigate climate change [@grassi_key_2017; @griscom_natural_2017; @cavaleri_urgent_2015].
 
-Despite the importance of forests, comprehensive global studies have historically been limited by the scattered and more local nature of research studies. 
-Primary research articles typically cover only a small numbers of sites at a time.
-The rare exceptions spanning regions or continents are typically coordinated through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015; e.g., @lutz_global_2018], NEON [@schimel_neon_2007], or FLUXNET [@baldocchi_fluxnet_2001; e.g., @novick_ameriflux_2018].
+### Evolution of forest C cycle research
+
+For more than half a century, researchers have sought to understand how forest carbon cycling varies across stands, including those of different biomes [e.g., Leith, @luyssaert_co2_2007] and stand ages [e.g., @odum_strategy_1969 Odum, Luyssaert 2008].
+- increasingly refined understanding of the elements of ecosystem C cycles,  
+- standardization of definitions, (which were vague at the time of Odum)
+- Expanding set of variables, notably including the development of the eddy-covariance technique to measure ecosystem-atmosphere CO~2~ exchange (REFS), NEP, soil respiration, Also various techniques for measuring belowground C cycling.
+- critical review of methods and their sources of errors
+- Increasing standardization of  methods: allometries, which are highly influential to any measurement including woody biomass or changes therein, but until recently have not been standardized
+- Further standardization made possible through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015; e.g., @lutz_global_2018], GEM (Malhi), NEON [@schimel_neon_2007], or FLUXNET [@baldocchi_fluxnet_2001; e.g., @novick_ameriflux_2018].
+
+Alongside these conceptual and methodological developments, there has been a proliferation of measurements across the world's forests. 
 The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles --often behind paywalls-- along with variation in data formats, units, measurement methods, *etc.*
-In this format, the data are effectively inaccessible for many global-scale analyses, including those attempting to benchmark model performance with global data (Clark et al 2017, Luo et al 2012), quantify the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], or use book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
+In this format, the data are effectively inaccessible for many global-scale analyses, 
+Data synthesis began,...
 
 To address the need for global-scale analyses of forest C cycling, we recently developed *ForC* [@anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018].
 *ForC* contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with the different variables capturing the unique ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
@@ -233,23 +246,41 @@ Since its most recent publication [@anderson-teixeira_forc_2018], *ForC* has gro
 Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones.
 This represents an `r round((nrow(ForC_measurements) - 17367)/17367*100, digits=0)`% increase in records from the prior publication [@anderson-teixeira_forc_2018].
 
+### Biome differences
+Forest C cycling varies enormously across biomes...
+Biome is an artificial categorical distinction convenient for categorizing the world's forests according to major differences in climate and vegetation. 
+
+The most important gradient for defining biomes is climate. 
+Since (Humboldt?), it has been recognized that climate plays a dominant role in shaping differences among forests.
+
+@lieth_primary_1973 synthesized differences in NPP across gradients of mean annual temperture and precipitation.
+
+@banbury_morgan_global_nodate
+
+Recently, machine learning draws on global maps in combination with ground-based data to create global maps of C cycling [e.g., REFS; @cook-patton_mapping_2020].
+
+While current data and technology allow increasingly fine-scale resolution for understanding differences across forests, cateogorization into biomes remains useful for applications where data do not yet support robust analysis across finer-scale axes of variation.
+
+### Age trends and their variation across biomes
+In 1969, Eugene Odum published ... [@odum_strategy_1969].
+Although the conceptualization of the C cycle in this paper is simplistic by current standards, the paper was foundational... [@corman_foundations_2019].
+...
+*(Need for a synthetic update.)*
+
+In the past *couple of/several* decades, researchers have started asking how age trends--mostly in biomass accumulation-- vary across biomes.
+*(look up early work on this--citations in @anderson_temperature-dependence_2006)*
+@anderson_temperature-dependence_2006
+@chazdon_carbon_2016
+@cook-patton_mapping_2020
+There has been little synthesis of differences in variables other than C stocks or their accumulation rates.
+
 ```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | DRAFT SCHEMATIC.", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/schematic/schematic.png")
 ```
 
-Here, we provide a robust and comprehensive analysis of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (*ForC*; Fig. `r figure_map`).
-Our primary goal is to provide a data-driven summary of our current state of knowledge on broad trends in forest C cycling. 
-Specifically, we address three broad questions:
-
-~~1. How thoroughly can we represent C budgets for each of the world's major forest biomes (*i.e.*, tropical, temperate broadleaf and deciduous, boreal) based on the current *ForC* data?~~
-
-2. How do C cycling vary across the world's major forest biomes?
-
-3. How does C cycling vary with stand age (in interaction with biome)?
-
-While researchers have been addressing components of these questions for more than half a century [@odum_strategy_1969; @luyssaert_co2_2007; @anderson-teixeira_carbon_2016; @cook-patton_mapping_2020; @banbury_morgan_global_nodate], our analysis represents by far the most comprehensive analysis of C cycling in global forests, and will serve as a foundation for improved understanding of global forest C cycling and highlight where key sources of uncertainty still reside.
-
+Here, conduct a data-based review of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (*ForC*; Fig. `r figure_map`).
+Our primary goal is to provide a comprehensive synthesis on broad trends in forest C cycling that can serve as a foundation for improved understanding of global forest C cycling and highlight where key sources of uncertainty still reside.
 
 
 ```{r figure_map, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | Map of sites included in this analysis. Symbols are colored according to the number of records at each site. Underlying map shows coverage of evergreen, deciduous, and mixed forests (from SYNMAP; Jung et al. 2006) and biomes. Distribution of sites, plots, and records among biomes is shown in the inset.", out.width='100%', fig.pos='H'}
@@ -368,9 +399,8 @@ That is, component variables summed to within one standard deviation of their re
 In the temperate conifer biome, the average composite measure of root biomass ($B_{root}$) was less than the combined average value of coarse and fine root biomass ($B_{root-coarse}$ and $B_{root-fine}$, respectively).
 This lack of closure was driven by very high estimates of $B_{root-coarse}$ from high-biomass forests of the US Pacific Northwest.
 
-
 \blandscape
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature tropical broadleaf forests. Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature tropical broadleaf forests. Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='90%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/C_cycle_diagrams/Tropical_broadleaf_MATURE.jpeg")
 ```
