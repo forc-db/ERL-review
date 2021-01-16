@@ -29,16 +29,16 @@ path_to_dir <- dirname(dirname(getwd())) # get path to repo
 # MOVE FIGURE FILES (Need to do this because I got an error when using the absolute path to call figures. However, it's not working at the moment, so did manual copy paste. )
 
 #C cycle diagrams
-#do.call(file.remove, list(list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/C_cycle_diagrams/", full.names = TRUE))) # first remove old files
+#do.call(file.remove, list(list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/C_cycle_diagrams/", full.names = TRUE))) # first remove old files
 
 #flist <- list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/EcoClimLab/ForC-db/ForC/figures/C_cycle_diagrams/Diagrams/", full.names = TRUE)
-#file.copy(flist, "/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/C_cycle_diagrams/")
+#file.copy(flist, "/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/C_cycle_diagrams/")
 
 #Age diagrams
-#do.call(file.remove, list(list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/age_trends/", full.names = TRUE))) # first remove old files
+#do.call(file.remove, list(list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/age_trends/", full.names = TRUE))) # first remove old files
 
 #flist <- list.files("/Users/kteixeira/Dropbox (Smithsonian)/GitHub/EcoClimLab/ForC-db/ForC/figures/age_trends/", full.names = TRUE)
-#file.copy(flist, "/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/tables_figures/age_trends/")
+#file.copy(flist, "/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/age_trends/")
 
 # FIGURE NUMBERS
 
