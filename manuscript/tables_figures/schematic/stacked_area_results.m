@@ -165,6 +165,12 @@ B_tot=max(0,(params_matrix.beta(B_tot_index)+beta_matrix(B_tot_index,b))* log10(
 B_ag_index=find(strcmp(params_matrix.variable,'B_ag'));
 B_ag=max(0,(params_matrix.beta(B_ag_index)+beta_matrix(B_ag_index,b))* log10(age)+ int_matrix(B_ag_index,b));
 
+B_root_index=find(strcmp(params_matrix.variable,'B_root'));
+B_root=max(0,(params_matrix.beta(B_root_index)+beta_matrix(B_root_index,b))* log10(age)+ int_matrix(B_root_index,b));
+
+B_foliage_index=find(strcmp(params_matrix.variable,'B_foliage'));
+B_foliage=max(0,(params_matrix.beta(B_foliage_index)+beta_matrix(B_foliage_index,b))* log10(age)+ int_matrix(B_foliage_index,b));
+
 DW_tot_index=find(strcmp(params_matrix.variable,'DW_tot'));
 DW_tot=max(0,(params_matrix.beta(DW_tot_index)+beta_matrix(DW_tot_index,b))* log10(age)+ int_matrix(DW_tot_index,b));
 
@@ -179,8 +185,8 @@ OL=max(0,(params_matrix.beta(OL_index)+beta_matrix(OL_index,b))* log10(age)+ int
 DW_standing=max(0,DW_tot-DW_down);
 
 % 2.2 group for plotting
-stock_names = {'B_{tot}', 'DW_{standing}', 'DW_{down}', 'OL'};
-stocks = [B_tot; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
+stock_names = {'B_{ag}', 'B_{root}', 'DW_{standing}', 'DW_{down}', 'OL'};
+stocks = [B_ag; B_root ; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
