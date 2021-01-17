@@ -13,7 +13,12 @@ working_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/ma
 %read in data:
 cd(figures_dir)
 model_summaries=readtable('SI_age_trend_model_summaries.csv');
-%probably need to remove specieal formatting from model_summaries.Variable
+%remove specieal formatting from model_summaries.Variable:
+for n=1:size(model_summaries,1)
+    s=cell2mat(model_summaries.Variable(n));
+    s(regexp(s,'[$,{,}]'))=[];
+    model_summaries.Variable(n)=cellstr(s);
+end
 
 %prepare some variables
 variables = unique(model_summaries.Variable);
@@ -23,7 +28,61 @@ params_matrix=cell2table(num2cell(NaN*ones(length(variables), 10)),'VariableName
 params_matrix.variable=variables;
 
 for v=1:length(variables) %cycle through variables and fill in params_matrix
-    
+    var=variables(v);
+    %beta
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age)'))==2;
+        params_matrix.beta(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age)'),3));
+    else
+        params_matrix.beta(v)=NaN;
+    end
+    %betaTrB
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTropical broadleaf'))==2;
+        params_matrix.betaTrB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTropical broadleaf'),3));
+    else
+        params_matrix.betaTrB(v)=NaN;
+    end
+    %betaTeB
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate broadleaf'))==2;
+        params_matrix.betaTeB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate broadleaf'),3));
+    else
+        params_matrix.betaTeB(v)=NaN;
+    end
+    %betaTeN
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate conifer'))==2;
+        params_matrix.betaTeN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate conifer'),3));
+    else
+        params_matrix.betaTeN(v)=NaN;
+    end
+    %betaBoN
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeBoreal conifer'))==2;
+        params_matrix.betaBoN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeBoreal conifer'),3));
+    else
+        params_matrix.betaBoN(v)=NaN;
+    end
+    %intTrB
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTropical broadleaf'))==2;
+        params_matrix.intTrB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTropical broadleaf'),3));
+    else
+        params_matrix.intTrB(v)=NaN;
+    end
+    %intTeB
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate broadleaf'))==2;
+        params_matrix.intTeB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate broadleaf'),3));
+    else
+        params_matrix.intTeB(v)=NaN;
+    end
+    %intTeN
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate conifer'))==2;
+        params_matrix.intTeN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate conifer'),3));
+    else
+        params_matrix.intTeN(v)=NaN;
+    end
+    %intBoN
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeBoreal conifer'))==2;
+        params_matrix.intBoN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeBoreal conifer'),3));
+    else
+        params_matrix.intBoN(v)=NaN;
+    end
 end
 
 

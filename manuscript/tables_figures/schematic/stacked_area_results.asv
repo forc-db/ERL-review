@@ -13,7 +13,12 @@ working_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/ma
 %read in data:
 cd(figures_dir)
 model_summaries=readtable('SI_age_trend_model_summaries.csv');
-%probably need to remove specieal formatting from model_summaries.Variable
+%remove specieal formatting from model_summaries.Variable:
+for n=1:size(model_summaries,1)
+    s=cell2mat(model_summaries.Variable(n));
+    s(regexp(s,'[$,{,}]'))=[];
+    model_summaries.Variable(n)=cellstr(s);
+end
 
 %prepare some variables
 variables = unique(model_summaries.Variable);
@@ -23,7 +28,37 @@ params_matrix=cell2table(num2cell(NaN*ones(length(variables), 10)),'VariableName
 params_matrix.variable=variables;
 
 for v=1:length(variables) %cycle through variables and fill in params_matrix
-    
+    var=variables(v);
+    %beta
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age)'))==2;
+        params_matrix.beta(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age)'),3));
+    else
+        params_matrix.beta(v)=NaN;
+    end
+    %betaTrB
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTropical broadleaf'))==2;
+        params_matrix.betaTrB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTropical broadleaf'),3));
+    else
+        params_matrix.betaTrB(v)=NaN;
+    end
+    %betaTeB
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate broadleaf'))==2;
+        params_matrix.betaTeB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate broadleaf'),3));
+    else
+        params_matrix.betaTeB(v)=NaN;
+    end
+    %betaTeN
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate needleleaf'))==2;
+        params_matrix.betaTeN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate needleleaf'),3));
+    else
+        params_matrix.betaTeN(v)=NaN;
+    end
+    %betaBoN
+    if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate needleleaf'))==2;
+        params_matrix.betaTeN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate needleleaf'),3));
+    else
+        params_matrix.betaTeN(v)=NaN;
+    end
 end
 
 
@@ -32,7 +67,7 @@ for b =3:3
 age = linspace (1,100,100);
 
 
-% 1. FLUXES
+% 1 FLUXES
 % 1.1 define age trends
 % 1.1.1 equations (currently entered manually; to be automated)
 NEP=4*log10(age)-.08*(age-1); %placeholder (peaks around 2 at 23 yrs age)
@@ -51,36 +86,41 @@ R_auto_calc1 = GPP.*(0.5+.001*age); %insufficient data
 R_auto_calc2 = NPP_calc.*(1+.001*age); %insufficient data
 R_auto_calc3 = R_eco-R_het_soil; %insufficient data
 
-% 1.2 categorize by "in" (GPP components) and "out" (Reco components)
-in_sum = sum(in_fluxes,1);
-in_fluxes = [R_auto_calc1; BNPP; ANPP_foliage;  ANPP_woody]; %matrix with all fluxes for stacked plot
+% 1.2 group for plotting
+% "in" (GPP components) 
 in_flux_names = {'R_{auto}', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}'};
+in_fluxes = [R_auto_calc1; BNPP; ANPP_foliage;  ANPP_woody]; %matrix with all fluxes for stacked plot
+in_sum = sum(in_fluxes,1);
 
+% "out" (Reco components)
 out_flux_names = {'R_{auto}', 'R_{het}'};
 out_fluxes = [R_auto_calc1; R_het_soil]; %matrix with all fluxes for stacked plot
 out_sum = sum(out_fluxes,1);
 
+% all fluxes
 flux_names= [in_flux_names, out_flux_names];
+fluxes = [in_fluxes; -1*out_fluxes];
 
 
 % 1.2. define mature fluxes 
 
-%THIS IS CUR
+%THIS IS CURRENTLY JUST THE 100-YEAR VALUE FOR FLUXES. NEEDS TO BE REPLACED WITH MATURE BIOME MEANS!
 
 %for grouped stacked plot
-fluxes = [in_fluxes; -1*out_fluxes];
+
 mature_fluxes = [fluxes(:,end)'; fluxes(:,end)' ; fluxes(:,end)'; fluxes(:,end)'];
 
-%others
 
-%STOCKS
-% 1. by age
-%for stacked plot
+
+% 2 STOCKS
+% 2.1 define age trends
+% 2.1.1 equations (currently entered manually; to be automated)
 biomass=54* log10(age); 
 DW= 2.6*log10(age);
 
-stocks = [biomass; DW]; %matrix with all stocks for stacked plot
+% 2.2 group for plotting
 stock_names = {'B_{tot}', 'DW'};
+stocks = [biomass; DW]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
