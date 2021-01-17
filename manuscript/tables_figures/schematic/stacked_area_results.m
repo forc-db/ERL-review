@@ -39,73 +39,92 @@ for v=1:length(variables) %cycle through variables and fill in params_matrix
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTropical broadleaf'))==2;
         params_matrix.betaTrB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTropical broadleaf'),3));
     else
-        params_matrix.betaTrB(v)=NaN;
+        params_matrix.betaTrB(v)=0;
     end
     %betaTeB
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate broadleaf'))==2;
         params_matrix.betaTeB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate broadleaf'),3));
     else
-        params_matrix.betaTeB(v)=NaN;
+        params_matrix.betaTeB(v)=0;
     end
     %betaTeN
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate conifer'))==2;
         params_matrix.betaTeN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeTemperate conifer'),3));
     else
-        params_matrix.betaTeN(v)=NaN;
+        params_matrix.betaTeN(v)=0;
     end
     %betaBoN
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeBoreal conifer'))==2;
         params_matrix.betaBoN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'log10(stand.age):BiomeBoreal conifer'),3));
     else
-        params_matrix.betaBoN(v)=NaN;
+        params_matrix.betaBoN(v)=0;
     end
     %intTrB
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTropical broadleaf'))==2;
         params_matrix.intTrB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTropical broadleaf'),3));
     else
-        params_matrix.intTrB(v)=NaN;
+        params_matrix.intTrB(v)=0;
     end
     %intTeB
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate broadleaf'))==2;
         params_matrix.intTeB(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate broadleaf'),3));
     else
-        params_matrix.intTeB(v)=NaN;
+        params_matrix.intTeB(v)=0;
     end
     %intTeN
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeTemperate conifer'))==2;
         params_matrix.intTeN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeTemperate conifer'),3));
     else
-        params_matrix.intTeN(v)=NaN;
+        params_matrix.intTeN(v)=0;
     end
     %intBoN
     if max(strcmp(model_summaries.Variable, var) + strcmp(model_summaries.Parameter, 'BiomeBoreal conifer'))==2;
         params_matrix.intBoN(v)=table2array(model_summaries(strcmp(model_summaries.Variable, var) & strcmp(model_summaries.Parameter, 'BiomeBoreal conifer'),3));
     else
-        params_matrix.intBoN(v)=NaN;
+        params_matrix.intBoN(v)=0;
     end
 end
 
+int_matrix=[params_matrix.intTrB, params_matrix.intTeB, params_matrix.intTeN, params_matrix.intBoN];
+beta_matrix=[params_matrix.betaTrB, params_matrix.betaTeB, params_matrix.betaTeN, params_matrix.betaBoN];
 
-for b =3:3
+for b =1:4
 %% GENERATE EQUATIONS FOR PLOTTING
 age = linspace (1,100,100);
 
 
 % 1 FLUXES
 % 1.1 define age trends
-% 1.1.1 equations (currently entered manually; to be automated)
-NEP=4*log10(age)-.08*(age-1); %placeholder (peaks around 2 at 23 yrs age)
-GPP= 11.15 + (1.99+1.44)* log10(age);
-ANPP_foliage = 1.66* log10(age) +.18;
-ANPP_woody = 2.31* log10(age) -.76;
-BNPP=0.97*log10(age)+.67;
-NPP=(-.27+1.44)*log10(age)+11.15;
-R_eco=.91*log10(age)+11.08;
-R_het_soil=0.18*log10(age)+3.88;
+% 1.1.1 equations 
+NEP_index=find(strcmp(params_matrix.variable,'NEP'));
+NEP=(params_matrix.beta(NEP_index)+beta_matrix(NEP_index,b))* log10(age)+ int_matrix(NEP_index,b);
+
+GPP_index=find(strcmp(params_matrix.variable,'GPP'));
+GPP=max(0,(params_matrix.beta(GPP_index)+beta_matrix(GPP_index,b))* log10(age)+ int_matrix(GPP_index,b));
+
+ANPP_foliage_index=find(strcmp(params_matrix.variable,'ANPP_foliage'));
+ANPP_foliage=max(0,(params_matrix.beta(ANPP_foliage_index)+beta_matrix(ANPP_foliage_index,b))* log10(age)+ int_matrix(ANPP_foliage_index,b));
+
+ANPP_woody_index=find(strcmp(params_matrix.variable,'ANPP_woody'));
+ANPP_woody=max(0,(params_matrix.beta(ANPP_woody_index)+beta_matrix(ANPP_woody_index,b))* log10(age)+ int_matrix(ANPP_woody_index,b));
+
+BNPP_index=find(strcmp(params_matrix.variable,'BNPP'));
+BNPP=max(0,(params_matrix.beta(BNPP_index)+beta_matrix(BNPP_index,b))* log10(age)+ int_matrix(BNPP_index,b));
+
+NPP_index=find(strcmp(params_matrix.variable,'NPP'));
+NPP=max(0,(params_matrix.beta(NPP_index)+beta_matrix(NPP_index,b))* log10(age)+ int_matrix(NPP_index,b));
+
+R_eco_index=find(strcmp(params_matrix.variable,'R_eco'));
+R_eco=max(0,(params_matrix.beta(R_eco_index)+beta_matrix(R_eco_index,b))* log10(age)+ int_matrix(R_eco_index,b));
+
+R_het_soil_index=find(strcmp(params_matrix.variable,'R_het-soil'));
+R_het_soil=max(0,(params_matrix.beta(R_het_soil_index)+beta_matrix(R_het_soil_index,b))* log10(age)+ int_matrix(R_het_soil_index,b));
+
 
 % 1.1.2 calculated fluxes
 NEP_calc=GPP-R_eco;
 NPP_calc=ANPP_foliage+ANPP_woody+BNPP;
+R_auto_calc = 0.5*GPP; % this is the one that's used
 R_auto_calc1 = GPP.*(0.5+.001*age); %insufficient data
 R_auto_calc2 = NPP_calc.*(1+.001*age); %insufficient data
 R_auto_calc3 = R_eco-R_het_soil; %insufficient data
@@ -113,12 +132,12 @@ R_auto_calc3 = R_eco-R_het_soil; %insufficient data
 % 1.2 group for plotting
 % "in" (GPP components) 
 in_flux_names = {'R_{auto}', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}'};
-in_fluxes = [R_auto_calc1; BNPP; ANPP_foliage;  ANPP_woody]; %matrix with all fluxes for stacked plot
+in_fluxes = [R_auto_calc; BNPP; ANPP_foliage;  ANPP_woody]; %matrix with all fluxes for stacked plot
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
 out_flux_names = {'R_{auto}', 'R_{het}'};
-out_fluxes = [R_auto_calc1; R_het_soil]; %matrix with all fluxes for stacked plot
+out_fluxes = [R_auto_calc; R_het_soil]; %matrix with all fluxes for stacked plot
 out_sum = sum(out_fluxes,1);
 
 % all fluxes
@@ -138,13 +157,30 @@ mature_fluxes = [fluxes(:,end)'; fluxes(:,end)' ; fluxes(:,end)'; fluxes(:,end)'
 
 % 2 STOCKS
 % 2.1 define age trends
-% 2.1.1 equations (currently entered manually; to be automated)
-biomass=54* log10(age); 
-DW= 2.6*log10(age);
+% 2.1.1 equations
+
+B_tot_index=find(strcmp(params_matrix.variable,'B_tot'));
+B_tot=max(0,(params_matrix.beta(B_tot_index)+beta_matrix(B_tot_index,b))* log10(age)+ int_matrix(B_tot_index,b));
+
+B_ag_index=find(strcmp(params_matrix.variable,'B_ag'));
+B_ag=max(0,(params_matrix.beta(B_ag_index)+beta_matrix(B_ag_index,b))* log10(age)+ int_matrix(B_ag_index,b));
+
+DW_tot_index=find(strcmp(params_matrix.variable,'DW_tot'));
+DW_tot=max(0,(params_matrix.beta(DW_tot_index)+beta_matrix(DW_tot_index,b))* log10(age)+ int_matrix(DW_tot_index,b));
+
+DW_down_index=find(strcmp(params_matrix.variable,'DW_down'));
+DW_down=max(0,(params_matrix.beta(DW_down_index)+beta_matrix(DW_down_index,b))* log10(age)+ int_matrix(DW_down_index,b));
+
+OL_index=find(strcmp(params_matrix.variable,'OL'));
+OL=max(0,(params_matrix.beta(OL_index)+beta_matrix(OL_index,b))* log10(age)+ int_matrix(OL_index,b));
+
+
+% 2.1.2 caculated stocks
+DW_standing=max(0,DW_tot-DW_down);
 
 % 2.2 group for plotting
-stock_names = {'B_{tot}', 'DW'};
-stocks = [biomass; DW]; %matrix with all stocks for stacked plot
+stock_names = {'B_{tot}', 'DW_{standing}', 'DW_{down}', 'OL'};
+stocks = [B_tot; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
@@ -167,7 +203,7 @@ plot(age, NEP, '-w', 'LineWidth', 3);hold on;
 plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 plot(age, -R_eco, '--r', 'LineWidth', 3);
 t = title(biomes(b));
-ylabel ('C  stocks (Mg C ha^{-1})')
+ylabel ('C  fluxes (Mg C ha^{-1})')
 
 subplot (2,4,4) %mature C fluxes
 bar([mature_fluxes(b,:); 0*ones(1, size(mature_fluxes,2))], 'stacked');
@@ -180,8 +216,8 @@ subplot (2,4,5:7)
 %flux plot:
 h=area (age, stocks'); %, 'LineStyle','-'); 
 hold on;
-plot(age, biomass, '-k', 'LineWidth', 3);
-xlabel ('stand age');
+plot(age, B_tot, '-k', 'LineWidth', 3);
+xlabel ('stand age (years)');
 ylabel ('C  stocks (Mg C ha^{-1})')
 
 subplot (2,4,8) %mature C stocks
