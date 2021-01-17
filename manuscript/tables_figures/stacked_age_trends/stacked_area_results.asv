@@ -233,8 +233,6 @@ xlabel ('mature stands');
 xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
 
-%% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-savename=char(strcat(biomes(b),'_age_trends'));
-print(savename, '-dpng', '-r300')
+
 
 end
