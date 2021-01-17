@@ -7,7 +7,7 @@ set(0,'DefaultLegendAutoUpdate','off');
 
 %% SETTINGS
 figures_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures';
-working_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/schematic';
+working_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/stacked_age_trends';
 
 %% READ IN & PREPARE DATA
 %read in data:

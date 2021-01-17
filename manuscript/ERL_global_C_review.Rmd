@@ -276,7 +276,7 @@ Given the important role of secondary forests in the current and future global C
 
 ```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | DRAFT Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Plotted values are realistic with respect to the results of this synthesis, but schematic is not intended to be quantitatively precise. ", out.width='100%', fig.pos='H'}
 
-  knitr::include_graphics("tables_figures/schematic/schematic.png")
+  knitr::include_graphics("tables_figures/stacked_age_trends/schematic.png")
 ```
 
 Here, conduct a data-based review of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (*ForC*; Fig. `r figure_map`).
