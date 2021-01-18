@@ -121,17 +121,28 @@ NPP=max(0,(params_matrix.beta(NPP_index)+beta_matrix(NPP_index,b))* log10(age)+ 
 R_eco_index=find(strcmp(params_matrix.variable,'R_eco'));
 R_eco=max(0,(params_matrix.beta(R_eco_index)+beta_matrix(R_eco_index,b))* log10(age)+ int_matrix(R_eco_index,b));
 
+
+R_soil_index=find(strcmp(params_matrix.variable,'R_soil'));
+R_soil=max(0,(params_matrix.beta(R_soil_index)+beta_matrix(R_soil_index,b))* log10(age)+ int_matrix(R_soil_index,b));
+
 R_het_soil_index=find(strcmp(params_matrix.variable,'R_het-soil'));
 R_het_soil=max(0,(params_matrix.beta(R_het_soil_index)+beta_matrix(R_het_soil_index,b))* log10(age)+ int_matrix(R_het_soil_index,b));
+
+R_root_index=find(strcmp(params_matrix.variable,'R_root'));
+R_root=max(0,(params_matrix.beta(R_root_index)+beta_matrix(R_root_index,b))* log10(age)+ int_matrix(R_root_index,b));
 
 
 % 1.1.2 calculated fluxes
 NEP_calc=GPP-R_eco;
 NPP_calc=ANPP_foliage+ANPP_woody+BNPP;
-R_auto_calc = 0.5*GPP; % this is the one that's used
-R_auto_calc1 = GPP.*(0.5+.001*age); %insufficient data
-R_auto_calc = NPP_calc.*(1+.001*age); %insufficient data
-R_auto_calc3 = R_eco-R_het_soil; %insufficient data
+%options for R_auto_calc (insufficient data for regression or to calculate as sum/difference). 
+%Last one in list is the one that will be used.
+CUE=0.679-0.153*log10(age); %from DeLucia et al. 2007 (note that equation given mistakenly leaves of the log10(age))
+R_auto_calc = CUE.*GPP; 
+R_auto_calc= NPP_calc;
+R_auto_calc = NPP_calc.*(1./CUE-1); %Rauto=NPP*(1/CUE-1), and CUE equation is above
+
+
 BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.2 group for plotting
@@ -141,8 +152,8 @@ in_fluxes = [R_auto_calc; BNPP; ANPP_woody ; ANPP_foliage]; %matrix with all flu
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
-out_flux_names = {'R_{auto}*', 'R_{het-soil}'};
-out_fluxes = [R_auto_calc; R_het_soil]; %matrix with all fluxes for stacked plot
+out_flux_names = {'R_{root}', 'R_{het-soil}'};
+out_fluxes = [R_root; R_het_soil]; %matrix with all fluxes for stacked plot
 out_sum = sum(out_fluxes,1);
 
 % all fluxes
@@ -196,7 +207,7 @@ B_tot_calc=B_ag+B_root_coarse+B_root_fine;
 B_ag_wood_calc=max(0,B_ag-B_foliage);
 
 % 2.2 group for plotting
-stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}', 'DW_{down}', 'OL'};
+stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}*', 'DW_{down}', 'OL'};
 stocks = [ B_root_coarse ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
@@ -219,8 +230,9 @@ if b~= 1
     plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
     plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
+    plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
-plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
+plot(age, -R_soil, '-k', 'LineWidth', 3);hold on;
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1})')
 

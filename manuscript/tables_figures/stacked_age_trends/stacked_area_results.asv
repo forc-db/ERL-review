@@ -128,16 +128,19 @@ R_het_soil=max(0,(params_matrix.beta(R_het_soil_index)+beta_matrix(R_het_soil_in
 % 1.1.2 calculated fluxes
 NEP_calc=GPP-R_eco;
 NPP_calc=ANPP_foliage+ANPP_woody+BNPP;
-R_auto_calc = 0.5*GPP; % this is the one that's used
-R_auto_calc1 = GPP.*(0.5+.001*age); %insufficient data
-R_auto_calc = NPP_calc.*(1+.001*age); %insufficient data
-R_auto_calc3 = R_eco-R_het_soil; %insufficient data
+%options for R_auto_calc (insufficient data for regression or to calculate as sum/difference). 
+%Last one in list is the one that will be used.
+R_auto_calc = 0.5*GPP; 
+R_auto_calc = GPP.*(0.5+.001*age); 
+R_auto_calc = NPP_calc.*(1+.001*age); 
+0.679-0.153*age
+
 BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.2 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{auto}*', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}'};
-in_fluxes = [R_auto_calc; BNPP; ANPP_foliage;  ANPP_woody]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{auto}*', 'BNPP',  'ANPP_{woody}', 'ANPP_{foliage}'};
+in_fluxes = [R_auto_calc; BNPP; ANPP_woody ; ANPP_foliage]; %matrix with all fluxes for stacked plot
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
@@ -193,10 +196,11 @@ OL=max(0,(params_matrix.beta(OL_index)+beta_matrix(OL_index,b))* log10(age)+ int
 DW_standing=max(0,DW_tot-DW_down);
 B_root_coarse=max(0,B_root-B_root_fine);
 B_tot_calc=B_ag+B_root_coarse+B_root_fine;
+B_ag_wood_calc=max(0,B_ag-B_foliage);
 
 % 2.2 group for plotting
-stock_names = {'B_{ag}', 'B_{root-coarse}*', 'B_{root-fine}','DW_{standing}', 'DW_{down}', 'OL'};
-stocks = [B_ag; B_root_coarse ; B_root_fine ; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
+stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}*', 'DW_{down}', 'OL'};
+stocks = [ B_root_coarse ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
@@ -232,10 +236,10 @@ set(gca, 'XTick', []); %ticks off
 
 subplot (2,4,5:7)
 %flux plot:
-h=area (age, stocks'); %, 'LineStyle','-'); 
-hold on;
-%compare biomass fplot(age, B_tot, '-k', 'LineWidth', 3);
-plot(age, B_tot_calc, '--k', 'LineWidth', 3);
+h=area (age, stocks'); hold on;
+%compare biomass from different estimation methods:
+%plot(age, B_tot, '-k', 'LineWidth', 3);
+%plot(age, B_tot_calc, '--k', 'LineWidth', 3);
 xlabel ('stand age (years)');
 ylabel ('C  stocks (Mg C ha^{-1})')
 
@@ -247,6 +251,7 @@ xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cd(working_dir)
 savename=char(strcat(biomes(b),'_age_trends'));
 print(savename, '-dpng', '-r300')
 
