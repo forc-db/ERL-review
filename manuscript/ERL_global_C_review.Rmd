@@ -62,6 +62,9 @@ generate_figures=TRUE
 #note: table fails when knitting in word
 
 # DISPLAY ITEMS
+#tables
+variables_table=1
+
 #figures
 schematic =1
 figure_map=2
@@ -72,9 +75,14 @@ diagram_BoN_mature=6
 all_diagrams_mature="3-6"
 flux_age_trends=7
 stock_age_trends=8
+TrB_age_trends=9
 
-#tables
-variables_table=1
+age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto}=NPP $ ,$B_{ag-wood}=B_{ag}-B_{foliage}$, $B_{root-coarse}=B_{root}-B_{root-fine}$."
+TrB_age_trends_caption = paste("Figure 9 | Age trends in C cycling in tropical broadleaf forests.", age_trends_caption_generic) 
+TeB_age_trends_caption = paste("Figure 10 | Age trends in C cycling in temperate broadleaf forests.", age_trends_caption_generic) 
+TeN_age_trends_caption = paste("Figure 11 | Age trends in C cycling in temperate conifer forests.", age_trends_caption_generic) 
+BoN_age_trends_caption = paste("Figure 12 | Age trends in C cycling in boreal conifer forests.", age_trends_caption_generic) 
+
 
 #SI
 
@@ -239,13 +247,10 @@ Since its most recent publication [@anderson-teixeira_forc_2018], *ForC* has gro
 Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones, making it ideal for assessing how forest C cycling varies across biomes and with respect to stand age.
 
 ### Biome differences
-Forest C cycling varies enormously across biomes...
-Biome is an artificial categorical distinction convenient for categorizing the world's forests according to major differences in climate and vegetation. 
 
-The most important gradient for defining biomes is climate. 
-Since (Humboldt?), it has been recognized that climate plays a dominant role in shaping differences among forests.
-
-@lieth_primary_1973 synthesized differences in NPP across gradients of mean annual temperature and precipitation.
+Forest C cycling varies enormously across biomes, which are artificial categorical distinctions convenient for categorizing the world's forests according to major differences in climate, vegetation, *etc.* 
+Since *(Humboldt?)*, it has been recognized that climate plays a dominant role in shaping differences among forests.
+Early quantitative syntheses revealed that C fluxes such as net primary productivity ($NPP$) decrease dramatically with latitude, or increase across gradients of mean annual temperature and, to a lesser extent, precipitation [@lieth_primary_1973].
 
 @banbury_morgan_global_nodate
 
@@ -461,6 +466,30 @@ There were sufficient data to model age $\times$ biome interactions were also si
 In the case of two non-living C stocks ($DW_{down}$ and $OL$), age $\times$ biome interactions were such that 
 Specifically, $DW_{down}$ declined with age in temperate and boreal forests, compared to an increase with age in tropical forests (Figs. `r stock_age_trends`, `r DW_down_fig`).
 Similarly, $OL$ declined slightly with age in temperate broadleaf forests, contrasting an increase in the other three biomes (Figs. `r stock_age_trends`, `r OL_fig`).
+
+
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap =TrB_age_trends_caption, out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/stacked_age_trends/Tropical broadleaf_age_trends.png")
+```
+
+
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap =TeB_age_trends_caption, out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/stacked_age_trends/Temperate broadleaf_age_trends.png")
+```
+
+
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap =TeN_age_trends_caption, out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/stacked_age_trends/Temperate conifer_age_trends.png")
+```
+
+
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap =BoN_age_trends_caption, out.width='100%', fig.pos='H'}
+
+  knitr::include_graphics("tables_figures/stacked_age_trends/Boreal conifer_age_trends.png")
+```
 
 \newpage
 
