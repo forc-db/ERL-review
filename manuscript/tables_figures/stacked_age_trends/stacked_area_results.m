@@ -8,9 +8,10 @@ set(0,'DefaultLegendAutoUpdate','off');
 %% SETTINGS
 figures_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures';
 working_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/stacked_age_trends';
+ForC_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC';
 
 %% READ IN & PREPARE DATA
-%read in data:
+%read in age trends modesl summaries:
 cd(figures_dir)
 model_summaries=readtable('SI_age_trend_model_summaries.csv');
 %remove specieal formatting from model_summaries.Variable:
@@ -87,6 +88,10 @@ end
 
 int_matrix=[params_matrix.intTrB, params_matrix.intTeB, params_matrix.intTeN, params_matrix.intBoN];
 beta_matrix=[params_matrix.betaTrB, params_matrix.betaTeB, params_matrix.betaTeN, params_matrix.betaBoN];
+
+%read in ForC variable averages
+cd(strcat(ForC_dir,'/numbers_and_facts'))
+ForC_variable_averages=readtable('ForC_variable_averages_per_Biome.csv');
 
 for b =1:4
 %% GENERATE EQUATIONS FOR PLOTTING
@@ -170,7 +175,6 @@ BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 % "in" (GPP components) 
 in_flux_names = {'R_{root}', 'R_{auto-ag}*', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}*'};
 in_fluxes = [R_root; R_auto_ag_calc; BNPP; ANPP_foliage; ANPP_woody_calc ]; %matrix with all fluxes for stacked plot
-%in_fluxes = [R_root; R_auto_ag_calc; NPP ]; %matrix with all fluxes for stacked plot
 
 in_sum = sum(in_fluxes,1);
 
@@ -185,12 +189,41 @@ fluxes = [in_fluxes; -1*out_fluxes];
 
 
 % 1.2. define mature fluxes 
+NEP_index=find(strcmp(ForC_variable_averages.variable_diagram,'NEP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+NEP_mature=ForC_variable_averages.mean(NEP_index);
+
+R_root_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_root') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_root_mature=ForC_variable_averages.mean(R_root_index);
+
+R_auto_ag_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_auto_ag') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_auto_ag_mature=ForC_variable_averages.mean(R_auto_ag_index);
+
+BNPP_index=find(strcmp(ForC_variable_averages.variable_diagram,'BNPP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+BNPP_mature=ForC_variable_averages.mean(BNPP_index);
+
+ANPP_foliage_index=find(strcmp(ForC_variable_averages.variable_diagram,'ANPP_foliage') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+ANPP_foliage_mature=ForC_variable_averages.mean(ANPP_foliage_index);
+
+ANPP_woody_index=find(strcmp(ForC_variable_averages.variable_diagram,'ANPP_woody') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+ANPP_woody_mature=ForC_variable_averages.mean(ANPP_woody_index);
+
+ANPP_stem_index=find(strcmp(ForC_variable_averages.variable_diagram,'ANPP_stem') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+ANPP_stem_mature=ForC_variable_averages.mean(ANPP_stem_index);
+
+GPP_index=find(strcmp(ForC_variable_averages.variable_diagram,'GPP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+GPP_mature=ForC_variable_averages.mean(GPP_index);
+
+R_het_soil_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_het_soil') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_het_soil_mature=ForC_variable_averages.mean(R_het_soil_index);
 
 %THIS IS CURRENTLY JUST THE 100-YEAR VALUE FOR FLUXES. NEEDS TO BE REPLACED WITH MATURE BIOME MEANS!
 
-%for grouped stacked plot
 
-mature_fluxes = [fluxes(:,end)'; fluxes(:,end)' ; fluxes(:,end)'; fluxes(:,end)'];
+
+%for grouped stacked plot
+mature_fluxes= [R_root_mature R_auto_ag_mature BNPP_mature ANPP_foliage_mature ANPP_woody_mature... %in fluxes
+                -R_het_soil_mature -R_root_mature -R_auto_ag_mature]; % out fluxes
+mature_fluxes_matrix(b,1:length(mature_fluxes)) =mature_fluxes;
 
 
 
@@ -263,7 +296,7 @@ t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1})')
 
 subplot (2,4,4) %mature C fluxes
-bar([mature_fluxes(b,:); 0*ones(1, size(mature_fluxes,2))], 'stacked');
+bar([mature_fluxes_matrix(b,:); 0*ones(1, size(mature_fluxes_matrix,2))], 'stacked');
 legend (flux_names, 'Location', 'BestOutside');
 xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
@@ -286,7 +319,7 @@ xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
 
 %figure (10+b)
-%plot (age, ANPP, age, ANPP_foliage, age, ANPP_woody_calc, age, ANPP_foliage+ANPP_woody_calc)
+%plot (age, ANPP_woody, age, ANPP_foliage, age, ANPP_woody_calc, age, ANPP_foliage+ANPP_woody_calc)
 %legend ('ANPP', 'ANPP_foliage', 'ANPP woody', 'foliage+woody')
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
