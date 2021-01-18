@@ -76,6 +76,9 @@ all_diagrams_mature="3-6"
 flux_age_trends=7
 stock_age_trends=8
 TrB_age_trends=9
+TeB_age_trends=10
+TeN_age_trends=11
+BoN_age_trends=12
 
 age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto}=NPP $ ,$B_{ag-wood}=B_{ag}-B_{foliage}$, $B_{root-coarse}=B_{root}-B_{root-fine}$."
 TrB_age_trends_caption = paste("Figure 9 | Age trends in C cycling in tropical broadleaf forests.", age_trends_caption_generic) 
