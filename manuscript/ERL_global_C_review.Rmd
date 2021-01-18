@@ -202,9 +202,9 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 ```
 
 Forest ecosystems are shaping the course of climate change through their influence on atmospheric carbon dioxide [CO~2~; @bonan_forests_2008; @friedlingstein_global_2019; @ipcc_global_2018].
-Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climatecarbon_2006; @krause_large_2018; @bonan_model_2019; @di_vittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011] can be traced to lack of accessible, comprehensive data on how C cycling varies across forest types and in relation to stand history.
-These require large-scale databases with global coverage, which runs contrary to the nature in which forest C stocks and fluxes are measured and published.
-Large-scale synthesis is critical to benchmarking model performance with global data (Clark et al 2017, Luo et al 2012), quantifying the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], or using book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
+Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climatecarbon_2006; @krause_large_2018; @bonan_model_2019; @di_vittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011] can be traced to lack of understanding on how C cycling varies across forest types and in relation to stand history.
+This requires accessible, comprehensive, and large-scale databases with global coverage, which runs contrary to the traditional way forest C stocks and fluxes have been measured and published.
+Large-scale synthesis is critical to benchmarking model performance with global data (Clark et al 2017, Luo et al 2012), quantifying the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], and using book-keeping methods to quantify actual or scenario-based exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
 
 ### Forests in the global C cycle: current and future
 
@@ -212,7 +212,7 @@ A robust understanding of forest impacts on global C cycling is essential.
 Annual gross CO~2~ sequestration in forests (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], or >7 times average annual fossil fuel emissions from 2009-2018 [9.5 $\pm$ 0.5 Gt C yr^-1^; @friedlingstein_global_2019].
 Most of this enormous C sequestration is counterbalanced by CO~2~ releases to the atmosphere through ecosystem respiration ($R_{eco}$) or fire, with forests globally dominant as sources of both soil respiration [@warner_spatial_2019] and fire emissions [@van_der_werf_global_2017].
 In recent years, the remaining CO~2~ sink averaged 3.2 $\pm$ 0.6 GtC yr^-1^ from 2009-2018, offsetting 29% of anthropogenic fossil fuel emissions [@friedlingstein_global_2019].
-Yet, this sink is reduced by deforestation, estimated at ~1 Gt C yr^-1^ in recent decades [@pan_large_2011; @tubiello_carbon_2020], reducing the net forest sink to ~1.1-2.2 Gt C yr^-1^ across Earth's forests [@friedlingstein_global_2019].
+However, deforestation, estimated at ~1 Gt C yr^-1^ in recent decades [@pan_large_2011; @tubiello_carbon_2020], reduces the net forest sink to ~1.1-2.2 Gt C yr^-1^ across Earth's forests [@friedlingstein_global_2019].
 
 The future of the current forest C sink is dependent both upon forest responses to climate change itself and human land use decisions, which will feedback and strongly influence the course of climate change. 
 Regrowing forests in particular will play an important role [@pugh_role_2019], as almost two-thirds of the world’s forests were secondary as of 2010 [@fao_global_2010].
@@ -223,27 +223,20 @@ Understanding, modeling, and managing forest-atmosphere CO~2~ exchange is thus c
 
 ### Evolution of forest C cycle research
 
-For more than half a century, researchers have sought to understand how forest carbon cycling varies across stands, including those of different biomes [e.g., Leith, @luyssaert_co2_2007] and stand ages [e.g., @odum_strategy_1969 Odum, Luyssaert 2008].
-- increasingly refined understanding of the elements of ecosystem C cycles,  
-- standardization of definitions, (which were vague at the time of Odum)
-- Expanding set of variables, notably including the development of the eddy-covariance technique to measure ecosystem-atmosphere CO~2~ exchange (REFS), NEP, soil respiration, Also various techniques for measuring belowground C cycling.
-- critical review of methods and their sources of errors
-- Increasing standardization of  methods: allometries, which are highly influential to any measurement including woody biomass or changes therein, but until recently have not been standardized
-- Further standardization made possible through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015; e.g., @lutz_global_2018], GEM (Malhi), NEON [@schimel_neon_2007], or FLUXNET [@baldocchi_fluxnet_2001; e.g., @novick_ameriflux_2018].
-- While remote sensing measurements are increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass: @hu_mapping_2016; @spawn_harmonized_2020; gross primary productivity, $GPP$: @li_mapping_2019; @saatchi_benchmark_2011], measurement and validation of most forest C stocks and fluxes require intensive on-the-ground data collection.
+For more than half a century, researchers have sought to understand how forest carbon cycling varies across stands, including those of different biomes [e.g., @lieth_primary_1973; @luyssaert_co2_2007] and stand ages [e.g., @odum_strategy_1969; @luyssaert_old-growth_2008].
+Over this time, an increasingly refined conceptual understanding of the elements of ecosystem C cycles has developed, as a growing number of variables have been defined [e.g., @chapin_reconciling_2006], along with appropriate measurement methods [e.g., @clark_measuring_2001]. 
+New technology has also enabled researches to directly measure an expanding set of variables, notably including the development of continuous measurements of soil CO~2~ efflux (**REF-BEN**) and ecosystem-atmosphere CO~2~ exchange (**REFS**).
+Standardization of estimation techniques has also increased; for example, there has been increasing standardization of the biomass allometries strongly influence estimates of any C cycle variable including woody biomass or changes therein [e.g., @chojnacky_updated_2014; @chave_improved_2014].
+Further standardization has been made possible through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015; @davies_forestgeo_2021], NEON [@schimel_neon_2007], and FLUXNET [@baldocchi_fluxnet_2001; @novick_ameriflux_2018].
+Remote sensing technology has become increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass: @hu_mapping_2016; @spawn_harmonized_2020; gross primary productivity, $GPP$: @li_mapping_2019; @saatchi_benchmark_2011], yet measurement and validation of most forest C stocks and fluxes necessarily requires intensive on-the-ground data collection.
 
 Alongside these conceptual and methodological developments, there has been a proliferation of measurements across the world's forests. 
-The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles --often behind paywalls-- along with variation in data formats, units, measurement methods, *etc.*
-In this format, the data are effectively inaccessible for many global-scale analyses, 
-Data synthesis began,...
-
-To address the need for global-scale analyses of forest C cycling, we recently developed *ForC* [@anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018].
-*ForC* contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with the different variables capturing the unique ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
+The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles, along with variation in data formats, units, measurement methods, *etc.*
+To use these data to address global-scale questions, researchers began synthesizing data into increasingly large databases [e.g., @lieth_primary_1973; @luyssaert_co2_2007;  @bond-lamberty_global_2010; @anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018; @cook-patton_mapping_2020]. 
+The current largest, most comprehensive database on forest C cycling is *ForC* [@anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018], which contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with the different variables capturing the unique ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
 These data are ground-based measurements, and *ForC* contains associated data required for interpretation (*e.g.*, stand history, measurement methods).
-Data have been amalgamated from original peer-reviewed publications, either directly or via intermediary data compilations.
-Since its most recent publication [@anderson-teixeira_forc_2018], *ForC* has grown to include two additional large databases: the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020] that also synthesized published forest C data.
-Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones.
-This represents an `r round((nrow(ForC_measurements) - 17367)/17367*100, digits=0)`% increase in records from the prior publication [@anderson-teixeira_forc_2018].
+Since its most recent publication [@anderson-teixeira_forc_2018], *ForC* has grown `r round((nrow(ForC_measurements) - 17367)/17367*100, digits=0)`% through the incorporation of two additional large databases that also synthesized published forest C data: the Global Soil Respiration Database [SRDB; @bond-lamberty_global_2010; @jian_restructured_2020] and the Global Reforestation Opportunity Assessment database [GROA; @cook-patton_mapping_2020].
+Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones, making it ideal for assessing how forest C cycling varies across biomes and with respect to stand age.
 
 ### Biome differences
 Forest C cycling varies enormously across biomes...
