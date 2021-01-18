@@ -156,7 +156,7 @@ elseif b==1  %tropical forests
     NPP_calc=ANPP_foliage+ANPP_woody_calc+BNPP;
     %options for R_auto_calc (insufficient data for regression or to calculate as sum/difference). 
     %Last one in list is the one that will be used.
-    R_auto_calc = NPP_calc.*(1./CUE-1); %Rauto=NPP*(1/CUE-1), and CUE equation is above
+    R_auto_calc = max(R_root,NPP_calc.*(1./CUE-1)); %Rauto=NPP*(1/CUE-1), and CUE equation is above
     R_auto_ag_calc=max(0,R_auto_calc-R_root);
 end
 
@@ -170,6 +170,8 @@ BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 % "in" (GPP components) 
 in_flux_names = {'R_{root}', 'R_{auto-ag}*', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}*'};
 in_fluxes = [R_root; R_auto_ag_calc; BNPP; ANPP_foliage; ANPP_woody_calc ]; %matrix with all fluxes for stacked plot
+%in_fluxes = [R_root; R_auto_ag_calc; NPP ]; %matrix with all fluxes for stacked plot
+
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
@@ -246,7 +248,6 @@ h=area (age, in_fluxes'); %, 'LineStyle','-');
 hold on;
 h=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
 hold on;
-%plot(age, in_sum, '--b', 'LineWidth', 3); hold on;
 if b~= 1 
     plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
@@ -254,6 +255,8 @@ if b~= 1
     plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
     plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
+plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
+plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
 plot(age, -R_soil, '-k', 'LineWidth', 3);hold on;
 plot(age, -R_root-R_het_soil, '--k', 'LineWidth', 3);hold on;
 t = title(biomes(b));

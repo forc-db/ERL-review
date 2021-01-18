@@ -81,7 +81,7 @@ TeN_age_trends=11
 BoN_age_trends=12
 
 
-TrB_age_trends_caption = "Figure 9 | Age trends in C cycling in tropical broadleaf forests. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto}=NPP(1/CUE-1)$, where $CUE$ is TEMPORARILY 0.5; $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
+TrB_age_trends_caption = "Figure 9 | Age trends in C cycling in tropical broadleaf forests. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$, where $CUE$ is TEMPORARILY 0.5; $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
 age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto-ag}=R_{eco}-R{soil}$; ANPP_{woody}=min(ANPP_{stem},ANPP_{woody}); $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
 TeB_age_trends_caption = paste("Figure 10 | Age trends in C cycling in temperate broadleaf forests.", age_trends_caption_generic) 
 TeN_age_trends_caption = paste("Figure 11 | Age trends in C cycling in temperate conifer forests.", age_trends_caption_generic) 
@@ -453,17 +453,22 @@ For three variables that had been disproportionately sampled in the high-biomass
 
 ### C cycling in young forests
 
-Average C cycles for forests <100 years old are presented in Figures 8-11.
-Both C stocks and fluxes commonly increased significantly with stand age (Tables 1, S2, Figs. `r flux_age_trends`- `r stock_age_trends`, `r all_age_trends`; detailed below).
+Both C stocks and fluxes commonly increased significantly with stand age (Tables 1, S2, Figs. `r flux_age_trends`- `r stock_age_trends`, `r TrB_age_trends`-`r BoN_age_trends`, `r all_age_trends`; detailed below).
 
 *ForC* contained 16 C flux variables with sufficient data for analyses of age trends in young forests (see Methods) (Figs. `r flux_age_trends`, `r all_flux_age_trends`).
-Of these, ten increased significantly with age: $NEP$, $GPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{foliage}$, $ANPP_{litterfal}$, $BNPP$, $BNPP_{fine}$, $R_{eco}$, and $R_{root}$.
+Of these, ten increased significantly with $log10[age]$: $NEP$, $GPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{foliage}$, $ANPP_{litterfal}$, $BNPP$, $BNPP_{fine}$, $R_{eco}$, and $R_{root}$.
 The remaining six--$NPP$, $ANPP_{stem}$, $ANPP_{branch}$, $BNPP_{coarse}$, $R_{soil-het}$, and $R_{soil-het}$-–displayed no significant relationship to stand age.
 
 Differences in C fluxes across biomes typically paralleled those observed for mature forests, with C cycling generally most rapid in the tropics and slowest in boreal forests.
 The single exception was $ANPP_{stem}$, for which temperate broadleaf and conifer forests had similar flux rates than tropical forests.
 Notably, and in contrast to the lack of biome differences in $NEP$ for mature forests (Fig. `r flux_age_trends`), the tendency for temperate forests to have greater fluxes than boreal forests held for $NEP$ in regrowth forests (tropical forests excluded because of insufficient data).
 
+"Closure" and internal consistency of the C flux budget was less successful for young than mature forests (Figs. `r TrB_age_trends`-`r BoN_age_trends`).
+Summed regression equations for $R_{soil-het}$ and $R_{root}$ were generally very close to $R_{soil}$.
+We calculated $R_{auto-ag}$ as the difference between $R_{eco}$ and $R_{soil}$ (except for tropical forests, which had insufficient $R_{eco}$ data), effectively guaranteeing near-closure of the CO~2~ efflux (respiration) portion of the budget (negative values in Figs. `r TrB_age_trends`-`r BoN_age_trends`).
+In contrast, the  CO~2~ influx portion of the budget generally did not "close": the sum of $R_{auto}$ ($R_{root}+R_{auto-ag}$, as described above) and components of $NPP$ consistently fell short of $GPP$ by **##-##** Mg C ha^-1^ yr^-1^ , particularly in in young stands.
+Moreover, there was not consistent budget closure among the components of $NPP$, and substantially different age trends resulting from the sum of components versus total $NPP$ (Figs. `r TrB_age_trends`-`r BoN_age_trends`).
+ 
 In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. `r stock_age_trends`, `r all_stock_age_trends`).
 All of these displayed a significant overall increase with with $log10[stand.age]$.
 There were sufficient data to model age $\times$ biome interactions were also significant for all ten of these C stock variables (Table S2), with living C stocks tending to accumulate more rapidly during the early stages of forest regrowth in tropical forests (Figs. `r stock_age_trends`, `r all_stock_age_trends`).
