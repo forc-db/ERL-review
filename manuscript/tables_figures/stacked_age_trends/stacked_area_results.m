@@ -99,7 +99,7 @@ age = linspace (1,100,100);
 NEP_index=find(strcmp(params_matrix.variable,'NEP'));
 NEP=(params_matrix.beta(NEP_index)+beta_matrix(NEP_index,b))* log10(age)+ int_matrix(NEP_index,b);
 
-GPP_index=find(strcmp(params_matrix.variable,'GPP'));
+GPP_index=find(strcmp(params_matrix.variable,'GPP')); %not available for tropical forests
 GPP=max(0,(params_matrix.beta(GPP_index)+beta_matrix(GPP_index,b))* log10(age)+ int_matrix(GPP_index,b));
 
 ANPP_foliage_index=find(strcmp(params_matrix.variable,'ANPP_foliage'));
@@ -110,6 +110,10 @@ ANPP_woody=max(0,(params_matrix.beta(ANPP_woody_index)+beta_matrix(ANPP_woody_in
 
 BNPP_index=find(strcmp(params_matrix.variable,'BNPP'));
 BNPP=max(0,(params_matrix.beta(BNPP_index)+beta_matrix(BNPP_index,b))* log10(age)+ int_matrix(BNPP_index,b));
+
+BNPP_fine_index=find(strcmp(params_matrix.variable,'BNPP_fine'));
+BNPP_fine=max(0,(params_matrix.beta(BNPP_fine_index)+beta_matrix(BNPP_fine_index,b))* log10(age)+ int_matrix(BNPP_fine_index,b));
+
 
 NPP_index=find(strcmp(params_matrix.variable,'NPP'));
 NPP=max(0,(params_matrix.beta(NPP_index)+beta_matrix(NPP_index,b))* log10(age)+ int_matrix(NPP_index,b));
@@ -126,17 +130,18 @@ NEP_calc=GPP-R_eco;
 NPP_calc=ANPP_foliage+ANPP_woody+BNPP;
 R_auto_calc = 0.5*GPP; % this is the one that's used
 R_auto_calc1 = GPP.*(0.5+.001*age); %insufficient data
-R_auto_calc2 = NPP_calc.*(1+.001*age); %insufficient data
+R_auto_calc = NPP_calc.*(1+.001*age); %insufficient data
 R_auto_calc3 = R_eco-R_het_soil; %insufficient data
+BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.2 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{auto}', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}'};
-in_fluxes = [R_auto_calc; BNPP; ANPP_foliage;  ANPP_woody]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{auto}*', 'BNPP',  'ANPP_{woody}', 'ANPP_{foliage}'};
+in_fluxes = [R_auto_calc; BNPP; ANPP_woody ; ANPP_foliage]; %matrix with all fluxes for stacked plot
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
-out_flux_names = {'R_{auto}', 'R_{het}'};
+out_flux_names = {'R_{auto}*', 'R_{het-soil}'};
 out_fluxes = [R_auto_calc; R_het_soil]; %matrix with all fluxes for stacked plot
 out_sum = sum(out_fluxes,1);
 
@@ -168,6 +173,9 @@ B_ag=max(0,(params_matrix.beta(B_ag_index)+beta_matrix(B_ag_index,b))* log10(age
 B_root_index=find(strcmp(params_matrix.variable,'B_root'));
 B_root=max(0,(params_matrix.beta(B_root_index)+beta_matrix(B_root_index,b))* log10(age)+ int_matrix(B_root_index,b));
 
+B_root_fine_index=find(strcmp(params_matrix.variable,'B_root-fine'));
+B_root_fine=max(0,(params_matrix.beta(B_root_fine_index)+beta_matrix(B_root_fine_index,b))* log10(age)+ int_matrix(B_root_fine_index,b));
+
 B_foliage_index=find(strcmp(params_matrix.variable,'B_foliage'));
 B_foliage=max(0,(params_matrix.beta(B_foliage_index)+beta_matrix(B_foliage_index,b))* log10(age)+ int_matrix(B_foliage_index,b));
 
@@ -183,10 +191,13 @@ OL=max(0,(params_matrix.beta(OL_index)+beta_matrix(OL_index,b))* log10(age)+ int
 
 % 2.1.2 caculated stocks
 DW_standing=max(0,DW_tot-DW_down);
+B_root_coarse=max(0,B_root-B_root_fine);
+B_tot_calc=B_ag+B_root_coarse+B_root_fine;
+B_ag_wood_calc=max(0,B_ag-B_foliage);
 
 % 2.2 group for plotting
-stock_names = {'B_{ag}', 'B_{root}', 'DW_{standing}', 'DW_{down}', 'OL'};
-stocks = [B_ag; B_root ; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
+stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}', 'DW_{down}', 'OL'};
+stocks = [ B_root_coarse ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
@@ -203,11 +214,13 @@ h=area (age, in_fluxes'); %, 'LineStyle','-');
 hold on;
 h=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
 hold on;
-plot(age, in_sum, '-b', 'LineWidth', 3); hold on;
-plot(age, GPP, '--b', 'LineWidth', 3); hold on;
-plot(age, NEP, '-w', 'LineWidth', 3);hold on;
+plot(age, in_sum, '--b', 'LineWidth', 3); hold on;
+if b~= 1 
+    plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
+    plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
+    plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
+end
 plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
-plot(age, -R_eco, '--r', 'LineWidth', 3);
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1})')
 
@@ -220,9 +233,10 @@ set(gca, 'XTick', []); %ticks off
 
 subplot (2,4,5:7)
 %flux plot:
-h=area (age, stocks'); %, 'LineStyle','-'); 
-hold on;
-plot(age, B_tot, '-k', 'LineWidth', 3);
+h=area (age, stocks'); hold on;
+%compare biomass from different estimation methods:
+%plot(age, B_tot, '-k', 'LineWidth', 3);
+%plot(age, B_tot_calc, '--k', 'LineWidth', 3);
 xlabel ('stand age (years)');
 ylabel ('C  stocks (Mg C ha^{-1})')
 
@@ -234,6 +248,7 @@ xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cd(working_dir)
 savename=char(strcat(biomes(b),'_age_trends'));
 print(savename, '-dpng', '-r300')
 
