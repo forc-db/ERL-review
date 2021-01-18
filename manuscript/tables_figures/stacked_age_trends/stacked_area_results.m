@@ -102,8 +102,14 @@ NEP=(params_matrix.beta(NEP_index)+beta_matrix(NEP_index,b))* log10(age)+ int_ma
 GPP_index=find(strcmp(params_matrix.variable,'GPP')); %not available for tropical forests
 GPP=max(0,(params_matrix.beta(GPP_index)+beta_matrix(GPP_index,b))* log10(age)+ int_matrix(GPP_index,b));
 
+ANPP_index=find(strcmp(params_matrix.variable,'ANPP'));
+ANPP=max(0,(params_matrix.beta(ANPP_index)+beta_matrix(ANPP_index,b))* log10(age)+ int_matrix(ANPP_index,b));
+
 ANPP_foliage_index=find(strcmp(params_matrix.variable,'ANPP_foliage'));
 ANPP_foliage=max(0,(params_matrix.beta(ANPP_foliage_index)+beta_matrix(ANPP_foliage_index,b))* log10(age)+ int_matrix(ANPP_foliage_index,b));
+
+ANPP_stem_index=find(strcmp(params_matrix.variable,'ANPP_stem'));
+ANPP_stem=max(0,(params_matrix.beta(ANPP_stem_index)+beta_matrix(ANPP_stem_index,b))* log10(age)+ int_matrix(ANPP_stem_index,b));
 
 ANPP_woody_index=find(strcmp(params_matrix.variable,'ANPP_woody'));
 ANPP_woody=max(0,(params_matrix.beta(ANPP_woody_index)+beta_matrix(ANPP_woody_index,b))* log10(age)+ int_matrix(ANPP_woody_index,b));
@@ -134,26 +140,41 @@ R_root=max(0,(params_matrix.beta(R_root_index)+beta_matrix(R_root_index,b))* log
 
 % 1.1.2 calculated fluxes
 NEP_calc=GPP-R_eco;
-NPP_calc=ANPP_foliage+ANPP_woody+BNPP;
-%options for R_auto_calc (insufficient data for regression or to calculate as sum/difference). 
-%Last one in list is the one that will be used.
+
+
+%options for CUE. lat one in list is the one that will be used.
 CUE=0.679-0.153*log10(age); %from DeLucia et al. 2007 (note that equation given mistakenly leaves of the log10(age))
-R_auto_calc = CUE.*GPP; 
-R_auto_calc= NPP_calc;
-R_auto_calc = NPP_calc.*(1./CUE-1); %Rauto=NPP*(1/CUE-1), and CUE equation is above
+CUE=0.5;
+
+if b>1  %extratropical forests
+    ANPP_woody_calc=min(ANPP_stem, ANPP_woody);
+    NPP_calc=ANPP_foliage+ANPP_woody_calc+BNPP;
+    R_auto_ag_calc=R_eco-R_soil;
+    R_auto_calc=R_root+R_auto_ag_calc;
+elseif b==1  %tropical forests
+    ANPP_woody_calc=max(0,ANPP-ANPP_foliage);
+    NPP_calc=ANPP_foliage+ANPP_woody_calc+BNPP;
+    %options for R_auto_calc (insufficient data for regression or to calculate as sum/difference). 
+    %Last one in list is the one that will be used.
+    R_auto_calc = NPP_calc.*(1./CUE-1); %Rauto=NPP*(1/CUE-1), and CUE equation is above
+    R_auto_ag_calc=max(0,R_auto_calc-R_root);
+end
+
+
+
 
 
 BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.2 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{auto}*', 'BNPP',  'ANPP_{woody}', 'ANPP_{foliage}'};
-in_fluxes = [R_auto_calc; BNPP; ANPP_woody ; ANPP_foliage]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{root}', 'R_{auto-ag}*', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}*'};
+in_fluxes = [R_root; R_auto_ag_calc; BNPP; ANPP_foliage; ANPP_woody_calc ]; %matrix with all fluxes for stacked plot
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
-out_flux_names = {'R_{root}', 'R_{het-soil}'};
-out_fluxes = [R_root; R_het_soil]; %matrix with all fluxes for stacked plot
+out_flux_names = { 'R_{het-soil}', 'R_{root}', 'R_{auto-ag}*'};
+out_fluxes = [R_het_soil; R_root; R_auto_ag_calc ]; %matrix with all fluxes for stacked plot
 out_sum = sum(out_fluxes,1);
 
 % all fluxes
@@ -225,14 +246,16 @@ h=area (age, in_fluxes'); %, 'LineStyle','-');
 hold on;
 h=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
 hold on;
-plot(age, in_sum, '--b', 'LineWidth', 3); hold on;
+%plot(age, in_sum, '--b', 'LineWidth', 3); hold on;
 if b~= 1 
     plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
+    %plot(age, -R_root-R_het_soil-R_auto_ag_calc, '--r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
     plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
     plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
 plot(age, -R_soil, '-k', 'LineWidth', 3);hold on;
+plot(age, -R_root-R_het_soil, '--k', 'LineWidth', 3);hold on;
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1})')
 
@@ -258,6 +281,10 @@ legend (stock_names, 'Location', 'BestOutside');
 xlabel ('mature stands');
 xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
+
+%figure (10+b)
+%plot (age, ANPP, age, ANPP_foliage, age, ANPP_woody_calc, age, ANPP_foliage+ANPP_woody_calc)
+%legend ('ANPP', 'ANPP_foliage', 'ANPP woody', 'foliage+woody')
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd(working_dir)

@@ -80,8 +80,9 @@ TeB_age_trends=10
 TeN_age_trends=11
 BoN_age_trends=12
 
-age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto}=NPP(1/CUE-1)$, where $CUE$ is the age trend from DeLucia et al. (2007); $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
-TrB_age_trends_caption = paste("Figure 9 | Age trends in C cycling in tropical broadleaf forests.", age_trends_caption_generic) 
+
+TrB_age_trends_caption = "Figure 9 | Age trends in C cycling in tropical broadleaf forests. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto}=NPP(1/CUE-1)$, where $CUE$ is TEMPORARILY 0.5; $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
+age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables, as follows: $R_{auto-ag}=R_{eco}-R{soil}$; ANPP_{woody}=min(ANPP_{stem},ANPP_{woody}); $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
 TeB_age_trends_caption = paste("Figure 10 | Age trends in C cycling in temperate broadleaf forests.", age_trends_caption_generic) 
 TeN_age_trends_caption = paste("Figure 11 | Age trends in C cycling in temperate conifer forests.", age_trends_caption_generic) 
 BoN_age_trends_caption = paste("Figure 12 | Age trends in C cycling in boreal conifer forests.", age_trends_caption_generic) 
