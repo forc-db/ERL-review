@@ -319,16 +319,22 @@ subplot (2,1,1) %FLUXES
 h1a=area (age, in_fluxes'); hold on;
 h2a=area(112:116, mature_in_fluxes.*ones(5,size(mature_in_fluxes,1)),'HandleVisibility','off'); hold on;
 
-h1b=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
+h2bl=area(age, -1*out_fluxes(3,:)'); hold on; %not shown, just for legend
+h1b=area (age, -1*out_fluxes','HandleVisibility','off'); 
 h2b=area(112:116, mature_out_fluxes.*ones(5,size(mature_out_fluxes,1)),'HandleVisibility','off'); hold on;
 
 if b~= 1 
-    plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
-    plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
+    plot(age, GPP, '-b', 'LineWidth', 2,'HandleVisibility','off'); hold on; % eddy flux: insufficient data for tropics
+    plot(age, -R_eco, '-r', 'LineWidth', 2,'HandleVisibility','off'); % eddy flux: insufficient data for tropics
     %plot(age, -R_root-R_het_soil-R_auto_ag_calc, '--r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
-    plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
+    plot(age, NEP, '-w', 'LineWidth', 2,'HandleVisibility','off');hold on; % eddy flux: insufficient data for tropics
     %plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
+plot (114, GPP_mature, 'ok', 'MarkerFaceColor', 'b'); hold on;
+plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'w'); hold on;
+plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
+
+
 %plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
 %plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
 %plot(age, -R_auto_ag_calc-R_soil, '-y', 'LineWidth', 3);hold on;
@@ -354,11 +360,12 @@ facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
         h1b(n).FaceColor= facecolor_out_fluxes(n,:);
         h2b(n).FaceColor= facecolor_out_fluxes(n,:);
     end
+    h2bl.FaceColor= facecolor_out_fluxes(3,:);
 xlim([0 119])
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1} yr^{-1})')
 
-legend (flux_names, 'Location', 'BestOutside');
+legend ([in_flux_names, {'R_{het-soil}','GPP','NEP', 'R_{eco}' }], 'Location', 'BestOutside');
 
 
 subplot (2,1,2) %STOCKS

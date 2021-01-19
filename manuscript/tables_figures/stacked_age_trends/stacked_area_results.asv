@@ -169,7 +169,7 @@ BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.1.3 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP',  'ANPP_{woody}*','ANPP_{foliage}'};
+in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP',  'ANPP_{woody}**','ANPP_{foliage}'};
 in_fluxes = [ R_auto_ag_calc; R_root; BNPP;  ANPP_woody_calc ;ANPP_foliage]; %matrix with all fluxes for stacked plot
 
 in_sum = sum(in_fluxes,1);
@@ -260,17 +260,20 @@ OL=max(0,(params_matrix.beta(OL_index)+beta_matrix(OL_index,b))* log10(age)+ int
 
 % 2.1.2 caculated stocks
 DW_standing=max(0,DW_tot-DW_down);
-B_root_coarse=max(0,B_root-B_root_fine);
-B_tot_calc=B_ag+B_root_coarse+B_root_fine;
+B_root_coarse_calc=max(0,B_root-B_root_fine);
+B_tot_calc=B_ag+B_root_coarse_calc+B_root_fine;
 B_ag_wood_calc=max(0,B_ag-B_foliage);
 
 % 2.2 group for plotting
-stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}*', 'DW_{down}', 'OL'};
-stocks = [ B_root_coarse ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
+stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}**', 'DW_{down}***', 'OL'};
+stocks = [ B_root_coarse_calc ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
 % 2.2.1 ForC means
+B_root_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_root') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_root_mature=ForC_variable_averages.mean(B_root_index);
+
 B_root_coarse_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_root_coarse') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 B_root_coarse_mature=ForC_variable_averages.mean(B_root_coarse_index);
 
@@ -286,6 +289,9 @@ B_ag_mature=ForC_variable_averages.mean(B_ag_index);
 B_foliage_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_foliage') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 B_foliage_mature=ForC_variable_averages.mean(B_foliage_index);
 
+DW_tot_index=find(strcmp(ForC_variable_averages.variable_diagram,'deadwood') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+DW_tot_mature=ForC_variable_averages.mean(DW_tot_index);
+
 DW_standing_index=find(strcmp(ForC_variable_averages.variable_diagram,'deadwood_standing') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 DW_standing_mature=ForC_variable_averages.mean(DW_standing_index);
 
@@ -296,10 +302,12 @@ OL_index=find(strcmp(ForC_variable_averages.variable_diagram,'organic.layer') + 
 OL_mature=ForC_variable_averages.mean(OL_index);
 
 % 2.2.2 calculated stocks
-B_ag_wood_mature_calculated=B_ag_mature-B_foliage_mature;
+B_ag_wood_mature_calculated=max(0,B_ag_mature-B_foliage_mature);
+B_root_coarse_mature_calc=max(0,B_root_mature-B_root_fine_mature);
+DW_down_mature_calc=max(0,DW_tot_mature-DW_standing_mature);
 
 % 2.2.3 group for plotting
-mature_stocks = [B_root_coarse_mature B_root_fine_mature B_ag_wood_mature_calculated B_foliage_mature DW_standing_mature DW_down_mature OL_mature];
+mature_stocks = [B_root_coarse_mature_calc B_root_fine_mature B_ag_wood_mature_calculated B_foliage_mature DW_standing_mature DW_down_mature_calc OL_mature];
 mature_stocks_matrix(b,1:length(mature_stocks)) =mature_stocks;
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
@@ -311,16 +319,21 @@ subplot (2,1,1) %FLUXES
 h1a=area (age, in_fluxes'); hold on;
 h2a=area(112:116, mature_in_fluxes.*ones(5,size(mature_in_fluxes,1)),'HandleVisibility','off'); hold on;
 
-h1b=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
+h2bl=area(age, -1*out_fluxes(3,:)'); hold on; %not shown, just for legend
+h1b=area (age, -1*out_fluxes','HandleVisibility','off'); 
 h2b=area(112:116, mature_out_fluxes.*ones(5,size(mature_out_fluxes,1)),'HandleVisibility','off'); hold on;
 
 if b~= 1 
-    plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
-    plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
+    plot(age, GPP, '-b', 'LineWidth', 2,'HandleVisibility','off'); hold on; % eddy flux: insufficient data for tropics
+    plot(age, -R_eco, '-r', 'LineWidth', 2,'HandleVisibility','off'); % eddy flux: insufficient data for tropics
     %plot(age, -R_root-R_het_soil-R_auto_ag_calc, '--r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
-    plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
+    plot(age, NEP, '-w', 'LineWidth', 2,'HandleVisibility','off');hold on; % eddy flux: insufficient data for tropics
     %plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
+plot (114, GPP_mature, 'ok', 'MarkerFaceColor', 'b'); hold on;
+plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
+plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'w'); hold on;
+
 %plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
 %plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
 %plot(age, -R_auto_ag_calc-R_soil, '-y', 'LineWidth', 3);hold on;
@@ -331,7 +344,7 @@ facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
                     0.1 0 .4;...  % 'R_{root}', 
                     0 .7 1;...  %'BNPP'
                     0 .527 .527;...%'ANPP_{woody}*'
-                    0 1 .527 ]; %'ANPP_{foliage}',
+                    .5 1 .527 ]; %'ANPP_{foliage}',
                 
 facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
                     0.1 0 .4;...  % 'R_{root}', 
@@ -346,6 +359,7 @@ facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
         h1b(n).FaceColor= facecolor_out_fluxes(n,:);
         h2b(n).FaceColor= facecolor_out_fluxes(n,:);
     end
+    h2bl.FaceColor== facecolor_out_fluxes(n,:)
 xlim([0 119])
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1} yr^{-1})')
@@ -357,14 +371,13 @@ subplot (2,1,2) %STOCKS
 h1=area (age, stocks'); hold on;
 h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 
-facecolor_stocks= [.1 .4 .9;...  %'B_{root-coarse}*', ''DW_{standing}*', 'DW_{down}', 'OL'
-                    0.8 0 0;... % 'B_{root-fine}',
-                    .9 .527 .527 ;... % 'B_{ag-wood}*', 
-                    0.8 .2 0;... %
-                    .9 0 .527 ;...  %
-                    0.8 0 .7;... %
-                    0 .527 .527 ;... %
-                    0 .9 .9 ]; %
+facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', ' 
+                    0 .7 1;... % 'B_{root-fine}',
+                    0 .527 .527 ;... % 'B_{ag-wood}*', 
+                    .5 1 .527;... % B_{foliage}',
+                    1 .8 0;...  % 'DW_{standing}*', 
+                    1 99/255 99/255 ;... % 'DW_{down}',
+                    0.7 0 1 ];... %'OL'
 %set facecolor:
     for n=1:length(mature_stocks)
         h1(n).FaceColor= facecolor_stocks(n,:);
@@ -377,7 +390,6 @@ facecolor_stocks= [.1 .4 .9;...  %'B_{root-coarse}*', ''DW_{standing}*', 'DW_{do
 xlim([0 119])
 xlabel ('stand age (years) ......... MATURE STANDS');
 ylabel ('C  stocks (Mg C ha^{-1})')
-
 
 legend (stock_names, 'Location', 'BestOutside');
 
