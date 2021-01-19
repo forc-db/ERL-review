@@ -169,14 +169,14 @@ BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.1.3 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{root}', 'R_{auto-ag}*', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}*'};
-in_fluxes = [R_root; R_auto_ag_calc; BNPP; ANPP_foliage; ANPP_woody_calc ]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP',  'ANPP_{woody}*','ANPP_{foliage}'};
+in_fluxes = [ R_auto_ag_calc; R_root; BNPP;  ANPP_woody_calc ;ANPP_foliage]; %matrix with all fluxes for stacked plot
 
 in_sum = sum(in_fluxes,1);
 
 % "out" (Reco components)
-out_flux_names = { 'R_{het-soil}', 'R_{root}', 'R_{auto-ag}*'};
-out_fluxes = [R_het_soil; R_root; R_auto_ag_calc ]; %matrix with all fluxes for stacked plot
+out_flux_names = { 'R_{auto-ag}*', 'R_{root}', 'R_{het-soil}'};
+out_fluxes = [ R_auto_ag_calc ; R_root; R_het_soil]; %matrix with all fluxes for stacked plot
 out_sum = sum(out_fluxes,1);
 
 % all fluxes
@@ -222,8 +222,8 @@ R_eco_mature=ForC_variable_averages.mean(R_eco_index);
 R_auto_ag_mature_calc=R_eco_mature-R_soil_mature;
 
 %for grouped stacked plot (%THIS NEEDS TO MATCH YOUNG STANDS, ABOVE)
-mature_in_fluxes= [R_root_mature R_auto_ag_mature_calc BNPP_mature ANPP_foliage_mature ANPP_woody_mature]; %in fluxes
-mature_out_fluxes= [-R_het_soil_mature -R_root_mature -R_auto_ag_mature_calc]; % out fluxes
+mature_in_fluxes= [ R_auto_ag_mature_calc R_root_mature  BNPP_mature ANPP_woody_mature ANPP_foliage_mature ]; %in fluxes
+mature_out_fluxes= [-R_auto_ag_mature_calc -R_root_mature  -R_het_soil_mature ]; % out fluxes
 mature_in_fluxes_matrix(b,1:length(mature_in_fluxes)) =mature_in_fluxes;
 mature_out_fluxes_matrix(b,1:length(mature_out_fluxes)) =mature_out_fluxes;
 
@@ -309,35 +309,66 @@ figure (b)
 subplot (2,1,1) %FLUXES
 
 h1a=area (age, in_fluxes'); hold on;
-h2a=area(112:116, mature_in_fluxes.*ones(5,size(mature_in_fluxes,1))); hold on;
+h2a=area(112:116, mature_in_fluxes.*ones(5,size(mature_in_fluxes,1)),'HandleVisibility','off'); hold on;
 
 h1b=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
-b2b=area(112:116, mature_out_fluxes.*ones(5,size(mature_out_fluxes,1))); hold on;
+h2b=area(112:116, mature_out_fluxes.*ones(5,size(mature_out_fluxes,1)),'HandleVisibility','off'); hold on;
 
 if b~= 1 
     plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
     %plot(age, -R_root-R_het_soil-R_auto_ag_calc, '--r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
     plot(age, NEP, '-w', 'LineWidth', 3);hold on; % eddy flux: insufficient data for tropics
-    plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
+    %plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
-plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
-plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
-plot(age, -R_soil, '-k', 'LineWidth', 3);hold on;
-plot(age, -R_root-R_het_soil, '--k', 'LineWidth', 3);hold on;
+%plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
+%plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
+%plot(age, -R_auto_ag_calc-R_soil, '-y', 'LineWidth', 3);hold on;
+%plot(age, -R_auto_ag_calc-R_root-R_het_soil, '--y', 'LineWidth', 3);hold on;
 
+
+facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
+                    0.1 0 .4;...  % 'R_{root}', 
+                    0 .7 1;...  %'BNPP'
+                    0 .527 .527;...%'ANPP_{woody}*'
+                    .5 1 .527 ]; %'ANPP_{foliage}',
+                
+facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
+                    0.1 0 .4;...  % 'R_{root}', 
+                     0.7 0 1]; %R_het_soil
+
+%set facecolor:
+    for n=1:length(mature_in_fluxes)
+        h1a(n).FaceColor= facecolor_in_fluxes(n,:);
+        h2a(n).FaceColor= facecolor_in_fluxes(n,:);
+    end
+    for n=1:length(mature_out_fluxes)
+        h1b(n).FaceColor= facecolor_out_fluxes(n,:);
+        h2b(n).FaceColor= facecolor_out_fluxes(n,:);
+    end
 xlim([0 119])
 t = title(biomes(b));
-ylabel ('C  fluxes (Mg C ha^{-1})')
+ylabel ('C  fluxes (Mg C ha^{-1} yr^{-1})')
 
 legend (flux_names, 'Location', 'BestOutside');
-
 
 
 subplot (2,1,2) %STOCKS
 h1=area (age, stocks'); hold on;
 h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 
+facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', ' 
+                    0 .7 1;... % 'B_{root-fine}',
+                    0 .527 .527 ;... % 'B_{ag-wood}*', 
+                    .5 1 .527;... % B_{foliage}',
+                    1 .8 0;...  % 'DW_{standing}*', 
+                    1 99/255 99/255 ;... % 'DW_{down}',
+                    0.7 0 1 ];... %'OL'
+%set facecolor:
+    for n=1:length(mature_stocks)
+        h1(n).FaceColor= facecolor_stocks(n,:);
+        h2(n).FaceColor= facecolor_stocks(n,:);
+    end
 %compare biomass from different estimation methods:
 %plot(age, B_tot, '-k', 'LineWidth', 3);
 %plot(age, B_tot_calc, '--k', 'LineWidth', 3);
