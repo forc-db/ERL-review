@@ -200,13 +200,13 @@ nocite: |
 ```
 
 
-*Background.* Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate by their impact on the global carbon (C) cycle. However, efforts to incorporate forests into climate models and CO~2~ accounting frameworks have been constrained by a lack of accessible, global-scale data on how C cycling varies across forest types and stand ages. 
+*Background.* Earth’s climate is closely linked to forests, which strongly influence atmospheric carbon dioxide (CO~2~) and climate by their impact on the global carbon (C) cycle. However, efforts to incorporate forests into climate models and CO~2~ accounting frameworks have been constrained by a lack of accessible, global-scale synthesis on how C cycling varies across forest types and stand ages. 
 
 *Methods/Design.* Here, we draw from the Global Forest Carbon Database, ForC, to provide a macroscopic overview of C cycling in the world’s forests, giving special attention to stand age-related variation. Specifically, we use `r n_records` *ForC* records from `r n_areas_tot` geographic locations representing `r nrow(T1)` C cycle variables to characterize ensemble C budgets for four broad forest types (tropical broadleaf evergreen, temperate broadleaf, temperate conifer, and taiga), including estimates for both mature and regrowth (age <100 years) forests. For regrowth forests, we quantify age trends for all variables with sufficient data.
 
-*Review Results/ Synthesis.*  *ForC v3.0* yielded a comprehensive picture of C cycling in the world's major forest biomes. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age. Importantly, there was generally good closure of C budgets, *i.e.,* internal consistency in the *ForC* data.
+*Review Results/ Synthesis.*  *ForC v3.0* yielded a comprehensive picture of C cycling in the world's major forest biomes. The rate of C cycling generally increased from boreal to tropical regions in both mature and regrowth forests, whereas C stocks showed less directional variation. The majority of flux variables, together with most live biomass pools, increased significantly with stand age. There was generally good closure of C budgets for mature forests, whereas age trends and C budget closure in young forests remain less clearly resolved.
 
-*Discussion.* As climate change accelerates, understanding and managing the carbon dynamics of forests is critical to forecasting, mitigation, and adaptation. This synthetic and internally consistent global overview of C stocks and fluxes across biomes and stand ages will help to advance these efforts. 
+*Discussion.* As climate change accelerates, understanding and managing the carbon dynamics of forests is critical to forecasting, mitigation, and adaptation. This synthetic global overview of C stocks and fluxes across biomes and stand ages will help to advance these efforts. 
 
 *Key words*: forest ecosystems; carbon cycle; stand age; productivity; respiration; biomass; global
 
@@ -257,14 +257,14 @@ Following these additions, *ForC* currently contains `r nrow(ForC_measurements)`
 ### Biome differences
 
 Forest C cycling varies enormously across biomes, which are artificial categorical distinctions convenient for categorizing the world's forests according to major differences in climate, vegetation, *etc.* 
-Since *(Humboldt?)*, it has been recognized that climate plays a dominant role in shaping differences among forests.
+Since the early 19th century, it has been recognized that climate plays a dominant role in shaping differences among forests on a global scale [@humboldt_essay_1807; @holdridge_determination_1947].
 Early quantitative syntheses revealed that C fluxes such as net primary productivity ($NPP$) decrease dramatically with latitude, or increase across gradients of mean annual temperature and, to a lesser extent, precipitation [@lieth_primary_1973].
 
 @banbury_morgan_global_nodate
 
 Recently, machine learning draws on global maps in combination with ground-based data to create global maps of C cycling [e.g., REFS; @cook-patton_mapping_2020].
 
-While current data and technology allow increasingly fine-scale resolution for understanding differences across forests, cateogorization into biomes remains useful for applications where data do not yet support robust analysis across finer-scale axes of variation.
+While current data and technology allow increasingly fine-scale resolution for understanding differences across forests, categorization into biomes remains useful for applications where data do not yet support robust analysis across finer-scale axes of variation.
 
 ### Age trends and their variation across biomes
 In 1969, Eugene Odum published ... [@odum_strategy_1969].
