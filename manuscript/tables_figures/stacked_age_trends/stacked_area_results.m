@@ -165,13 +165,9 @@ elseif b==1  %tropical forests
     R_auto_ag_calc=max(0,R_auto_calc-R_root);
 end
 
-
-
-
-
 BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
-% 1.2 group for plotting
+% 1.1.3 group for plotting
 % "in" (GPP components) 
 in_flux_names = {'R_{root}', 'R_{auto-ag}*', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}*'};
 in_fluxes = [R_root; R_auto_ag_calc; BNPP; ANPP_foliage; ANPP_woody_calc ]; %matrix with all fluxes for stacked plot
@@ -188,7 +184,7 @@ flux_names= [in_flux_names, out_flux_names];
 fluxes = [in_fluxes; -1*out_fluxes];
 
 
-% 1.2. define mature fluxes 
+% 1.2.1 define mature fluxes 
 NEP_index=find(strcmp(ForC_variable_averages.variable_diagram,'NEP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 NEP_mature=ForC_variable_averages.mean(NEP_index);
 
@@ -213,16 +209,23 @@ ANPP_stem_mature=ForC_variable_averages.mean(ANPP_stem_index);
 GPP_index=find(strcmp(ForC_variable_averages.variable_diagram,'GPP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 GPP_mature=ForC_variable_averages.mean(GPP_index);
 
+R_soil_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_soil') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_soil_mature=ForC_variable_averages.mean(R_soil_index);
+
 R_het_soil_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_het_soil') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 R_het_soil_mature=ForC_variable_averages.mean(R_het_soil_index);
 
 R_eco_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_eco') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 R_eco_mature=ForC_variable_averages.mean(R_eco_index);
 
-%for grouped stacked plot
-mature_fluxes= [R_root_mature R_auto_ag_mature BNPP_mature ANPP_foliage_mature ANPP_woody_mature... %in fluxes
-                -R_het_soil_mature -R_root_mature -R_auto_ag_mature]; % out fluxes
-mature_fluxes_matrix(b,1:length(mature_fluxes)) =mature_fluxes;
+% 1.2.2 calculations
+R_auto_ag_mature_calc=R_eco_mature-R_soil_mature;
+
+%for grouped stacked plot (%THIS NEEDS TO MATCH YOUNG STANDS, ABOVE)
+mature_in_fluxes= [R_root_mature R_auto_ag_mature_calc BNPP_mature ANPP_foliage_mature ANPP_woody_mature]; %in fluxes
+mature_out_fluxes= [-R_het_soil_mature -R_root_mature -R_auto_ag_mature_calc]; % out fluxes
+mature_in_fluxes_matrix(b,1:length(mature_in_fluxes)) =mature_in_fluxes;
+mature_out_fluxes_matrix(b,1:length(mature_out_fluxes)) =mature_out_fluxes;
 
 
 
@@ -302,13 +305,15 @@ mature_stocks_matrix(b,1:length(mature_stocks)) =mature_stocks;
 %% ~~~~~~~PLOTTING~~~~~~~~~~
 
 figure (b)
- 
-subplot (2,4,1:3)
-%flux plot:
-h=area (age, in_fluxes'); %, 'LineStyle','-'); 
-hold on;
-h=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
-hold on;
+
+subplot (2,1,1) %FLUXES
+
+h1a=area (age, in_fluxes'); hold on;
+h2a=area(112:116, mature_in_fluxes.*ones(5,size(mature_in_fluxes,1))); hold on;
+
+h1b=area (age, -1*out_fluxes'); %, 'LineStyle','-'); 
+b2b=area(112:116, mature_out_fluxes.*ones(5,size(mature_out_fluxes,1))); hold on;
+
 if b~= 1 
     plot(age, GPP, '-b', 'LineWidth', 3); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
@@ -320,37 +325,30 @@ plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
 plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
 plot(age, -R_soil, '-k', 'LineWidth', 3);hold on;
 plot(age, -R_root-R_het_soil, '--k', 'LineWidth', 3);hold on;
+
+xlim([0 119])
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1})')
 
-subplot (2,4,4) %mature C fluxes
-bar([mature_fluxes_matrix(b,:); 0*ones(1, size(mature_fluxes_matrix,2))], 'stacked');
 legend (flux_names, 'Location', 'BestOutside');
-xlim([0.5 1.5])
-set(gca, 'XTick', []); %ticks off
 
 
-subplot (2,4,5:7)
-%flux plot:
-h=area (age, stocks'); hold on;
+
+subplot (2,1,2) %STOCKS
+h1=area (age, stocks'); hold on;
+h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
+
 %compare biomass from different estimation methods:
 %plot(age, B_tot, '-k', 'LineWidth', 3);
 %plot(age, B_tot_calc, '--k', 'LineWidth', 3);
 
-h2=area(118:122, mature_stocks.*ones(5,size(mature_stocks,1)));
-xlabel ('stand age (years)');
+xlim([0 119])
+xlabel ('stand age (years) ......... MATURE STANDS');
 ylabel ('C  stocks (Mg C ha^{-1})')
 
-subplot (2,4,8) %mature C stocks
-bar([mature_stocks_matrix(b,:); 0*ones(1, size(mature_stocks_matrix,2))], 'stacked');
-legend (stock_names, 'Location', 'BestOutside');
-xlabel ('mature stands');
-xlim([0.5 1.5])
-set(gca, 'XTick', []); %ticks off
 
-%figure (10+b)
-%plot (age, ANPP_woody, age, ANPP_foliage, age, ANPP_woody_calc, age, ANPP_foliage+ANPP_woody_calc)
-%legend ('ANPP', 'ANPP_foliage', 'ANPP woody', 'foliage+woody')
+legend (stock_names, 'Location', 'BestOutside');
+
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd(working_dir)
