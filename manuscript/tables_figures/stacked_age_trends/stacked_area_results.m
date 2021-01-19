@@ -148,8 +148,8 @@ NEP_calc=GPP-R_eco;
 
 
 %options for CUE. lat one in list is the one that will be used.
-CUE=0.679-0.153*log10(age); %from DeLucia et al. 2007 (note that equation given mistakenly leaves of the log10(age))
-CUE=0.5;
+CUE=0.679-0.153*log10(age); %from DeLucia et al. 2007 (note that equation given mistakenly leaves of the log10(age)). Collati et al. 2020 gives an update of this.
+CUE=0.46; %from Collati et al. 2020
 
 if b>1  %extratropical forests
     ANPP_woody_calc=min(ANPP_stem, ANPP_woody);
