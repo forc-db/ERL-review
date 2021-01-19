@@ -453,29 +453,10 @@ For three variables that had been disproportionately sampled in the high-biomass
 
 ### C cycling in young forests
 
-Both C stocks and fluxes commonly increased significantly with stand age (Tables 1, S2, Figs. `r flux_age_trends`- `r stock_age_trends`, `r TrB_age_trends`-`r BoN_age_trends`, `r all_age_trends`; detailed below).
-
-*ForC* contained 16 C flux variables with sufficient data for analyses of age trends in young forests (see Methods) (Figs. `r flux_age_trends`, `r all_flux_age_trends`).
+C fluxes commonly increased significantly with stand age (Tables 1, S2, Figs. `r flux_age_trends`, `r TrB_age_trends`-`r BoN_age_trends`, `r all_age_trends`).
+*ForC* contained 16 C flux variables with sufficient data for analyses of age trends in young forests (see Methods).
 Of these, ten increased significantly with $log10[age]$: $NEP$, $GPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{foliage}$, $ANPP_{litterfal}$, $BNPP$, $BNPP_{fine}$, $R_{eco}$, and $R_{root}$.
-The remaining six--$NPP$, $ANPP_{stem}$, $ANPP_{branch}$, $BNPP_{coarse}$, $R_{soil-het}$, and $R_{soil-het}$-–displayed no significant relationship to stand age.
-
-Differences in C fluxes across biomes typically paralleled those observed for mature forests, with C cycling generally most rapid in the tropics and slowest in boreal forests.
-The single exception was $ANPP_{stem}$, for which temperate broadleaf and conifer forests had similar flux rates than tropical forests.
-Notably, and in contrast to the lack of biome differences in $NEP$ for mature forests (Fig. `r flux_age_trends`), the tendency for temperate forests to have greater fluxes than boreal forests held for $NEP$ in regrowth forests (tropical forests excluded because of insufficient data).
-
-"Closure" and internal consistency of the C flux budget was less successful for young than mature forests (Figs. `r TrB_age_trends`-`r BoN_age_trends`).
-Summed regression equations for $R_{soil-het}$ and $R_{root}$ were generally very close to $R_{soil}$.
-We calculated $R_{auto-ag}$ as the difference between $R_{eco}$ and $R_{soil}$ (except for tropical forests, which had insufficient $R_{eco}$ data), effectively guaranteeing near-closure of the CO~2~ efflux (respiration) portion of the budget (negative values in Figs. `r TrB_age_trends`-`r BoN_age_trends`).
-In contrast, the  CO~2~ influx portion of the budget generally did not "close": the sum of $R_{auto}$ ($R_{root}+R_{auto-ag}$, as described above) and components of $NPP$ consistently fell short of $GPP$ by **##-##** Mg C ha^-1^ yr^-1^ , particularly in in young stands.
-Moreover, there was not consistent budget closure among the components of $NPP$, and substantially different age trends resulting from the sum of components versus total $NPP$ (Figs. `r TrB_age_trends`-`r BoN_age_trends`).
- 
-In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. `r stock_age_trends`, `r all_stock_age_trends`).
-All of these displayed a significant overall increase with with $log10[stand.age]$.
-There were sufficient data to model age $\times$ biome interactions were also significant for all ten of these C stock variables (Table S2), with living C stocks tending to accumulate more rapidly during the early stages of forest regrowth in tropical forests (Figs. `r stock_age_trends`, `r all_stock_age_trends`).
-In the case of two non-living C stocks ($DW_{down}$ and $OL$), age $\times$ biome interactions were such that 
-Specifically, $DW_{down}$ declined with age in temperate and boreal forests, compared to an increase with age in tropical forests (Figs. `r stock_age_trends`, `r DW_down_fig`).
-Similarly, $OL$ declined slightly with age in temperate broadleaf forests, contrasting an increase in the other three biomes (Figs. `r stock_age_trends`, `r OL_fig`).
-
+The remaining six--$NPP$, $ANPP_{stem}$, $ANPP_{branch}$, $BNPP_{coarse}$, **$R_{soil-het}$, and $R_{soil-het}$**-–displayed no significant relationship to stand age.
 
 
 ```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap =TrB_age_trends_caption, out.width='100%', fig.pos='H'}
@@ -500,6 +481,27 @@ Similarly, $OL$ declined slightly with age in temperate broadleaf forests, contr
 
   knitr::include_graphics("tables_figures/stacked_age_trends/Boreal conifer_age_trends.png")
 ```
+*(paragraph on young vs mature)*
+
+Differences in C fluxes across biomes typically paralleled those observed for mature forests, with C cycling generally most rapid in the tropics and slowest in boreal forests.
+The single exception was $ANPP_{stem}$, for which temperate broadleaf and conifer forests had similar flux rates than tropical forests.
+Notably, and in contrast to the lack of biome differences in $NEP$ for mature forests (Fig. `r flux_age_trends`), the tendency for temperate forests to have greater fluxes than boreal forests held for $NEP$ in regrowth forests (tropical forests excluded because of insufficient data).
+
+"Closure" and internal consistency of the C flux budget was less successful for young than mature forests (Figs. `r TrB_age_trends`-`r BoN_age_trends`).
+Summed regression equations for $R_{soil-het}$ and $R_{root}$ were generally very close to $R_{soil}$.
+We calculated $R_{auto-ag}$ as the difference between $R_{eco}$ and $R_{soil}$ (except for tropical forests, which had insufficient $R_{eco}$ data), effectively guaranteeing near-closure of the CO~2~ efflux (respiration) portion of the budget (negative values in Figs. `r TrB_age_trends`-`r BoN_age_trends`).
+In contrast, the  CO~2~ influx portion of the budget generally did not "close": the sum of $R_{auto}$ ($R_{root}+R_{auto-ag}$, as described above) and components of $NPP$ consistently fell short of $GPP$, particularly in in young stands (range across forest types and ages: 0.9-7.6 Mg C ha^-1^ yr^-1^).
+Moreover, there was not consistent budget closure among the components of $NPP$, and substantially different age trends resulting from the sum of components versus total $NPP$ (Figs. `r TrB_age_trends`-`r BoN_age_trends`).
+
+ 
+In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. `r stock_age_trends`, `r all_stock_age_trends`).
+All of these displayed a significant overall increase with with $log10[stand.age]$.
+There were sufficient data to model age $\times$ biome interactions were also significant for all ten of these C stock variables (Table S2), with living C stocks tending to accumulate more rapidly during the early stages of forest regrowth in tropical forests (Figs. `r stock_age_trends`, `r all_stock_age_trends`).
+In the case of two non-living C stocks ($DW_{down}$ and $OL$), age $\times$ biome interactions were such that 
+Specifically, $DW_{down}$ declined with age in temperate and boreal forests, compared to an increase with age in tropical forests (Figs. `r stock_age_trends`, `r DW_down_fig`).
+Similarly, $OL$ declined slightly with age in temperate broadleaf forests, contrasting an increase in the other three biomes (Figs. `r stock_age_trends`, `r OL_fig`).
+
+*(paragraph on young vs mature)*
 
 \newpage
 

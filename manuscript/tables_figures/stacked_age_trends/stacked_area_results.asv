@@ -331,8 +331,9 @@ if b~= 1
     %plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
 end
 plot (114, GPP_mature, 'ok', 'MarkerFaceColor', 'b'); hold on;
-plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
 plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'w'); hold on;
+plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
+
 
 %plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
 %plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
@@ -359,12 +360,12 @@ facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
         h1b(n).FaceColor= facecolor_out_fluxes(n,:);
         h2b(n).FaceColor= facecolor_out_fluxes(n,:);
     end
-    h2bl.FaceColor== facecolor_out_fluxes(n,:)
+    h2bl.FaceColor= facecolor_out_fluxes(3,:);
 xlim([0 119])
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1} yr^{-1})')
 
-legend (flux_names, 'Location', 'BestOutside');
+legend ([in_flux_names, {'R_{het-soil}','GPP','NEP', 'R_{eco}' }], 'Location', 'BestOutside');
 
 
 subplot (2,1,2) %STOCKS
@@ -393,6 +394,8 @@ ylabel ('C  stocks (Mg C ha^{-1})')
 
 legend (stock_names, 'Location', 'BestOutside');
 
+figure(10)
+plot(age, 
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd(working_dir)

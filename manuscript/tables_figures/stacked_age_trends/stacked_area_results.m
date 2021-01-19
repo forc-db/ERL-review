@@ -400,4 +400,15 @@ cd(working_dir)
 savename=char(strcat(biomes(b),'_age_trends'));
 print(savename, '-dpng', '-r300')
 
+
+%figure(10)
+%if b>1
+%plot(age, GPP-in_sum); hold on;
+%end
+
 end
+
+%figure 10, cont
+%xlabel ('age')
+%ylabel ('GPP-in.sum')
+%legend ('TeB', 'TeN', 'BoN')
