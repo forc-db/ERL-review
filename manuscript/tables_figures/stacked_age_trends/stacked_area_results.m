@@ -169,7 +169,7 @@ BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.1.3 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP',  'ANPP_{woody}*','ANPP_{foliage}'};
+in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP',  'ANPP_{woody}**','ANPP_{foliage}'};
 in_fluxes = [ R_auto_ag_calc; R_root; BNPP;  ANPP_woody_calc ;ANPP_foliage]; %matrix with all fluxes for stacked plot
 
 in_sum = sum(in_fluxes,1);
@@ -260,17 +260,20 @@ OL=max(0,(params_matrix.beta(OL_index)+beta_matrix(OL_index,b))* log10(age)+ int
 
 % 2.1.2 caculated stocks
 DW_standing=max(0,DW_tot-DW_down);
-B_root_coarse=max(0,B_root-B_root_fine);
-B_tot_calc=B_ag+B_root_coarse+B_root_fine;
+B_root_coarse_calc=max(0,B_root-B_root_fine);
+B_tot_calc=B_ag+B_root_coarse_calc+B_root_fine;
 B_ag_wood_calc=max(0,B_ag-B_foliage);
 
 % 2.2 group for plotting
-stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}*', 'DW_{down}', 'OL'};
-stocks = [ B_root_coarse ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
+stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}**', 'DW_{down}***', 'OL'};
+stocks = [ B_root_coarse_calc ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
 % 2.2.1 ForC means
+B_root_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_root') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_root_mature=ForC_variable_averages.mean(B_root_index);
+
 B_root_coarse_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_root_coarse') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 B_root_coarse_mature=ForC_variable_averages.mean(B_root_coarse_index);
 
@@ -286,6 +289,9 @@ B_ag_mature=ForC_variable_averages.mean(B_ag_index);
 B_foliage_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_foliage') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 B_foliage_mature=ForC_variable_averages.mean(B_foliage_index);
 
+DW_tot_index=find(strcmp(ForC_variable_averages.variable_diagram,'deadwood') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+DW_tot_mature=ForC_variable_averages.mean(DW_tot_index);
+
 DW_standing_index=find(strcmp(ForC_variable_averages.variable_diagram,'deadwood_standing') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 DW_standing_mature=ForC_variable_averages.mean(DW_standing_index);
 
@@ -296,10 +302,12 @@ OL_index=find(strcmp(ForC_variable_averages.variable_diagram,'organic.layer') + 
 OL_mature=ForC_variable_averages.mean(OL_index);
 
 % 2.2.2 calculated stocks
-B_ag_wood_mature_calculated=B_ag_mature-B_foliage_mature;
+B_ag_wood_mature_calculated=max(0,B_ag_mature-B_foliage_mature);
+B_root_coarse_mature_calc=max(0,B_root_mature-B_root_fine_mature);
+DW_down_mature_calc=max(0,DW_tot_mature-DW_standing_mature);
 
 % 2.2.3 group for plotting
-mature_stocks = [B_root_coarse_mature B_root_fine_mature B_ag_wood_mature_calculated B_foliage_mature DW_standing_mature DW_down_mature OL_mature];
+mature_stocks = [B_root_coarse_mature_calc B_root_fine_mature B_ag_wood_mature_calculated B_foliage_mature DW_standing_mature DW_down_mature_calc OL_mature];
 mature_stocks_matrix(b,1:length(mature_stocks)) =mature_stocks;
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
@@ -376,7 +384,6 @@ facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', '
 xlim([0 119])
 xlabel ('stand age (years) ......... MATURE STANDS');
 ylabel ('C  stocks (Mg C ha^{-1})')
-
 
 legend (stock_names, 'Location', 'BestOutside');
 
