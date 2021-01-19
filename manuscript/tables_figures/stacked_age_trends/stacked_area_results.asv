@@ -195,12 +195,33 @@ NEP_mature=ForC_variable_averages.mean(NEP_index);
 R_root_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_root') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 R_root_mature=ForC_variable_averages.mean(R_root_index);
 
-%THIS IS CURRENTLY JUST THE 100-YEAR VALUE FOR FLUXES. NEEDS TO BE REPLACED WITH MATURE BIOME MEANS!
+R_auto_ag_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_auto_ag') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_auto_ag_mature=ForC_variable_averages.mean(R_auto_ag_index);
 
+BNPP_index=find(strcmp(ForC_variable_averages.variable_diagram,'BNPP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+BNPP_mature=ForC_variable_averages.mean(BNPP_index);
 
+ANPP_foliage_index=find(strcmp(ForC_variable_averages.variable_diagram,'ANPP_foliage') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+ANPP_foliage_mature=ForC_variable_averages.mean(ANPP_foliage_index);
+
+ANPP_woody_index=find(strcmp(ForC_variable_averages.variable_diagram,'ANPP_woody') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+ANPP_woody_mature=ForC_variable_averages.mean(ANPP_woody_index);
+
+ANPP_stem_index=find(strcmp(ForC_variable_averages.variable_diagram,'ANPP_stem') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+ANPP_stem_mature=ForC_variable_averages.mean(ANPP_stem_index);
+
+GPP_index=find(strcmp(ForC_variable_averages.variable_diagram,'GPP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+GPP_mature=ForC_variable_averages.mean(GPP_index);
+
+R_het_soil_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_het_soil') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_het_soil_mature=ForC_variable_averages.mean(R_het_soil_index);
+
+R_eco_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_eco') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+R_eco_mature=ForC_variable_averages.mean(R_eco_index);
 
 %for grouped stacked plot
-mature_fluxes= [R_root_mature R_root R_root R_root R_root R_root R_root R_root];
+mature_fluxes= [R_root_mature R_auto_ag_mature BNPP_mature ANPP_foliage_mature ANPP_woody_mature... %in fluxes
+                -R_het_soil_mature -R_root_mature -R_auto_ag_mature]; % out fluxes
 mature_fluxes_matrix(b,1:length(mature_fluxes)) =mature_fluxes;
 
 
@@ -246,8 +267,37 @@ stocks = [ B_root_coarse ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing
 
 
 % 2. mature forests
+% 2.2.1 ForC means
+B_root_coarse_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_root_coarse') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_root_coarse_mature=ForC_variable_averages.mean(B_root_coarse_index);
 
-mature_stocks = [stocks(:,end)'; stocks(:,end)' ; stocks(:,end)'; stocks(:,end)'];
+B_root_fine_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_root_fine') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_root_fine_mature=ForC_variable_averages.mean(B_root_fine_index);
+
+B_ag_wood_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_ag_woody') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_ag_wood_mature=ForC_variable_averages.mean(B_ag_wood_index);
+
+B_ag_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_ag') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_ag_mature=ForC_variable_averages.mean(B_ag_index);
+
+B_foliage_index=find(strcmp(ForC_variable_averages.variable_diagram,'biomass_foliage') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+B_foliage_mature=ForC_variable_averages.mean(B_foliage_index);
+
+DW_standing_index=find(strcmp(ForC_variable_averages.variable_diagram,'deadwood_standing') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+DW_standing_mature=ForC_variable_averages.mean(DW_standing_index);
+
+DW_down_index=find(strcmp(ForC_variable_averages.variable_diagram,'deadwood_down') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+DW_down_mature=ForC_variable_averages.mean(DW_down_index);
+
+OL_index=find(strcmp(ForC_variable_averages.variable_diagram,'organic.layer') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
+OL_mature=ForC_variable_averages.mean(OL_index);
+
+% 2.2.2 calculated stocks
+B_ag_wood_mature_calculated=B_ag_mature-B_foliage_mature;
+
+% 2.2.3 group for plotting
+mature_stocks = [B_root_coarse_mature B_root_fine_mature B_ag_wood_mature_calculated B_foliage_mature DW_standing_mature DW_down_mature OL_mature];
+mature_stocks_matrix(b,1:length(mature_stocks)) =mature_stocks;
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
 
@@ -270,6 +320,8 @@ plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
 plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
 plot(age, -R_soil, '-k', 'LineWidth', 3);hold on;
 plot(age, -R_root-R_het_soil, '--k', 'LineWidth', 3);hold on;
+
+plot(110:1
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1})')
 
@@ -290,14 +342,14 @@ xlabel ('stand age (years)');
 ylabel ('C  stocks (Mg C ha^{-1})')
 
 subplot (2,4,8) %mature C stocks
-bar([mature_stocks(b,:); 0*ones(1, size(mature_stocks,2))], 'stacked');
+bar([mature_stocks_matrix(b,:); 0*ones(1, size(mature_stocks_matrix,2))], 'stacked');
 legend (stock_names, 'Location', 'BestOutside');
 xlabel ('mature stands');
 xlim([0.5 1.5])
 set(gca, 'XTick', []); %ticks off
 
 %figure (10+b)
-%plot (age, ANPP, age, ANPP_foliage, age, ANPP_woody_calc, age, ANPP_foliage+ANPP_woody_calc)
+%plot (age, ANPP_woody, age, ANPP_foliage, age, ANPP_woody_calc, age, ANPP_foliage+ANPP_woody_calc)
 %legend ('ANPP', 'ANPP_foliage', 'ANPP woody', 'foliage+woody')
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
