@@ -169,8 +169,8 @@ BNPP_coarse_calc=max(0,BNPP-BNPP_fine);
 
 % 1.1.3 group for plotting
 % "in" (GPP components) 
-in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP',  'ANPP_{woody}**','ANPP_{foliage}'};
-in_fluxes = [ R_auto_ag_calc; R_root; BNPP;  ANPP_woody_calc ;ANPP_foliage]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{auto-ag}*', 'R_{root}',  'BNPP', 'ANPP_{foliage}', 'ANPP_{woody}**'};
+in_fluxes = [ R_auto_ag_calc; R_root; BNPP;ANPP_foliage ;  ANPP_woody_calc ]; %matrix with all fluxes for stacked plot
 
 in_sum = sum(in_fluxes,1);
 
@@ -222,7 +222,7 @@ R_eco_mature=ForC_variable_averages.mean(R_eco_index);
 R_auto_ag_mature_calc=R_eco_mature-R_soil_mature;
 
 %for grouped stacked plot (%THIS NEEDS TO MATCH YOUNG STANDS, ABOVE)
-mature_in_fluxes= [ R_auto_ag_mature_calc R_root_mature  BNPP_mature ANPP_woody_mature ANPP_foliage_mature ]; %in fluxes
+mature_in_fluxes= [ R_auto_ag_mature_calc R_root_mature  BNPP_mature ANPP_foliage_mature  ANPP_woody_mature ]; %in fluxes
 mature_out_fluxes= [-R_auto_ag_mature_calc -R_root_mature  -R_het_soil_mature ]; % out fluxes
 mature_in_fluxes_matrix(b,1:length(mature_in_fluxes)) =mature_in_fluxes;
 mature_out_fluxes_matrix(b,1:length(mature_out_fluxes)) =mature_out_fluxes;
@@ -265,8 +265,8 @@ B_tot_calc=B_ag+B_root_coarse_calc+B_root_fine;
 B_ag_wood_calc=max(0,B_ag-B_foliage);
 
 % 2.2 group for plotting
-stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{ag-wood}*', 'B_{foliage}','DW_{standing}**', 'DW_{down}***', 'OL'};
-stocks = [ B_root_coarse_calc ; B_root_fine ; B_ag_wood_calc;  B_foliage; DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
+stock_names = { 'B_{root-coarse}*', 'B_{root-fine}','B_{foliage}','B_{ag-wood}*', 'DW_{standing}**', 'DW_{down}***', 'OL'};
+stocks = [ B_root_coarse_calc ; B_root_fine ; B_foliage;  B_ag_wood_calc;   DW_standing; DW_down; OL]; %matrix with all stocks for stacked plot
 
 
 % 2. mature forests
@@ -307,7 +307,7 @@ B_root_coarse_mature_calc=max(0,B_root_mature-B_root_fine_mature);
 DW_down_mature_calc=max(0,DW_tot_mature-DW_standing_mature);
 
 % 2.2.3 group for plotting
-mature_stocks = [B_root_coarse_mature_calc B_root_fine_mature B_ag_wood_mature_calculated B_foliage_mature DW_standing_mature DW_down_mature_calc OL_mature];
+mature_stocks = [B_root_coarse_mature_calc B_root_fine_mature B_foliage_mature B_ag_wood_mature_calculated  DW_standing_mature DW_down_mature_calc OL_mature];
 mature_stocks_matrix(b,1:length(mature_stocks)) =mature_stocks;
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
@@ -327,11 +327,11 @@ if b~= 1
     plot(age, GPP, '-b', 'LineWidth', 2,'HandleVisibility','off'); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 2,'HandleVisibility','off'); % eddy flux: insufficient data for tropics
     %plot(age, -R_root-R_het_soil-R_auto_ag_calc, '--r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
-    plot(age, NEP, '-w', 'LineWidth', 2,'HandleVisibility','off');hold on; % eddy flux: insufficient data for tropics
-    %plot(age, NEP_calc, '--w', 'LineWidth', 3);hold on;
+    plot(age, NEP, '-y', 'LineWidth', 2,'HandleVisibility','off');hold on; % eddy flux: insufficient data for tropics
+    %plot(age, NEP_calc, '--y', 'LineWidth', 3);hold on;
 end
 plot (114, GPP_mature, 'ok', 'MarkerFaceColor', 'b'); hold on;
-plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'w'); hold on;
+plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'y'); hold on;
 plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
 
 
@@ -344,12 +344,12 @@ plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
 facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
                     0.1 0 .4;...  % 'R_{root}', 
                     0 .7 1;...  %'BNPP'
-                    0 .527 .527;...%'ANPP_{woody}*'
-                    .5 1 .527 ]; %'ANPP_{foliage}',
+                    0 .527 .27;... %'ANPP_{foliage}',
+                    170/255 1 0 ]...%'ANPP_{woody}*'
                 
 facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
                     0.1 0 .4;...  % 'R_{root}', 
-                     0.7 0 1]; %R_het_soil
+                     0.7 0 .7]; %R_het_soil
 
 %set facecolor:
     for n=1:length(mature_in_fluxes)
@@ -374,11 +374,11 @@ h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 
 facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', ' 
                     0 .7 1;... % 'B_{root-fine}',
-                    0 .527 .527 ;... % 'B_{ag-wood}*', 
-                    .5 1 .527;... % B_{foliage}',
+                    0 .527 .27 ;... % B_{foliage}',
+                    170/255 1 0;... % 'B_{ag-wood}*', 
                     1 .8 0;...  % 'DW_{standing}*', 
                     1 99/255 99/255 ;... % 'DW_{down}',
-                    0.7 0 1 ];... %'OL'
+                    0.7 0 .7 ];... %'OL'
 %set facecolor:
     for n=1:length(mature_stocks)
         h1(n).FaceColor= facecolor_stocks(n,:);

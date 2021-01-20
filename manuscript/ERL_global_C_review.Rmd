@@ -258,6 +258,7 @@ Following these additions, *ForC* currently contains `r nrow(ForC_measurements)`
 
 Forest C cycling varies enormously across biomes, which are artificial categorical distinctions convenient for categorizing the world's forests according to major differences in climate, vegetation, *etc.* 
 Since the early 19th century, it has been recognized that climate plays a dominant role in shaping differences among forests on a global scale [@humboldt_essay_1807; @holdridge_determination_1947].
+*C stocks*
 Early quantitative syntheses revealed that C fluxes such as net primary productivity ($NPP$) decrease dramatically with latitude, or increase across gradients of mean annual temperature and, to a lesser extent, precipitation [@lieth_primary_1973].
 
 @banbury_morgan_global_nodate
@@ -278,9 +279,9 @@ In the past *couple of/several* decades, researchers have started asking how age
 @chazdon_carbon_2016
 @cook-patton_mapping_2020
 There has been little synthesis of differences in variables other than C stocks or their accumulation rates.
-Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understandign of the global C cycle.
+Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding of the global C cycle.
 
-```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | DRAFT Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Plotted values are realistic with respect to the results of this synthesis, but schematic is not intended to be quantitatively precise. ", out.width='100%', fig.pos='H'}
+```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Variables are defined in Table 1. Age trends, which represent idealized dynamics following a disturbance that removes all living and non-living vegetation, are an updated version of the classic figure from Odum (1969), with heavy lines corresponding to those in Odum's figure and $NEP$ corresponding to Odum's 'net production'. Here, $NEP$ conists primarily of woody aboveground net primary production ($ANPP_{woody}$), while $ANPP_{woody.turnover}$ is the sum of woody mortality and branch turnover ", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/stacked_age_trends/schematic.png")
 ```

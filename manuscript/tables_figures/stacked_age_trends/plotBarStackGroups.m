@@ -44,9 +44,13 @@ set(gca,'XTick',1:NumGroupsPerAxis);
 set(gca,'XTickLabelMode','manual');
 set(gca,'XTickLabel',groupLabels);
 
-%set(h(1,1),'FaceColor',[11 102 35]/255); %KAT
-%for n=1:size(stackData,3)  %KAT
-%    set(h(2,n),'FaceColor',bar_colors(n,:)); %KAT
-%end %KAT
+for n=1:size(stackData,3)  %KAT
+    set(h(1,n),'FaceColor',bar_colors(n,:)); %KAT
+end %KAT
+
+set(h(2,1),'FaceColor',bar_colors(1,:)); %KAT
+set(h(2,2),'FaceColor',[.7 0 .7]); %KAT
+
+
 
 end 
