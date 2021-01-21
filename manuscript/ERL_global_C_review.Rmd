@@ -286,21 +286,20 @@ The result is that biomass accumulates rapidly in young forests, followed by a s
 Hember et al., 2012]*.
 While these trends have been subject of fairly recent review [@andersonteixeira_altered_2013], *there is need for a synthetic, quantitaitive review.*
 
-In the past *couple of/several* decades, researchers have started asking how age trends--mostly in biomass accumulation-- vary across biomes.
-*(look up early work on this--citations in @anderson_temperature-dependence_2006)*
-@anderson_temperature-dependence_2006
-@chazdon_carbon_2016, 
-Tepley et al., 
-@cook-patton_mapping_2020
-There has been little synthesis of differences in variables other than C stocks or their accumulation rates.
-Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding of the global C cycle.
 
 ```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Variables are defined in Table 1. Age trends, which represent idealized dynamics following a disturbance that removes all living and non-living vegetation, are an updated version of the classic figure from Odum (1969), with heavy lines corresponding to those in Odum's figure and $NEP$ corresponding to Odum's 'net production'. Here, $NEP$ conists primarily of woody aboveground net primary production ($ANPP_{woody}$), while $ANPP_{woody.turnover}$ is the sum of woody mortality and branch turnover. ", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/stacked_age_trends/schematic.png")
 ```
 
-Here, conduct a data-based review of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (*ForC*; Fig. `r figure_map`).
+In the past *couple of/several* decades, researchers have started asking how age trends--mostly in $B_{ag}$ or total biomass ($B_{tot}$) accumulation-- vary across biomes.
+Early research on this theme showed that biomass accumulation rates during secondary succession increase with temperature on a global scale [**REFS**; @anderson_temperature-dependence_2006] and *with precipitation in the neotropics* [**REFS**; @chazdon_carbon_2016]. 
+Most recently, @cook-patton_mapping_2020 reinforced these earlier findings with a much larger dataset and crated a high-resolution global map of estimated potential C accumulation rates.
+However, there has been little synthesis of cross-biome differences in variables other than biomass and its accumulation rate (but see @cook-patton_mapping_2020 for $DW$, $OL$, and soil C accumulation in young stands).
+Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding of the global C cycle.
+Accurate estimates of C sequestration rates by regrowth forests are also critical for national greenhouse gas accounting under the IPCC framework [**REFS**] and to quantifying the value of regrwoth forests for climate change mitigation [@anderson-teixeira_greenhouse_2011; @goldstein_protecting_2020].
+
+Here, we conduct a data-based review of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (*ForC*; Fig. `r figure_map`).
 Our primary goal is to provide a comprehensive synthesis on broad trends in forest C cycling that can serve as a foundation for improved understanding of global forest C cycling and highlight where key sources of uncertainty still reside.
 
 
