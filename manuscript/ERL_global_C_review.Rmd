@@ -67,6 +67,11 @@ variables_table=1
 
 #figures
 schematic =1
+schematic_fluxes_biome="1a"
+  schematic_fluxes_age="1b"
+  schematic_stocks_biome="1c"
+  schematic_stocks_age="1d"
+  schematic_fs_age = "1b,d"
 figure_map=2
 diagram_TrB_mature= 3
 diagram_TeB_mature=4
@@ -244,7 +249,7 @@ Over this time, an increasingly refined conceptual understanding of the elements
 New technology has also enabled researches to directly measure an expanding set of variables, notably including the development of continuous measurements of soil CO~2~ efflux (**REF-BEN**) and ecosystem-atmosphere CO~2~ exchange (**REFS**).
 Standardization of estimation techniques has also increased; for example, there has been increasing standardization of the biomass allometries strongly influence estimates of any C cycle variable including woody biomass or changes therein [e.g., @chojnacky_updated_2014; @chave_improved_2014].
 Further standardization has been made possible through research networks such as ForestGEO [@anderson-teixeira_ctfs-forestgeo_2015; @davies_forestgeo_2021], NEON [@schimel_neon_2007], and FLUXNET [@baldocchi_fluxnet_2001; @novick_ameriflux_2018].
-Remote sensing technology has become increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass: @hu_mapping_2016; @spawn_harmonized_2020; gross primary productivity, $GPP$: @li_mapping_2019; @saatchi_benchmark_2011], yet measurement and validation of most forest C stocks and fluxes necessarily requires intensive on-the-ground data collection.
+Remote sensing technology has become increasingly useful for global- or regional-scale estimates of a few critical variables [e.g., aboveground biomass, $B_{ag}$: @saatchi_benchmark_2011; @hu_mapping_2016; @spawn_harmonized_2020; gross primary productivity, $GPP$: @li_mapping_2019], yet measurement and validation of most forest C stocks and fluxes necessarily requires intensive on-the-ground data collection.
 
 Alongside these conceptual and methodological developments, there has been a proliferation of measurements across the world's forests. 
 The result of decades of research on forest C cycling is that tens of thousands of records have been distributed across literally thousands of scientific articles, along with variation in data formats, units, measurement methods, *etc.*
@@ -258,30 +263,39 @@ Following these additions, *ForC* currently contains `r nrow(ForC_measurements)`
 
 Forest C cycling varies enormously across biomes, which are artificial categorical distinctions convenient for categorizing the world's forests according to major differences in climate, vegetation, *etc.* 
 Since the early 19th century, it has been recognized that climate plays a dominant role in shaping differences among forests on a global scale [@humboldt_essay_1807; @holdridge_determination_1947].
-*C stocks*
-Early quantitative syntheses revealed that C fluxes such as net primary productivity ($NPP$) decrease dramatically with latitude, or increase across gradients of mean annual temperature and, to a lesser extent, precipitation [@lieth_primary_1973].
+Global scale data synthesis has revealed that C fluxes including $GPP$, net primary productivity ($NPP$), and soil respiration ($R_{soil}$) decrease with latitude or, correspondingly, increase with mean annual temperature and, to a lesser extent, precipitation [Fig. `r schematic_fluxes_biome` **REFS**; @lieth_primary_1973; @luyssaert_co2_2007; @banbury_morgan_global_nodate].
+C stocks of mature forests show less directional variation (Fig. `r schematic_fluxes_biome`).
+On average, $B_{ag}$ tends to decrease with latitude, but not as dramatically as fluxes, and with the highest $B_{ag}$ forests in relatively cool, moist temperate regions [**REFS**; @keith_re-evaluation_2009]. 
+In contrast, standing and downed dead wood ($DW_{standing}$ and $DW_{down}$, respectively) and the organic layer ($OL$) tend to accumulate more in colder climates where decomposition is slow relative to $NPP$ [**REFS**].
 
-@banbury_morgan_global_nodate
-
-Recently, machine learning draws on global maps in combination with ground-based data to create global maps of C cycling [e.g., REFS; @cook-patton_mapping_2020].
-
-While current data and technology allow increasingly fine-scale resolution for understanding differences across forests, categorization into biomes remains useful for applications where data do not yet support robust analysis across finer-scale axes of variation.
+Correlative analyses relating C cycle variables to climate and other environmental variables have recently been taken to a new level through use of machine-learning algorithms that relate ground-based C cycle data to *global data on climate/soils/satellite data*, making it possible to create fine-scale global maps of C cycling [e.g., **REFS**; @cook-patton_mapping_2020].
+*This approach can be particularly effective when paired with satellite data ...  (e.g., aboveground biomass: Saatchi et al 2011, Hu et al 2016, Spawn et al 2020, gross primary productivity, GPP: Li and Xiao 2019, ).* 
+Yet, any such analysis is constrained by the quality and coverage of ground-based estimates of forest C fluxes or stocks. 
+While estimates of some variables (e.g., $B_{ag}$, $GPP$, $NPP$, $R_{soil}$) are widely available, many remain poorly characterized (e.g., $DW$; autotrophic respiration, $R_{auto}$) --even at the coarse resolution of biomes.
+This is a critical limitation not only for understanding forest C cycling, but also for quantifying climate change mitigation across forest biomes or ecozones [e.g., **REFS**].
 
 ### Age trends and their variation across biomes
-In 1969, Eugene Odum published ... [@odum_strategy_1969].
-Although the conceptualization of the C cycle in this paper is simplistic by current standards, the paper was foundational... [@corman_foundations_2019].
-...
-*(Need for a synthetic update.)*
+
+Stand age is another important axis of variation in forest C cycling (Fig. `r schematic_fs_age`).
+In 1969, E.P. Odum's "The Strategy of Ecosystem Development" laid out predictions as to how forest energy flows and organic matter stocks vary with stand age  [@odum_strategy_1969].
+Although the conceptualization of the C cycle in this paper is simplistic by current standards, the paper was foundational in framing the theory around which research on the subject still revolves [@corman_foundations_2019], and the basic framework still holds, *albiet* with modest modifications [@andersonteixeira_altered_2013].
+Following stand-clearing disturbance, $GPP$, $NPP$, and biomass of leaves ($B_{foliage}$) and fine roots ($B_{root-fine}$) increase rapidly and thereafter remain relatively stable ($B_{foliage}$,$B_{root-fine}$, sometimes $GPP$) or decline slightly [$NPP$, sometimes $GPP$; e.g., *Goulden et al. 2011, ....  refs in * @andersonteixeira_altered_2013].
+The decline in $NPP$ occurs because $R_{auto}$ increases relative to $GPP$ as forests age, corresponding to declining carbon use efficiency with stand age [@delucia_forest_2007; @collalti_forest_2020].
+Heterotrophic respiration, most of which originates from the soil ($R_{het-soil}$) remains relatively constant with stand age *[Law et al., 2003; Pregitzer & Euskirchen, 2004; Goulden et al., 2011]*, with the result that net ecosystem production ($NEP=GPP-R_{eco}$, where $R_{eco}$ is total ecosystem respiration) is initially negative, increases to a maximum at intermediate ages, and declines thereafter *[Law et al., 2003; Pregitzer & Euskirchen, 2004; Zhou et al., 2006; Baldocchi, 2008; Luyssaert et al., 2008; Amiro et al., 2010; Goulden et al., 2011]*.
+The result is that biomass accumulates rapidly in young forests, followed by a slow decline to near zero in old forests *[Lichstein et al., 2009; Yang et al., 2011;
+Hember et al., 2012]*.
+While these trends have been subject of fairly recent review [@andersonteixeira_altered_2013], *there is need for a synthetic, quantitaitive review.*
 
 In the past *couple of/several* decades, researchers have started asking how age trends--mostly in biomass accumulation-- vary across biomes.
 *(look up early work on this--citations in @anderson_temperature-dependence_2006)*
 @anderson_temperature-dependence_2006
-@chazdon_carbon_2016
+@chazdon_carbon_2016, 
+Tepley et al., 
 @cook-patton_mapping_2020
 There has been little synthesis of differences in variables other than C stocks or their accumulation rates.
 Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding of the global C cycle.
 
-```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Variables are defined in Table 1. Age trends, which represent idealized dynamics following a disturbance that removes all living and non-living vegetation, are an updated version of the classic figure from Odum (1969), with heavy lines corresponding to those in Odum's figure and $NEP$ corresponding to Odum's 'net production'. Here, $NEP$ conists primarily of woody aboveground net primary production ($ANPP_{woody}$), while $ANPP_{woody.turnover}$ is the sum of woody mortality and branch turnover ", out.width='100%', fig.pos='H'}
+```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Variables are defined in Table 1. Age trends, which represent idealized dynamics following a disturbance that removes all living and non-living vegetation, are an updated version of the classic figure from Odum (1969), with heavy lines corresponding to those in Odum's figure and $NEP$ corresponding to Odum's 'net production'. Here, $NEP$ conists primarily of woody aboveground net primary production ($ANPP_{woody}$), while $ANPP_{woody.turnover}$ is the sum of woody mortality and branch turnover. ", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/stacked_age_trends/schematic.png")
 ```
