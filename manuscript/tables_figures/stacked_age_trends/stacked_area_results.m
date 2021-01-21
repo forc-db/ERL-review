@@ -24,6 +24,7 @@ end
 %prepare some variables
 variables = unique(model_summaries.Variable);
 biomes= {'Tropical broadleaf','Temperate broadleaf', 'Temperate conifer', 'Boreal conifer'};
+biome_codes= {'TrB','TeB', 'TeN', 'BoN'};
 %{'BiomeTropical broadleaf','BiomeTemperate broadleaf','BiomeTemperate conifer','BiomeBoreal conifer'}
 params_matrix=cell2table(num2cell(NaN*ones(length(variables), 10)),'VariableNames',{'variable', 'beta' 'betaTrB' 'betaTeB' 'betaTeN' 'betaBoN' 'intTrB' 'intTeB' 'intTeN' 'intBoN'});
 params_matrix.variable=variables;
@@ -345,7 +346,7 @@ facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
                     0.1 0 .4;...  % 'R_{root}', 
                     0 .7 1;...  %'BNPP'
                     0 .527 .27;... %'ANPP_{foliage}',
-                    170/255 1 0 ]...%'ANPP_{woody}*'
+                    170/255 1 0 ];...%'ANPP_{woody}*'
                 
 facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
                     0.1 0 .4;...  % 'R_{root}', 
@@ -397,7 +398,7 @@ legend (stock_names, 'Location', 'BestOutside');
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd(working_dir)
-savename=char(strcat(biomes(b),'_age_trends'));
+savename=char(strcat(biome_codes(b),'_age_trends'));
 print(savename, '-dpng', '-r300')
 
 
