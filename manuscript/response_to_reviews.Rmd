@@ -113,7 +113,11 @@ e. Table 1: (i) The definition of GPP refers to NEE, but this in never defined. 
 
 f. Line 210: I am confused by the statement that of the 39762 records in ForC v3.0, 11923 were included in this study. Previously (lines 135-149), the authors described creating "ForC-simplified" with 17349 records. Clarify the difference between ForC-simplified and ForC v3.0.
 
+**It appears that reference to ForC-simplified (essentially an automatically generated rearrangement of ForC that is purged of duplicates and organized for easy analysis) makes the process more confusing, and isn't necessary, so we eliminated mention of it.**
+
 g. Line 212: The authors refer to ForC, where in the previous sentence they referred to ForC v3.0, and previously used ForC-simplified. Clarify what database is used in the analyses.
+
+**As in the response above, we have eliminated unnecessary/confusing mention of ForC-simplified. The version used is ForC v3.0 (to be released with DOI upon acceptance of this manuscript). We do not feel it is necessary to state the version number every time ForC is mentione.**
 
 4. This is not a review article in the traditional sense that a review is a critical assessment of recent papers in the field of carbon cycle research or identifies future research priorities. Instead, the paper documents a database and shows the utility of the database for carbon cycle research. My comments on the review aspect of the manuscript are:
 
@@ -123,7 +127,8 @@ b. No, this is not a critical and authoritative review of the carbon cycle; and
 
 c. The authors reference many other publications and datasets, but they do not critically evaluate their own dataset or other datasets.
 
-*This requires careful consideration and response*
+**We'd define this as a "quantitative review"--*i.e.*, one that quantitatively synthesizes previous studies. However, we agree that the previous version did little to critically review the corresponding literature. To improve in this area, we have expanded and reorganized the introduction into four sub-sections ("Forests in the global C cycle: current and future", "Evolution of forest C cycle research", "Biome differences", and "Age trends and their variation across biomes"). The latter three sections are mostly or entirely new relative to the previous version, and briefly review the development and current status of the science on each topic. We have also added a schematic figure (Fig. 1) to summarize current understanding of each topic and help with conceptual framing of the review. We also shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness.**
+
 
 # Referee: 3
 

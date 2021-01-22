@@ -333,13 +333,11 @@ We have also added data from individual publications, with a particular focus on
 A record of data sets added to *ForC* is available at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv.
 The database version used for this analysis has been tagged as a new release on Github (v3.0) and assigned a DOI through Zenodo (DOI: TBD).
 
-To facilitate analyses, we created a simplified version of ForC, *ForC-simplified* (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which we analyzed here.
-In generating *ForC-simplified*, all measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ [@ipcc_global_2018].
-Duplicate or otherwise conflicting records were reconciled as described in Appendix S1, resulting in a total of `r ForC_simplified_duplicates_removed` records (`r round(ForC_simplified_duplicates_removed/nrow(ForC_measurements)*100,digits=1)`% size of total database).
+All measurements originally expressed in units of dry organic matter ($OM$) were converted to units of C using the IPCC default of $C = 0.47 * OM$ [@ipcc_global_2018].
+Duplicate or otherwise conflicting records were purged as described in Appendix S1, resulting in a total of `r ForC_simplified_duplicates_removed` records (`r round(ForC_simplified_duplicates_removed/nrow(ForC_measurements)*100,digits=1)`% size of total database).
 Records were filtered to remove plots that had undergone significant anthropogenic management or major disturbance since the most recent stand initiation event.
-Specifically, we removed all plots flagged as managed in ForC-simplified (`r round(n_managed_in_ForC_simplified/ForC_simplified_duplicates_removed*100,digits=1)`%).
-This included plots with any record of managements manipulating CO~2~, temperature, hydrology, nutrients, or biota, as well as any plots whose site or plot name contained the terms “plantation”, "planted", “managed”, “irrigated”, or “fertilized”.
-Plots flagged as disturbed in ForC-simplified (`r round(n_disturbed_in_ForC_simplified/ForC_simplified_duplicates_removed*100,digits=1)`%) included stands that had undergone any notable anthropogenic thinning or partial harvest.
+Specifically, we removed plots with any record of managements manipulating CO~2~, temperature, hydrology, nutrients, or biota, as well as any plots whose site or plot name contained the terms “plantation”, "planted", “managed”, “irrigated”, or “fertilized” (`r round(n_managed_in_ForC_simplified/ForC_simplified_duplicates_removed*100,digits=1)`% of duplicate-purged records).
+We also removed stands that had undergone any notable anthropogenic thinning or partial harvest (`r round(n_disturbed_in_ForC_simplified/ForC_simplified_duplicates_removed*100,digits=1)`% of duplicate-purged records).
 We retained sites that were grazed or had undergone low severity natural disturbances (<10% mortality) including droughts, major storms, fires, and floods.
 We removed all plots for which no stand history information had been retrieved (`r round(n_no_history/ForC_simplified_duplicates_removed*100,digits=1)`%).
 In total, this resulted in `r records_eligible_for_inclusion` records (`r round(records_eligible_for_inclusion/nrow(ForC_measurements)*100,digits=1)`% of the records in the database) being eligible for inclusion in the analysis.
