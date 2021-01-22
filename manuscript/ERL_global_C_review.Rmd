@@ -85,9 +85,14 @@ TeB_age_trends=10
 TeN_age_trends=11
 BoN_age_trends=12
 
+schematics_caption_generic ="Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Note that variables differ in geographical repressentation, resulting in potential imbalances (Figs. S5-S30). Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure."
+TrB_mature_caption = paste( "Figure 3 | C cycle diagram for mature tropical broadleaf forests. ", schematics_caption_generic)  
+TeB_mature_caption = paste( "Figure 4 | C cycle diagram for mature temperate broadleaf forests. ", schematics_caption_generic)  
+TeN_mature_caption = paste( "Figure 5 | C cycle diagram for mature temperate conifer forests. ", schematics_caption_generic)  
+BoN_mature_caption = paste( "Figure 6 | C cycle diagram for mature boreaal conifer forests. ", schematics_caption_generic)  
 
-TrB_age_trends_caption = "Figure 9 | Age trends in C cycling in tropical broadleaf forests. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows: $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$, where $CUE$=0.46 (Collati et al. 2020); $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
-age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows: $R_{auto-ag}=R_{eco}-R{soil}$; $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$."
+TrB_age_trends_caption = "Figure 9 | Age trends in C cycling in tropical broadleaf forests. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows: $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$, where $CUE$=0.46 (Collati et al. 2020); $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$. Note that there remain substantial uncertainties as to the functional form of age trends and discrepancies in closure among related variables."
+age_trends_caption_generic= "Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows: $R_{auto-ag}=R_{eco}-R{soil}$; $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$; $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$; $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$; $DW_{standing}=max(0, DW_{tot}-DW_{down})$. Note that there remain substantial uncertainties as to the functional form of age trends and discrepencies in closure among related variables."
 TeB_age_trends_caption = paste("Figure 10 | Age trends in C cycling in temperate broadleaf forests.", age_trends_caption_generic) 
 TeN_age_trends_caption = paste("Figure 11 | Age trends in C cycling in temperate conifer forests.", age_trends_caption_generic) 
 BoN_age_trends_caption = paste("Figure 12 | Age trends in C cycling in boreal conifer forests.", age_trends_caption_generic) 
@@ -192,10 +197,6 @@ n_fluxes_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_fluxes3])
 n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])  
 ```
 
----
-nocite: | 
-@collalti_forest_2020
----
 
 \newpage
 
@@ -265,7 +266,7 @@ Forest C cycling varies enormously across biomes, which are artificial categoric
 Since the early 19th century, it has been recognized that climate plays a dominant role in shaping differences among forests on a global scale [@humboldt_essay_1807; @holdridge_determination_1947].
 Global scale data syntheses have shown that C fluxes including $GPP$, net primary productivity ($NPP$), and soil respiration ($R_{soil}$) decrease with latitude or, correspondingly, increase with mean annual temperature and, to a lesser extent, precipitation [Fig. `r schematic_fluxes_biome` **REFS**; @lieth_primary_1973;  @luyssaert_co2_2007; @hursh_sensitivity_2017; @banbury_morgan_global_nodate].
 C stocks of mature forests show less directional variation (Fig. `r schematic_fluxes_biome`).
-On average, $B_{ag}$ tends to decrease with latitude, but not as dramatically as fluxes, and with the highest $B_{ag}$ forests in relatively cool, moist temperate regions [**REFS**; @keith_re-evaluation_2009]. 
+On average, $B_{ag}$ tends to decrease with latitude, but not as dramatically as fluxes, and with the highest $B_{ag}$ forests in relatively cool, moist temperate regions [@keith_re-evaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
 In contrast, standing and downed dead wood ($DW_{standing}$ and $DW_{down}$, respectively) and the organic layer ($OL$) tend to accumulate more in colder climates where decomposition is slow relative to $NPP$ [@harmon_ecology_1986; @allen_global_2002].
 
 Correlative analyses relating C cycle variables to climate and other environmental variables have recently been taken to a new level through use of machine-learning algorithms that relate ground-based C cycle data to *global data on climate/soils/satellite data*, making it possible to create fine-scale global maps of C cycling [e.g., **REFS**;@warner_spatial_2019; @cook-patton_mapping_2020].
@@ -303,11 +304,14 @@ Here, we conduct a data-based review of carbon cycling from a stand to global le
 Our primary goal is to provide a comprehensive synthesis on broad trends in forest C cycling that can serve as a foundation for improved understanding of global forest C cycling and highlight where key sources of uncertainty still reside.
 
 
-```{r figure_map, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | Map of sites included in this analysis. Symbols are colored according to the number of records at each site. Underlying map shows coverage of evergreen, deciduous, and mixed forests (from SYNMAP; Jung et al. 2006) and biomes. Distribution of sites, plots, and records among biomes is shown in the inset.", out.width='100%', fig.pos='H'}
+```{r figure_map, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 2 | Map of sites included in this analysis. Symbols are colored according to the number of records at each site. Underlying map shows coverage of evergreen, deciduous, and mixed forests (shading differences; data from Jung et al. 2006) and biomes (color differences). Distribution of sites, plots, and records among biomes is shown in the inset.", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/World_Map_records_in_Biomes.png")
 ```
-
+---
+nocite: | 
+@jung_exploiting_2006
+---
 
 ## Methods/ Design
 ```{r eval=FALSE, echo=FALSE}
@@ -347,7 +351,7 @@ Records for our focal variables represented `r round(n_focal_variable_records_el
 For this analysis, we combined some of ForC’s specific variables into more broadly defined variables. 
 Specifically, net ecosystem exchange [measured by eddy-covariance; @baldocchi_fluxnet_2001] and biometric estimates of $NEP$ were combined into the single variable $NEP$ (Table 1).
 Furthermore, for $NPP$, aboveground $NPP$ ($ANPP$), and the litterfall component of $ANPP$ ($ANPP_{litterfall}$), *ForC* variables specifying inclusion of different components were combined (*e.g.*, measurements including or excluding fruit and flower production and herbivory).
-Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), the minimum diameter breast height (DBH) threshold for tree census was $\le$ 10cm. 
+Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), trees were censused down to a minimum diameter breast height (DBH) threshold of 10 cm or less. 
 All records were measured directly or derived from field measurements (as opposed to modeled).
 
 ```{r eval = generate_figures, echo=FALSE, warning=FALSE}
@@ -367,7 +371,7 @@ kable(S1, format = "latex", booktabs = TRUE, caption = "Table 1. Carbon cycle va
   column_spec(5, width = "1.8cm") %>%
   pack_rows("Annual fluxes", 1, 23, colnum = 2, hline_before = FALSE) %>%
   pack_rows("Stocks", 24, 34, colnum = 2, hline_before = FALSE) %>%
-kableExtra::footnote(symbol = c("Tr: Tropical, TeB: Temperate Broadleaf, TeN: Temperate Needleleaf, B: Boreal, n.s.: no significant differences, n.t.: not tested ", "+ or -: significant positive or negative trend, xB: significant age x biome interaction, n.s.: no significant age trend, n.t.: not tested"), footnote_as_chunk = FALSE)
+kableExtra::footnote(symbol = c("TrB: Tropical, TeB: Temperate Broadleaf, TeN: Temperate Needleleaf, BoN: Boreal, n.s.: no significant differences, n.t.: not tested ", "+ or -: significant positive or negative trend, xB: significant age x biome interaction, n.s.: no significant age trend, n.t.: not tested"), footnote_as_chunk = FALSE)
 ```
 
 We grouped forests into four broad biome types based on climate zones and dominant vegetation type (tropical broadleaf, temperate broadleaf, temperate needleleaf, and boreal needleleaf) and two age classifications (young and mature).
@@ -424,22 +428,22 @@ In the temperate conifer biome, the average composite measure of root biomass ($
 This lack of closure was driven by very high estimates of $B_{root-coarse}$ from high-biomass forests of the US Pacific Northwest.
 
 \blandscape
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 3 | C cycle diagram for mature tropical broadleaf forests. Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='90%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = TrB_mature_caption, out.width='90%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/C_cycle_diagrams/Tropical_broadleaf_MATURE.jpeg")
 ```
 
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 4 | C cycle diagram for mature temperate broadleaf forests. Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = TeB_mature_caption, out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/C_cycle_diagrams/Temperate_broadleaf_MATURE.jpeg")
 ```
 
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 5 | C cycle diagram for mature temperate conifer forests. Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = TeN_mature_caption, out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/C_cycle_diagrams/Temperate_conifer_MATURE.jpeg")
 ```
 
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 6 | C cycle diagram for mature boreal conifer forests. Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std, where geographically distinct areas are treated as the unit of replication. Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow size is proportional to the square root of corresponding flux. Asterisk after variable name indicates lack of C cycle closure.", out.width='100%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = BoN_mature_caption, out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/C_cycle_diagrams/Boreal_conifer_MATURE.jpeg")
 ```
@@ -516,8 +520,6 @@ Moreover, there was not consistent budget closure among the components of $NPP$,
 ALthough age trends of young forests often converged towards mature forest averages, there were also some  discrepancies between young forest trends and mature forest averages (Figs. `r flux_age_trends`, `r TrB_age_trends`-`r BoN_age_trends`, `r all_age_trends`), most notably including a tendency for higher fluxes in regrowth boreal forests than in their mature counterparts (Fig. `r BoN_age_trends`).
 
 
-
- 
 In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. `r stock_age_trends`, `r all_stock_age_trends`).
 All of these displayed a significant overall increase with with $log10[stand.age]$.
 There were sufficient data to model age $\times$ biome interactions were also significant for all ten of these C stock variables (Table S2), with living C stocks tending to accumulate more rapidly during the early stages of forest regrowth in tropical forests (Figs. `r stock_age_trends`, `r all_stock_age_trends`).
@@ -543,7 +545,7 @@ Together, these results refine and expand out understanding of C cycling in matu
 
 ### C variable coverage and budget closure
 
-The large number of C cycle variables covered by ForC, and the general consistency among them, provide confidence that our overall reported mature forest means provide accurate and useful baselines for analysis -- with the caveats that they are unlikely to be accurate representations of C cycling for any particular forest, and that these sample means almost certainly do not represent true biome means (particularly for temperate conifer forests where high-biomass stands are over-represented in *ForC*).
+The large number of C cycle variables covered by ForC, and the general consistency among them, provide confidence that our overall reported mature forest means provide useful baselines for analysis -- with the caveats that they are unlikely to be accurate representations of C cycling for any particular forest, and that these sample means almost certainly do not represent true biome means (particularly for temperate conifer forests where high-biomass stands are over-represented in *ForC*).
 
 There are of course notable holes in the ForC variable coverage (Fig. `r figure_map`) that limit the scope of our inferences here. 
 Notably, *ForC* currently has sparse--if any--coverage of fluxes to herbivores and higher consumers, along with the woody mortality ($M_{woody}$) and dead wood stocks (Table 1, Figs. `r DW_tot_fig`-`r DW_down_fig`). 
@@ -583,7 +585,7 @@ The observed tendency for young forest fluxes to decrease from tropical to borea
 
 In contrast to C fluxes and biomass accumulation rates in regrowth forests, stocks showed less systematic variation across biomes.
 For aboveground biomass, which is the variable in *ForC* with broadest geographical representation, the modest trend of declining biomass from tropical to boreal regions mirrors observations from spaceborne lidar that reveal a decline in aboveground biomass (for all forests, including secondary) with latitude across the N hemisphere [@hu_mapping_2016]. 
-The highest- biomass forests on Earth are, however, found in coastal temperate climates of both the southern and northern hemisphere [@keith_re-evaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
+The highest- biomass forests on Earth are, however, found in coastal temperate climates of both the southern and northern hemisphere [Figs. `r schematic`, `r stock_age_trends`a; @keith_re-evaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
 Disproportionate representation of forests in one such region--the US Pacific Northwest--inflated estimates of temperate conifer fluxes and stocks for some variables and was responsible for all of the anomalous results described here (e.g., lack of complete C budget closure, anomalous trend across biomes for $BNPP_{coarse}$). 
 Thus, biome differences should always be interpreted relative to the geographic distribution of sampling, which only rarely covers the majority of forested area within a biome. 
 

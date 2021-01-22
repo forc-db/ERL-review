@@ -81,6 +81,7 @@ Stock_ratio_boreal_trop=0.7;
 
 mature_stocks = [stocks(:,end)'; Stock_ratio_temp_trop*stocks(:,end)' ; Stock_ratio_boreal_trop*stocks(:,end)'];
 
+stocks_std = sum(mature_stocks, 2)'.*[.4 1 .4];
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
 
@@ -134,10 +135,13 @@ ylim([0, max(in_sum)+1]);
 legend ([{'R_{het}'}, in_flux_names, {'GPP' 'Reco'}], 'Location', 'BestOutside');
 
 subplot (2,3,4)
-h=bar(mature_stocks, 'stacked');
+h=bar(mature_stocks, 'stacked'); hold on;
     for n=1:size(mature_stocks,2)
         h(n).FaceColor= facecolor_stocks(n,:);
     end
+er=errorbar([1:3],sum(mature_stocks, 2), 0.5*stocks_std, stocks_std);
+er.Color = [0 0 0];                            
+er.LineStyle = 'none'; 
 ylabel ('C  stocks (Mg C ha^{-1})')
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)

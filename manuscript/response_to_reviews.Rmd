@@ -65,7 +65,7 @@ a. For example, is Fluxnet the source of GPP and Reco? The authors state that "F
 
 **SRDB:**
 
-**Methods: "First, we imported (via R script) the Global Database of Soil Respiration Database [*SRDB* v4, `r n_SRDB` records; @bond-lamberty_global_2010], and corrections and improvements to *SRDB* arising from this process were incorporated in *SRDB* v5 [@jian_restructured_2020]."**
+**Methods: "First, we imported (via R script) the Global Database of Soil Respiration Database [*SRDB* v4, 9488 records; @bond-lamberty_global_2010], and corrections and improvements to *SRDB* arising from this process were incorporated in *SRDB* v5 [@jian_restructured_2020]."**
 
 b. I need information on how Figures 2-5, 8-11 were prepared. Carbon stocks and fluxes such as NPP, litterfall, etc. are probably plot data. There is a detailed discussion of how the data were filtered to remove, for example, disturbance effects (lines 140-149). The GPP, Reco, and soil respiration databases seem to me to be different and may not be collocated with the plot data. Was disturbance filtering applied to the GPP, Reco, and soil respiration databases, too?
 
@@ -79,19 +79,17 @@ c. If Luyssaert et al (2007) is a source of data, is there circularity in the co
 
 a. For example, Figure 2 lists foliage and woody aboveground biomass in tropical broadleaf forests. These do not sum to aboveground biomass (3.53 + 125.42 = 128.95 Mg C/ha vs 146.69). Nor do coarse root biomass and fine root biomass sum to root biomass (23.15 + 9.29 = 32.44 vs. 21.86). Total biomass (147.96) is not the sum of aboveground (146.69) and root (21.86).
 
-*This just requires adding some explanation.*
+**We acknowledge and discuss lack of closure in various places throughout the results and discussion. To ensure that this is clear from the figures, we have added the following statement to the captions of Figures 3-6 (formerly 2-5): "Note that variables differ in geographical representation, resulting in potential imbalances (Figs. S5-S30). Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented." We have also added a similar statement to the captions of Figures S1-S4 (formerly 8-11). We also make a related statement in the captions of new figures 9-12: "Note that there remain substantial uncertainties as to the functional form of age trends and discrepancies in closure among related variables."**
 
 b. Figure 4 for temperate conifer forests has large discrepancies in carbon stocks: e.g., 315.61 Mg C/ha for woody aboveground biomass, but only 167.46 for aboveground biomass and 226.58 for total biomass. The authors have a detailed discussion about lack of closure for root biomass, but do not discuss aboveground biomass. Presumably, this is because the data fall within the closure criteria, but what are we to make of the inconsistent data?
 
-*This just requires adding some explanation.*
+**This is partially addressed by the response above, and covered in the results and discussion. In addition, to help explain the fact that lack of closure is particularly pronounced in temperate conifer forests, we have included errorbars in on the new schematic figure (Fig. 1) indicating that temperate forests have particularly high variation in C stocks.**
 
 I understand that the data comes from many different sources and so may not always be compatible and that they have large standard deviations, but how are we to interpret and use the various data entries? For example, what has higher confidence: the component variables or the aggregate variables? What is the best estimate for aboveground biomass or root biomass? The authors take great pride in that component variables sum to within one standard deviation of the aggregate variables in all but one instance (lines 225-226, 301-302, 309-310). This is somewhat remarkable! But users of the dataset need guidance on how to interpret and use the data.
 
-*This just requires adding some explanation. Note that R2 and R3 have very different interpretations of the "closure"*
+**We have addressed this by adding the following statement to the captions of Figures 3-6 (formerly 2-5): "Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented."**
 
 3. There is a general sloppiness to the manuscript that makes me think the authors did not proofread the manuscript carefully.
-
-*This is true. Need to fix all points below. None difficult.*
 
 a. Line 58: The authors say GPP is estimated to be >69 Gt C/year, and cite Badgley et al. (2019). This statement is factually correct, but is quite misleading. Badgley et al. "estimate global annual terrestrial photosynthesis to be 147 Pg C/year (95% credible interval 131-163 Pg C/year)". The value of 69 Gt C is less than one-half that reported by Badgley. What are the authors trying to say? Such a large discrepancy does not instill confidence in the other numbers reported in the manuscript.
 
@@ -103,9 +101,15 @@ b. Line 81: "rare exceptions that span regions or continents" is repeated twice.
 
 c. Figure 1: Explain the gray scale for "forest cover". It seems like this refers to gradations of the various biomes, but the figure caption does not provide an explanation.
 
+**We have added an explanation.**
+
 d. Line 162: Clarify what is meant by "the minimum diameter breast height (DBH) threshold for tree census was <10cm"?
 
+**We have reworded this sentence for improved clarity: "Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), trees were censused down to a minimum diameter breast height (DBH) threshold of 10 cm or less."**
+
 e. Table 1: (i) The definition of GPP refers to NEE, but this in never defined. The preceding entry defines NEP not NEE. (ii) The description of the biome labels is inaccurate. The table uses "TrB" but the note refers to "Tr". The table uses "BoN", but the note refers to "B".
+
+**We have fixed both of these.**
 
 f. Line 210: I am confused by the statement that of the 39762 records in ForC v3.0, 11923 were included in this study. Previously (lines 135-149), the authors described creating "ForC-simplified" with 17349 records. Clarify the difference between ForC-simplified and ForC v3.0.
 
