@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -284,7 +284,7 @@ The decline in $NPP$ occurs because $R_{auto}$ increases relative to $GPP$ as fo
 Heterotrophic respiration, most of which originates from the soil ($R_{het-soil}$) remains relatively constant with stand age *[Law et al., 2003; Pregitzer & Euskirchen, 2004; Goulden et al., 2011]*, with the result that net ecosystem production ($NEP=GPP-R_{eco}$, where $R_{eco}$ is total ecosystem respiration) is initially negative, increases to a maximum at intermediate ages, and declines thereafter *[Law et al., 2003; Pregitzer & Euskirchen, 2004; Zhou et al., 2006; Baldocchi, 2008; Luyssaert et al., 2008; Amiro et al., 2010; Goulden et al., 2011]*.
 The result is that biomass accumulates rapidly in young forests, followed by a slow decline to near zero in old forests *[Lichstein et al., 2009; Yang et al., 2011;
 Hember et al., 2012]*.
-While these trends have been subject of fairly recent review [@andersonteixeira_altered_2013], *there is need for a synthetic, quantitaitive review.*
+While these trends have been subject of fairly recent review [@andersonteixeira_altered_2013], *there is need for a synthetic, quantitative review.*
 
 
 ```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Variables are defined in Table 1. Age trends, which represent idealized dynamics following a disturbance that removes all living and non-living vegetation, are an updated version of the classic figure from Odum (1969), with heavy lines corresponding to those in Odum's figure and $NEP$ corresponding to Odum's 'net production'. Here, $NEP$ conists primarily of woody aboveground net primary production ($ANPP_{woody}$), while $ANPP_{woody.turnover}$ is the sum of woody mortality and branch turnover. ", out.width='100%', fig.pos='H'}
@@ -319,10 +319,14 @@ This review synthesizes data from the *ForC* database [Fig. `r figure_map`; http
 *ForC* amalgamates numerous intermediary data sets [*e.g.*, @luyssaert_co2_2007; @bond-lamberty_global_2010; @cook-patton_mapping_2020] and original studies.
 Original publications were referenced to check values and obtain information not contained in intermediary data sets, although this process has not been completed for all records.
 The database was developed with goals of understanding how C cycling in forests varies across broad geographic scales and as a function of stand age.
-As such, there has been a focus on incorporating data from regrowth forests (*e.g.*, Anderson et al 2006, Martin et al 2013, Bonner et al 2013) and obtaining stand age data when possible [83% of records in v.2.0; @anderson-teixeira_forc_2018].
+As such, there has been a focus on incorporating data from regrowth forests [*e.g.*, @anderson_temperature-dependence_2006; @martin_carbon_2013; @bonner_meta-analytical_2013] and obtaining stand age data when possible [83% of records in v.2.0; @anderson-teixeira_forc_2018].
 Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], which represented roughly one-third of records in *ForC* v2.0 [@anderson-teixeira_forc_2018].
-Since publication of ForC v2.0, we added the following data to ForC: the Global Database of Soil Respiration Database [*SRDB* v4, `r n_SRDB` records; @bond-lamberty_global_2010], the Global Reforestation Opportunity Assessment database [*GROA* v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020].
+Since publication of ForC v2.0, we imported three large additional databases into *ForC* via a combination of R scripts and manual edits. 
+First, we imported (via R script) the Global Database of Soil Respiration Database [*SRDB* v4, `r n_SRDB` records; @bond-lamberty_global_2010], and corrections and improvements to *SRDB* arising from this process were incorporated in *SRDB* v5 [@jian_restructured_2020].
+Second, we imported (via R script) the Global Reforestation Opportunity Assessment database [*GROA* v1.0, `r n_GROA` records; @cook-patton_mapping_2020; @anderson-teixeira_forc-dbgroa_2020], which itself had drawn on an earlier version of *ForC*. Because all records in *GROA* were checked against original publications, these records were given priority over duplicates in *ForC*. 
+Third, we manually incorporated records of annual $NEP$, $GPP$, and $R_{eco}$ from the FLUXNET2015 dataset [@pastorello_fluxnet2015_2020], treating these records as authoritative when they duplicated earlier records (Appendix S1). 
 We have also added data from individual publications, with a particular focus on productivity [e.g., @taylor_temperature_2017], dead wood, and ForestGEO sites [e.g., @lutz_global_2018; @johnson_climate_2018].
+A record of data sets added to *ForC* is available at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv.
 The database version used for this analysis has been tagged as a new release on Github (v3.0) and assigned a DOI through Zenodo (DOI: TBD).
 
 To facilitate analyses, we created a simplified version of ForC, *ForC-simplified* (https://github.com/forc-db/ForC/blob/master/ForC_simplified), which we analyzed here.
@@ -562,7 +566,7 @@ While this analysis provides a first analysis of age trends in forest C cycling 
 
 Our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
 For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate].
-The consistency with which this occurs across numerous fluxes is not surprising, but has never been simultaneously assessed across such a large number of variables [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
+The consistency with which this occurs across numerous fluxes is not surprising, particularly given commonality in the data analyzed or used for calibration, but has never been simultaneously assessed across such a large number of variables [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
 
 The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$ (Fig. `r flux_age_trends`), which showed no significant differences across biomes.
 Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem.

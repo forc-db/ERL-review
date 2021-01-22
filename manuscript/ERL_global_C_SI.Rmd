@@ -116,7 +116,7 @@ Within each group, we flagged records as potential duplicates--and excluded them
 Because *GROA* is believed to contain no duplicates, all records originating from *GROA* were assumed independent, and any other records within the group flagged as potential duplicates.
 If all records originated from *ForC v2.0* or *SRDB*, we gave precedence to *ForC* records, flagging *SRDB* records as potential duplicates.
 If duplicates remained (within *ForC v2.0* or *SRDB*), we selected a record for retention based on citation year, keeping the oldest (presumably original) citations for most variables. 
-For eddy-covariance variables ($NEP$, $GPP$, $R_{eco}$), we retained the record associated with the most recent publication, as these data are commonly re-assessed using new analysis methods.
+For eddy-covariance variables ($NEP$, $GPP$, $R_{eco}$), we retained the record associated with the most recent publication [most often @pastorello_fluxnet2015_2020], as these data are commonly re-assessed using new analysis methods.
 If publication years were the same, we randomly selected one record.
 
 This approach was conservative in that it removed some legitimately independent records. 

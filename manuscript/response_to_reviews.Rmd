@@ -51,19 +51,29 @@ The manuscript provides an important contribution to carbon cycle research. It p
 
 1. It is not clear what the various sources of data are. Perhaps this is because the authors have already described data sources in previous documentation of the dataset. However, I think some summary is needed for readers new to the dataset. I need to know what I am looking at when I see the various numbers in Figures 2-5, 8-11.
 
-*This just requires adding some explanation.*
+**In addition to addressing the specific questions below, we have added a link to a spreadsheet recording the datasets that have been incorporated, which is maintained in the open-access GitHub repository: "A record of data sets added to *ForC* is available at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv."**
 
 a. For example, is Fluxnet the source of GPP and Reco? The authors state that "ForC amalgamates numerous intermediary data sets" (line 119) and cite Luyssaert et al (2007). Is that the source of GPP and Reco, or have the fluxes been updated to newer Fluxnet data products? Similarly for the soil respiration data. Is this the data from Bond-Lamberty and Thomson (2010) or has it been updated?
 
-*This just requires adding some explanation.*
+**We now clarify as follows:**
+
+**FLUXNET:**
+
+**Methods: "Third, we manually incorporated records of annual $NEP$, $GPP$, and $R_{eco}$ from the FLUXNET2015 dataset [@pastorello_fluxnet2015_2020], treating these records as authoritative when they duplicated earlier records (Appendix S1)."**
+
+**Appendix S1: "For eddy-covariance variables ($NEP$, $GPP$, $R_{eco}$), we retained the record associated with the most recent publication [most often @pastorello_fluxnet2015_2020], as these data are commonly re-assessed using new analysis methods."**
+
+**SRDB:**
+
+**Methods: "First, we imported (via R script) the Global Database of Soil Respiration Database [*SRDB* v4, `r n_SRDB` records; @bond-lamberty_global_2010], and corrections and improvements to *SRDB* arising from this process were incorporated in *SRDB* v5 [@jian_restructured_2020]."**
 
 b. I need information on how Figures 2-5, 8-11 were prepared. Carbon stocks and fluxes such as NPP, litterfall, etc. are probably plot data. There is a detailed discussion of how the data were filtered to remove, for example, disturbance effects (lines 140-149). The GPP, Reco, and soil respiration databases seem to me to be different and may not be collocated with the plot data. Was disturbance filtering applied to the GPP, Reco, and soil respiration databases, too?
 
-*This just requires adding some explanation.*
+**All records analyzed here have been fully incorporated into the ForC format and treated as described. We believe this should now be clearer where we describe the importation of new datasets: "Since publication of ForC v2.0, we imported three large additional databases [SRDB, GROA, FLUXNET15] into *ForC* via a combination of R scripts and manual edits. ..."**
 
 c. If Luyssaert et al (2007) is a source of data, is there circularity in the comparison with latitudinal trends found in other datasets, for which Luyssaert et al is cited (lines 317-318)?
 
-*This just requires some re-wording. We are building on/ updating results of Luyssaert.*
+**We don't see this as circular; we are reaffirming earlier results with an expanded dataset. To make it clear that we are not claiming to provide an independent test, we have edited this text as follows: "For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate]. The consistency with which this occurs across numerous fluxes is not surprising, particularly given commonality in the data analyzed or used for calibration, but has never been simultaneously assessed across such a large number of variables [but see @banbury_morgan_global_nodate for nine autotrophic fluxes]."**
 
 2. Figures 2-5, 8-11 are excellent summaries of the dataset. Yet there is much unexplained in the figure and the reported data values. No guidance is given on how to use the data, and especially how to resolve discrepancies in the data.
 
