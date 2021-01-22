@@ -32,12 +32,13 @@ biome_names={'tropical', 'temperate', 'boreal'};
 %for stacked plot
 NEP=2.4*log10(age)-.04*(age-1); %placeholder (peaks around 2 at 23 yrs age)
 GPP= NEP + (1.99+1.44)* log10(age);
-ANPP_foliage = 1.66* log10(age) +.18;
-ANPP_woody = 2.31* log10(age) -.76;
+ANPP_foliage = 1.66* log10(age) +.18 - .01*(age-1);
+ANPP_woody = 2.31* log10(age) -.76 - .02*(age-1);
 ANPP_woody_turnover=1.7*log10(age)-1; %max(0,ANPP_woody-NEP);
-BNPP=0.97*log10(age)+.67;
+BNPP=0.97*log10(age)+.67 - .01*(age-1);
 NPP=ANPP_foliage+ANPP_woody+BNPP;
-R_auto = NPP.*(1+.001*age); %insufficient data
+CUE=0.679-0.153*log10(age); %from DeLucia et al. 2007 (note that equation given mistakenly leaves of the log10(age)). Collati et al. 2020 gives an update of this.
+R_auto= max(0,NPP.*(1./CUE-1)); %Rauto=NPP*(1/CUE-1), and CUE equation is above
 R_het=ANPP_foliage+ANPP_woody_turnover+BNPP;
 
 
@@ -80,14 +81,15 @@ Stock_ratio_boreal_trop=0.7;
 
 mature_stocks = [stocks(:,end)'; Stock_ratio_temp_trop*stocks(:,end)' ; Stock_ratio_boreal_trop*stocks(:,end)'];
 
+stocks_std = sum(mature_stocks, 2)'.*[.4 1 .4];
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
 
 %set facecolors:
-facecolor_in_fluxes= [0.2 0 .7;...  %'R_{auto-ag}*' . 'R_{auto}', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody.turnover}',  'NEP'
+facecolor_in_fluxes= [0.2 0 .7;...  %' 'R_{auto}'
                     0 .7 1;...  %'BNPP'
                     0 .527 .2;... %'ANPP_{foliage}',
-                    170/255 1 0 ;...%'ANPP_{woody}*'
+                    150/255 1 0 ;...%'ANPP_{woody.turnover}*'
                     255/256 255/256 0]; % NEP
 facecolor_stocks= [%0.1 0 .4;...  %'B_{root-coarse}*', ' 
                     %0 .7 1;... % 'B_{root-fine}',
@@ -112,34 +114,39 @@ subplot (2,3,2:3)
 %flux plot:
 h2=area (90:100, out_fluxes(2, 90:100)'); hold on; %will be covered just for legend.
     h2(1).FaceColor= [.7 0 .7];
-h2=area (age, out_fluxes' ,'HandleVisibility','off'); hold on;
-    h2(1).FaceColor= facecolor_in_fluxes(1,:);
-    h2(2).FaceColor= [.7 0 .7];
-h=area (1:90, in_fluxes(:, 1;90)'); hold on;
+
+h=area (age, in_fluxes'); hold on;
     for n=1:size(in_fluxes,1)
         h(n).FaceColor= facecolor_in_fluxes(n,:);
     end
 
-
+h2=area (95:100, out_fluxes(:, 95:100)' ,'HandleVisibility','off'); hold on;
+    h2(1).FaceColor= facecolor_in_fluxes(1,:);
+    h2(1).EdgeColor= facecolor_in_fluxes(1,:);
+    h2(2).FaceColor= [.7 0 .7];
     
 plot(age, in_sum, '-b', 'LineWidth', 4); hold on;
 plot(age, out_sum, '--r', 'LineWidth', 4);
 
 t = title('age trends'); 
+xlabel ('stand age');
 set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
 ylim([0, max(in_sum)+1]);
 legend ([{'R_{het}'}, in_flux_names, {'GPP' 'Reco'}], 'Location', 'BestOutside');
 
 subplot (2,3,4)
-h=bar(mature_stocks, 'stacked');
+h=bar(mature_stocks, 'stacked'); hold on;
     for n=1:size(mature_stocks,2)
         h(n).FaceColor= facecolor_stocks(n,:);
     end
-xlabel ('biome');
+er=errorbar([1:3],sum(mature_stocks, 2), 0.5*stocks_std, stocks_std);
+er.Color = [0 0 0];                            
+er.LineStyle = 'none'; 
 ylabel ('C  stocks (Mg C ha^{-1})')
-set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
+set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
+xtickangle(30)
 
 subplot (2,3,5:6) %stocks by age:
 

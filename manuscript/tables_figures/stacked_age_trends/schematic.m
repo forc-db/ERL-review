@@ -107,8 +107,9 @@ subplot (2,3,1)
 plotBarStackGroups(mature_fluxes, biome_names, facecolor_in_fluxes); 
 t = title('biome differences');
 ylabel ('C fluxes (Mg C ha^{-1} yr^{-1})');
-set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
+set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
+xtickangle(30)
 
 subplot (2,3,2:3)
 %flux plot:
@@ -129,6 +130,7 @@ plot(age, in_sum, '-b', 'LineWidth', 4); hold on;
 plot(age, out_sum, '--r', 'LineWidth', 4);
 
 t = title('age trends'); 
+xlabel ('stand age');
 set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
 ylim([0, max(in_sum)+1]);
@@ -143,9 +145,9 @@ er=errorbar([1:3],sum(mature_stocks, 2), 0.5*stocks_std, stocks_std);
 er.Color = [0 0 0];                            
 er.LineStyle = 'none'; 
 ylabel ('C  stocks (Mg C ha^{-1})')
+set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)
-set(gca, 'YTick', []); %ticks off
 
 subplot (2,3,5:6) %stocks by age:
 
