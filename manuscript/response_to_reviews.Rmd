@@ -33,7 +33,7 @@ The most substantive changes included the following:
 
 - Changed the figure set in accordance with comments from R3. Specifically, we
 (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review
-(2) added figures synthesizing changes in fluxes through time for each biome;
+(2) added a figure synthesizing changes in fluxes through time for each biome;
 (3) removed maps from age trend diagrams (available in SI) from age trend diagrams, which makes the figures less busy/ easier to read; and
 (4) moved C cycle diagrams for young forests to SI; 
 
@@ -90,6 +90,8 @@ I understand that the data comes from many different sources and so may not alwa
 **We have addressed this by adding the following statement to the captions of Figures 3-6 (formerly 2-5): "Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented."**
 
 3. There is a general sloppiness to the manuscript that makes me think the authors did not proofread the manuscript carefully.
+
+**We have proofread more carefully this time.**
 
 a. Line 58: The authors say GPP is estimated to be >69 Gt C/year, and cite Badgley et al. (2019). This statement is factually correct, but is quite misleading. Badgley et al. "estimate global annual terrestrial photosynthesis to be 147 Pg C/year (95% credible interval 131-163 Pg C/year)". The value of 69 Gt C is less than one-half that reported by Badgley. What are the authors trying to say? Such a large discrepancy does not instill confidence in the other numbers reported in the manuscript.
 

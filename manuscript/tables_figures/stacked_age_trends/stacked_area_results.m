@@ -14,13 +14,13 @@ ForC_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC';
     fig_dims=[20 20 700 800];
 
     %subplot positions
-    plot_width=0.33;  %plot_width+legend_width+left_marg=.5
-    legend_width=0.1;
+    plot_width=0.295;  %plot_width+legend_width+left_marg=.5
+    legend_width=0.145;
     plot_height=0.19;
-    left_marg=.07;
+    left_marg=.057;
     lower_marg=.05;
     plot_space_vertical=.05;
-    plot_space_horizontal=.025;
+    plot_space_horizontal=left_marg;
     pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width+legend_width plot_height];
     pos_TeB_f=[left_marg lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
     pos_TeN_f=[left_marg lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
