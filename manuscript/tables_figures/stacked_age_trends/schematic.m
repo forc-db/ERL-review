@@ -124,8 +124,8 @@ h2=area (95:100, out_fluxes(:, 95:100)' ,'HandleVisibility','off'); hold on;
     h2(1).EdgeColor= facecolor_in_fluxes(1,:);
     h2(2).FaceColor= [.7 0 .7];
     
-plot(age, in_sum, '-b', 'LineWidth', 4); hold on;
-plot(age, out_sum, '--r', 'LineWidth', 4);
+plot(age, in_sum, '-b', 'LineWidth', 3.4); hold on;
+plot(age, out_sum, '--r', 'LineWidth', 3.4);
 
 t = title('age trends'); 
 xlabel ('stand age');
@@ -143,6 +143,7 @@ h=bar(mature_stocks, 'stacked'); hold on;
 er=errorbar([1:3],sum(mature_stocks, 2), 0.5*stocks_std, stocks_std);
 er.Color = [0 0 0];                            
 er.LineStyle = 'none'; 
+er.LineWidth= 1.7;
 ylabel ('C  stocks (Mg C ha^{-1})')
 set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
@@ -152,7 +153,7 @@ subplot ('Position', pos_age_s) %stocks by age:
 
 h=area (age, stocks'); %, 'LineStyle','-'); 
 hold on;
-plot(age, biomass, '-k', 'LineWidth', 4);
+plot(age, biomass, '-k', 'LineWidth', 3.4);
 xlabel ('stand age');
 set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
