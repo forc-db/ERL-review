@@ -14,21 +14,22 @@ ForC_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC';
     fig_dims=[20 20 700 800];
 
     %subplot positions
-    plot_width=0.295;  %plot_width+legend_width+left_marg=.5
+    plot_width=0.4;  %plot_width+legend_width+left_marg=.5
     legend_width=0.145;
-    plot_height=0.19;
+    plot_height=0.17;
+    legend_height=.1
     left_marg=.057;
     lower_marg=.05;
     plot_space_vertical=.05;
     plot_space_horizontal=left_marg;
-    pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width+legend_width plot_height];
+    pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width plot_height+legend_height];
     pos_TeB_f=[left_marg lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
     pos_TeN_f=[left_marg lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
     pos_BoN_f=[left_marg lower_marg+0*(plot_height+plot_space_vertical) plot_width plot_height];
-    pos_TrB_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+3*(plot_height+plot_space_vertical) plot_width+legend_width plot_height];
-    pos_TeB_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
-    pos_TeN_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
-    pos_BoN_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+0*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_TrB_s=[left_marg+plot_width+plot_space_horizontal lower_marg+3*(plot_height+plot_space_vertical) plot_width plot_height+legend_height];
+    pos_TeB_s=[left_marg+plot_width+plot_space_horizontal lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_TeN_s=[left_marg+plot_width+plot_space_horizontal lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_BoN_s=[left_marg+plot_width+plot_space_horizontal lower_marg+0*(plot_height+plot_space_vertical) plot_width plot_height];
 
     %colors
     facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
@@ -411,7 +412,9 @@ xlabel ('stand age (years) ......... MATURE STANDS');
 end
 
 if b==1
-legend ([in_flux_names, {'R_{het-soil}','GPP','NEP', 'R_{eco}' }], 'Location', 'BestOutside');
+lgd=legend ([in_flux_names, {'R_{het-soil}','GPP','NEP', 'R_{eco}' }], 'Location', 'northoutside');
+lgd.NumColumns = 3;
+legend('Boxoff')
 end
 
 % STOCKS SUBPLOT
@@ -446,7 +449,9 @@ end
 
 
 if b==1
-legend (stock_names, 'Location', 'BestOutside');
+lgd=legend (stock_names, 'Location', 'northoutside');
+lgd.NumColumns = 3;
+legend('Boxoff')
 end
 
 
