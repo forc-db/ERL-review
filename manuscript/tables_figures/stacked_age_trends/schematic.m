@@ -21,7 +21,7 @@ set(0,'DefaultLegendAutoUpdate','off');
     pos_age_s=[left_marg+plot_width_biome+plot_space_horizontal lower_marg+0*(plot_height+plot_space_vertical) plot_width_age_s plot_height];
 
 %set facecolors:
-    facecolor_in_fluxes= [0.2 0 .7;...  %' 'R_{auto}'
+    facecolor_in_fluxes= [0.2 0 .5;...  %' 'R_{auto}'
                         0 .7 1;...  %'BNPP'
                         0 .527 .2;... %'ANPP_{foliage}',
                         150/255 1 0 ;...%'ANPP_{woody.turnover}*'
