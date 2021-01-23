@@ -14,14 +14,13 @@ ForC_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC';
     fig_dims=[20 20 700 800];
 
     %subplot positions
-    plot_width=0.4;  %plot_width+legend_width+left_marg=.5
-    legend_width=0.145;
+    plot_width=0.41;  
     plot_height=0.17;
-    legend_height=.1
-    left_marg=.057;
+    legend_height=.1;
+    left_marg=.09;
     lower_marg=.05;
     plot_space_vertical=.05;
-    plot_space_horizontal=left_marg;
+    plot_space_horizontal=.07;
     pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width plot_height+legend_height];
     pos_TeB_f=[left_marg lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
     pos_TeN_f=[left_marg lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
@@ -404,8 +403,7 @@ plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
     end
     h2bl.FaceColor= facecolor_out_fluxes(3,:);
 xlim([0 119])
-t = title(biomes(b));
-ylabel ('C  fluxes (Mg C ha^{-1} yr^{-1})')
+ylabel ({'\bf ',char(biomes(b)), '\rm C  fluxes (Mg C ha^{-1} yr^{-1})'})
 
 if b==4
 xlabel ('stand age (years) ......... MATURE STANDS');
@@ -440,7 +438,7 @@ h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 %plot(age, B_tot, '-k', 'LineWidth', 3);
 %plot(age, B_tot_calc, '--k', 'LineWidth', 3);
 
-ylabel ('C  stocks (Mg C ha^{-1})')
+ylabel ({'C  stocks (Mg C ha^{-1})'})
 
 xlim([0 119])
 if b==4
