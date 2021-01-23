@@ -5,9 +5,35 @@
 clf; clear; close all;
 set(0,'DefaultLegendAutoUpdate','off');
 
+%plot settings
+    %subplot positions
+    plot_width_biome=0.27; 
+    plot_width_age_f=0.57; 
+    plot_width_age_s=0.47;
+    plot_height=0.37;
+    left_marg=.09;
+    lower_marg=.1;
+    plot_space_vertical=.1;
+    plot_space_horizontal=.04;
+    pos_biome_f=[left_marg lower_marg+1*(plot_height+plot_space_vertical) plot_width_biome plot_height];
+    pos_biome_s=[left_marg lower_marg+0*(plot_height+plot_space_vertical) plot_width_biome plot_height];
+    pos_age_f=[left_marg+plot_width_biome+plot_space_horizontal lower_marg+1*(plot_height+plot_space_vertical) plot_width_age_f plot_height];
+    pos_age_s=[left_marg+plot_width_biome+plot_space_horizontal lower_marg+0*(plot_height+plot_space_vertical) plot_width_age_s plot_height];
 
-
-
+%set facecolors:
+    facecolor_in_fluxes= [0.2 0 .7;...  %' 'R_{auto}'
+                        0 .7 1;...  %'BNPP'
+                        0 .527 .2;... %'ANPP_{foliage}',
+                        150/255 1 0 ;...%'ANPP_{woody.turnover}*'
+                        255/256 255/256 0]; % NEP
+    facecolor_stocks= [%0.1 0 .4;...  %'B_{root-coarse}*', ' 
+                        %0 .7 1;... % 'B_{root-fine}',
+                        %0 .527 .27 ;... % B_{foliage}',
+                        170/255 1 0;... % 'B_{ag-wood}*', 
+                        %1 .8 0;...  % 'DW_{standing}*', 
+                        1 99/255 99/255 ... % 'DW_{down}',
+                        %; 0.7 0 .7 ;... %'OL'
+                        ];  
 %% ~~~~~~~CREATE DATA FOR PLOTTING~~~~~~~~~~
 age = linspace (1,100,100);
 biome_names={'tropical', 'temperate', 'boreal'};
@@ -70,24 +96,11 @@ stocks_std = sum(mature_stocks, 2)'.*[.4 1 .4];
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
 
-%set facecolors:
-facecolor_in_fluxes= [0.2 0 .7;...  %' 'R_{auto}'
-                    0 .7 1;...  %'BNPP'
-                    0 .527 .2;... %'ANPP_{foliage}',
-                    150/255 1 0 ;...%'ANPP_{woody.turnover}*'
-                    255/256 255/256 0]; % NEP
-facecolor_stocks= [%0.1 0 .4;...  %'B_{root-coarse}*', ' 
-                    %0 .7 1;... % 'B_{root-fine}',
-                    %0 .527 .27 ;... % B_{foliage}',
-                    170/255 1 0;... % 'B_{ag-wood}*', 
-                    %1 .8 0;...  % 'DW_{standing}*', 
-                    1 99/255 99/255 ... % 'DW_{down}',
-                    %; 0.7 0 .7 ;... %'OL'
-                    ];
+
 
 figure (1)
 
-subplot (2,3,1)
+subplot ('Position', pos_biome_f)
 %stack as components of GPP and Reco, outline those.
 plotBarStackGroups(mature_fluxes, biome_names, facecolor_in_fluxes); 
 t = title('biome differences');
@@ -96,7 +109,7 @@ set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)
 
-subplot (2,3,2:3)
+subplot ('Position', pos_age_f)
 %flux plot:
 h2=area (90:100, out_fluxes(2, 90:100)'); hold on; %will be covered just for legend.
     h2(1).FaceColor= [.7 0 .7];
@@ -120,8 +133,9 @@ set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
 ylim([0, max(in_sum)+1]);
 legend ([{'R_{het}'}, in_flux_names, {'GPP' 'Reco'}], 'Location', 'BestOutside');
+legend('Boxoff')
 
-subplot (2,3,4)
+subplot ('Position', pos_biome_s)
 h=bar(mature_stocks, 'stacked'); hold on;
     for n=1:size(mature_stocks,2)
         h(n).FaceColor= facecolor_stocks(n,:);
@@ -134,7 +148,7 @@ set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)
 
-subplot (2,3,5:6) %stocks by age:
+subplot ('Position', pos_age_s) %stocks by age:
 
 h=area (age, stocks'); %, 'LineStyle','-'); 
 hold on;
@@ -150,6 +164,7 @@ set(gca, 'YTick', []); %ticks off
     end
 
 legend ([stock_names,{'B_{tot}'}], 'Location', 'BestOutside');
+legend('Boxoff')
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 print('schematic', '-dpng', '-r600')

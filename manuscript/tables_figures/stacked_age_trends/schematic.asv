@@ -5,22 +5,21 @@
 clf; clear; close all;
 set(0,'DefaultLegendAutoUpdate','off');
 
-
 %plot settings
-
     %subplot positions
-    plot_width=0.32;
-    plot_height=0.15;
-    plot_space_vertical=(1-plot_height*5)/5-.01;
-    plot_space_horizontal=(1-plot_width*2.5)/2-.05;
-
-    %color
-    facecolor_cat=[.1 .4 .9; 0.8 0 0;  .9 .527 .527 ; 1 .9 .9 ]; %blue/ red
-
-    
-    %font
-    fs= 10; %font size
-
+    plot_width_biome=0.3; 
+    plot_width_age=0.4; 
+    legend_width=.1
+    plot_height=0.19;
+    legend_height=.1;
+    left_marg=.09;
+    lower_marg=.05;
+    plot_space_vertical=.027;
+    plot_space_horizontal=.07;
+    pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width_biome plot_height+legend_height];
+    pos_TeB_f=[left_marg lower_marg+2*(plot_height+plot_space_vertical) plot_width_biome plot_height];
+    pos_TrB_s=[left_marg+plot_width_biome+plot_space_horizontal lower_marg+3*(plot_height+plot_space_vertical) plot_width_age plot_height+legend_height];
+    pos_TeB_s=[left_marg+plot_width_biome+plot_space_horizontal lower_marg+2*(plot_height+plot_space_vertical) plot_width_age plot_height];
 
 
 %% ~~~~~~~CREATE DATA FOR PLOTTING~~~~~~~~~~
@@ -107,8 +106,9 @@ subplot (2,3,1)
 plotBarStackGroups(mature_fluxes, biome_names, facecolor_in_fluxes); 
 t = title('biome differences');
 ylabel ('C fluxes (Mg C ha^{-1} yr^{-1})');
-set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
+set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
+xtickangle(30)
 
 subplot (2,3,2:3)
 %flux plot:
