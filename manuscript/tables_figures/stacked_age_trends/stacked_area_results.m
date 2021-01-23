@@ -375,22 +375,11 @@ h2b=area(112:116, mature_out_fluxes.*ones(5,size(mature_out_fluxes,1)),'HandleVi
 if b~= 1 
     plot(age, GPP, '-b', 'LineWidth', 2,'HandleVisibility','off'); hold on; % eddy flux: insufficient data for tropics
     plot(age, -R_eco, '-r', 'LineWidth', 2,'HandleVisibility','off'); % eddy flux: insufficient data for tropics
-    %plot(age, -R_root-R_het_soil-R_auto_ag_calc, '--r', 'LineWidth', 3); % eddy flux: insufficient data for tropics
     plot(age, NEP, '-y', 'LineWidth', 2,'HandleVisibility','off');hold on; % eddy flux: insufficient data for tropics
-    %plot(age, NEP_calc, '--y', 'LineWidth', 3);hold on;
 end
 plot (114, GPP_mature, 'ok', 'MarkerFaceColor', 'b'); hold on;
 plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'y'); hold on;
 plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
-
-
-%plot(age, in_sum, '--k', 'LineWidth', 3); hold on;
-%plot(age, R_auto_calc+NPP, '-k', 'LineWidth', 3);hold on;
-%plot(age, -R_auto_ag_calc-R_soil, '-y', 'LineWidth', 3);hold on;
-%plot(age, -R_auto_ag_calc-R_root-R_het_soil, '--y', 'LineWidth', 3);hold on;
-
-
-
 
 %set facecolor:
     for n=1:length(mature_in_fluxes)
@@ -428,7 +417,6 @@ end
 h1=area (age, stocks'); hold on;
 h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 
-
 %set facecolor:
     for n=1:length(mature_stocks)
         h1(n).FaceColor= facecolor_stocks(n,:);
@@ -438,9 +426,10 @@ h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 %plot(age, B_tot, '-k', 'LineWidth', 3);
 %plot(age, B_tot_calc, '--k', 'LineWidth', 3);
 
-ylabel ({'C  stocks (Mg C ha^{-1})'})
-
+ylim([0 sum(mature_stocks)+10])
 xlim([0 119])
+
+ylabel ({'C  stocks (Mg C ha^{-1})'})
 if b==4
 xlabel ('stand age (years) ......... MATURE STANDS');
 end
