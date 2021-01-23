@@ -6,21 +6,6 @@ clf; clear; close all;
 set(0,'DefaultLegendAutoUpdate','off');
 
 
-%plot settings
-
-    %subplot positions
-    plot_width=0.32;
-    plot_height=0.15;
-    plot_space_vertical=(1-plot_height*5)/5-.01;
-    plot_space_horizontal=(1-plot_width*2.5)/2-.05;
-
-    %color
-    facecolor_cat=[.1 .4 .9; 0.8 0 0;  .9 .527 .527 ; 1 .9 .9 ]; %blue/ red
-
-    
-    %font
-    fs= 10; %font size
-
 
 
 %% ~~~~~~~CREATE DATA FOR PLOTTING~~~~~~~~~~

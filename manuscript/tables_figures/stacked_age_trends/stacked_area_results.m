@@ -10,6 +10,45 @@ figures_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/ma
 working_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ERL-review/manuscript/tables_figures/stacked_age_trends';
 ForC_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC';
 
+%plot settings
+    fig_dims=[20 20 700 800];
+
+    %subplot positions
+    plot_width=0.33;  %plot_width+legend_width+left_marg=.5
+    legend_width=0.1;
+    plot_height=0.19;
+    left_marg=.07;
+    lower_marg=.05;
+    plot_space_vertical=.05;
+    plot_space_horizontal=.025;
+    pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width+legend_width plot_height];
+    pos_TeB_f=[left_marg lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_TeN_f=[left_marg lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_BoN_f=[left_marg lower_marg+0*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_TrB_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+3*(plot_height+plot_space_vertical) plot_width+legend_width plot_height];
+    pos_TeB_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_TeN_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+1*(plot_height+plot_space_vertical) plot_width plot_height];
+    pos_BoN_s=[left_marg+plot_width+legend_width+plot_space_horizontal lower_marg+0*(plot_height+plot_space_vertical) plot_width plot_height];
+
+    %colors
+    facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
+                        0.1 0 .4;...  % 'R_{root}', 
+                        0 .7 1;...  %'BNPP'
+                        0 .527 .27;... %'ANPP_{foliage}',
+                        170/255 1 0 ];...%'ANPP_{woody}*'
+
+    facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
+                        0.1 0 .4;...  % 'R_{root}', 
+                         0.7 0 .7]; %R_het_soil
+
+    facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', ' 
+                        0 .7 1;... % 'B_{root-fine}',
+                        0 .527 .27 ;... % B_{foliage}',
+                        170/255 1 0;... % 'B_{ag-wood}*', 
+                        1 .8 0;...  % 'DW_{standing}*', 
+                        1 99/255 99/255 ;... % 'DW_{down}',
+                        0.7 0 .7 ];... %'OL'
+
 %% READ IN & PREPARE DATA
 %read in age trends modesl summaries:
 cd(figures_dir)
@@ -313,9 +352,18 @@ mature_stocks_matrix(b,1:length(mature_stocks)) =mature_stocks;
 
 %% ~~~~~~~PLOTTING~~~~~~~~~~
 
-figure (b)
-
-subplot (2,1,1) %FLUXES
+figure (1)
+set(gcf,'Position', fig_dims)
+% FLUXES SUBPLOT
+if b==1
+   subplot('Position', pos_TrB_f)
+elseif b==2
+    subplot('Position', pos_TeB_f)
+elseif b==3
+    subplot('Position', pos_TeN_f)
+elseif b==4
+    subplot('Position', pos_BoN_f)
+end
 
 h1a=area (age, in_fluxes'); hold on;
 h2a=area(112:116, mature_in_fluxes.*ones(5,size(mature_in_fluxes,1)),'HandleVisibility','off'); hold on;
@@ -342,15 +390,7 @@ plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
 %plot(age, -R_auto_ag_calc-R_root-R_het_soil, '--y', 'LineWidth', 3);hold on;
 
 
-facecolor_in_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
-                    0.1 0 .4;...  % 'R_{root}', 
-                    0 .7 1;...  %'BNPP'
-                    0 .527 .27;... %'ANPP_{foliage}',
-                    170/255 1 0 ];...%'ANPP_{woody}*'
-                
-facecolor_out_fluxes= [0.3 0 1;...  %'R_{auto-ag}*'
-                    0.1 0 .4;...  % 'R_{root}', 
-                     0.7 0 .7]; %R_het_soil
+
 
 %set facecolor:
     for n=1:length(mature_in_fluxes)
@@ -366,20 +406,28 @@ xlim([0 119])
 t = title(biomes(b));
 ylabel ('C  fluxes (Mg C ha^{-1} yr^{-1})')
 
+if b==4
+xlabel ('stand age (years) ......... MATURE STANDS');
+end
+
+if b==1
 legend ([in_flux_names, {'R_{het-soil}','GPP','NEP', 'R_{eco}' }], 'Location', 'BestOutside');
+end
 
-
-subplot (2,1,2) %STOCKS
+% STOCKS SUBPLOT
+if b==1
+   subplot('Position', pos_TrB_s)
+elseif b==2
+    subplot('Position', pos_TeB_s)
+elseif b==3
+    subplot('Position', pos_TeN_s)
+elseif b==4
+    subplot('Position', pos_BoN_s)
+end
 h1=area (age, stocks'); hold on;
 h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 
-facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', ' 
-                    0 .7 1;... % 'B_{root-fine}',
-                    0 .527 .27 ;... % B_{foliage}',
-                    170/255 1 0;... % 'B_{ag-wood}*', 
-                    1 .8 0;...  % 'DW_{standing}*', 
-                    1 99/255 99/255 ;... % 'DW_{down}',
-                    0.7 0 .7 ];... %'OL'
+
 %set facecolor:
     for n=1:length(mature_stocks)
         h1(n).FaceColor= facecolor_stocks(n,:);
@@ -389,27 +437,30 @@ facecolor_stocks= [0.1 0 .4;...  %'B_{root-coarse}*', '
 %plot(age, B_tot, '-k', 'LineWidth', 3);
 %plot(age, B_tot_calc, '--k', 'LineWidth', 3);
 
-xlim([0 119])
-xlabel ('stand age (years) ......... MATURE STANDS');
 ylabel ('C  stocks (Mg C ha^{-1})')
 
+xlim([0 119])
+if b==4
+xlabel ('stand age (years) ......... MATURE STANDS');
+end
+
+
+if b==1
 legend (stock_names, 'Location', 'BestOutside');
+end
 
 
-%% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cd(working_dir)
-savename=char(strcat(biome_codes(b),'_age_trends'));
-print(savename, '-dpng', '-r300')
-
-
+%% GPP-in sum closure plot
 %figure(10)
 %if b>1
 %plot(age, GPP-in_sum); hold on;
 %end
-
 end
-
 %figure 10, cont
 %xlabel ('age')
 %ylabel ('GPP-in.sum')
 %legend ('TeB', 'TeN', 'BoN')
+
+%% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cd(working_dir)
+print('age_trends_all', '-dpng', '-r300')
