@@ -15,11 +15,11 @@ ForC_dir='/Users/kteixeira/Dropbox (Smithsonian)/GitHub/ForC-db/ForC';
 
     %subplot positions
     plot_width=0.41;  
-    plot_height=0.17;
+    plot_height=0.19;
     legend_height=.1;
     left_marg=.09;
     lower_marg=.05;
-    plot_space_vertical=.05;
+    plot_space_vertical=.027;
     plot_space_horizontal=.07;
     pos_TrB_f=[left_marg lower_marg+3*(plot_height+plot_space_vertical) plot_width plot_height+legend_height];
     pos_TeB_f=[left_marg lower_marg+2*(plot_height+plot_space_vertical) plot_width plot_height];
@@ -395,7 +395,7 @@ xlim([0 119])
 ylabel ({'\bf ',char(biomes(b)), '\rm C  fluxes (Mg C ha^{-1} yr^{-1})'})
 
 if b==4
-xlabel ('stand age (years) ......... MATURE STANDS');
+xlabel ('stand age (years)');
 end
 
 if b==1
@@ -429,9 +429,10 @@ h2=area(112:116, mature_stocks.*ones(5,size(mature_stocks,1))); hold on;
 ylim([0 sum(mature_stocks)+10])
 xlim([0 119])
 
+
 ylabel ({'C  stocks (Mg C ha^{-1})'})
 if b==4
-xlabel ('stand age (years) ......... MATURE STANDS');
+xlabel ('stand age (years)');
 end
 
 
@@ -452,6 +453,16 @@ end
 %xlabel ('age')
 %ylabel ('GPP-in.sum')
 %legend ('TeB', 'TeN', 'BoN')
+
+%add "mature" annotation on x-axes:
+annotation('textbox', [.453, .7, 0, 0], 'string', 'mature')
+annotation('textbox', [.93, .7, 0, 0], 'string', 'mature')
+annotation('textbox', [.453, .485, 0, 0], 'string', 'mature')
+annotation('textbox', [.93, .485, 0, 0], 'string', 'mature')
+annotation('textbox', [.453, .265, 0, 0], 'string', 'mature')
+annotation('textbox', [.93, .265, 0, 0], 'string', 'mature')
+annotation('textbox', [.453, .049, 0, 0], 'string', 'mature')
+annotation('textbox', [.93, .049, 0, 0], 'string', 'mature')
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd(working_dir)
