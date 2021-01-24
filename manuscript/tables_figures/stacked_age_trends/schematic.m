@@ -9,7 +9,7 @@ set(0,'DefaultLegendAutoUpdate','off');
     %subplot positions
     plot_width_biome=0.27; 
     plot_width_age_f=0.57; 
-    plot_width_age_s=0.47;
+    plot_width_age_s=0.515;
     plot_height=0.37;
     left_marg=.09;
     lower_marg=.1;
@@ -27,13 +27,13 @@ set(0,'DefaultLegendAutoUpdate','off');
                         150/255 1 0 ;...%'ANPP_{woody.turnover}*'
                         255/256 255/256 0]; % NEP
     facecolor_stocks= [%0.1 0 .4;...  %'B_{root-coarse}*', ' 
-                        %0 .7 1;... % 'B_{root-fine}',
-                        %0 .527 .27 ;... % B_{foliage}',
+                        0 .7 1;... % 'B_{root-fine}',
+                        0 .527 .27 ;... % B_{foliage}',
                         170/255 1 0;... % 'B_{ag-wood}*', 
                         %1 .8 0;...  % 'DW_{standing}*', 
-                        1 99/255 99/255 ... % 'DW_{down}',
-                        %; 0.7 0 .7 ;... %'OL'
-                        ];  
+                        1 99/255 99/255; ... % 'DW_{down}',
+                        0.7 0 .7 ];... %'OL'
+                     
 %% ~~~~~~~CREATE DATA FOR PLOTTING~~~~~~~~~~
 age = linspace (1,100,100);
 biome_names={'tropical', 'temperate', 'boreal'};
@@ -41,7 +41,7 @@ biome_names={'tropical', 'temperate', 'boreal'};
 %FLUXES
 % 1. by age
 %for stacked plot
-NEP=2.4*log10(age)-.04*(age-1); %placeholder (peaks around 2 at 23 yrs age)
+NEP=2.4*log10(age)-.04*(age-1); 
 GPP= NEP + (1.99+1.44)* log10(age);
 ANPP_foliage = 1.66* log10(age) +.18 - .01*(age-1);
 ANPP_woody = 2.31* log10(age) -.76 - .02*(age-1);
@@ -77,20 +77,23 @@ mature_fluxes(:,2,1:size(out_fluxes,1))=[out_fluxes(:,end)'; Flux_ratio_temp_tro
 %STOCKS
 % 1. by age
 %for stacked plot
-biomass=54* log10(age); 
-DW= 2.6*log10(age);
+B_woody=54* log10(age); 
+DW= 5.27*log10(age);
+OL= 4.5*log10(age);
+B_foliage=max(0,1.2* log10(age)+1);
+B_fineroot=max(0,1.2* log10(age)+1);
 
-stocks = [biomass; DW]; %matrix with all stocks for stacked plot
-stock_names = {'B_{tot}', 'DW'};
+stocks = [B_fineroot; B_foliage; B_woody; DW; OL]; %matrix with all stocks for stacked plot
+stock_names = {'B_{root-fine}', 'B_{foliage}', 'B_{woody}', 'DW_{tot}', 'OL'};
 
 
 
 
 % 2. mature forests
-Stock_ratio_temp_trop=0.9;
-Stock_ratio_boreal_trop=0.7;
+Stock_ratio_by_biomes=[1 0.9 0.7; 1 0.9 0.7; 1 0.9 0.7; 1 1 .8; 1 1.5 2];
 
-mature_stocks = [stocks(:,end)'; Stock_ratio_temp_trop*stocks(:,end)' ; Stock_ratio_boreal_trop*stocks(:,end)'];
+mature_stocks = [stocks(:,end)'; stocks(:,end)'; stocks(:,end)'].*Stock_ratio_by_biomes';
+
 
 stocks_std = sum(mature_stocks, 2)'.*[.4 1 .4];
 
@@ -108,6 +111,7 @@ ylabel ('C fluxes (Mg C ha^{-1} yr^{-1})');
 set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)
+box on
 
 subplot ('Position', pos_age_f)
 %flux plot:
@@ -126,13 +130,14 @@ h2=area (95:100, out_fluxes(:, 95:100)' ,'HandleVisibility','off'); hold on;
     
 plot(age, in_sum, '-b', 'LineWidth', 3.4); hold on;
 plot(age, out_sum, '--r', 'LineWidth', 3.4);
+plot (age(1:20), 2.4*R_het(end).*exp(-.27*age(1:20))+sum(out_sum(:,1:20),1), ':r', 'LineWidth', 2)
 
 t = title('age trends'); 
 xlabel ('stand age');
 set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
 ylim([0, max(in_sum)+1]);
-legend ([{'R_{het}'}, in_flux_names, {'GPP' 'Reco'}], 'Location', 'BestOutside');
+legend ([{'R_{het}'}, in_flux_names, {'GPP' 'R_{eco}' 'legacy R_{eco}'}], 'Location', 'BestOutside');
 legend('Boxoff')
 
 subplot ('Position', pos_biome_s)
@@ -151,9 +156,9 @@ xtickangle(30)
 
 subplot ('Position', pos_age_s) %stocks by age:
 
-h=area (age, stocks'); %, 'LineStyle','-'); 
-hold on;
-plot(age, biomass, '-k', 'LineWidth', 3.4);
+h=area (age, stocks'); hold on;
+plot(age, B_woody+B_foliage+B_fineroot, '-k', 'LineWidth', 3.4);
+plot (age(1:20), B_woody(end).*exp(-.27*age(1:20))+sum(stocks(:,1:20),1), ':', 'Color',facecolor_stocks(4,:), 'LineWidth', 2)
 xlabel ('stand age');
 set(gca, 'XTick', []); %ticks off
 set(gca, 'YTick', []); %ticks off
@@ -164,7 +169,7 @@ set(gca, 'YTick', []); %ticks off
         h(n).FaceColor= facecolor_stocks(n,:);
     end
 
-legend ([stock_names,{'B_{tot}'}], 'Location', 'BestOutside');
+legend ([stock_names,{'B_{tot}', 'legacy DW_{tot}'}], 'Location', 'BestOutside');
 legend('Boxoff')
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

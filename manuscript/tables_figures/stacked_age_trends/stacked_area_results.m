@@ -467,3 +467,5 @@ annotation('textbox', [.93, .049, 0, 0], 'string', 'mature')
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd(working_dir)
 print('age_trends_all', '-dpng', '-r300')
+
+save params_matrix
