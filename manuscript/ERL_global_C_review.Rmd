@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -512,45 +512,23 @@ Again, there were some discrepencies between young forest trends and mature fore
 # The Discussion section highlights the general conclusions, emphasizes novel findings, puts them in context and identifies issues and inferences for future work or policy considerations.
 ```
 
-*work on this par:*
-
 *ForC* v3.0 provided unprecedented coverage of most major variables, yielding a broad picture of C cycling in the world's major forest biomes.
-Carbon cycling rates generally increased from boreal to tropical regions and with stand age.
-Specifically, most C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. `r flux_age_trends`- `r stock_age_trends`).
-The notable exception was mature forest $NEP$, which, as the difference between $GPP$ and $R_{eco}$, was indistinguishable across biomes.
+Carbon cycling rates generally increased from boreal to tropical regions and with stand age (Figs. `r schematic`, `r all_age_trends`).
+Specifically, most C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. `r schematic`, `r flux_age_trends`- `r stock_age_trends`, `r age_trends_all`).
+The notable exception was mature forest $NEP$, which, as the difference between $GPP$ and $R_{eco}$, was indistinguishable across biomes (Fig. `r flux_age_trends`f).
 There was also little directional variation in mean mature forest C stocks across biomes, although maximum values for the majority of stocks (all including live or standing woody biomass) occurred in temperate biomes (Figs. `r schematic`, `r `all_diagrams_mature`, `r stock_age_trends`).
 Consistent with theory and previous studies (Fig. `r schematic`), the majority of flux variables, together with most live biomass pools, increased significantly with stand age (Table 1; Figs. `r flux_age_trends`- `r age_trends_all`, `r all_age_trends`).
 Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks and $NEP$ of mature forests, which are defined by the differences between in- and out- fluxes, do not vary systematically across biomes.
 Together, these results refine and expand out understanding of C cycling in mature forests, while providing the first global-scale analysis of age trends in multiple forest C stocks and fluxes (Figs. `r age_trends_all`). 
 
-### C variable coverage and budget closure
-
-*HM: I recommend putting this later in the discussion.  *
-
-The large number of C cycle variables covered by ForC, and the general consistency among them, provide confidence that our overall reported mature forest means provide useful baselines for analysis -- with the caveats that they are unlikely to be accurate representations of C cycling for any particular forest, and that these sample means almost certainly do not represent true biome means (particularly for temperate conifer forests where high-biomass stands are over-represented in *ForC*).
-
-In this analysis, the C cycle budgets for mature forests (Figs. `r all_diagrams_mature`) generally “close”–-that is, the sums of component variables do not differ from the larger fluxes by more than one standard deviation. 
-On the one hand, this reflects the general fact that ecosystem-scale measurements tend to close the C budget more easily and consistently than, for example, for energy balance [@stoy_data-driven_2013]. 
-On the other, however, *ForC* derives data from multiple heterogeneous sources, and standard deviations within each biome are high; as a result, the standard for C closure is relatively loose [*c.f.* @houghton_terrestrial_2020]. 
-The one instance where the C budgets doesn’t close is likely due to differences in the representation of forest types (*i.e.*, disproportionate representation of US Pacific NW for  $B_{root-coarse}$ relative to  $B_{root}$; Fig. `r diagram_TeN_mature`) rather than issues of methodological accuracy. 
-The overall high degree of closure implies that *ForC* gives an at least roughly consistent picture of C cycling within biomes for mature forests. 
-This is an important and useful test, because it allows for consistency checks within the C cycle, for example leveraging separate and independently-measured fluxes to constrain errors in another [@phillips_value_2017; @williams_impacts_2014; @harmon_heterotrophic_2011], or producing internally consistent global data products [@wang_golum-cnp_2018]. 
-
-In contrast, age trends for young forests generally remain less clearly defined, in large part because their data records remain somewhat sparse for most variables (*i.e.*, have low representation of different geographical regions for any given age). 
-While this analysis provides a first analysis of age trends in forest C cycling for multiple variables at a global scale, improved resolution of these trends will require additional data.
-
-There are of course notable holes in the ForC variable coverage (Fig. `r figure_map`) that limit the scope of our inferences here. 
-Notably, *ForC* currently has sparse--if any--coverage of fluxes to herbivores and higher consumers, along with the woody mortality ($M_{woody}$) and dead wood stocks (Table 1, Figs. `r DW_tot_fig`-`r DW_down_fig`). 
-Geographically, all variables are poorly covered in Africa and Siberia, a common problem in the carbon-cycle community [@xu_contribution_2016; @schimel_effect_2015]. 
-*ForC* does not include soil carbon, which is covered by other efforts [e.g., @kochy_global_2015]. 
-*ForC* is not intended to replace databases that are specialized for particular parts of the C cycle analyses, e.g., aboveground biomass [@spawn_harmonized_2020], land-atmosphere fluxes [@baldocchi_fluxnet_2001], soil respiration [@jian_restructured_2020], or the human footprint in global forests [@magnani_human_2007].
 
 
 ### C cycling across biomes
 
 Our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
 For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate].
-The consistency with which this occurs across numerous fluxes is not surprising, particularly given commonality in the data analyzed or used for calibration, but has never been simultaneously assessed across such a large number of variables [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
+This consistency is not not surprising, particularly given commonality in the data analyzed or used for calibration.
+The finding that these patterns hold consistently across across numerous fluxes, while unsurprising, is novel to this analysis [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
 
 The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$, which showed no significant differences across biomes (Fig. `r flux_age_trends`f).
 Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem (Fig. `r schematic`).
@@ -585,7 +563,7 @@ These would be expected to increase rapidly with the most metabolically active c
 In contrast, soil heterotrophic respiration ($R_{het-soil}$) and total soil respiration ($R_{soil}$) are expected to be non-zero following stand-clearing disturbance, although these may decrease with a reduction of root respiration ($R_{soil}$ only) and C exudates or increase in response to an influx of dead roots and litter [@ribeiro-kumara_how_2020; @maurer_carbon_2016; @bond-lamberty_contribution_2004].
 In this study, we detect no significant age trends in either variable.
 
-Notably, net carbon sequestration ($NEP$) increases with age up to the 100-yr threshold examined here, with more pronounced patterns in temperate than boreal forests (Fig. `r flux_age_trends`). 
+Notably, net carbon sequestration ($NEP$) exhibits an overall increase with age across the first 100 years of stand development, with more pronounced patterns in temperate than boreal forests (Fig. `r flux_age_trends`). 
 This finding is largely consistent with, but built from a far larger dataset than, previous studies showing an increase in $NEP$ across relatively young stand ages [@pregitzer_carbon_2004; @baldocchi_fluxnet_2001; @luyssaert_old-growth_2008].
 However, $NEP$ has been observed to decline from intermediate to old stands [@luyssaert_old-growth_2008], and the $NEP$ estimated by our model for 100-year-old temperate conifer stands (~5 Mg C ha^-1^ yr^-1^) exceeds the mean of mature forests in the same biome (0.7 Mg C ha^-1^ yr^-1^; Fig. `r diagram_TeN_mature`).
 A decrease in $NEP$ is consistent with the observed deceleration of biomass accumulation as stands age, although both biomass and non-living C stocks will often continue to increase well beyond the 100-yr threshold used here to delimit young and mature stands [@luyssaert_old-growth_2008; @mcgarvey_carbon_2014; @lichstein_biomass_2009].
@@ -594,6 +572,35 @@ In terms of stocks, our study reveals consistent increases in live biomass stock
 The latter are particularly sensitive to the type of disturbance, where disturbances that remove most organic material (e.g., logging, agriculture) result in negligible deadwood in young stands, followed by a buildup over time [tropical stands in Fig. `r stock_age_trends`; e.g., @vargas_biomass_2008].
 In contrast, natural disturbances (e.g., fire, drought) can produce large amounts of deadwood (mostly $DW_{standing}$) that slowly decomposes as the stand recovers, resulting in declines across young stand ages [e.g., temperate and boreal stands in Fig. `r stock_age_trends`; e.g., @carmona_coarse_2002].
 Again, further study and synthesis of non-living C stocks across biomes and stand ages will be valuable to giving a more comprehensive picture. 
+
+### C variable coverage and budget closure
+
+The large number of C cycle variables covered by ForC, and the general consistency among them, provide confidence that our overall reported mature forest means provide useful baselines for analysis -- with the caveats that they are unlikely to be accurate representations of C cycling for any particular forest, and that these sample means almost certainly do not represent true biome means (particularly for temperate conifer forests where high-biomass stands are over-represented in *ForC*).
+
+In this analysis, the C cycle budgets for mature forests (Figs. `r all_diagrams_mature`) generally “close”–-that is, the sums of component variables do not differ from the larger fluxes by more than one standard deviation. 
+On the one hand, this reflects the general fact that ecosystem-scale measurements tend to close the C budget more easily and consistently than, for example, for energy balance [@stoy_data-driven_2013]. 
+On the other, however, *ForC* derives data from multiple heterogeneous sources, and standard deviations within each biome are high; as a result, the standard for C closure is relatively loose [*c.f.* @houghton_terrestrial_2020]. 
+The one instance where the C budgets doesn’t close is likely due to differences in the representation of forest types (*i.e.*, disproportionate representation of US Pacific NW for  $B_{root-coarse}$ relative to  $B_{root}$; Fig. `r diagram_TeN_mature`) rather than issues of methodological accuracy. 
+The overall high degree of closure implies that *ForC* gives an at least roughly consistent picture of C cycling within biomes for mature forests. 
+This is an important and useful test, because it allows for consistency checks within the C cycle, for example leveraging separate and independently-measured fluxes to constrain errors in another [@phillips_value_2017; @williams_impacts_2014; @harmon_heterotrophic_2011], or producing internally consistent global data products [@wang_golum-cnp_2018]. 
+
+In contrast, age trends for young forests generally remain less clearly defined, in large part because their data records remain somewhat sparse for most variables (*i.e.*, have low representation of different geographical regions for any given age). 
+While this analysis provides a first analysis of age trends in forest C cycling for multiple variables at a global scale, improved resolution of these trends will require additional data.
+
+There are of course notable holes in the ForC variable coverage that limit the scope of our inferences here. 
+Notably, *ForC* currently has sparse--if any--coverage of fluxes to herbivores and higher consumers, along with the woody mortality ($M_{woody}$) and dead wood stocks (Table 1, Figs. `r DW_tot_fig`-`r DW_down_fig`). 
+*ForC* does not include soil carbon, which is covered by other efforts [e.g., @kochy_global_2015]. 
+*ForC* is not intended to replace databases that are specialized for particular parts of the C cycle analyses, e.g., aboveground biomass [@spawn_harmonized_2020], land-atmosphere fluxes [@baldocchi_fluxnet_2001], soil respiration [@jian_restructured_2020], or the human footprint in global forests [@magnani_human_2007].
+
+Importantly, *ForC* and the analyses presented here cover the forests that have received research attention, which are not a representative sample of the world's existing forests--geographically or in terms of human impacts [@martin_mapping_2012].
+Geographically, all variables are poorly covered in Africa and Siberia (Fig. `r figure_map`), a common problem in the carbon-cycle community [@xu_contribution_2016; @schimel_effect_2015]. 
+In terms of human impacts, research efforts tend to focus on interior forest ecosystems [@martin_mapping_2012], often in permanently protected areas [e.g., @davies_forestgeo_2021].
+Studies of regrowth forests tend to focus on sites where recurring anthropogenic disturbance is not a confounding factor.
+Yet, fragmentation and degradation impact a large and growing proportion of Earth's forests [@fao_and_unep_state_2020].
+Fragmentation and the creation of edges strongly impacts forest C cycling [e.g., @chaplin-kramer_degradation_2015; @remy_strong_2016; @reinmann_edge_2017; @smith_evidence_2019; @reinmann_urbanization_2020;  @ordway_carbon_2020].
+Partial logging and other forms of non- stand clearing anthropogenic disturbance also strongly impact forest C cycling [e.g., @huang_long-term_2010; @piponiot_carbon_2016] but are under-studied [@sist_tropical_2015] and excluded from this analysis. 
+Fragmented and degraded forests do not fit the idealized conceptual framework around which this review is structured (Fig. `r schematic`), yet their representation in models, sustainability assessments, and C accounting systems is critical to accurate accounting of C cycling in Earth's forests [e.g., @huang_long-term_2010; @reinmann_edge_2017; @smith_evidence_2019; @piponiot_can_2019]. 
+Additional research and synthesis are needed to fill critical gaps in our understanding of forest C cycling [e.g., @sist_tropical_2015].
 
 ### Relevance for climate change prediction and mitigation
 
@@ -632,6 +639,7 @@ Generally speaking, the conservation of mature forests will yield greater climat
 
 ## Acknowledgements
 Thanks to all researchers whose data are included in *ForC* and this analysis, to Jennifer McGarvey and Ian McGregor for help with the database, and to Norbert Kunert for helpful discussion.
+Three anonymous reviewers provided helpful feedback. 
 Funding sources included a Smithsonian Scholarly Studies grant to KAT and HML and a Smithsonian Working Land and Seascapes grant to KAT.
 
 ## Data availability statement

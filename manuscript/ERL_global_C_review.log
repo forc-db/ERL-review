@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  23 JAN 2021 11:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 JAN 2021 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,7 +867,7 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8] [9] [10]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 694.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 700.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -878,7 +878,7 @@ File: tables_figures/C_cycle_diagrams/Tropical_broadleaf_MATURE.jpeg Graphic fi
 le (type jpg)
 <use tables_figures/C_cycle_diagrams/Tropical_broadleaf_MATURE.jpeg>
 Package pdftex.def Info: tables_figures/C_cycle_diagrams/Tropical_broadleaf_MAT
-URE.jpeg  used on input line 709.
+URE.jpeg  used on input line 716.
 (pdftex.def)             Requested size: 585.3669pt x 405.98816pt.
 <tables_figures/C_cycle_diagrams/Temperate_broadleaf_MATURE.jpeg, id=110, 2396.
 955pt x 1649.16125pt>
@@ -886,7 +886,7 @@ File: tables_figures/C_cycle_diagrams/Temperate_broadleaf_MATURE.jpeg Graphic f
 ile (type jpg)
 <use tables_figures/C_cycle_diagrams/Temperate_broadleaf_MATURE.jpeg>
 Package pdftex.def Info: tables_figures/C_cycle_diagrams/Temperate_broadleaf_MA
-TURE.jpeg  used on input line 718.
+TURE.jpeg  used on input line 725.
 (pdftex.def)             Requested size: 650.40508pt x 447.49394pt.
 [12
 
@@ -900,7 +900,7 @@ File: tables_figures/C_cycle_diagrams/Temperate_conifer_MATURE.jpeg Graphic fil
 e (type jpg)
 <use tables_figures/C_cycle_diagrams/Temperate_conifer_MATURE.jpeg>
 Package pdftex.def Info: tables_figures/C_cycle_diagrams/Temperate_conifer_MATU
-RE.jpeg  used on input line 727.
+RE.jpeg  used on input line 734.
 (pdftex.def)             Requested size: 650.41972pt x 441.40422pt.
 
 Overfull \vbox (29.18921pt too high) has occurred while \output is active []
@@ -912,60 +912,60 @@ File: tables_figures/C_cycle_diagrams/Boreal_conifer_MATURE.jpeg Graphic file (
 type jpg)
 <use tables_figures/C_cycle_diagrams/Boreal_conifer_MATURE.jpeg>
 Package pdftex.def Info: tables_figures/C_cycle_diagrams/Boreal_conifer_MATURE.
-jpeg  used on input line 736.
+jpeg  used on input line 743.
 (pdftex.def)             Requested size: 650.40073pt x 446.02794pt.
 
 Overfull \vbox (33.81293pt too high) has occurred while \output is active []
 
 [15 <./tables_figures/C_cycle_diagrams/Boreal_conifer_MATURE.jpeg>]
-<tables_figures/age_trends/for_ERL_review/Flux_age_trends.jpeg, id=136, 385.44p
+<tables_figures/age_trends/for_ERL_review/Flux_age_trends.jpeg, id=136, 361.35p
 t x 361.35pt>
 File: tables_figures/age_trends/for_ERL_review/Flux_age_trends.jpeg Graphic fil
 e (type jpg)
 <use tables_figures/age_trends/for_ERL_review/Flux_age_trends.jpeg>
 Package pdftex.def Info: tables_figures/age_trends/for_ERL_review/Flux_age_tren
-ds.jpeg  used on input line 775.
-(pdftex.def)             Requested size: 385.43906pt x 361.34912pt.
+ds.jpeg  used on input line 782.
+(pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
 [16
 
 ]
-<tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg, id=141, 385.4
-4pt x 361.35pt>
+<tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg, id=141, 361.3
+5pt x 361.35pt>
 File: tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg Graphic f
 ile (type jpg)
 <use tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg>
 Package pdftex.def Info: tables_figures//age_trends/for_ERL_review/Stock_age_tr
-ends.jpeg  used on input line 797.
-(pdftex.def)             Requested size: 385.43906pt x 361.34912pt.
+ends.jpeg  used on input line 808.
+(pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
 [17 <./tables_figures/age_trends/for_ERL_review/Flux_age_trends.jpeg>]
-<tables_figures/stacked_age_trends/age_trends_all.png, id=147, 702.7053pt x 802
+<tables_figures/stacked_age_trends/age_trends_all.png, id=148, 702.7053pt x 802
 .9197pt>
 File: tables_figures/stacked_age_trends/age_trends_all.png Graphic file (type p
 ng)
 <use tables_figures/stacked_age_trends/age_trends_all.png>
 Package pdftex.def Info: tables_figures/stacked_age_trends/age_trends_all.png  
-used on input line 820.
+used on input line 831.
 (pdftex.def)             Requested size: 469.75932pt x 536.75275pt.
 [18 <./tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg>] [19 <.
 /tables_figures/stacked_age_trends/age_trends_all.png (PNG copy)>] [20] [21] [2
-2] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2078.
-[36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2078.
+2] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2188.
+[37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2188.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2078.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2078.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2188.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2188.
  ) 
 Here is how much of TeX's memory you used:
- 16207 strings out of 492616
- 242427 string characters out of 6129482
- 410966 words of memory out of 5000000
+ 16222 strings out of 492616
+ 242747 string characters out of 6129482
+ 411446 words of memory out of 5000000
  19483 multiletter control sequences out of 15000+600000
- 64396 words of font info for 129 fonts, out of 8000000 for 9000
+ 64480 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,14n,41p,1108b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+ 39i,14n,41p,1170b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-d
 ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/
 dvips/lm/lm-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
@@ -986,10 +986,10 @@ c/lm/lmss8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (36 pages, 3616738 bytes).
+Output written on ERL_global_C_review.pdf (37 pages, 3687205 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
- 212 named destinations out of 1000 (max. 500000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 504 compressed objects within 6 object streams
+ 225 named destinations out of 1000 (max. 500000)
  14550 words of extra memory for PDF output out of 17280 (max. 10000000)
 
