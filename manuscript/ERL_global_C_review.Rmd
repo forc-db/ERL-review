@@ -219,16 +219,16 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 Forest ecosystems are shaping the course of climate change through their influence on atmospheric carbon dioxide [CO~2~; @bonan_forests_2008; @friedlingstein_global_2019; @ipcc_global_2018].
 Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climatecarbon_2006; @krause_large_2018; @bonan_model_2019; @di_vittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011] can be traced to lack of understanding on how C cycling varies across forest types and in relation to stand history.
 This requires accessible, comprehensive, and large-scale databases with global coverage, which runs contrary to the traditional way forest C stocks and fluxes have been measured and published.
-Large-scale synthesis is critical to benchmarking model performance with global data (Clark et al 2017, Luo et al 2012), quantifying the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], and using book-keeping methods to quantify actual or potential exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
+Large-scale synthesis is critical to benchmarking model performance with global data [@clark_field_2017; @luo_framework_2012], quantifying the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], and using book-keeping methods to quantify actual or potential exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
 
 ### Forests in the global C cycle: current and future
 
 A robust understanding of forest impacts on global C cycling is essential. 
 Total annual photosynthesis in forests (gross primary productivity, $GPP$) is estimated at >69 Gt C yr^-1^ [@badgley_terrestrial_2019], more than seven times the average annual fossil fuel emissions during 2009-2018 [9.5 $\pm$ 0.5 Gt C yr^-1^; @friedlingstein_global_2019].
 Most of this enormous C uptake is counterbalanced by releases to the atmosphere through ecosystem respiration ($R_{eco}$) and fire, with forests globally dominant as sources of both soil respiration [@warner_spatial_2019] and fire [@van_der_werf_global_2017].
-In recent years, total forest C uptake has exceeded releases, such that globally forests have been a C sink.
+In recent years, total forest C uptake has exceeded releases, such that globally forests have been a C sink [@harris_global_2021].
 Considering only areas remaining in forest, this C sink has averaged 3.2 $\pm$ 0.6 Gt C yr^-1^ for 2009-2018, offsetting 29% of anthropogenic fossil fuel emissions [@friedlingstein_global_2019].
-However, deforestation, estimated at ~1 Gt C yr^-1^ in recent decades [@pan_large_2011; @tubiello_carbon_2020], reduces the net forest sink to ~1.1-2.2 Gt C yr^-1^ [@friedlingstein_global_2019].
+However, deforestation, estimated at ~1 Gt C yr^-1^ in recent decades [@pan_large_2011; @tubiello_carbon_2020], reduces the net forest sink to ~1.1-2.2 Gt C yr^-1^ [@friedlingstein_global_2019; @harris_global_2021].
 
 The future of the current forest C sink is dependent both upon forest responses to climate change itself and human land use decisions, which will feedback and strongly influence the course of climate change. 
 Regrowing forests in particular will play an important role [@pugh_role_2019], as almost two-thirds of the world’s forests were secondary as of 2010 [@fao_global_2010].
@@ -633,10 +633,6 @@ The C data in *ForC*, as summarized here, will be valuable to these efforts.
 Notably, the fact that tropical forests tend to have both the highest rates of C sequestration in young stands [Fig. `r stock_age_trends`; @cook-patton_mapping_2020], fueled by their generally high C flux rates (Table 1; Fig. `r flux_age_trends`), and the highest mean biomass [Fig. `r stock_age_trends`; Table `r variables_table`; @hu_mapping_2016; @jian_restructured_2020] reinforces the concept that conservation and restoration of these forests is a priority for climate change mitigation, along with high-biomass old-growth temperate stands [@grassi_key_2017; @goldstein_protecting_2020].
 It is also important to note the trade-off in climate mitigation potential of restoration of young forests, with high rates of CO~2~ sequestration [$NEP$; @cook-patton_mapping_2020], versus conservation and management of mature forests, with low $NEP$ but high C stocks that could not be recovered on a time scale relevant to climate change mitigation [@goldstein_protecting_2020].
 Generally speaking, the conservation of mature forests will yield greater climate benefits [@anderson-teixeira_greenhouse_2011], but both approaches are critical to avoiding catastrophic climate change [@ipcc_global_2018].
-
-###  Citations to add
-
-@harris_global_2021
 
 ## Acknowledgements
 Thanks to all researchers whose data are included in *ForC* and this analysis, to Jennifer McGarvey and Ian McGregor for help with the database, and to Norbert Kunert for helpful discussion.
