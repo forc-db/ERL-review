@@ -34,7 +34,7 @@ The most substantive changes included the following:
 - Changed the figure set in accordance with comments from R3. Specifically, we
 (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review
 (2) added a figure synthesizing changes in fluxes through time for each biome;
-(3) removed maps from age trend diagrams (available in SI) from age trend diagrams, which makes the figures less busy/ easier to read; and
+(3) removed maps from age trend diagrams (maps still available in SI), which makes the figures less busy/ easier to read; and
 (4) moved C cycle diagrams for young forests to SI; 
 
 - Improved conceptual framework and "review" nature of the work by adding background information to the introduction, including the schematic figure mentioned above. We also shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness.
@@ -166,17 +166,21 @@ Finally, I wondered about the interacting effects of changing climate (rising CO
 
 Second, I had some questions about the representativeness of the dataset. While I appreciate that the authors choose to use distinct geographic areas as the unit of analysis (avoiding some issues of pseudo-replication from many observations from a single site), I still wondered about the extent to which the distinct geographic areas were representative of the climate space within each biome. For example, if mean annual climate versus presentation for all boreal, temperate and tropical locations are shown in a scatterplot (for example, using reanalysis data), and then mean annual temperature and precipation of the observations are shown on top, how much of the “climate space” is covered by the dataset?
 
-*[Issue #57](https://github.com/forc-db/ERL-review/issues/57)*
+**An analysis of this type would need to be fairly involved, including a separate analysis for each variable. While do-able (we have previously published a plot similar to that described for the entire database), such an analysis would only begin to cover important aspects of representativeness (MAT and MAP, but not seasonality, soils, floristic composition, etc.). We feel that, in this case, the insights gained from the analysis would not justify the strain on time and resources that it would require. We have, however, given additional attention to the issue of representativeness in the revision. Specifically, we have done the following:**
+
+- **Set the stage for discussion of within-biome variability by including error bars on our schematic figure (Fig. 1).**
+
+- **Ensured that the issue is clearly and transparently presented in the figures--for example, by adding the following statement to the captions of Figures 3-6 (formerly 2-5): "Note that variables differ in geographical representation, resulting in potential imbalances (Figs. S5-S30). Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented." ** 
+
+- **Revisited our presentation of representativeness issues in the results and discussion, revising text to ensure clear communication of the concept that biomed differences were influenced by geographical representation within the biome. For example, our discussion of stock differences across biome differences now reads: "...For $B_{tot}$ and $B_{ag}$, tropical broadleaf forests had the highest mean biomass and boreal forests the lowest, with temperate broadleaf and needleleaf ($B_{ag}$ only) intermediate. However, maximum values for stocks including live or standing woody biomass ($B_{tot}$, $B_{ag}$, $B_{ag-wood}$, $B_{root}$, $B_{root_coarse}$, $DW_{tot}$, $DW_{standing}$) consistently occurred in temperate biomes (Figs. 1, 8, S20-S30). For variables that were disproportionately sampled in such high-biomass forests ($B_{ag-wood}$, $B_{foliage}$, and $B_{root-coarse}$; disproportionately sampled in  the US Pacific Northwest), temperate conifer forests had significantly higher stocks than the other biomes."**
+
 
 Third, I found the presentation of the results made it difficult to see clearly the major differences in C fluxes and pools across biomes and age classes. The illustrated C budgets (the majority of the figures, 8 in total) are visually very appealing, but the reader has to do a lot of flipping back and forth to see how any particular flux or pool varies across biomes and age class. Figure 6 is more synthetic, but each panel is very small and the differences from one group to the next are hard to see. It is also difficult to compare results for young forests (as scatterplots) with the box plots for the mature forests.  My advice is to move some of the budgets to SI, and include in the main manuscript more figures that clearly illustrate the most interesting trends with biome, and to allow an expansion of the results in Figure 6 (for example, by first showing scatterplots of all forests, young and old, as a function of stand age), and then perhaps another that is a box plot comparison of mature versus old forests in each biome.
 
-- *move young forest C budgets to SI?*
+**We have done a major re-arrangment of figures, including the following: (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review; (2) added a figure synthesizing changes in fluxes through time for each biome; (3) removed maps from age trend diagrams (maps still available in SI), which makes the figures less busy/ easier to read; and (4) moved C cycle diagrams for young forests to SI. The result is that (1) the main manuscript contains only the more informative illustrated C budgets (mature forests); (2) the figures showing age trends and biome differences in 6 C flux and stock variables (Figs. 7-8, formerly 6-7) are much easier to read; and (3) the new figure 9 provides an overall synthesis of results, focusing on the most trusted variables.**
 
-- *remove maps from age trend figures?*
+**Regarding the suggestion of showing age of old forests as a scatterplot, this is unfortunately not possible give unknown ages of most mature tropical forests, as explained above.**
 
-**Regarding the suggestion of showing age of old forests as a scatterplot, this is not possible give unknown ages of most mature tropical forests, as explained above.**
-
-**Regarding the proposed figure rearrangement, ...** *[issue #58](https://github.com/forc-db/ERL-review/issues/58)*
 
 A few other comments:
 
@@ -184,15 +188,13 @@ Page 6, first paragraph: I wondered about the extent to which filtering the data
 
 The binary age classification (two ages, less than 100 years or greater than 100 years) was difficult to accept, as forests that are in the 80-100 year age range are often considered to be mature (at least in the temperate zone). I realize that even with a dataset as rich as For C, data availability will limit stratification into too many bins. Nonetheless, at least for some measurements, I wonder if it's possible to consider a greater number of age classes (for example, young, maturing, and mature).
 
-*No changes here; just respond....*
+**We prefer not to separate forests of known age into categories, but rather to represent age as a continuous variable, when possible. In large part this is motivated by the fact that appropriate age thresholds for various categories would vary across biomes, given differences in biomass accumulation rates. While our ideal would be to have no categorical divisions, unknown stand ages--particularly in the tropics--force us to divide the data into the categories used here.**
 
-**We prefer not to separate forests of known age into categories, but rather to represent age as a continuous variable. ...** 
+**To provide a better representation of age trends, we created new figure 9. Although it does not break forests into additional age categories, it does address what seems to be at the core of this concern, which is a concise representation of differences across the full range of stand ages.**
 
 The consistency check (e.g. do component fluxes/pools sum to within one standard deviation of the aggregate flux or pool) seems like it is destined to provide a favorable assessment of the degree of closure so long as the data within each grouping represent a wide range of natural climatic and soil variability. As long as the aggregate variable has a large standard deviation, the results are likely guaranteed to be “consistent.” It seems this metric would benefit from some simulations (perhaps with artificially generated data) to understand exactly how poor closure needs to be at the site-level to generate an inconsistent results when aggregated across sites.
 
-*(No! Too much work!)*
-
-*I'm inclined to place less--not more--emphasis on representativeness: [Issue #60](https://github.com/forc-db/ERL-review/issues/60) *
+**We agree that such an analysis would be valuable, but time and resource constraints place it beyond the scope of what is currently feasible in this already very large analysis. We believe that the current consistency check is valuable as a first pass for identifying cases of extreme mis-matches, and therefore retain it as is. However, we agree that it is not the ideal test, and that it is not very stringent (given high standard deviations) and have therefore toned down claims that the budgets are "closed"/"internally consistent" throughout the manuscript (e.g., removed from abstract). We note that the discussion already stated that our criteria for closure was relatively loose (and this statement is unchanged in the revised version): "On the other, however, *ForC* derives data from multiple heterogeneous sources, and standard deviations within each biome are high; as a result, the standard for C closure is relatively loose [*c.f.* @houghton_terrestrial_2020]."** 
 
 # Referee: 4
 
