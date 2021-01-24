@@ -338,6 +338,7 @@ In total, this resulted in `r records_eligible_for_inclusion` records (`r round(
 
 We selected 23 annual flux and 11 C stock variables for inclusion in the analysis (Table 1).
 These different flux and stock variables represent different pools (e.g., aboveground biomass, root biomass, dead wood) and levels of combination (e.g., total net primary productivity, $NPP$, versus the individual elements of $NPP$ such as foliage, roots, and branches). 
+We did not analyze soil carbon, which is not a focus of the *ForC* database.
 Note that two flux variables, aboveground heterotropic respiration ($R_{het-ag}$) and total respiration ($R_{het}$), were included for conceptual completeness but had no records in *ForC* (Table 1).
 Records for our focal variables represented `r round(n_focal_variable_records_eligible_for_inclusion/records_eligible_for_inclusion*100,digits=1)`% of the total records eligible for inclusion.
 For this analysis, we combined some of ForC’s specific variables into more broadly defined variables. 
@@ -495,7 +496,7 @@ Summed regression equations for $R_{soil-het}$ and $R_{root}$ were generally ver
 We calculated $R_{auto-ag}$ as the difference between $R_{eco}$ and $R_{soil}$ (except for tropical forests, which had insufficient $R_{eco}$ data), effectively guaranteeing near-closure of the CO~2~ efflux (respiration) portion of the budget (negative values in Figs. `r age_trends_all`).
 In contrast, the  CO~2~ influx portion of the budget generally did not "close": the sum of $R_{auto}$ ($R_{root}+R_{auto-ag}$, as described above) and components of $NPP$ consistently fell short of $GPP$, particularly in in young stands (range across forest types and ages: 0.9-7.6 Mg C ha^-1^ yr^-1^).
 Moreover, there was not consistent budget closure among the components of $NPP$, and substantially different age trends resulting from the sum of components versus total $NPP$ (Figs. `r age_trends_all`).
-ALthough age trends of young forests often converged towards mature forest averages, there were also some  discrepancies between young forest trends and mature forest averages (Figs. `r flux_age_trends`, `r age_trends_all`, `r all_age_trends`), most notably including a tendency for higher fluxes in regrowth boreal forests than in their mature counterparts (Fig. `r age_trends_all`).
+Although age trends of young forests often converged towards mature forest averages, there were also some  discrepancies between young forest trends and mature forest averages (Figs. `r flux_age_trends`, `r age_trends_all`, `r all_age_trends`), most notably including a tendency for higher fluxes in regrowth boreal forests than in their mature counterparts (Fig. `r age_trends_all`).
 
 In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. `r stock_age_trends`, `r all_stock_age_trends`).
 All of these displayed a significant overall increase with with $log10[stand.age]$.
@@ -515,13 +516,11 @@ Again, there were some discrepencies between young forest trends and mature fore
 *ForC* v3.0 provided unprecedented coverage of most major variables, yielding a broad picture of C cycling in the world's major forest biomes.
 Carbon cycling rates generally increased from boreal to tropical regions and with stand age (Figs. `r schematic`, `r all_age_trends`).
 Specifically, most C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. `r schematic`, `r flux_age_trends`- `r stock_age_trends`, `r age_trends_all`).
-The notable exception was mature forest $NEP$, which, as the difference between $GPP$ and $R_{eco}$, was indistinguishable across biomes (Fig. `r flux_age_trends`f).
-There was also little directional variation in mean mature forest C stocks across biomes, although maximum values for the majority of stocks (all including live or standing woody biomass) occurred in temperate biomes (Figs. `r schematic`, `r `all_diagrams_mature`, `r stock_age_trends`).
+The notable exception was mature forest $NEP$, which, as the difference between $GPP$ and $R_{eco}$, was statistically indistinguishable across biomes (Fig. `r flux_age_trends`f).
+There was also little directional variation in mean mature forest C stocks (biomass, dead wood, and organic layer) across biomes, although maximum values for the majority of stocks (all including live or standing woody biomass) occurred in temperate biomes (Figs. `r schematic`, `r all_diagrams_mature`, `r stock_age_trends`).
 Consistent with theory and previous studies (Fig. `r schematic`), the majority of flux variables, together with most live biomass pools, increased significantly with stand age (Table 1; Figs. `r flux_age_trends`- `r age_trends_all`, `r all_age_trends`).
 Together, these results indicate that, moving from cold to tropical climates and from young to old stands, there is a general acceleration of C cycling, whereas C stocks and $NEP$ of mature forests, which are defined by the differences between in- and out- fluxes, do not vary systematically across biomes.
 Together, these results refine and expand out understanding of C cycling in mature forests, while providing the first global-scale analysis of age trends in multiple forest C stocks and fluxes (Figs. `r age_trends_all`). 
-
-
 
 ### C cycling across biomes
 
@@ -530,14 +529,15 @@ For mature forests, this is consistent with a large body of previous work demons
 This consistency is not not surprising, particularly given commonality in the data analyzed or used for calibration.
 The finding that these patterns hold consistently across across numerous fluxes, while unsurprising, is novel to this analysis [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
 
-The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$, which showed no significant differences across biomes (Fig. `r flux_age_trends`f).
+The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$, which showed no significant differences across biomes, albeit with the highest mean in temperate broadleaf forests (Fig. `r flux_age_trends`f).
 Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem (Fig. `r schematic`).
-$NEP$ tends to be relatively small in mature forest stands (discussed further below), which accumulate carbon slowly relative to younger stands, if at all [@luyssaert_old-growth_2008; @amiro_ecosystem_2010; @besnard_quantifying_2018].
+$NEP$ tends to be relatively small in mature forest stands, which accumulate carbon slowly relative to younger stands (discussed further below), if at all [Fig. `r schematic`; @luyssaert_old-growth_2008; @amiro_ecosystem_2010; @besnard_quantifying_2018].
 It is therefore unsurprising that there are no pronounced differences across biomes [in agreement with @luyssaert_co2_2007], suggesting that variation in $NEP$ of mature forests is controlled less by climate and more by other factors including moderate disturbances [@curtis_forest_2018] or disequilibrium of $R_{soil}$ relative to C inputs [e.g., in peatlands where anoxic conditions inhibit decomposition; @wilson_stability_2016].
+The fact that mature temperate broadleaf forests have a higher mean than the other biomes may reflect the fact that most of these forests are older secondary forests that, while classified here as mature, are still accumulating carbon [@curtis_forest_2018].
 
 In contrast to the patterns observed for $NEP$ in mature stands, $NEP$ of stands between 20 and 100 years of age varied across biomes, being lowest in boreal forests, intermediate in temperate broadleaf forests, and highest in temperate conifer forests (with insufficient data to assess tropical forests; Figs. `r flux_age_trends`, `r NEP_fig`).
 This is consistent with findings that live biomass accumulation rates (*e.g.*, $\Delta B_{ag}$ or $\Delta B_{tot}$) during early secondary succession decrease with latitude [Figs. 7a, S16-S22; @anderson_temperature-dependence_2006; @cook-patton_mapping_2020]. 
-Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon, and biome differences in the accumulation rates of these variables have not been detected, in part because these variables do not consistently increase with stand age [Figs. `r stock_age_trends`, `r DW_tot_fig`-`r OL_fig`, and see discussion below; @cook-patton_mapping_2020].
+Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon (not analyzed here), and biome differences in the accumulation rates of these variables have not been detected, in part because these variables do not consistently increase with stand age [Figs. `r schematic`, `r stock_age_trends`, `r DW_tot_fig`-`r OL_fig`, and see discussion below; @cook-patton_mapping_2020].
 
 For regrowth forests, little is known about cross-biome differences in carbon fluxes, and we are not aware of any previous large-scale comparisons of C fluxes that have been limited to regrowth forests. 
 Thus, this analysis was the first to examine flux trends in regrowth forests across biomes.
@@ -600,7 +600,9 @@ Yet, fragmentation and degradation impact a large and growing proportion of Eart
 Fragmentation and the creation of edges strongly impacts forest C cycling [e.g., @chaplin-kramer_degradation_2015; @remy_strong_2016; @reinmann_edge_2017; @smith_evidence_2019; @reinmann_urbanization_2020;  @ordway_carbon_2020].
 Partial logging and other forms of non- stand clearing anthropogenic disturbance also strongly impact forest C cycling [e.g., @huang_long-term_2010; @piponiot_carbon_2016] but are under-studied [@sist_tropical_2015] and excluded from this analysis. 
 Fragmented and degraded forests do not fit the idealized conceptual framework around which this review is structured (Fig. `r schematic`), yet their representation in models, sustainability assessments, and C accounting systems is critical to accurate accounting of C cycling in Earth's forests [e.g., @huang_long-term_2010; @reinmann_edge_2017; @smith_evidence_2019; @piponiot_can_2019]. 
-Additional research and synthesis are needed to fill critical gaps in our understanding of forest C cycling [e.g., @sist_tropical_2015].
+Finally, plantation forests account for approximately 3% of Earth's forests [@fao_and_unep_state_2020] but are not included in this analysis. 
+While it is known that these tend to accumulate biomass faster than naturally regenerating forests [@anderson_temperature-dependence_2006; @bonner_meta-analytical_2013], their global scale C cycling patterns remain less clearly understood [c.f. @cook-patton_mapping_2020].
+Additional research and synthesis are needed to fill these critical gaps in our understanding of forest C cycling.
 
 ### Relevance for climate change prediction and mitigation
 
