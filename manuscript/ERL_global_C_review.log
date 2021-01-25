@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 JAN 2021 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 JAN 2021 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -957,13 +957,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2220.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2220.
  ) 
 Here is how much of TeX's memory you used:
- 16219 strings out of 492616
- 242745 string characters out of 6129482
- 412213 words of memory out of 5000000
+ 16221 strings out of 492616
+ 242761 string characters out of 6129482
+ 412211 words of memory out of 5000000
  19480 multiletter control sequences out of 15000+600000
- 64395 words of font info for 129 fonts, out of 8000000 for 9000
+ 64479 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,14n,41p,1178b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,14n,41p,1176b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2019/texmf-dist/
@@ -985,7 +985,7 @@ c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (38 pages, 3684830 bytes).
+Output written on ERL_global_C_review.pdf (38 pages, 3684836 bytes).
 PDF statistics:
  576 PDF objects out of 1000 (max. 8388607)
  501 compressed objects within 6 object streams

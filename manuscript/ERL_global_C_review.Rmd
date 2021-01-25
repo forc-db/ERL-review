@@ -67,11 +67,6 @@ variables_table=1
 
 #figures
 schematic =1
-schematic_fluxes_biome="1a"
-  schematic_fluxes_age="1b"
-  schematic_stocks_biome="1c"
-  schematic_stocks_age="1d"
-  schematic_fs_age = "1b,d"
 figure_map=2
 diagram_TrB_mature= 3
 diagram_TeB_mature=4
@@ -258,8 +253,8 @@ Following these additions, *ForC* currently contains `r nrow(ForC_measurements)`
 
 Forest C cycling varies enormously across biomes, which cateogrize the world's forests according to major differences in climate, vegetation, *etc.* 
 Since the early 19th century, it has been recognized that climate plays a dominant role in shaping differences among forests on a global scale [@humboldt_essay_1807; @holdridge_determination_1947].
-Global scale data syntheses have shown that C fluxes including $GPP$, net primary productivity ($NPP$), and soil respiration ($R_{soil}$) decrease with latitude or, correspondingly, increase with mean annual temperature [Fig. `r schematic_fluxes_biome`; e.g., @lieth_primary_1973;  @luyssaert_co2_2007; @hursh_sensitivity_2017; @banbury_morgan_global_nodate].
-C stocks of mature forests show less directional variation (Fig. `r schematic_fluxes_biome`).
+Global scale data syntheses have shown that C fluxes including $GPP$, net primary productivity ($NPP$), and soil respiration ($R_{soil}$) decrease with latitude or, correspondingly, increase with mean annual temperature [Fig. `r schematic`; e.g., @lieth_primary_1973;  @luyssaert_co2_2007; @hursh_sensitivity_2017; @banbury_morgan_global_nodate].
+C stocks of mature forests show less directional variation (Fig. `r schematic`).
 On average, aboveground biomass ($B_{ag}$) tends to decrease with latitude, but not as dramatically as fluxes, and with the highest $B_{ag}$ forests in relatively cool, moist temperate regions [@keith_re-evaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
 In contrast, standing and downed dead wood ($DW_{standing}$ and $DW_{down}$, respectively, summing to $DW_{tot}$) and the organic layer ($OL$) tend to accumulate more in colder climates where decomposition is slow relative to $NPP$ [@harmon_ecology_1986; @allen_global_2002].
 
@@ -301,10 +296,7 @@ Our goal is to provide a comprehensive synthesis on broad trends in forest C cyc
 
   knitr::include_graphics("tables_figures/World_Map_records_in_Biomes.png")
 ```
----
-nocite: | 
-@jung_exploiting_2006
----
+
 
 ## Methods/ Design
 ```{r eval=FALSE, echo=FALSE}
