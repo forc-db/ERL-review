@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 JAN 2021 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 JAN 2021 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,11 +866,12 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 616.
+[8] [9] [10]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 702.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [8] [9] [10] [11]
+) [11]
 <tables_figures/C_cycle_diagrams/Tropical_broadleaf_MATURE.jpeg, id=108, 2400.9
 7pt x 1665.22125pt>
 File: tables_figures/C_cycle_diagrams/Tropical_broadleaf_MATURE.jpeg Graphic fi
@@ -958,8 +959,8 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2220.
  ) 
 Here is how much of TeX's memory you used:
  16221 strings out of 492616
- 242761 string characters out of 6129482
- 412211 words of memory out of 5000000
+ 242763 string characters out of 6129482
+ 412213 words of memory out of 5000000
  19480 multiletter control sequences out of 15000+600000
  64479 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -985,7 +986,7 @@ c/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (38 pages, 3684836 bytes).
+Output written on ERL_global_C_review.pdf (38 pages, 3684793 bytes).
 PDF statistics:
  576 PDF objects out of 1000 (max. 8388607)
  501 compressed objects within 6 object streams
