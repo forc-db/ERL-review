@@ -88,7 +88,7 @@ TeB_mature_caption = paste( "Figure 4 | C cycle diagram for mature temperate bro
 TeN_mature_caption = paste( "Figure 5 | C cycle diagram for mature temperate conifer forests. ", schematics_caption_generic, "The temperate conifer biome in particular is subject to high variability, with highest fluxes and stocks in the high-biomass forests of the US Pacific Northwest. An asterisk after a variable name indicates lack of C cycle closure.")  
 BoN_mature_caption = paste( "Figure 6 | C cycle diagram for mature boreaal conifer forests. ", schematics_caption_generic)  
 
-age_trends_all_caption= "Figure 9 | Age trends in C cycling. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows. For all forests: $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$, $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$, $DW_{standing}=max(0, DW_{tot}-DW_{down})$. For tropical forests: $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$, $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$ and $CUE$=0.46 (Collati et al. 2020). for non-tropical forests: $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$, $R_{auto-ag}=R_{eco}-R{soil}$, . Note that there remain substantial uncertainties as to the functional form of age trends and discrepencies in closure among related variables."
+age_trends_all_caption= "Figure 9 | Age trends in C cycling. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Error bars on mature forest flux estimates indicate $\\pm$ 1 standard deviation. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows. For all forests: $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$, $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$, $DW_{standing}=max(0, DW_{tot}-DW_{down})$. For tropical forests: $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$, $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$ and $CUE$=0.46 (Collati et al. 2020). For non-tropical forests: $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$, $R_{auto-ag}=R_{eco}-R{soil}$. Note that there remain substantial uncertainties as to the functional form of age trends and discrepencies in closure among related variables."
 
 
 #SI
@@ -647,6 +647,7 @@ Three anonymous reviewers provided helpful feedback.
 Funding sources included a Smithsonian Scholarly Studies grant to KAT and HML and a Smithsonian Working Land and Seascapes grant to KAT.
 
 ## Data availability statement
+The data that support the findings of this study are openly available.
 Materials required to fully reproduce these analyses, including data, R scripts, and image files, are archived in Zenodo (DOI: TBD].
 Data, scripts, and results presented here are also available through the open-access *ForC* GitHub repository (https://github.com/forc-db/ForC), where many will be updated as the database develops.
 

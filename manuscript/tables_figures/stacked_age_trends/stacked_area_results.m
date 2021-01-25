@@ -227,6 +227,7 @@ fluxes = [in_fluxes; -1*out_fluxes];
 % 1.2.1 define mature fluxes 
 NEP_index=find(strcmp(ForC_variable_averages.variable_diagram,'NEP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 NEP_mature=ForC_variable_averages.mean(NEP_index);
+NEP_std=ForC_variable_averages.std(NEP_index);
 
 R_root_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_root') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 R_root_mature=ForC_variable_averages.mean(R_root_index);
@@ -248,6 +249,7 @@ ANPP_stem_mature=ForC_variable_averages.mean(ANPP_stem_index);
 
 GPP_index=find(strcmp(ForC_variable_averages.variable_diagram,'GPP') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 GPP_mature=ForC_variable_averages.mean(GPP_index);
+GPP_std=ForC_variable_averages.std(GPP_index);
 
 R_soil_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_soil') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 R_soil_mature=ForC_variable_averages.mean(R_soil_index);
@@ -257,6 +259,7 @@ R_het_soil_mature=ForC_variable_averages.mean(R_het_soil_index);
 
 R_eco_index=find(strcmp(ForC_variable_averages.variable_diagram,'R_eco') + strcmp(ForC_variable_averages.Biome,strcat(biomes(b),' MATURE'))==2);
 R_eco_mature=ForC_variable_averages.mean(R_eco_index);
+R_eco_std=ForC_variable_averages.std(R_eco_index);
 
 % 1.2.2 calculations
 R_auto_ag_mature_calc=R_eco_mature-R_soil_mature;
@@ -378,8 +381,11 @@ if b~= 1
     plot(age, NEP, '-y', 'LineWidth', 2,'HandleVisibility','off');hold on; % eddy flux: insufficient data for tropics
 end
 plot (114, GPP_mature, 'ok', 'MarkerFaceColor', 'b'); hold on;
+errorbar(114, GPP_mature, GPP_std, 'b','HandleVisibility','off'); hold on;
 plot (114, NEP_mature, 'ok', 'MarkerFaceColor', 'y'); hold on;
+errorbar(114, NEP_mature, NEP_std, 'y','HandleVisibility','off'); hold on;
 plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
+errorbar(114, -R_eco_mature, R_eco_std, 'r','HandleVisibility','off'); hold on;
 
 %set facecolor:
     for n=1:length(mature_in_fluxes)
@@ -392,6 +398,8 @@ plot (114, -R_eco_mature, 'ok', 'MarkerFaceColor', 'r'); hold on;
     end
     h2bl.FaceColor= facecolor_out_fluxes(3,:);
 xlim([0 119])
+y_max_abs=max(GPP_mature+GPP_std, R_eco_mature+R_eco_std)+3;
+ylim([-y_max_abs y_max_abs])
 ylabel ({'\bf ',char(biomes(b)), '\rm C  fluxes (Mg C ha^{-1} yr^{-1})'})
 
 if b==4
