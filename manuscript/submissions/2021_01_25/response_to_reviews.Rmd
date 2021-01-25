@@ -1,0 +1,289 @@
+---
+title: ""
+output:
+  pdf_document:
+    fig_caption: yes
+bibliography: references.bib
+csl: environmental-research-letters.csl
+
+header-includes:  \usepackage{float}
+                  \usepackage{caption}
+                  \captionsetup[table]{font=footnotesize}
+                  \captionsetup[figure]{font=footnotesize}
+                  \captionsetup[figure]{labelformat=empty}
+                  \captionsetup[table]{labelformat=empty}
+                  \usepackage{pdflscape}
+                  \newcommand{\blandscape}{\begin{landscape}}
+                  \newcommand{\elandscape}{\end{landscape}}
+
+                  \usepackage{setspace}\onehalfspacing
+
+
+---
+\raggedright
+
+**Title:** Response to reviews
+
+Re: "Carbon cycling in mature and regrowth forests globally" by Anderson-Teixeira, Kristina; Herrmann, Valentine; Banbury Morgan , Rebecca ; Bond-Lamberty, Benjamin; Cook-Patton, Susan; Ferson , Abigail; Muller-Landau, Helene; Wang, Maria
+Article reference: ERL-109898
+
+## LETTER TO EDITOR:
+
+Dear Editor:
+
+We are please to submit a revised version of our manuscript, "Carbon cycling in mature and regrowth forests globally" (ERL-109898), for consideration for publication in *Environmental Research Letters*. We have addressed all points raised by the reviewers, as detailed below. The most substantive changes included the following:
+
+- We changed the figure set in accordance with comments from R3. Specifically, we (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review; (2) added a figure synthesizing changes in fluxes through time for each biome; (3) removed maps from age trend diagrams (maps still available in supplementary information), which makes the figures less busy/ easier to read; and (4) moved C cycle diagrams for young forests to the supplementary information.
+
+- We improved conceptual framework and "review" nature of the work by adding background information to the introduction, including the schematic figure mentioned above. We also shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness.
+
+Thank you for considering this revised version, and we look forward to your response.
+
+Sincerely,
+
+Kristina Anderson-Teixeira (on behalf of all coauthors)
+
+\newpage
+
+## REFEREE REPORT(S) & RESPONSES:
+
+# Referee: 2
+
+COMMENTS TO THE AUTHOR(S)
+
+The manuscript provides an important contribution to carbon cycle research. It provides an update to a previously published data base of forest carbon stocks and fluxes (ForC) and analyses the dataset across forests biomes and in relation to stand age. This is a valuable dataset for assessing the current state of the carbon cycle and comparing across biomes. The dataset presents carbon cycle modelers with an opportunity to rigorously compare their models with observations. Figures 2-5, 8-11 are excellent summaries of the dataset. Yet I have some concerns and clarifications that must be addressed.
+
+1. It is not clear what the various sources of data are. Perhaps this is because the authors have already described data sources in previous documentation of the dataset. However, I think some summary is needed for readers new to the dataset. I need to know what I am looking at when I see the various numbers in Figures 2-5, 8-11.
+
+**In addition to addressing the specific questions below, we have added a link to a spreadsheet recording the datasets that have been incorporated, which is maintained in the open-access GitHub repository: "A record of data sets added to *ForC* is available at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv."**
+
+a. For example, is Fluxnet the source of GPP and Reco? The authors state that "ForC amalgamates numerous intermediary data sets" (line 119) and cite Luyssaert et al (2007). Is that the source of GPP and Reco, or have the fluxes been updated to newer Fluxnet data products? Similarly for the soil respiration data. Is this the data from Bond-Lamberty and Thomson (2010) or has it been updated?
+
+**We now clarify as follows:**
+
+**FLUXNET:**
+
+**Methods: "Third, we manually incorporated records of annual $NEP$, $GPP$, and $R_{eco}$ from the FLUXNET2015 dataset [@pastorello_fluxnet2015_2020], treating these records as authoritative when they duplicated earlier records (Appendix S1)."**
+
+**Appendix S1: "For eddy-covariance variables ($NEP$, $GPP$, $R_{eco}$), we retained the record associated with the most recent publication [most often @pastorello_fluxnet2015_2020], as these data are commonly re-assessed using new analysis methods."**
+
+**SRDB:**
+
+**Methods: "First, we imported (via R script) the Global Database of Soil Respiration Database [*SRDB* v4, 9488 records; @bond-lamberty_global_2010], and corrections and improvements to *SRDB* arising from this process were incorporated in *SRDB* v5 [@jian_restructured_2020]."**
+
+b. I need information on how Figures 2-5, 8-11 were prepared. Carbon stocks and fluxes such as NPP, litterfall, etc. are probably plot data. There is a detailed discussion of how the data were filtered to remove, for example, disturbance effects (lines 140-149). The GPP, Reco, and soil respiration databases seem to me to be different and may not be collocated with the plot data. Was disturbance filtering applied to the GPP, Reco, and soil respiration databases, too?
+
+**All records analyzed here have been fully incorporated into the ForC format and treated as described. We believe this should now be clearer where we describe the importation of new datasets: "Since publication of ForC v2.0, we imported three large additional databases [SRDB, GROA, FLUXNET15] into *ForC* via a combination of R scripts and manual edits. ..."**
+
+c. If Luyssaert et al (2007) is a source of data, is there circularity in the comparison with latitudinal trends found in other datasets, for which Luyssaert et al is cited (lines 317-318)?
+
+**We don't see this as circular; we are reaffirming earlier results with an expanded dataset. To make it clear that we are not claiming to provide an independent test, we have edited this text as follows: "For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate]. This consistency is not not surprising, particularly given commonality in the data analyzed or used for calibration."**
+
+2. Figures 2-5, 8-11 are excellent summaries of the dataset. Yet there is much unexplained in the figure and the reported data values. No guidance is given on how to use the data, and especially how to resolve discrepancies in the data.
+
+a. For example, Figure 2 lists foliage and woody aboveground biomass in tropical broadleaf forests. These do not sum to aboveground biomass (3.53 + 125.42 = 128.95 Mg C/ha vs 146.69). Nor do coarse root biomass and fine root biomass sum to root biomass (23.15 + 9.29 = 32.44 vs. 21.86). Total biomass (147.96) is not the sum of aboveground (146.69) and root (21.86).
+
+**We acknowledge and discuss lack of closure in various places throughout the results and discussion. To ensure that this is clear from the figures, we have added the following statement to the captions of Figures 3-6 (formerly 2-5): "Mean component fluxes do not necessarily add up to the mean total fluxes because different sets of sites are included depending on availability of data (Figs. S5-S30)." We have also added a similar statement to the captions of Figures S1-S4 (formerly 8-11). We also make a related statement in the captions of new figures 9-12: "Note that there remain substantial uncertainties as to the functional form of age trends and discrepancies in closure among related variables."**
+
+b. Figure 4 for temperate conifer forests has large discrepancies in carbon stocks: e.g., 315.61 Mg C/ha for woody aboveground biomass, but only 167.46 for aboveground biomass and 226.58 for total biomass. The authors have a detailed discussion about lack of closure for root biomass, but do not discuss aboveground biomass. Presumably, this is because the data fall within the closure criteria, but what are we to make of the inconsistent data?
+
+**This is partially addressed by the response above, and covered in the results and discussion. In addition, to help explain the fact that lack of closure is particularly pronounced in temperate conifer forests, we have included errorbars in on the new schematic figure (Fig. 1) indicating that temperate forests have particularly high variation in C stocks.**
+
+I understand that the data comes from many different sources and so may not always be compatible and that they have large standard deviations, but how are we to interpret and use the various data entries? For example, what has higher confidence: the component variables or the aggregate variables? What is the best estimate for aboveground biomass or root biomass? The authors take great pride in that component variables sum to within one standard deviation of the aggregate variables in all but one instance (lines 225-226, 301-302, 309-310). This is somewhat remarkable! But users of the dataset need guidance on how to interpret and use the data.
+
+**We have done two things to address this comment. First, to ensure accurate interpretation, we added the following statement to the captions of Figures 3-6 (formerly 2-5): "Mean component fluxes do not necessarily add up to the mean total fluxes because different sets of sites are included depending on availability of data (Figs. S5-S30)." Second, we have added the following guidance on using the data to the discussion: "*ForC*’s tens of thousands of records are readily available in a standardized format, along with all code used in the analyses presented here, and we recommend that researchers use these resources to identify and summarize data specific the analysis at hand."**
+
+3. There is a general sloppiness to the manuscript that makes me think the authors did not proofread the manuscript carefully.
+
+**We have proofread more carefully this time.**
+
+a. Line 58: The authors say GPP is estimated to be >69 Gt C/year, and cite Badgley et al. (2019). This statement is factually correct, but is quite misleading. Badgley et al. "estimate global annual terrestrial photosynthesis to be 147 Pg C/year (95% credible interval 131-163 Pg C/year)". The value of 69 Gt C is less than one-half that reported by Badgley. What are the authors trying to say? Such a large discrepancy does not instill confidence in the other numbers reported in the manuscript.
+
+**The 147 Pg C/year figure refers to *total* annual terrestrial photosynthesis, including non-forests. Table S4 in @badgley_terrestrial_2019 breaks this down by biome. The >69 Gt C/yr figure was obtained by summing the forest biomes, not including savannas/ mixed biomes.**
+
+b. Line 81: "rare exceptions that span regions or continents" is repeated twice.
+
+**Fixed.**
+
+c. Figure 1: Explain the gray scale for "forest cover". It seems like this refers to gradations of the various biomes, but the figure caption does not provide an explanation.
+
+**We have added an explanation.**
+
+d. Line 162: Clarify what is meant by "the minimum diameter breast height (DBH) threshold for tree census was <10cm"?
+
+**We have reworded this sentence for improved clarity: "Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), trees were censused down to a minimum diameter breast height (DBH) threshold of 10 cm or less."**
+
+e. Table 1: (i) The definition of GPP refers to NEE, but this in never defined. The preceding entry defines NEP not NEE. (ii) The description of the biome labels is inaccurate. The table uses "TrB" but the note refers to "Tr". The table uses "BoN", but the note refers to "B".
+
+**We have fixed both of these.**
+
+f. Line 210: I am confused by the statement that of the 39762 records in ForC v3.0, 11923 were included in this study. Previously (lines 135-149), the authors described creating "ForC-simplified" with 17349 records. Clarify the difference between ForC-simplified and ForC v3.0.
+
+**It appears that reference to ForC-simplified (essentially an automatically generated rearrangement of ForC that is purged of duplicates and organized for easy analysis) makes the process more confusing, and isn't necessary, so we eliminated mention of it.**
+
+g. Line 212: The authors refer to ForC, where in the previous sentence they referred to ForC v3.0, and previously used ForC-simplified. Clarify what database is used in the analyses.
+
+**As in the response above, we have eliminated unnecessary/confusing mention of ForC-simplified. The version used is ForC v3.0 (to be released with DOI upon acceptance of this manuscript). We do not feel it is necessary to state the version number every time ForC is mentioned.**
+
+4. This is not a review article in the traditional sense that a review is a critical assessment of recent papers in the field of carbon cycle research or identifies future research priorities. Instead, the paper documents a database and shows the utility of the database for carbon cycle research. My comments on the review aspect of the manuscript are:
+
+a. Yes, there is a need for this database; but
+
+b. No, this is not a critical and authoritative review of the carbon cycle; and
+
+c. The authors reference many other publications and datasets, but they do not critically evaluate their own dataset or other datasets.
+
+**We'd define this as a "quantitative review"--*i.e.*, one that quantitatively synthesizes previous studies. However, we agree that the previous version did little to critically review the corresponding literature. To improve in this area, we have expanded and reorganized the introduction into four sub-sections ("Forests in the global C cycle: current and future", "Evolution of forest C cycle research", "Biome differences", and "Age trends and their variation across biomes"). The latter three sections are mostly or entirely new relative to the previous version, and briefly review the development and current status of the science on each topic. We have also added a schematic figure (Fig. 1) to summarize current understanding of each topic and help with conceptual framing of the review. We also shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness.**
+
+
+# Referee: 3
+
+COMMENTS TO THE AUTHOR(S)
+
+This papers uses a database recently created and updated by the author team – For C – to understand how forest carbon stocks and pools varies across broad biome classifications (e.g. boreal, temperature, and tropical) and stand age. The find that the rate of C cycling is faster in warmer climates, and that many C fluxes and pools increase with stand age (at least up to 100 years of age).
+
+There were several things I really liked about this paper. First, I applaud the author’s ambition in creating (and maintaining) this database, which has already been used in multiple high-profile papers. It is a novel idea to curate all the C fluxes and pools together in one virtual location, and the carbon cycle budgets illustrated in Figures 2-5, and 8-11, will likely function as useful “reality checks” against which both empirical and modeling results can be assessed. I also appreciated the focus on understanding how carbon cycles varies with stand age, as this is an important unknown that limits understanding of the usefulness of reforestation as a natural climate solution (among other unknowns). Overall I found the manuscript to be clearly written.
+
+**Thank you.**
+
+However, I also found that many aspects of the paper gave me considerable pause.
+
+First, the paper covers an awful lot of ground. It strikes me that each of the three research questions (bottom of page 4) could easily motivate an entire paper on their own. By attempting to address all three in one (relatively short) manuscript, it is not possible to discuss in any detail the mechanisms and processes that determine the results. There are no process-oriented hypotheses or frameworks against which the results are evaluated.
+
+**We agree that this covers a lot of ground, which corresponds with our vision of producing a comprehensive synthesis of broad trends. We envision that smaller questions can (and hopefully will) be broken off for more detailed analysis in the future.**
+
+**At the same time, we agreed that the manuscript could be improved with more of a conceptual framework. To improve in this area, we have expanded and reorganized the introduction into four sub-sections ("Forests in the global C cycle: current and future", "Evolution of forest C cycle research", "Biome differences", and "Age trends and their variation across biomes"). The latter three sections are mostly or entirely new relative to the previous version, and briefly review the development and current status of the science on each topic. We have also added a schematic figure (Fig. 1) to summarize current understanding of each topic and help with conceptual framing of the review. We also shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness.**
+
+For example, concerning expectations about how various C cycles and pools vary with stand age? There is a fairly extensive literature on this topic … Odum’s classic paper on the topic (“The Strategy of Ecosystem Development, 1969) has been cited thousands of times. But this literature is not referenced or cited in the current manuscript. Odum’s hypothesis suggests that NEP (arguably the most important flux, at least from a climate mitigation perspective) should increase initially with stand age and then eventually decrease as forests continue to mature. However, this framework/literature is not referenced, and the way the results are presented make it difficult to understand whether those expectations were borne out in the data. On that note, I didn’t understand why the authors chose to show flux trends explicitly as a function of age up to 100 years (Figure 6), but then group all the forests >100 years old into a single “bar). Why not plot the mature forests explicitly on the flux versus age axis? This would allow a clearer assessment of whether flux trends with age are really linear.  It would also help the reader understand better one of the most striking results from this manuscript: that NEP of mature forests is indistinguishable across biomes. The authors describe this as unsurprising, but I think it is a bit unexpected, especially given the results of some of the more synthetic work from FLUXNET (e.g. Luyssaert et al. 2007). The authors explain this result in a couple of sentences (Page 25, lines 22-26), speculating that the result is driver by “moderate disturbances” or “disequilibrium of Rsoil relative to C inputs). A deeper dive into the results, combined with some mechanistic grounding, might reveal to what extent this result represents a climate-age interaction that is predicted from the existing theory.
+
+**We greatly appreciated the suggestion to engage with Odum's framework. We now cite and discuss @odum_strategy_1969 in the introduction, and designed the age trends portion of the schematic figure to correspond to Odum's classic Fig. 1 (updated with more details and current terminology).**
+
+**Regarding the question of showing flux trends as a function of age beyond 100 years, this unfortunately doesn't make sense within the context of the database because tropical forests can rarely be aged beyond 100 years (if that). This is because tropical trees rarely form annual rings, which are used to age (older) extratropical forests. It would not make sense to treat tropical and extra-tropical forests differently.**
+
+**Regarding the NEP result for mature forests, we agree that a better conceptual framework (now implemented) should help set the stage for explaining this result.  We have modified the discussion paragraph on this to cite the schematic figure and also to note that this result does agree with @luyssaert_co2_2007 (although that study did not standardize for age). The paragraph now reads as follows:** 
+
+**"The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$, which showed no significant differences across biomes (Fig. 6f). Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem (Fig. 1). $NEP$ tends to be relatively small in mature forest stands (discussed further below), which accumulate carbon slowly relative to younger stands, if at all [@luyssaert_old-growth_2008; @amiro_ecosystem_2010; @besnard_quantifying_2018]. It is therefore unsurprising that there are no pronounced differences across biomes [in agreement with @luyssaert_co2_2007], suggesting that variation in $NEP$ of mature forests is controlled less by climate and more by other factors including moderate disturbances [@curtis_forest_2018] or disequilibrium of $R_{soil}$ relative to C inputs [e.g., in peatlands where anoxic conditions inhibit decomposition; @wilson_stability_2016]."**
+
+Finally, I wondered about the interacting effects of changing climate (rising CO2, warming temperatures) and stand age, especially in determining trends in the pools. Mature forests will have experienced a much wider range of climate conditions than younger stands. How does this complicate the comparison of live biomass across forest of different age?
+
+**This is an excellent question, and one that is of great interest to the lead author [e.g., @andersonteixeira_altered_2013]; however, we think it is unlikely to have much influence at this relatively coarse scale of analysis, especially given that much of the data in ForC was collected in the 20th century. Sorting this out would require carefully designed studies, and probably would not be possible using ForC data at this point.**
+
+Second, I had some questions about the representativeness of the dataset. While I appreciate that the authors choose to use distinct geographic areas as the unit of analysis (avoiding some issues of pseudo-replication from many observations from a single site), I still wondered about the extent to which the distinct geographic areas were representative of the climate space within each biome. For example, if mean annual climate versus presentation for all boreal, temperate and tropical locations are shown in a scatterplot (for example, using reanalysis data), and then mean annual temperature and precipation of the observations are shown on top, how much of the “climate space” is covered by the dataset?
+
+**An analysis of this type would need to be fairly involved, including a separate analysis for each variable. While do-able (we have previously published a plot similar to that described for the entire database), such an analysis would only begin to cover important aspects of representativeness (MAT and MAP, but not seasonality, soils, floristic composition, etc.). We feel that, in this case, the insights gained from the analysis would not justify the strain on time and resources that it would require. We have, however, given additional attention to the issue of representativeness in the revision. Specifically, we have done the following:**
+
+- **Set the stage for discussion of within-biome variability by including error bars on our schematic figure (Fig. 1).**
+
+- **Ensured that the issue is clearly and transparently presented in the figures--for example, by adding the following statement to the captions of Figures 3-6 (formerly 2-5): "Note that variables differ in geographical representation, resulting in potential imbalances (Figs. S5-S30). Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented." ** 
+
+- **Revisited our presentation of representativeness issues in the results and discussion, revising text to ensure clear communication of the concept that biomed differences were influenced by geographical representation within the biome. For example, our discussion of stock differences across biome differences now reads: "...For $B_{tot}$ and $B_{ag}$, tropical broadleaf forests had the highest mean biomass and boreal forests the lowest, with temperate broadleaf and needleleaf ($B_{ag}$ only) intermediate. However, maximum values for stocks including live or standing woody biomass ($B_{tot}$, $B_{ag}$, $B_{ag-wood}$, $B_{root}$, $B_{root_coarse}$, $DW_{tot}$, $DW_{standing}$) consistently occurred in temperate biomes (Figs. 1, 8, S20-S30). For variables that were disproportionately sampled in such high-biomass forests ($B_{ag-wood}$, $B_{foliage}$, and $B_{root-coarse}$; disproportionately sampled in  the US Pacific Northwest), temperate conifer forests had significantly higher stocks than the other biomes."**
+
+
+Third, I found the presentation of the results made it difficult to see clearly the major differences in C fluxes and pools across biomes and age classes. The illustrated C budgets (the majority of the figures, 8 in total) are visually very appealing, but the reader has to do a lot of flipping back and forth to see how any particular flux or pool varies across biomes and age class. Figure 6 is more synthetic, but each panel is very small and the differences from one group to the next are hard to see. It is also difficult to compare results for young forests (as scatterplots) with the box plots for the mature forests.  My advice is to move some of the budgets to SI, and include in the main manuscript more figures that clearly illustrate the most interesting trends with biome, and to allow an expansion of the results in Figure 6 (for example, by first showing scatterplots of all forests, young and old, as a function of stand age), and then perhaps another that is a box plot comparison of mature versus old forests in each biome.
+
+**We have done a major re-arrangment of figures, including the following: (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review; (2) added a figure synthesizing changes in fluxes through time for each biome; (3) removed maps from age trend diagrams (maps still available in SI), which makes the figures less busy/ easier to read; and (4) moved C cycle diagrams for young forests to SI. The result is that (1) the main manuscript contains only the more informative illustrated C budgets (mature forests); (2) the figures showing age trends and biome differences in 6 C flux and stock variables (Figs. 7-8, formerly 6-7) are much easier to read; and (3) the new figure 9 provides an overall synthesis of results, focusing on the most trusted variables.**
+
+**Regarding the suggestion of showing age of old forests as a scatterplot, this is unfortunately not possible give unknown ages of most mature tropical forests, as explained above.**
+
+
+A few other comments:
+
+Page 6, first paragraph: I wondered about the extent to which filtering the data for “managed” affected the results. In the Eastern US, for example, its difficult to find any forests on public land that aren’t managed to some extent (for example, through periodic selective harvests), and many of them regenerated from “planted” stands back in the 1930s. I would be curious to know if including “managed” forests substantially altered results.
+
+The binary age classification (two ages, less than 100 years or greater than 100 years) was difficult to accept, as forests that are in the 80-100 year age range are often considered to be mature (at least in the temperate zone). I realize that even with a dataset as rich as For C, data availability will limit stratification into too many bins. Nonetheless, at least for some measurements, I wonder if it's possible to consider a greater number of age classes (for example, young, maturing, and mature).
+
+**We prefer not to separate forests of known age into categories, but rather to represent age as a continuous variable, when possible. In large part this is motivated by the fact that appropriate age thresholds for various categories would vary across biomes, given differences in biomass accumulation rates. While our ideal would be to have no categorical divisions, unknown stand ages--particularly in the tropics--force us to divide the data into the categories used here.**
+
+**To provide a better representation of age trends, we created new figure 9. Although it does not break forests into additional age categories, it does address what seems to be at the core of this concern, which is a concise representation of differences across the full range of stand ages.**
+
+The consistency check (e.g. do component fluxes/pools sum to within one standard deviation of the aggregate flux or pool) seems like it is destined to provide a favorable assessment of the degree of closure so long as the data within each grouping represent a wide range of natural climatic and soil variability. As long as the aggregate variable has a large standard deviation, the results are likely guaranteed to be “consistent.” It seems this metric would benefit from some simulations (perhaps with artificially generated data) to understand exactly how poor closure needs to be at the site-level to generate an inconsistent results when aggregated across sites.
+
+**We agree that such an analysis would be valuable, but time and resource constraints place it beyond the scope of what is currently feasible in this already very large analysis. We also note that the focus is now shifted towards the ecological questions (trends across biomes and with age), dropping as a main focus the original question on database representativeness and C cycle closure.**
+
+**We believe that the current consistency check is valuable as a first pass for identifying cases of extreme mis-matches, and therefore retain it as is. However, we agree that it is not the ideal test, and that it is not very stringent (given high standard deviations) and have therefore toned down claims that the budgets are "closed"/"internally consistent" throughout the manuscript (e.g., removed from abstract). We note that the discussion already stated that our criteria for closure was relatively loose (and this statement is unchanged in the revised version): "On the other, however, *ForC* derives data from multiple heterogeneous sources, and standard deviations within each biome are high; as a result, the standard for C closure is relatively loose [*c.f.* @houghton_terrestrial_2020]."** 
+
+# Referee: 4
+
+COMMENTS TO THE AUTHOR(S)
+General:
+This paper presents the findings of a rather comprehensive modeling analysis of C fluxes and stocks in the world’s major forest biomes. An important strength of this work is its reliance on a fairly large empirical data set to calculate a comprehensive suite of fluxes and stocks to close (or come close) C budgets in these systems. Another unique component of this work is the contrasts of young vs mature forests in each biome. An important contribution of this work is its highlighting of gaps in data (e.g., deadwood) and non-random distribution of empirical data (though this, of course is well-known) and how these factors influence C accounting efforts. Overall, the paper is well written with beautiful figures and the analyses and data sets are sound. I think this work makes an important and timely contribution to fields of C cycle science, forest ecology, and ecosystem ecology and is likely to be of interest to many ERL readers. I have no fundamental concerns with this manuscript. However, in addition to the detailed comments/suggestions below, I think it would greatly benefit the paper if the authors could include some discussion of how the forest ecosystems they characterize here compare to the forest ecosystems that actually exist. The data here represent generally interior forest ecosystems, which of course are incredibly important. But, work over the last 5 years or so highlights the extent to which forest fragmentation influences a large proportion of the world’s forests (Haddad et al., 2015). Fragmentation and the creation of edges has been shown to have important implications for C stocks and fluxes with regional and global implications (e.g., (Chaplin-Kramer et al., 2015; Remy et al., 2016; Reinmann & Hutyra, 2017; Smith et al., 2019; Ordway & Asner, 2020; Reinmann et al., 2020: FULL REFS BELOW). Logging and other forms of management also influence a large proportion of the world’s forests. I am not suggesting this be included in modeling efforts here, but in placing this work in the broader context of C stocks and fluxes of the world’s forests I think it would do the scientific community a great service to more explicitly recognize what is being modeled and perhaps the proportion of the world’s forests these data might represent…even if discussed in a qualitative sense.
+
+**Thank you. We have added the following paragraph (citing the references given above) on representation of forest types in the Discussion section "C variable coverage and budget closure":**
+
+**Importantly, *ForC* and the analyses presented here cover the forests that have received research attention, which are not a representative sample of the world's existing forests--geographically or in terms of human impacts [@martin_mapping_2012]. Geographically, all variables are poorly covered in Africa and Siberia (Fig. 1), a common problem in the carbon-cycle community [@xu_contribution_2016; @schimel_effect_2015]. In terms of human impacts, research efforts tend to focus on interior forest ecosystems [@martin_mapping_2012], often in permanently protected areas [e.g., @davies_forestgeo_2021]. Studies of regrowth forests tend to focus on sites where recurring anthropogenic disturbance is not a confounding factor. Yet, fragmentation and degradation impact a large and growing proportion of Earth's forests [@fao_and_unep_state_2020]. Fragmentation and the creation of edges strongly impacts forest C cycling [e.g., @chaplin-kramer_degradation_2015; @remy_strong_2016; @reinmann_edge_2017; @smith_evidence_2019; @reinmann_urbanization_2020;  @ordway_carbon_2020].Partial logging and other forms of non- stand clearing anthropogenic disturbance also strongly impact forest C cycling [e.g., @huang_long-term_2010; @piponiot_carbon_2016] but are under-studied [@sist_tropical_2015] and excluded from this analysis. Fragmented and degraded forests do not fit the idealized conceptual framework around which this review is structured (Fig. 1), yet their representation in models, sustainability assessments, and C accounting systems is critical to accurate accounting of C cycling in Earth's forests [e.g., @huang_long-term_2010; @reinmann_edge_2017; @smith_evidence_2019; @piponiot_can_2019]. Finally, plantation forests account for approximately 3% of Earth's forests [@fao_and_unep_state_2020] but are not included in this analysis. While it is known that these tend to accumulate biomass faster than naturally regenerating forests [@anderson_temperature-dependence_2006; @bonner_meta-analytical_2013], their global scale C cycling patterns remain less clearly understood [c.f. @cook-patton_mapping_2020]. Additional research and synthesis are needed to fill these critical gaps in our understanding of forest C cycling.**
+
+
+Introduction:
+
+L81: “exceptions” in sentence twice.
+
+**Fixed.**
+
+L97: Typo “Since the its most”
+
+**Fixed.**
+
+Methods:
+
+L144: If there is a non-trivial proportion of the world’s forests (especially in certain biomes) is plantation or planted forests, does removing such plots from the dataset bias the results of a global modeling product?
+
+**We have added a statement on plantation forests in the paragraph representation of forest types: Finally, plantation forests account for approximately 3% of Earth's forests [@fao_and_unep_state_2020] but are not included in this analysis. While it is known that these tend to accumulate biomass faster than naturally regenerating forests [@anderson_temperature-dependence_2006; @bonner_meta-analytical_2013], their global scale C cycling patterns remain less clearly understood [c.f. @cook-patton_mapping_2020]."**
+
+
+Results:
+
+L243-245: I think this is per unit forest area, correct? If so, I think it would be helpful to specify that here. Also, the reader should be referred to Figs 2-5, not just 5, right?
+
+**Fixed.**
+
+L270-271: The wording of the sentence “There were sufficient data to model….” Seems a bit awkward. Should it read “…WHICH were also significant…”?
+
+**We have reworded this sentence to read, "Age $\times$ biome interactions were also significant for all ten of these C stock variables (Table S2), with living C stocks tending to accumulate more rapidly during the early stages of forest regrowth in tropical forests (Figs. 8, S20-S30)."**
+
+Discussion:
+You might consider reiterating in the first paragraph of the Discussion section that your findings indicate that Temperate Broadleaf Forests are actually the most productive forest biome in terms of NEP. I think this is a surprising finding (we normally think of Tropical forests as being more productive) that warrants attention.
+
+**We have added the following sentence to the first paragraph of the discussion: "The notable exception was mature forest $NEP$, which, as the difference between $GPP$ and $R_{eco}$, was statistically indistinguishable across biomes (Fig. 7f)." Given that there is no signficant difference among biomes, we prefer not to discuss temperate broadleaf forests as higher.**
+
+L297: The fact that ForC does not include soil C is important. It is not a flaw in the model or the approach here, but throughout you discuss C stocks, which many would interpret as being inclusive of soil C. I think the authors should consider clearly indicating in the Methods section, and perhaps reiterating in the Results and Discussion, that stocks here are defined as litter layer, biomass, and necromass, but excludes C in soil.
+
+**We have added the following statement to the methods section: "We did not analyze soil carbon, which is not a focus of the *ForC* database." We also now note this in the first paragraph of the discussion "There was also little directional variation in mean mature forest C stocks (biomass, dead wood, and organic layer) across biomes, although maximum values for the majority of stocks (all including live or standing woody biomass) occurred in temperate biomes (Figs. 1, 2-5, 8)."**
+
+
+L322-323: As you point out in the Results section, while there are no statistically sig differences in NEP across biomes, there are large differences in the means. Is this an artifact of the data sources used (i.e. distribution and number of sites with empirical data)? Can you speak a little more to this point in this section?
+
+**We have modified sentences in this paragraph to address this: "The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$, which showed no significant differences across biomes, albeit with the highest mean in temperate broadleaf forests (Fig. 7f). ... The fact that mature temperate broadleaf forests have a higher mean than the other biomes may reflect the fact that most of these forests are older secondary forests that, while classified here as mature, are still accumulating carbon [@curtis_forest_2018].**
+
+L382: You might consider changing text to “increases with age AT LEAST up to the 100-yr threshold examined here” so that it does not come across as suggesting that NEP only increases for the first hundred years of stand development, which we know is not true.
+
+**Reworded to read, "Notably, net carbon sequestration ($NEP$) exhibits an overall increase with age across the first 100 years of stand development...".**
+
+L445-450: I come back to the data in Figs 2-5 and text in the results section (L243-245), which indicates no sig differences in NEP, but highest means in temperate forests. Of course, the high biomass in tropical forests makes them critical to protect from a C storage perspective, but if NEP (i.e. rates of C sequestration) are highest, at least as a mean, in temperate broadleaf forests how should those ecosystems factor into conservation priorities. Related to this point, is the high NEP of temperate forests driven by the relatively young nature of temperate broadleaf forests in the eastern U.S., where a lot of data exist?
+
+**This question is now addressed earlier in the discussion (see response to comment on L322-323). The higher NEP of mature temperate forests contributes to their value for climate change mitigation, but does not make them more valuable than higher-biomass tropical forests (for example) that have already sequestered C that would become committed to eventual release as CO~2~ emissions if the forest were to be cleared (with the rapidity of that release depending on mode of clearing, wood product decay...). That trade-off is explored to some extent in one of the references given in this paragraph [@anderson-teixeira_greenhouse_2011], but seems too complex to get into here.**
+
+References mentioned above:
+
+Chaplin-Kramer R., Ramler I., Sharp R., Haddad N. M., Gerber J. S., West P. C., … King H. (2015). Degradation in carbon stocks near tropical forest edges. Nature Communications, 6, 1–6. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.1038%2Fncomms10158&amp;data=04%7C01%7Cteixeirak%40si.edu%7Cd27c53d6ec434c8ae42108d8a03017cf%7C989b5e2a14e44efe93b78cdd5fc5d11c%7C0%7C0%7C637435475707545147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=maYY3mHl%2F%2FX0jgkAOK5Kc9K1TpaoTVkFM52HsOxeMjU%3D&amp;reserved=0.
+
+Haddad N. M., Brudvig L. a., Clobert J., Davies K. F., Gonzalez A., Holt W. M., … Townshend J. R. (2015). Habitat fragmentation and its lasting impact on Earth’s ecosystems. Science Advances, (March), e1500052. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.4028%2Fwww.scientific.net%2FAMM.315.108&amp;data=04%7C01%7Cteixeirak%40si.edu%7Cd27c53d6ec434c8ae42108d8a03017cf%7C989b5e2a14e44efe93b78cdd5fc5d11c%7C0%7C0%7C637435475707545147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=1L35xf2RdBj6Y9PjsYhSY5tct4RhnJLE8Jd50QJdzBM%3D&amp;reserved=0.
+
+Ordway E. M. & Asner G. P. (2020). Carbon declines along tropical forest edges correspond to heterogeneous effects on canopy structure and function. Proceedings of the National Academy of Sciences of the United States of America, 117(14), 7863–7870. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.1073%2Fpnas.1914420117&amp;data=04%7C01%7Cteixeirak%40si.edu%7Cd27c53d6ec434c8ae42108d8a03017cf%7C989b5e2a14e44efe93b78cdd5fc5d11c%7C0%7C0%7C637435475707545147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=DnTMc4LCIoRcHMLUEAcpvNOn%2FeJLO3%2Bh8pXVYSUb%2BI4%3D&amp;reserved=0.
+
+Reinmann A. B. & Hutyra L. R. (2017). Edge effects enhance carbon uptake and its vulnerability to climate change in temperate broadleaf forests. Proceedings of the National Academy of Sciences, 114(1), 107–112. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.1073%2Fpnas.1612369114&amp;data=04%7C01%7Cteixeirak%40si.edu%7Cd27c53d6ec434c8ae42108d8a03017cf%7C989b5e2a14e44efe93b78cdd5fc5d11c%7C0%7C0%7C637435475707545147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=GncJJ%2FLa2f96c0tjkl5RZZv2JLJFoAoQnOTm0b%2BYyNo%3D&amp;reserved=0.
+
+Reinmann A. B., Smith I. A., Thompson J. R. & Hutyra L. R. (2020). Urbanization and fragmentation mediate temperate forest carbon cycle response to climate. Environmental Research Letters, 15, 114036.
+
+Remy E., Wuyts K., Boeckx P., Ginzburg S., Gundersen P., Demey A., … Verheyen K. (2016). Strong gradients in nitrogen and carbon stocks at temperate forest edges. Forest Ecology and Management, 376(2016), 45–58. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.1016%2Fj.foreco.2016.05.040&amp;data=04%7C01%7Cteixeirak%40si.edu%7Cd27c53d6ec434c8ae42108d8a03017cf%7C989b5e2a14e44efe93b78cdd5fc5d11c%7C0%7C0%7C637435475707545147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=u2ylmC4K4VIxHWamrCnk%2BNfu%2FsZDUkSPfABgfN%2BCzT4%3D&amp;reserved=0.
+
+Smith I. A., Hutyra L. R., Reinmann A. B. & Thompson J. R. (2019). Evidence for Edge Enhancements of Soil Respiration in Temperate Forests Geophysical Research Letters. Geophysical Research Letters, 46, 1–10. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.1029%2F2019GL082459&amp;data=04%7C01%7Cteixeirak%40si.edu%7Cd27c53d6ec434c8ae42108d8a03017cf%7C989b5e2a14e44efe93b78cdd5fc5d11c%7C0%7C0%7C637435475707545147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=92jjRZSUzQrNX6SGlV%2BZRfHlUN%2B6AL96%2FJIl4PIK3a8%3D&amp;reserved=0.
+
+
+
+
+\newpage
+## References
+
+```{r eval=FALSE, echo=FALSE}
+# All references should be presented in alphabetical order and should also be bundled in ways that will help the reader to find those that are germane to each of the themes, topics or issues that the authors have used to organize the review. Such a matrix will be included as supplementary material. ERL has no standardized format for subdividing references by cross-cutting themes, but guidance from editors will be helpful to authors.
+```
