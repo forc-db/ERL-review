@@ -504,7 +504,7 @@ Age $\times$ biome interactions were also significant for all ten of these C sto
 In the case of two non-living C stocks ($DW_{down}$ and $OL$), age $\times$ biome interactions were such that age trends were positive in some biomes and negative in others.
 Specifically, $DW_{down}$ declined with age in temperate and boreal forests, compared to an increase with age in tropical forests (Figs. `r stock_age_trends`,`r age_trends_all`, `r DW_down_fig`).
 Similarly, $OL$ declined slightly with age in temperate broadleaf forests, contrasting an increase in the other three biomes (Figs. `r stock_age_trends`, `r age_trends_all`,`r OL_fig`).
-Again, there were some discrepancies between young forest trends and mature forests, most notably including generally higher C stocks in mature forests relative to their 100-year counterparts, particularly for temperate conifer forests (with discrepancies again driven by differences in geographic representation) and, to a lesser extent, tropical broadleaf forests (`r age_trends_all`).
+Again, there were some discrepancies between young forest trends and mature forests, most notably including generally higher C stocks in mature forests relative to their 100-year counterparts, particularly for temperate conifer forests (with discrepancies again driven by differences in geographic representation) and, to a lesser extent, tropical broadleaf forests (FIg. `r age_trends_all`).
 
 \newpage
 
@@ -514,7 +514,7 @@ Again, there were some discrepancies between young forest trends and mature fore
 ```
 
 *ForC* v3.0 provided unprecedented coverage of most major variables, yielding a broad picture of C cycling in the world's major forest biomes.
-Carbon cycling rates generally increased from boreal to tropical regions and with stand age (Figs. `r schematic`, `r all_age_trends`).
+Carbon cycling rates generally increased from boreal to tropical regions and with stand age (Figs. `r schematic`, `r age_trends_all`).
 Specifically, most C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests -- a pattern that generally held for regrowth as well as mature forests (Figs. `r schematic`, `r flux_age_trends`- `r stock_age_trends`, `r age_trends_all`).
 The notable exception was mature forest $NEP$, which, as the difference between $GPP$ and $R_{eco}$, was statistically indistinguishable across biomes (Fig. `r flux_age_trends`f).
 There was also little directional variation in mean mature forest C stocks (biomass, dead wood, and organic layer) across biomes, although maximum values for the majority of stocks (all including live or standing woody biomass) occurred in temperate biomes (Figs. `r schematic`, `r all_diagrams_mature`, `r stock_age_trends`).
@@ -525,23 +525,25 @@ Together, these results refine and expand out understanding of C cycling in matu
 ### C cycling across biomes
 
 Our analysis reveals that carbon cycling is most rapid in the tropics and slowest in boreal regions, including C fluxes into ($GPP$), within (e.g., $NPP$ and its components), and out of (e.g., $R_{soil}$, $R_{eco}$) the ecosystem.
-For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude (or increase with temperature) on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate].
-This consistency is not not surprising, particularly given commonality in the data analyzed or used for calibration.
-The finding that these patterns hold consistently across across numerous fluxes, while unsurprising, is novel to this analysis [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
+For mature forests, this is consistent with a large body of previous work demonstrating that C fluxes generally decline with latitude -- or increase with temperature -- on a global scale [e.g., @luyssaert_co2_2007;  @gillman_latitude_2015; @li_mapping_2019; @banbury_morgan_global_nodate].
+This consistency is not surprising, particularly given commonality in the data analyzed or used for calibration.
+The finding that these patterns hold consistently across across numerous fluxes, while consistent with theoretical expectations (Fig. `r schematic`), is novel to this analysis [but see @banbury_morgan_global_nodate for nine autotrophic fluxes].
 
 The notable exception to the pattern of fluxes decreasing from tropical to boreal regions is $NEP$, which showed no significant differences across biomes, albeit with the highest mean in temperate broadleaf forests (Fig. `r flux_age_trends`f).
-Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but is the balance between C sequestration ($GPP$) and respiratory losses ($R_{eco}$) and represents net CO~2~ sequestration (or release) by the ecosystem (Fig. `r schematic`).
-$NEP$ tends to be relatively small in mature forest stands, which accumulate carbon slowly relative to younger stands (discussed further below), if at all [Fig. `r schematic`; @luyssaert_old-growth_2008; @amiro_ecosystem_2010; @besnard_quantifying_2018].
-It is therefore unsurprising that there are no pronounced differences across biomes [in agreement with @luyssaert_co2_2007], suggesting that variation in $NEP$ of mature forests is controlled less by climate and more by other factors including moderate disturbances [@curtis_forest_2018] or disequilibrium of $R_{soil}$ relative to C inputs [e.g., in peatlands where anoxic conditions inhibit decomposition; @wilson_stability_2016].
+Unlike the other C flux variables, $NEP$ does not characterize the rate at which C cycles through the ecosystem, but, as the balance between $GPP$ and $R_{eco}$, represents net CO~2~ sequestration (or release) by the ecosystem (Fig. `r schematic`).
+$NEP$ tends to be relatively small in mature forest stands, which accumulate carbon slowly relative to younger stands, if at all [Fig. `r schematic`; @luyssaert_old-growth_2008; @amiro_ecosystem_2010; @besnard_quantifying_2018].
+It is therefore consistent with theory -- and with previous research [@luyssaert_co2_2007] -- that there are no pronounced differences across biomes. 
+Rather, variation in $NEP$ of mature forests appears to be controlled less by climate and more by other factors including moderate disturbances [@curtis_forest_2018] or disequilibrium of $R_{soil}$ relative to C inputs [e.g., in peatlands where anoxic conditions inhibit decomposition; @wilson_stability_2016].
 The fact that mature temperate broadleaf forests have a higher mean than the other biomes may reflect the fact that most of these forests are older secondary forests that, while classified here as mature, are still accumulating carbon [@curtis_forest_2018].
 
 In contrast to the patterns observed for $NEP$ in mature stands, $NEP$ of stands between 20 and 100 years of age varied across biomes, being lowest in boreal forests, intermediate in temperate broadleaf forests, and highest in temperate conifer forests (with insufficient data to assess tropical forests; Figs. `r flux_age_trends`, `r NEP_fig`).
-This is consistent with findings that live biomass accumulation rates (*e.g.*, $\Delta B_{ag}$ or $\Delta B_{tot}$) during early secondary succession decrease with latitude [Figs. 7a, S16-S22; @anderson_temperature-dependence_2006; @cook-patton_mapping_2020]. 
-Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon (not analyzed here), and biome differences in the accumulation rates of these variables have not been detected, in part because these variables do not consistently increase with stand age [Figs. `r schematic`, `r stock_age_trends`, `r DW_tot_fig`-`r OL_fig`, and see discussion below; @cook-patton_mapping_2020].
+This is consistent with findings that live biomass accumulation rates ($\Delta B_{ag}$ or $\Delta B_{tot}$) during early secondary succession decrease with latitude [Figs. `r stock_age_trends`a, `r all_stock_age_trends`; @anderson_temperature-dependence_2006; @cook-patton_mapping_2020]. 
+Note, though, that $NEP$ includes not only $\Delta B_{tot}$, but also changes in $DW_{tot}$, $OL$, and soil carbon (not analyzed here). 
+Biome differences in the accumulation rates of $DW$, $OL$, and soil C  have not been detected, in part because these variables do not consistently increase with stand age [Figs. `r schematic`, `r stock_age_trends`, `r DW_tot_fig`-`r OL_fig`, and see discussion below; @cook-patton_mapping_2020].
 
-For regrowth forests, little is known about cross-biome differences in carbon fluxes, and we are not aware of any previous large-scale comparisons of C fluxes that have been limited to regrowth forests. 
+For regrowth forests, little was previously known about cross-biome differences in carbon fluxes, and we are not aware of any previous large-scale comparisons of C fluxes that have been limited to regrowth forests. 
 Thus, this analysis was the first to examine flux trends in regrowth forests across biomes.
-The observed tendency for young forest fluxes to decrease from tropical to boreal regions paralleled patterns in mature forests (Figs. `r flux_age_trends`, `r all_flux_age_trends`), suggesting that regrowth forests follow latitudinal trends in carbon cycling similar to those of mature forests [e.g., @banbury_morgan_global_nodate].
+The observed tendency for young forest fluxes to decrease from tropical to boreal regions paralleled patterns in mature forests (Figs. `r flux_age_trends`, `r age_trends_all`, `r all_flux_age_trends`), suggesting that regrowth forests follow latitudinal trends in carbon cycling similar to those of mature forests [e.g., @banbury_morgan_global_nodate].
 
 In contrast to C fluxes and biomass accumulation rates in regrowth forests, stocks showed less systematic variation across biomes.
 For aboveground biomass, which is the variable in *ForC* with broadest geographical representation, the modest trend of declining biomass from tropical to boreal regions mirrors observations from spaceborne lidar that reveal a decline in aboveground biomass (for all forests, including secondary) with latitude across the N hemisphere [@hu_mapping_2016]. 
