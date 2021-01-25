@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 JAN 2021 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 JAN 2021 06:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,21 +949,21 @@ used on input line 837.
 [18 <./tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg>] [19 <.
 /tables_figures/stacked_age_trends/age_trends_all.png (PNG copy)>] [20] [21] [2
 2] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2215.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2217.
 [38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2215.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2217.
 (./ERL_global_C_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2215.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2215.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2217.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2217.
  ) 
 Here is how much of TeX's memory you used:
- 16224 strings out of 492616
- 242807 string characters out of 6129482
- 412405 words of memory out of 5000000
+ 16222 strings out of 492616
+ 242789 string characters out of 6129482
+ 412177 words of memory out of 5000000
  19480 multiletter control sequences out of 15000+600000
- 64563 words of font info for 131 fonts, out of 8000000 for 9000
+ 64479 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,14n,41p,1170b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,14n,41p,1176b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-d
@@ -986,7 +986,7 @@ c/lm/lmss8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10
 local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ERL_global_C_review.pdf (38 pages, 3687058 bytes).
+Output written on ERL_global_C_review.pdf (38 pages, 3686961 bytes).
 PDF statistics:
  581 PDF objects out of 1000 (max. 8388607)
  505 compressed objects within 6 object streams

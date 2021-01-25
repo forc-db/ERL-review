@@ -83,7 +83,7 @@ c. If Luyssaert et al (2007) is a source of data, is there circularity in the co
 
 a. For example, Figure 2 lists foliage and woody aboveground biomass in tropical broadleaf forests. These do not sum to aboveground biomass (3.53 + 125.42 = 128.95 Mg C/ha vs 146.69). Nor do coarse root biomass and fine root biomass sum to root biomass (23.15 + 9.29 = 32.44 vs. 21.86). Total biomass (147.96) is not the sum of aboveground (146.69) and root (21.86).
 
-**We acknowledge and discuss lack of closure in various places throughout the results and discussion. To ensure that this is clear from the figures, we have added the following statement to the captions of Figures 3-6 (formerly 2-5): "Note that variables differ in geographical representation, resulting in potential imbalances (Figs. S5-S30). Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented." We have also added a similar statement to the captions of Figures S1-S4 (formerly 8-11). We also make a related statement in the captions of new figures 9-12: "Note that there remain substantial uncertainties as to the functional form of age trends and discrepancies in closure among related variables."**
+**We acknowledge and discuss lack of closure in various places throughout the results and discussion. To ensure that this is clear from the figures, we have added the following statement to the captions of Figures 3-6 (formerly 2-5): "Mean component fluxes do not necessarily add up to the mean total fluxes because different sets of sites are included depending on availability of data (Figs. S5-S30)." We have also added a similar statement to the captions of Figures S1-S4 (formerly 8-11). We also make a related statement in the captions of new figures 9-12: "Note that there remain substantial uncertainties as to the functional form of age trends and discrepancies in closure among related variables."**
 
 b. Figure 4 for temperate conifer forests has large discrepancies in carbon stocks: e.g., 315.61 Mg C/ha for woody aboveground biomass, but only 167.46 for aboveground biomass and 226.58 for total biomass. The authors have a detailed discussion about lack of closure for root biomass, but do not discuss aboveground biomass. Presumably, this is because the data fall within the closure criteria, but what are we to make of the inconsistent data?
 
@@ -91,7 +91,7 @@ b. Figure 4 for temperate conifer forests has large discrepancies in carbon stoc
 
 I understand that the data comes from many different sources and so may not always be compatible and that they have large standard deviations, but how are we to interpret and use the various data entries? For example, what has higher confidence: the component variables or the aggregate variables? What is the best estimate for aboveground biomass or root biomass? The authors take great pride in that component variables sum to within one standard deviation of the aggregate variables in all but one instance (lines 225-226, 301-302, 309-310). This is somewhat remarkable! But users of the dataset need guidance on how to interpret and use the data.
 
-**We have addressed this by adding the following statement to the captions of Figures 3-6 (formerly 2-5): "Probability that estimates reflect true biome means scales with the number of distinct geographical areas represented."**
+**We have done two things to address this comment. First, to ensure accurate interpretation, we added the following statement to the captions of Figures 3-6 (formerly 2-5): "Mean component fluxes do not necessarily add up to the mean total fluxes because different sets of sites are included depending on availability of data (Figs. S5-S30)." Second, we have added the following guidance on using the data to the discussion: "*ForC*’s tens of thousands of records are readily available in a standardized format, along with all code used in the analyses presented here, and we recommend that researchers use these resources to identify and summarize data specific the analysis at hand."**
 
 3. There is a general sloppiness to the manuscript that makes me think the authors did not proofread the manuscript carefully.
 
@@ -99,7 +99,7 @@ I understand that the data comes from many different sources and so may not alwa
 
 a. Line 58: The authors say GPP is estimated to be >69 Gt C/year, and cite Badgley et al. (2019). This statement is factually correct, but is quite misleading. Badgley et al. "estimate global annual terrestrial photosynthesis to be 147 Pg C/year (95% credible interval 131-163 Pg C/year)". The value of 69 Gt C is less than one-half that reported by Badgley. What are the authors trying to say? Such a large discrepancy does not instill confidence in the other numbers reported in the manuscript.
 
-**The 147 refers to *total* annual terrestrial photosynthesis, including non-forests. Table S4 breaks this down by biome. The >69 Gt C/yr figure was obtained by summing the forest biomes, not including savannas.**
+**The 147 Pg C/year figure refers to *total* annual terrestrial photosynthesis, including non-forests. Table S4 in @badgley_terrestrial_2019 breaks this down by biome. The >69 Gt C/yr figure was obtained by summing the forest biomes, not including savannas/ mixed biomes.**
 
 b. Line 81: "rare exceptions that span regions or continents" is repeated twice.
 

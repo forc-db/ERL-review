@@ -145,7 +145,7 @@ h=bar(mature_stocks, 'stacked'); hold on;
     for n=1:size(mature_stocks,2)
         h(n).FaceColor= facecolor_stocks(n,:);
     end
-er=errorbar([1:3],sum(mature_stocks, 2), 0.5*stocks_std, stocks_std);
+er=errorbar([1:3],sum(mature_stocks, 2), 50-sum(mature_stocks, 2), stocks_std);
 er.Color = [0 0 0];                            
 er.LineStyle = 'none'; 
 er.LineWidth= 1.7;
