@@ -1,5 +1,5 @@
 ---
-title: "Supplement for: Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the global Forest Carbon (ForC) database"
+title: "Supplement for: Carbon cycling in mature and regrowth forests globally"
 output: 
   pdf_document:
     fig_caption: yes    

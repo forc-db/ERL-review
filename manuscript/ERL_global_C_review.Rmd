@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -22,7 +22,7 @@ header-includes:  \usepackage{float}
 ---
 \raggedright
 
-**Title:** Carbon cycling in mature and regrowth forests globally: a macroecological synthesis based on the Global Forest Carbon (ForC) database
+**Title:** Carbon cycling in mature and regrowth forests globally
 
 **Authors:**
 
