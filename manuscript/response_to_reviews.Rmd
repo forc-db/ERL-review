@@ -33,7 +33,7 @@ Dear Editor:
 
 We are please to submit a revised version of our manuscript, "Carbon cycling in mature and regrowth forests globally" (ERL-109898), for consideration for publication in *Environmental Research Letters*. We have addressed all points raised by the reviewers, as detailed below. The most substantive changes included the following:
 
-- We changed the figure set in accordance with comments from R3. Specifically, we (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review; (2) added a figure synthesizing changes in fluxes through time for each biome; (3) removed maps from age trend diagrams (maps still available in SI), which makes the figures less busy/ easier to read; and (4) moved C cycle diagrams for young forests to SI; 
+- We changed the figure set in accordance with comments from R3. Specifically, we (1) added a schematic figure, somewhat in the style of @odum_strategy_1969, to help with conceptual framing of the review; (2) added a figure synthesizing changes in fluxes through time for each biome; (3) removed maps from age trend diagrams (maps still available in supplementary information), which makes the figures less busy/ easier to read; and (4) moved C cycle diagrams for young forests to the supplementary information.
 
 - We improved conceptual framework and "review" nature of the work by adding background information to the introduction, including the schematic figure mentioned above. We also shifted emphasis more towards the ecological questions (trends across biomes and with age), while retaining (with less emphasis) the analysis of database representativeness.
 
