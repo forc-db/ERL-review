@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -283,7 +283,7 @@ While these trends have been subject of fairly recent qualitative review [@ander
 
 In the past few decades, researchers have started asking how age trends--mostly in $B_{ag}$ or total biomass ($B_{tot}$) accumulation-- vary across biomes.
 Early research on this theme showed that biomass accumulation rates during secondary succession increase with temperature on a global scale [@johnson_post-disturbance_2000; @anderson_temperature-dependence_2006] and with water availability in the neotropics [@poorter_biomass_2016]. 
-Most recently, @cook-patton_mapping_2020 reinforced these earlier findings with a much larger dataset and crated a high-resolution global map of estimated potential C accumulation rates.
+Most recently, @cook-patton_mapping_2020 reinforced these earlier findings with a much larger dataset and created a high-resolution global map of estimated potential C accumulation rates.
 However, there has been little synthesis of cross-biome differences in variables other than biomass and its accumulation rate (but see @cook-patton_mapping_2020 for $DW$, $OL$, and soil C accumulation in young stands).
 Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding of the global C cycle.
 Accurate estimates of C sequestration rates by regrowth forests are also critical for national greenhouse gas accounting under the IPCC framework [@ipcc_2019_2019; @requena_suarez_estimating_2019] and to quantifying the value of regrowth forests for climate change mitigation [@anderson-teixeira_greenhouse_2011; @goldstein_protecting_2020].
@@ -559,9 +559,9 @@ In this study, we detect no significant age trends in either $R_{het-soil}$ or $
 
 Notably, net carbon sequestration ($NEP$) exhibits an overall increase with age across the first 100 years of stand development, with more pronounced patterns in temperate than boreal forests (Fig. `r flux_age_trends`). 
 This finding is consistent with previous studies showing an increase in $NEP$ across relatively young stand ages [@pregitzer_carbon_2004; @baldocchi_fluxnet_2001; @luyssaert_old-growth_2008].
-However, $NEP$ has been observed to decline from intermediate to old stands [@law_changes_2003; @luyssaert_old-growth_2008], whereas the $NEP$ values estimated by our models for 100-year-old stands were not systematically different from those of mature stands (lower for temperate broadleaf, higher for temperate conifer, and equal for boreal; Fig. `r age_trends_all`).
-This lack of a consistent age-related decrease may be driven by differences in geographical representation across age classes or by the fitting of an inappropriate functional form.
-A decrease in $NEP$ would be consistent with the observed deceleration of C accumulation as stands age (Fig. `r age_trends_all`), although both biomass and non-living C stocks will often continue to increase well beyond the 100-yr threshold used here to delimit young and mature stands [@luyssaert_old-growth_2008; @mcgarvey_carbon_2014; @lichstein_biomass_2009].
+However, $NEP$ is theoretically expected to peak in intermediate-aged stands and thereafter decline, consistent with decelerating C accumulation as stands age [Fig. `r age_trends_all`; @odum_strategy_1969], and such declines have been observed [@law_changes_2003; @luyssaert_old-growth_2008].
+The fact that $NEP$ values estimated by our models for 100-year-old stands were not systematically different from those of mature stands (lower for temperate broadleaf, higher for temperate conifer, and equal for boreal; Fig. `r age_trends_all`) may be driven by differences in geographical representation across age classes or by the fitting of an inappropriate functional form.
+Moreover, both biomass and non-living C stocks often continue to increase well beyond the 100-yr threshold used here to delimit young and mature stands [@luyssaert_old-growth_2008; @mcgarvey_carbon_2014; @lichstein_biomass_2009].
 Additional data, including on age trends of deadwood, the organic layer, and soil C will be important to parsing the timing and extend of an age-related $NEP$ decrease across forest biomes.
 
 In terms of stocks, our study reveals consistent increases in live biomass stocks with stand age, a pattern that is well-known and expected [e.g., @lichstein_biomass_2009; @yang_carbon_2011], contrasting with more variable age trends in deadwood and the organic layer (Fig. `r age_trends_all`).
@@ -613,7 +613,7 @@ Integration of *ForC* with models will be valuable to improving the accuracy and
 Second, *ForC* can serve as a pipeline through which information can flow efficiently from forest researchers to decision-makers working to implement forest conservation strategies at global, national, or landscape scales. 
 This is already happening: *ForC* has contributed to updating the IPCC guidelines for carbon accounting in forests [@ipcc_2019_2019; @requena_suarez_estimating_2019], mapping C accumulation potential from natural forest regrowth globally [@cook-patton_mapping_2020], and informing ecosystem conservation priorities [@goldstein_protecting_2020].
 
-It is also interesting to consider the complementary utility of global-scale but spatially discontinuous databases such as ForC and remote wall-to-wall remote sensing products. 
+It is also interesting to consider the complementary utility of global-scale but spatially discontinuous databases such as ForC and wall-to-wall remote sensing products. 
 The latter provide insight into aboveground carbon stocks, but less constraint on belowground stocks or carbon fluxes in general [@bondlamberty_estimating_2016; @anav_spatiotemporal_2015]. 
 Combining observational data and remote observations may provide a much more comprehensive and accurate picture of global forest C cycling, particularly when used in formal data assimilation systems [@konings_global_2019; @liu_detecting_2018].
 Biomass is the largest C stock in most forests, and most of the emphasis has traditionally been on this variable. 

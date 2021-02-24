@@ -1,0 +1,75 @@
+---
+title: ""
+output:
+  pdf_document:
+    fig_caption: yes
+bibliography: references.bib
+csl: environmental-research-letters.csl
+
+header-includes:  \usepackage{float}
+                  \usepackage{caption}
+                  \captionsetup[table]{font=footnotesize}
+                  \captionsetup[figure]{font=footnotesize}
+                  \captionsetup[figure]{labelformat=empty}
+                  \captionsetup[table]{labelformat=empty}
+                  \usepackage{pdflscape}
+                  \newcommand{\blandscape}{\begin{landscape}}
+                  \newcommand{\elandscape}{\end{landscape}}
+
+                  \usepackage{setspace}\onehalfspacing
+
+
+---
+\raggedright
+
+**Title:** Response to reviews
+
+Re: "Carbon cycling in mature and regrowth forests globally" by Anderson-Teixeira, Kristina; Herrmann, Valentine; Banbury Morgan , Rebecca ; Bond-Lamberty, Benjamin; Cook-Patton, Susan; Ferson , Abigail; Muller-Landau, Helene; Wang, Maria
+Article reference: ERL-109898
+
+## LETTER TO EDITOR:
+
+Dear Editor:
+
+We are please to submit a revised version of our manuscript, "Carbon cycling in mature and regrowth forests globally" (ERL-109898), for consideration for publication in *Environmental Research Letters*. We have addressed all points raised by the reviewers, as detailed below. 
+
+Thank you for considering this revised version, and we look forward to your response.
+
+Sincerely,
+
+Kristina Anderson-Teixeira (on behalf of all coauthors)
+
+\newpage
+
+## REFEREE REPORT(S) & RESPONSES:
+
+### Referee: 4
+
+COMMENTS TO THE AUTHOR(S)
+I am satisfied with the revised manuscript and feel it is now acceptable for publication.
+
+I did find a couple of typos (e.g., L142: change "crated" to "created") and suggest the authors give the manuscript a once over.
+
+**We fixed the noted typo and proofread the entire manuscript.**
+
+### Referee: 2
+
+COMMENTS TO THE AUTHOR(S)
+The authors have satisfactorily addressed my comments
+
+### Referee: 3
+
+COMMENTS TO THE AUTHOR(S)
+I find the authors did a thorough and good job responding to concerns from the last round of review. I appreciate the re-organization of the introduction, and the changes made to the figures (including the inclusion of a conceptual figure). This is a nice paper. I have just two suggestions for minor amendments before final submission:
+
+a) It'd be nice to return explicitly to the Odum hypotheses more clearly in the discussion. It seems that the results, as they are, do not support the prediction that NEP becomes near-zero in the most mature ecosystems (noting that Odum predicted this would happen in the southeastern US by 100 years of age). I think its important to highlight this fact explicitly (though possible some of this result is driven by CO2 fertilization effects).
+
+**We have modified the paragraph in the discussion that discusses age trends in $NEP$ to refer back to the Odum hypothesis. It now reads as follows:**
+
+**Notably, net carbon sequestration (NEP) exhibits an overall increase with age across the first 100 years of stand development, with more pronounced patterns in temperate than boreal forests (Fig. 7). This finding is consistent with previous studies showing an increase in NEP across relatively young stand ages (Pregitzer and Euskirchen 2004, Baldocchi et al 2001, Luyssaert et al 2008). However, NEP is theoretically expected to peak in intermediate-aged stands and thereafter decline, consistent with decelerating C accumulation as stands age (Fig. 9; Odum 1969), and such declines have been observed (Law et al 2003, Luyssaert et al 2008). The fact that NEP values estimated by our models for 100-year-old stands were not systematically different from those of mature stands (lower for temperate broadleaf, higher for temperate conifer, and equal for boreal; Fig. 9) may be driven by differences in geographical representation across age classes or by the fitting of an inappropriate functional form. Moreover, both biomass and non-living C stocks often continue to increase well beyond the 100-yr threshold used here to delimit young and mature stands (Luyssaert et al 2008, McGarvey et al 2014, Lichstein et al 2009). Additional data, including on age trends of deadwood, the organic layer, and soil C will be important to parsing the timing and extend of an age-related NEP decrease across forest biomes.**
+
+Figures 7 and 8 could be made wider (if not necessarily taller), so they take up the full width of the page, which might allow the authors to inch up the font size. Some of that text is really tiny.
+
+**We agree that these figures should be full-page width. They were displayed at a smaller size than intended because of low resolution, which we have now fixed.**
+
+
