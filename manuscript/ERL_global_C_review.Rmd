@@ -211,7 +211,7 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 # The Background section needs to present the rationale for why a systematic review of this topic is needed along with a history of what has been done to date and an expectation of what new will emerge from the review, especially if quantitative meta-analyses of studies are being considered.
 ```
 
-Forest ecosystems are shaping the course of climate change through their influence on atmospheric carbon dioxide [CO~2~; @bonan_forests_2008; @friedlingstein_global_2019; @ipcc_global_2018].
+Forest ecosystems are shaping the course of climate change through their influence on atmospheric carbon dioxide [CO~2~, @bonan_forests_2008; @friedlingstein_global_2019; @ipcc_global_2018].
 Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climate_2006; @krause_large_2018; @bonan_model_2019; @divittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011; @ipcc_2019_2019] can be traced to lack of understanding on how C cycling varies across forest types and in relation to stand history.
 This requires accessible, comprehensive, and large-scale databases with global coverage, which runs contrary to the traditional way forest C stocks and fluxes have been measured and published.
 Large-scale synthesis is critical to benchmarking model performance with global data [@clark_field_2017; @luo_framework_2012], quantifying the the role of forests in the global C cycle [*e.g.*, @pan_large_2011], and using book-keeping methods to quantify actual or potential exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
@@ -556,8 +556,9 @@ Further research on non-living C stocks in the world's forests will be essential
 Our study reveals that most autotrophic C fluxes quickly increase and then decelerate as stands age (Figs. `r flux_age_trends`, `r age_trends_all`), consistent with current understanding of age trends in forest C cycling [Fig. `r schematic`; e.g., @anderson-teixeira_altered_2013; @amiro_ecosystem_2010; @magnani_human_2007].
 While limited records in very young (*i.e.*, <5 year old) stands resulted in poor resolution of the earliest phases of this increase for many variables (sometimes detecting no age trend; Table 1), any autotrophic C flux (e.g., $GPP$, $NPP$ and its components, $R_{auto}$) would be minimal immediately following a stand-clearing disturbance (Fig. `r schematic`).
 These would be expected to increase rapidly, along with the most metabolically active components of biomass, foliage and fine roots, which also increase rapidly with stand age (Figs. `r schematic`, `r flux_age_trends`-`r age_trends_all`).
-In contrast, soil heterotrophic respiration ($R_{het-soil}$) and total soil respiration ($R_{soil}$)--and therefore $R_{eco}$ are expected to be non-zero following stand-clearing disturbance (Fig. `r schematic`), although these may decrease with a reduction of root respiration ($R_{soil}$ only) and C exudates or increase in response to an influx of dead roots and litter [@ribeiro-kumara_how_2020; @maurer_carbon_2016; @bond-lamberty_contribution_2004].
-In this study, we detect no significant age trends in either $R_{het-soil}$ or $R_{soil}$, consistent with previous findings [@law_changes_2003;@pregitzer_carbon_2004;@goulden_patterns_2011].
+In contrast, soil heterotrophic respiration ($R_{het-soil}$) and total soil respiration ($R_{soil}$) -- and therefore $R_{eco}$ -- are expected to be non-zero following stand-clearing disturbance (Fig. `r schematic`).
+These may decrease with a reduction of root respiration ($R_{soil}$ only) and C exudates or increase in response to an influx of dead roots, $DW$, and $OL$ [@ribeiro-kumara_how_2020; @maurer_carbon_2016; @bond-lamberty_contribution_2004], with the latter being strongly dependent upon the type of stand initiating disturbance (discussed below).
+In this study, we detect no significant overall age trends in either $R_{het-soil}$ or $R_{soil}$, consistent with previous findings [@law_changes_2003;@pregitzer_carbon_2004;@goulden_patterns_2011].
 
 Notably, net carbon sequestration ($NEP$) exhibits an overall increase with age across the first 100 years of stand development, with more pronounced patterns in temperate than boreal forests (Fig. `r flux_age_trends`). 
 This finding is consistent with previous studies showing an increase in $NEP$ across relatively young stand ages [@pregitzer_carbon_2004; @baldocchi_fluxnet_2001; @luyssaert_oldgrowth_2008].
@@ -567,9 +568,10 @@ Moreover, both biomass and non-living C stocks often continue to increase well b
 Additional data, including on age trends of deadwood, the organic layer, and soil C will be important to parsing the timing and extend of an age-related $NEP$ decrease across forest biomes.
 
 In terms of stocks, our study reveals consistent increases in live biomass stocks with stand age, a pattern that is well-known and expected [e.g., @lichstein_biomass_2009; @yang_carbon_2011], contrasting with more variable age trends in deadwood and the organic layer (Fig. `r age_trends_all`).
-The latter are particularly sensitive to the type of disturbance, where disturbances that remove most organic material (e.g., logging, agriculture) result in negligible deadwood in young stands, followed by a buildup over time [e.g., tropical stands in Figs. `r stock_age_trends`, `r age_trends_all`; e.g., @vargas_biomass_2008].
-In contrast, natural disturbances (e.g., fire, drought) can produce large amounts of deadwood (mostly $DW_{standing}$) that slowly decomposes as the stand recovers, resulting in declines across young stand ages [e.g., temperate and boreal stands in Figs. `r stock_age_trends`, `r age_trends_all`; @carmona_coarse_2002].
-Again, further study and synthesis of non-living C stocks across biomes and stand ages will be valuable to giving a more comprehensive picture. 
+The latter depend strongly on the type of disturbance. 
+Disturbances that remove most woody material (e.g., clearcut logging, agriculture) result in negligible deadwood in young stands, followed by a buildup over time [e.g., tropical stands in Figs. `r stock_age_trends`, `r age_trends_all`; e.g., @vargas_biomass_2008].
+In contrast, natural disturbances (e.g., fire, drought, typhoons/hurricanes) can produce large amounts of deadwood (mostly $DW_{standing}$) that slowly decomposes as the stand recovers, resulting in declines across young stand ages [e.g., temperate and boreal stands in Figs. `r stock_age_trends`, `r age_trends_all`; @carmona_coarse_2002].
+Further study and synthesis of non-living C stocks across biomes, stand ages, and disturbance types will be valuable to giving a more comprehensive picture.
 
 ### C variable coverage and budget closure
 
@@ -582,11 +584,14 @@ The one instance where the C budgets does not close according to our criteria is
 The overall high degree of closure implies that *ForC* gives an at least roughly consistent picture of C cycling within biomes for mature forests. 
 This is an important and useful test, because it allows for consistency checks within the C cycle, for example leveraging separate and independently-measured fluxes to constrain errors in another [@phillips_value_2017; @williams_impacts_2014; @harmon_heterotrophic_2011], or producing internally consistent global data products [@wang_golumcnp_2018]. 
 
-In contrast, age trends for young forests generally remain less clearly defined, in large part because their data records remain relatively sparse (*i.e.*, have low representation of different geographical regions for any given age) for most variables, particularly in the tropics [@anderson-teixeira_carbon_2016]. 
+In contrast, age trends for young forests generally remain less clearly defined. 
+In large part, this is because their data records remain relatively sparse (*i.e.*, have low representation of different geographical regions for any given age) for most variables, particularly in the tropics [@anderson-teixeira_carbon_2016]. 
+In addition, variation in the type and severity of stand-initiating disturbances introduces significant heterogeneity in both initial values and age trends of C cycle variables [e.g., @cook-patton_mapping_2020]
 While this review provides a first analysis of age trends in forest C cycling for multiple variables at a global scale, improved resolution of these trends will require additional data.
 
 There are of course notable holes in the ForC variable coverage that limit the scope of our inferences here. 
-Notably, *ForC* currently has sparse--if any--coverage of fluxes to herbivores and higher consumers, along with the woody mortality ($M_{woody}$) and $DW$ (Table 1, Figs. `r DW_tot_fig`-`r DW_down_fig`). 
+Notably, *ForC* currently has sparse--if any--coverage of fluxes to herbivores and higher consumers, along with woody mortality ($M_{woody}$) and $DW$ (Table 1, Figs. `r DW_tot_fig`-`r DW_down_fig`). 
+We note that there are considerable opportunities to expand data on $M_{woody}$ and $DW_{standing}$ through calculations from existing forest census data.
 *ForC* does not include soil carbon, which is covered by other efforts [e.g., @kochy_global_2015]. 
 *ForC* is not intended to replace databases that are specialized for particular parts of the C cycle analyses, e.g., aboveground biomass [@spawn_harmonized_2020], land-atmosphere fluxes [@baldocchi_fluxnet_2001], soil respiration [@jian_restructured_2020], or the human footprint in global forests [@magnani_human_2007].
 
@@ -620,19 +625,19 @@ The latter provide insight into aboveground carbon stocks, but less constraint o
 Combining observational data and remote observations may provide a much more comprehensive and accurate picture of global forest C cycling, particularly when used in formal data assimilation systems [@konings_global_2019; @liu_detecting_2018].
 Biomass is the largest C stock in most forests, and most of the emphasis has traditionally been on this variable. 
 Remote-sensing driven aboveground biomass estimates [e.g., @saatchi_benchmark_2011], calibrated based on high-quality ground-based data [@schepaschenko_forest_2019; @chave_ground_2019], provide the most promising approach, but significant uncertainties remain [@ploton_spatial_2020]. 
-Note, however, that factors such as stand age and disturbance history are difficult, if not impossible, to detect remotely, and can only be characterized for very recent decades [@hansen_highresolution_2013; @song_global_2018; @curtis_classifying_2018]. 
+Note, however, that factors such as stand age and disturbance history are difficult, if not impossible, to detect remotely, and can only be characterized for recent decades [@hansen_highresolution_2013; @song_global_2018; @curtis_classifying_2018]. 
 Ground-based data such as *ForC* are therefore valuable in defining age-based trajectories in biomass, as in @cook-patton_mapping_2020, and thus constraining variables such as carbon sink potential [@luyssaert_oldgrowth_2008].
 
 In contrast, carbon allocation within forest ecosystems and respiration fluxes cannot be remotely sensed. 
 Efforts such as the Global Carbon Project [@friedlingstein_global_2019] and NASA’s Carbon Monitoring System [@liu_detecting_2018] typically compute respiration as residuals of all other terms [@bond-lamberty_estimating_2016; @harmon_heterotrophic_2011]. 
 This means that the errors on respiration outputs are likely to be large and certainly poorly constrained, offering a unique opportunity for databases such as ForC and SRDB [@jian_restructured_2020] to provide observational benchmarks. 
-For example, @konings_global_2019 produced a unique top-down estimate of global heterotrophic respiration that can both be compared with extant bottom-up estimates [@bond-lamberty_new_2018] and used as an internal consistency check on other parts of the carbon cycle [@phillips_value_2017].
+For example, @konings_global_2019 produced a top-down estimate of global heterotrophic respiration that can both be compared with extant bottom-up estimates [@bond-lamberty_new_2018] and used as an internal consistency check on other parts of the carbon cycle [@phillips_value_2017].
 
 ### Conclusions
 As climate change accelerates, understanding and managing the carbon dynamics of forests-- including dynamics and fluxes that cannot be observed by satellites--is critical to forecasting, mitigation, and adaptation.
-The C data in *ForC*, as summarized here, will be valuable to these efforts.
-Notably, the fact that tropical forests tend to have both the highest rates of C sequestration in young stands [Fig. `r stock_age_trends`; @cook-patton_mapping_2020], fueled by their generally high C flux rates (Table 1; Fig. `r flux_age_trends`), and the highest mean biomass [Fig. `r stock_age_trends`; Table `r variables_table`; @hu_mapping_2016; @jian_restructured_2020] reinforces the concept that conservation and restoration of these forests is a priority for climate change mitigation, along with high-biomass old-growth temperate stands [@grassi_key_2017; @goldstein_protecting_2020].
-It is also important to note the trade-off in climate mitigation potential of restoration of young forests, with high rates of CO~2~ sequestration [$NEP$; @cook-patton_mapping_2020], versus conservation and management of mature forests, with low $NEP$ but high C stocks that could not be recovered on a time scale relevant to climate change mitigation [@goldstein_protecting_2020].
+The C data in *ForC*, as summarized here, are valuable to these efforts.
+Notably, the fact that tropical forests tend to have both the highest rates of C sequestration in young stands [Fig. `r stock_age_trends`; @cook-patton_mapping_2020], fueled by their generally high C flux rates (Table 1; Fig. `r flux_age_trends`), and the highest mean biomass [Fig. `r stock_age_trends`; Table `r variables_table`; @hu_mapping_2016; @jian_restructured_2020] reinforces the idea that conservation and restoration of these forests is a priority for climate change mitigation, along with high-biomass old-growth temperate stands [@grassi_key_2017; @goldstein_protecting_2020].
+It is also important to note the trade-off in climate mitigation potential of restoration of young forests, with high rates of CO~2~ sequestration [$NEP$; @cook-patton_mapping_2020], versus conservation and management of mature forests, with low $NEP$ but high C stocks that, if lost through disturbance, could not be recovered on time scales most relevant to avoiding dangerous climate change [i.e., @goldstein_protecting_2020].
 Generally speaking, the conservation of mature forests will yield greater climate benefits [@anderson-teixeira_greenhouse_2011], but both approaches are critical to avoiding catastrophic climate change [@ipcc_global_2018].
 
 ## Acknowledgements
