@@ -77,13 +77,13 @@ flux_age_trends=7
 stock_age_trends=8
 age_trends_all=9
 
-schematics_caption_generic ="Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std over geographically distinct areas (clusters of plots within 25 km of each other). Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow width is proportional to the square root of the corresponding flux. Mean component fluxes do not necessarily add up to the mean total fluxes because different sets of sites are included depending on availability of data (Figs. S5-S30). Mature forests are defined  as ≥ 100 years old and with no known major natural or anthropogenic disturbance in that time."
+schematics_caption_generic ="Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); boxes indicate stocks (Mg C ha$^{-1}$), with variables as defined in Table 1. Presented are mean ± std over geographically distinct areas (clusters of plots within 25 km of each other). Dashed shape outlines indicate variables with records from <7 distinct geographic areas, and dashed arrows indicate fluxes with no data. To illustrate the magnitude of different fluxes, arrow width is proportional to the square root of the corresponding flux. Mean component fluxes do not necessarily add up to the mean total fluxes because different sets of sites are included depending on data availability (Figs. S5-S30). Mature forests are defined  as ≥ 100 years old and with no known major natural or anthropogenic disturbance in that time."
 TrB_mature_caption = paste( "Figure 3 | C cycle diagram for mature tropical broadleaf forests. ", schematics_caption_generic)  
 TeB_mature_caption = paste( "Figure 4 | C cycle diagram for mature temperate broadleaf forests. ", schematics_caption_generic)  
 TeN_mature_caption = paste( "Figure 5 | C cycle diagram for mature temperate conifer forests. ", schematics_caption_generic, "The temperate conifer biome in particular is subject to high variability, with highest fluxes and stocks in the high-biomass forests of the US Pacific Northwest. An asterisk after a variable name indicates lack of C cycle closure.")  
 BoN_mature_caption = paste( "Figure 6 | C cycle diagram for mature boreaal conifer forests. ", schematics_caption_generic)  
 
-age_trends_all_caption= "Figure 9 | Age trends in C cycling. Selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all elements of C cycle. Error bars on mature forest flux estimates indicate $\\pm$ 1 standard deviation. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows. For all forests: $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$, $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$, $DW_{standing}=max(0, DW_{tot}-DW_{down})$. For tropical forests: $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$, $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$ and $CUE$=0.46 (Collati et al. 2020). For non-tropical forests: $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$, $R_{auto-ag}=R_{eco}-R{soil}$. Note that there remain substantial uncertainties as to the functional form of age trends and discrepencies in closure among related variables."
+age_trends_all_caption= "Figure 9 | Age trends in C cycling. The selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all C cycle elements. Error bars on mature forest flux estimates indicate $\\pm$ 1 standard deviation. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows. For all forests: $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$, $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$, $DW_{standing}=max(0, DW_{tot}-DW_{down})$. For tropical forests: $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$, $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$ and $CUE$=0.46 (Collati et al. 2020). For non-tropical forests: $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$, $R_{auto-ag}=R_{eco}-R{soil}$. Note that there remain substantial uncertainties in the functional form of age trends and discrepancies in closure among related variables."
 
 
 #SI
@@ -214,7 +214,7 @@ n_stocks_with_ge3_areas <- table(ForC_biome_averages$Biome[idx_stocks3])
 Forest ecosystems are shaping the course of climate change through their influence on atmospheric carbon dioxide, CO~2~ [@bonan_forests_2008; @ipcc_global_2018; @friedlingstein_global_2019].
 Despite the centrality of forest C cycling in regulating atmospheric CO~2~, important uncertainties in climate models [@friedlingstein_climate_2006; @krause_large_2018; @bonan_model_2019; @divittorio_initial_2020] and CO~2~ accounting frameworks [@pan_large_2011; @ipcc_2019_2019] can be traced to lack of understanding on how C cycling varies across forest types and in relation to stand history.
 This requires accessible, comprehensive, and large-scale databases with global coverage, which runs contrary to the traditional way forest C stocks and fluxes have been measured and published.
-Large-scale synthesis is critical to benchmarking model performance with global data [@luo_framework_2012; @clark_field_2017], quantifying the role of forests in the global C cycle [*e.g.*, @pan_large_2011], and using book-keeping methods to quantify actual or potential exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
+Large-scale synthesis is critical to benchmarking model performance with global data [@luo_framework_2012; @clark_field_2017], quantifying the role of forests in the global C cycle [e.g., @pan_large_2011], and using book-keeping methods to quantify actual or potential exchanges of CO~2~ between forests and the atmosphere [@griscom_natural_2017; @houghton_terrestrial_2020].
 
 ### Forests in the global C cycle: current and future
 
@@ -244,10 +244,10 @@ Remote sensing technology has become increasingly useful for global- or regional
 Yet, measurement and validation of most forest C stocks and fluxes necessarily requires intensive on-the-ground data collection.
 
 Alongside these conceptual and methodological developments, there has been a proliferation of measurements across the world's forests. 
-The result of decades of research on forest C cycling is tens of thousands of records distributed across thousands of scientific articles, varying in data formats, units, measurement methods, *etc.*
-To address global-scale questions, researchers began synthesizing data into increasingly large databases [e.g., @lieth_primary_1973; @luyssaert_co2_2007;  @bond-lamberty_global_2010; @anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018; @cook-patton_mapping_2020]. 
+The result of decades of research on forest C cycling is tens of thousands of records distributed across thousands of scientific articles, varying in data formats, units, measurement methods, etc.
+To address questions at a global scale, researchers began synthesizing data into increasingly large databases [e.g., @lieth_primary_1973; @luyssaert_co2_2007;  @bond-lamberty_global_2010; @anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018; @cook-patton_mapping_2020]. 
 The current largest, most comprehensive database on forest C cycling is *ForC* [@anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018], which contains published estimates of forest ecosystem C stocks and annual fluxes (>50 variables), with different variables capturing distinct ecosystem pools (e.g., woody, foliage, and root biomass; dead wood) and flux types (e.g, gross and net primary productivity; soil, root, and ecosystem respiration). 
-These data represent ground-based measurements, and *ForC* contains associated data required for interpretation (*e.g.*, stand history, measurement methods).
+These data represent ground-based measurements, and *ForC* contains associated data required for interpretation (e.g., stand history, measurement methods).
 Since its most recent publication [*ForC v2.0-Ecology*, @anderson-teixeira_forc_2018], *ForC* has grown `r round((nrow(ForC_measurements) - 17367)/17367*100, digits=0)`%, primarily through the incorporation of two additional large databases that also synthesized published forest C data: the Global Soil Respiration Database [SRDB, @bond-lamberty_global_2010; @jian_restructured_2020] and the Global Reforestation Opportunity Assessment database [GROA, @cook-patton_mapping_2020].
 Following these additions, *ForC* currently contains `r nrow(ForC_measurements)` records from `r nrow(ForC_plots)` plots and `r n_areas` distinct geographic areas representing all forested biogeographic and climate zones, making it ideal for assessing how forest C cycling varies across biomes and with respect to stand age.
 
@@ -257,7 +257,7 @@ Forest C cycling varies enormously across biomes, categories that encapsulate ma
 The dominant role of climate in shaping global variation among forests has been recognized since the early 19^th^ century [@humboldt_essay_1807; @holdridge_determination_1947].
 Global scale data syntheses have shown that C fluxes including $GPP$, net primary productivity ($NPP$), and soil respiration ($R_{soil}$) decrease with latitude or, correspondingly, increase with mean annual temperature [Fig. `r schematic`; e.g., @lieth_primary_1973;  @luyssaert_co2_2007; @hursh_sensitivity_2017; @banburymorgan_global_inpress].
 C stocks of mature forests show less directional variation (Fig. `r schematic`).
-On average, aboveground biomass ($B_{ag}$) tends to decrease with latitude, but not as dramatically as fluxes, and with the highest $B_{ag}$ forests in relatively cool, moist temperate regions [@keith_reevaluation_2009; @smithwick_potential_2002; @hu_mapping_2016]. 
+On average, aboveground biomass ($B_{ag}$) tends to decrease with latitude, but not as dramatically as fluxes, and with the highest $B_{ag}$ forests in relatively cool, moist temperate regions [@smithwick_potential_2002; @keith_reevaluation_2009; @hu_mapping_2016]. 
 In contrast, standing and downed dead wood ($DW_{standing}$ and $DW_{down}$, respectively, summing to $DW_{tot}$) and the organic layer ($OL$) tend to accumulate more in colder climates where decomposition is slow relative to $NPP$ [@harmon_ecology_1986; @allen_global_2002].
 
 Phenomenological analyses relating C stocks and fluxes to climate and other environmental variables have recently been taken to a new level through use of machine-learning algorithms that relate ground-based C cycle data to global maps of environmental covariates [e.g., @warner_spatial_2019; @cook-patton_mapping_2020].
@@ -265,7 +265,7 @@ The resulting models enable construction of fine-scale global maps of estimated 
 This approach can be particularly effective when it integrates satellite measurements that correlate with C cycle variables of interest; for example, solar-induced chlorophyll fluorescence is useful for fine-scale mapping of gross primary productivity [$GPP$, @li_mapping_2019], while LiDAR, radar, and optical imagery are being used to model $B_{ag}$ at regional to global scales [e.g., @saatchi_benchmark_2011; @hu_mapping_2016]. 
 However, all such analyses are ultimately constrained by the quality and coverage of ground-based estimates of forest C fluxes or stocks to train models [e.g., @schepaschenko_forest_2019]. 
 While estimates of some variables (e.g., $B_{ag}$, $GPP$, $NPP$, $R_{soil}$) are widely available, many remain poorly characterized (e.g., $DW_{tot}$; $OL$; autotrophic respiration, $R_{auto}$) even at the coarse resolution of biomes.
-This is a critical limitation not only for understanding forest C cycling, but also for quantifying forest-based climate change mitigation potential across forest biomes or ecozones [e.g., @ipcc_2019_2019].
+This is a critical limitation for understanding forest C cycling and quantifying forest-based climate change mitigation potential across forest biomes or ecozones [e.g., @ipcc_2019_2019].
 
 ### Age trends and their variation across biomes
 
@@ -274,9 +274,9 @@ In 1969, E.P. Odum's "The Strategy of Ecosystem Development" laid out prediction
 Although the conceptualization of the C cycle in this paper was simplistic by current standards, the paper was foundational in framing the theory around which research on the subject still revolves [@corman_foundations_2019], and the basic framework still holds, albeit with modest modifications [Fig. `r schematic`, @anderson-teixeira_altered_2013].
 Following stand-clearing disturbance, $GPP$, $NPP$, and biomass of leaves ($B_{foliage}$) and fine roots ($B_{root-fine}$) initially increase rapidly and thereafter remain relatively stable ($B_{foliage}$, $B_{root-fine}$, sometimes $GPP$) or decline slightly [$NPP$, sometimes $GPP$; e.g., @law_changes_2003; @pregitzer_carbon_2004; @amiro_ecosystem_2010; @goulden_patterns_2011].
 The decline in $NPP$ occurs because $R_{auto}$ increases relative to $GPP$ as forests age, corresponding to declining carbon use efficiency with stand age [@delucia_forest_2007; @collalti_forest_2020].
-Heterotrophic respiration, most of which originates from the soil ($R_{het-soil}$) remains relatively constant with stand age [@law_changes_2003; @pregitzer_carbon_2004; @goulden_patterns_2011], with the result that net ecosystem production ($NEP=GPP-R_{eco}$, where $R_{eco}$ is total ecosystem respiration) is initially negative, increases to a maximum at intermediate ages, and declines--typically to a small positive value--thereafter [@law_changes_2003; @pregitzer_carbon_2004; @amiro_ecosystem_2010; @goulden_patterns_2011; @luyssaert_oldgrowth_2008].
+Heterotrophic respiration, most of which originates from the soil ($R_{het-soil}$) remains relatively constant with stand age [@law_changes_2003; @pregitzer_carbon_2004; @goulden_patterns_2011], with the result that net ecosystem production ($NEP=GPP-R_{eco}$, where $R_{eco}$ is total ecosystem respiration) is initially negative, increases to a maximum at intermediate ages, and declines--typically to a small positive value--thereafter [@law_changes_2003; @pregitzer_carbon_2004; @luyssaert_oldgrowth_2008; @amiro_ecosystem_2010; @goulden_patterns_2011].
 The result is that biomass accumulation is rapid in young forests, followed by a slow decline to near zero in old forests [e.g., @lichstein_biomass_2009; @yang_carbon_2011].
-While these trends have been subject of fairly recent qualitative review [@anderson-teixeira_altered_2013], there is need for a synthetic, quantitative review taking advantage of the greatly expanded data now available.
+While these trends have been the subject of fairly recent qualitative review [@anderson-teixeira_altered_2013], there is need for a synthetic, quantitative review taking advantage of the greatly expanded data now available.
 
 
 ```{r schematic, eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 1 | Schematic diagram summarizing current understanding of biome differences and age trends in forest C cycling. Variables are defined in Table 1. Age trends, which represent idealized dynamics following a disturbance that removes all living vegetation, are an updated version of the classic figure from Odum (1969), with heavy lines corresponding to those in Odum's figure and $NEP$ corresponding to Odum's 'net production'. Here, $NEP$ consists primarily of woody aboveground net primary production ($ANPP_{woody}$), while $ANPP_{woody.turnover}$ is the sum of woody mortality and branch turnover. Dotted lines refer to decomposition of potential 'legacy' organic material produced prior to the disturbance and remaining at the site (e.g., standing and fallen dead wood, $DW_{tot}$; soil organic matter). Error bars on C stocks plot represent within-biome variability, wherein mean biomass is highest in the tropics, but maximum biomass is highest in temperate regions.", out.width='100%', fig.pos='H'}
@@ -286,12 +286,12 @@ While these trends have been subject of fairly recent qualitative review [@ander
 
 In the past few decades, researchers have started asking how age trends--mostly in $B_{ag}$ or total biomass ($B_{tot}$) accumulation-- vary across biomes.
 Early research on this theme showed that biomass accumulation rates during secondary succession increase with temperature on a global scale [@johnson_postdisturbance_2000; @anderson_temperaturedependence_2006] and with water availability in the neotropics [@poorter_biomass_2016]. 
-Most recently, @cook-patton_mapping_2020 reinforced these earlier findings with a much larger dataset and created a high-resolution global map of estimated potential C accumulation rates.
-However, there has been little synthesis of cross-biome differences in variables other than biomass and its accumulation rate (but see @cook-patton_mapping_2020 for $DW$, $OL$, and soil C accumulation in young stands).
-Given the important role of secondary forests in the current and future global C cycle, concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding of the global C cycle.
-Accurate estimates of C sequestration rates by regrowth forests are also critical for national greenhouse gas accounting under the IPCC framework [@ipcc_2019_2019; @requenasuarez_estimating_2019] and to quantifying the value of regrowth forests for climate change mitigation [@anderson-teixeira_greenhouse_2011; @goldstein_protecting_2020].
+@cook-patton_mapping_2020 reinforced these earlier findings with a much larger dataset and created a high-resolution global map of estimated potential C accumulation rates.
+However, there has been little synthesis of cross-biome differences in variables other than biomass and its accumulation rate [but see @cook-patton_mapping_2020 for $DW$, $OL$, and soil C accumulation in young stands].
+Given the important role of secondary forests in the current and future global C cycle, a concrete understanding of age trends in C fluxes and stocks and how these vary across biomes is critical to better understanding the global C cycle.
+Accurate estimates of C sequestration rates by regrowth forests are also critical for national greenhouse gas accounting under the IPCC framework [@ipcc_2019_2019; @requenasuarez_estimating_2019] and quantifying the value of regrowth forests for climate change mitigation [@anderson-teixeira_greenhouse_2011; @goldstein_protecting_2020].
 
-Here, we conduct a data-based review of carbon cycling from a stand to global level, and by biome and stand age, using the largest global compilation of forest carbon data, which is available in our open source Global Carbon Forest database (*ForC*; Fig. `r figure_map`).
+Here, we conduct a data-based review of carbon cycling from a stand to global level, and by biome and stand age, using our open-source Global Carbon Forest database (*ForC*; Fig. `r figure_map`), which is the largest global compilation of forest carbon data.
 Our goal is to provide a comprehensive synthesis on broad trends in forest C cycling that can serve as a foundation for improved understanding of global forest C cycling and highlight where key sources of uncertainty still reside.
 
 
@@ -308,16 +308,16 @@ Our goal is to provide a comprehensive synthesis on broad trends in forest C cyc
 
 
 This review synthesizes data from the *ForC* database [Fig. `r figure_map`, https://github.com/forc-db/ForC, @anderson-teixeira_carbon_2016; @anderson-teixeira_forc_2018].
-*ForC* amalgamates numerous intermediary data sets [*e.g.*, @luyssaert_co2_2007; @bond-lamberty_global_2010; @cook-patton_mapping_2020] and original studies.
+*ForC* amalgamates numerous intermediary data sets [e.g., @luyssaert_co2_2007; @bond-lamberty_global_2010; @cook-patton_mapping_2020] and original studies.
 Original publications were referenced to check values and obtain information not contained in intermediary data sets, although this process has not been completed for all records.
 The database was developed with goals of understanding how C cycling in forests varies across broad geographic scales and as a function of stand age.
-As such, there has been a focus on incorporating data from regrowth forests [*e.g.*, @anderson_temperaturedependence_2006; @martin_carbon_2013; @bonner_metaanalytical_2013] and obtaining stand age data when possible [83% of records in v.2.0, @anderson-teixeira_forc_2018].
+As such, there has been a focus on incorporating data from regrowth forests [e.g., @anderson_temperaturedependence_2006; @martin_carbon_2013; @bonner_metaanalytical_2013] and obtaining stand age data when possible [83% of records in *ForC* v.2.0, @anderson-teixeira_forc_2018].
 Particular attention was given to developing the database for tropical forests [@anderson-teixeira_carbon_2016], which represented roughly one-third of records in *ForC* v2.0 [@anderson-teixeira_forc_2018].
 Since publication of ForC v2.0, we imported three large additional databases into *ForC* via a combination of R scripts and manual edits. 
-First, we imported (via R script) the Global Database of Soil Respiration Database [*SRDB* v4, `r n_SRDB` records, @bond-lamberty_global_2010], and corrections and improvements to *SRDB* arising from this process were incorporated in *SRDB* v5 [@jian_restructured_2020].
+First, we imported (via R script) the Global Soil Respiration Database [*SRDB* v4, `r n_SRDB` records, @bond-lamberty_global_2010], with corrections and improvements to *SRDB* arising from this process incorporated into *SRDB* v5 [@jian_restructured_2020].
 Second, we imported (via R script) the Global Reforestation Opportunity Assessment database [*GROA* v1.0, `r n_GROA` records, @cook-patton_mapping_2020; @anderson-teixeira_forcdb_2020], which itself had drawn on an earlier version of *ForC*. Because all records in *GROA* were checked against original publications, these records were given priority over duplicates in *ForC* (Appendix S1). 
 Third, we incorporated records of annual $NEP$, $GPP$, and $R_{eco}$ from the FLUXNET2015 dataset [@pastorello_fluxnet2015_2020], treating these records as authoritative when they duplicated earlier records (Appendix S1). 
-We have also added data from individual publications, with a particular focus on productivity [e.g., @taylor_temperature_2017], dead wood, and ForestGEO sites [e.g., @lutz_global_2018; @johnson_climate_2018].
+We have also added data from individual publications, focusing on productivity [e.g., @taylor_temperature_2017], dead wood, and ForestGEO sites [e.g., @johnson_climate_2018; @lutz_global_2018].
 A record of data sets added to *ForC* over the course of its development is available at https://github.com/forc-db/ForC/blob/master/database_management_records/ForC_data_additions_log.csv.
 The database version used for this analysis has been tagged as a new release on Github (v3.0) and assigned a DOI through Zenodo (DOI: TBD).
 
@@ -333,12 +333,12 @@ In total, this resulted in `r records_eligible_for_inclusion` records (`r round(
 We selected 23 annual flux and 11 C stock variables for inclusion in the analysis (Table 1).
 These different flux and stock variables represent different pools (e.g., aboveground biomass, root biomass, dead wood) and levels of combination (e.g., total net primary productivity, $NPP$, versus the individual elements of $NPP$ such as foliage, roots, and branches). 
 We did not analyze soil carbon, which is not a focus of the *ForC* database.
-Note that two flux variables, aboveground heterotropic respiration ($R_{het-ag}$) and total heterotropic respiration ($R_{het}$), were included for conceptual completeness but had no records in *ForC* (Table 1).
+Note that two flux variables, aboveground heterotrophic respiration ($R_{het-ag}$) and total heterotrophic respiration ($R_{het}$), were included for conceptual completeness but had no records in *ForC* (Table 1).
 Records for our focal variables represented `r round(n_focal_variable_records_eligible_for_inclusion/records_eligible_for_inclusion*100,digits=1)`% of the total records eligible for inclusion.
-For this analysis, we combined some of ForC’s specific variables into more broadly defined variables. 
+For this analysis, we combined some specific variables from *ForC* into more broadly defined variables. 
 Specifically, net ecosystem exchange [measured by eddy-covariance, @baldocchi_fluxnet_2001] and biometric estimates of $NEP$ were combined into the single variable $NEP$ (Table 1).
-Furthermore, for $NPP$, aboveground $NPP$ ($ANPP$), and the litterfall component of $ANPP$ ($ANPP_{litterfall}$), we combined ForC variables specifying inclusion or exclusion of minor components (*e.g.*, measurements including or excluding fruit production, flower production, and herbivory).
-Throughout ForC, for all measurements drawing from tree census data (*e.g.*, biomass, productivity), trees were censused down to a minimum diameter breast height (DBH) threshold of 10 cm or less. 
+Furthermore, for $NPP$, aboveground $NPP$ ($ANPP$), and the litterfall component of $ANPP$ ($ANPP_{litterfall}$), we combined ForC variables specifying inclusion or exclusion of minor components (e.g., measurements including or excluding fruit production, flower production, and herbivory).
+Throughout ForC, for all measurements drawing from tree census data (e.g., biomass, productivity), trees were censused down to a minimum diameter breast height (DBH) threshold of 10 cm or less. 
 All records were based on ground-based field measurements.
 
 ```{r eval = generate_figures, echo=FALSE, warning=FALSE}
@@ -368,30 +368,30 @@ Forests in dry (B) and polar (E) Köppen-Geiger zones were excluded from the ana
 We distinguished broadleaf and needleleaf forests based on descriptions in original publications (prioritized) or values extracted from a global map based on satellite observations [SYNMAP, @jung_exploiting_2006].
 For young tropical forests imported from *GROA* but not yet classified by leaf type, we assumed that all were broadleaf, consistent with the rarity of naturally regenerating needleleaf forests in the tropics.
 We classified forests as “young”  if stand age was less than 100 years,  or “mature” if stand age was older or if they were described as “mature”, “old growth”, “intact”, or “undisturbed” in the original publication.
-Assigning stands to these groupings required the exclusion of records for which *ForC* lacked geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in full database) or records of stand age or forest maturity (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in full database). 
+Assigning stands to these groupings required excluding records for which *ForC* lacked geographic coordinates (`r round(n_sites_coord_unk/nrow(ForC_sites)*100, digits=1)`% of sites in the full database) or records of stand age or forest maturity (`r round(n_records_age_unk/nrow(ForC_measurements)*100, digits=1)`% of records in the full database). 
 We also excluded records of stand age = 0 year (`r round(n_records_age_0/nrow(ForC_measurements)*100, digits=1)`% of records in full database).
 In total, our analysis retained `r n_records` records. 
-Numbers of records by biome and age class are given in Table S1. 
+Numbers of records by biome and age class are provided in Table S1. 
 
-We calculated means and standard deviations of each mature forest C cycle variable by biome over geographically distinct areas to produce biome-specific schematics.
+We calculated the means and standard deviations of each mature forest C cycle variable by biome over geographically distinct areas to produce biome-specific schematics.
 We first averaged any repeated measurements within a plot.
 To avoid pseudo-replication, we then averaged multiple measurements within geographically distinct areas, defined as plots clustered within 25 km of one another  [*sensu* @anderson-teixeira_forc_2018], weighting by area sampled if available for all records.
 Finally, we took means and standard deviations over geographic areas.
 
 We tested whether the C budgets described above "closed"--*i.e.*, whether they were internally consistent.
-Specifically, we first defined relationships among variables: for example, $NEP =	GPP - R_{eco}$, $BNPP = BNPP_{coarse} + BNPP_{fine}$, $DW_{tot} = DW_{standing} + DW_{down}$).
+Specifically, we first defined relationships among variables (e.g., $NEP =	GPP - R_{eco}$, $BNPP = BNPP_{coarse} + BNPP_{fine}$, $DW_{tot} = DW_{standing} + DW_{down}$).
 Henceforth, we refer to the variables on the left side of the equation as "aggregate" fluxes or stocks, and those that are summed as "component" fluxes or stocks, noting that the same variable can take both aggregate and component positions in different relationships.
 We considered the C budget for a given relationship “closed” when the means of component variables summed to within one standard deviation of the mean of the aggregate variable. 
 
-To test for differences across mature forest biomes, we also examined how stand age impacted fluxes and stocks, employing a mixed effects model ['lmer' function in 'lme4' R package, @bates_fitting_2015] with biome as fixed effect and plot nested within geographic.area as random effects on the intercept.
-When biome had a significant effect, we used a Tukey's pairwise comparison to see which biomes were significantly different from one another. 
+To test for differences across mature forest biomes, we also examined how stand age impacted fluxes and stocks, employing a mixed effects model ['lmer' function in 'lme4' R package, @bates_fitting_2015] with biome as a fixed effect and plot nested within geographic area as random effects on the intercept.
+When biome had a significant effect, we used Tukey's pairwise comparison to see which biomes were significantly different from one another. 
 This analysis was run for variables and biomes with records for at least seven distinct geographic areas per biome (Table 1). 
 
 To test for age trends in young (<100yrs) forests, we employed a mixed effects model with biome and log10[stand age] as fixed effects and plot nested within geographic area as a random effect on the intercept.
-This analysis was run for variables and biomes with records for at least three distinct geographic areas per biome, excluding any biomes that failed this criteria (Table 1).
-When the effect of stand age was significant at p $\le$ 0.05 and when each biome had records for stands of at least 10 different ages, a biome $\times$ stand.age interaction was included in the model.
-We note that the logarithmic function fit in this analysis does not always correspond to theoretical expectations (Fig. `r schematic`); however, data limitations did not support fitting of functions with more parameters or reliable comparison of different functional forms.
-Within the data constraints, we deemed a logarithmic function to be the most appropriate functional form for the majority of variables.
+This analysis was run for variables and biomes with records for at least three distinct geographic areas per biome, excluding any biomes that failed this criterion (Table 1).
+When the effect of stand age was significant at p $\le$ 0.05, and when each biome had records for stands of at least ten different ages, a biome $\times$ stand age interaction was included in the model.
+We note that the logarithmic function fit in this analysis does not always correspond to theoretical expectations (Fig. `r schematic`); however, data limitations did not support fitting of functions with more parameters or reliable comparisons of different functional forms.
+Within the data constraints, we deemed a logarithmic function to be the appropriate functional form for most variables.
 
 
 To facilitate the accessibility of our results and data, and to allow for rapid updates as additional data become available, we automated all database manipulation, analyses, and figure production in R [@rcoreteam_language_2020].
@@ -441,7 +441,7 @@ This lack of closure was driven by very high estimates of $B_{root-coarse}$ from
 
 There were sufficient data to assess differences among biomes in mature forest values for 15 flux variables, and 12 of these variables exhibited statistically significant differences among biomes (Table 1).
 In all cases of significant differences (including C fluxes into, within, and out of the ecosystem), C fluxes were highest in tropical forests, intermediate in temperate (broadleaf or conifer) forests, and lowest in boreal forests (Table 1, Figs. `r flux_age_trends`, `r all_flux_age_trends`).
-Differences between tropical and boreal forests were always significant, with temperate forests intermediate and significantly different from one or both.
+Differences between tropical and boreal forests were consistently significant, with temperate forests intermediate and significantly different from one or both.
 Fluxes tended to be numerically greater in temperate broadleaf than temperate conifer forests, but the difference was never statistically significant.
 This pattern held for 11 of the 12 variables with significant biome effects: $GPP$, $NPP$, $ANPP$, $ANPP_{stem}$,$ANPP_{branch}$, $ANPP_{foliage}$, $BNPP$, $R_{eco}$, $R_{root}$, $R_{soil}$, and $R_{het-soil}$. 
 For two of the variables without significant differences among biomes ($ANPP_{litterfall}$ and $BNPP_{fine}$; Figs. `r ANPP_litterfall_fig` and `r BNPP_fine_fig`, respectively), the same general trends applied but were not statistically significant. 
@@ -451,7 +451,7 @@ For all biomes, $NEP$ was positive, with 95% confidence intervals excluding zero
 $BNPP_{root-coarse}$ also exhibited significant differences among biomes with the highest means outside the tropics, in this case in temperate conifer forest, a biome for which all records came from high-biomass forests in the US Pacific Northwest (Fig. `r BNPP_coarse_fig`; differences significant in mixed effects model but not in post-hoc pairwise comparison).
 
 
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 7 | Age trends and biome differences in some of the major C fluxes: (a) $GPP$, (b) $NPP$, (c) $ANPP$, (d) $R_{soil}$, (e) $R_{eco}$, and (f) $NEP$. The scatterplots show age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of log10(age) and biome. The fitted lines indicate the effect of age (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant log10(age) x biome interaction (interaction effects were tested only if the main age effect was significant and data were available for at least 10 stand ages per biome--i.e., for $GPP$, $ANPP$, $R_{soil}$, and $NEP$). The boxplots illustrate variation among biomes in mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or tests of differences across biomes (mature forests, indicated by a dash instead of a letter above the box plot). Individual figures for each flux with sufficient data, along with maps showing geographic distribution of the data, are given in the Supplement (Figs. S5-S19).", out.width='100%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 7 | Age trends and biome differences in some of the major C fluxes: (a) $GPP$, (b) $NPP$, (c) $ANPP$, (d) $R_{soil}$, (e) $R_{eco}$, and (f) $NEP$. The scatterplots show age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of log10(age) and biome. The fitted lines indicate the effect of age (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant log10(age) x biome interaction (interaction effects were tested only if the main age effect was significant and data were available for at least ten stand ages per biome--i.e., for $GPP$, $ANPP$, $R_{soil}$, and $NEP$). The boxplots illustrate variation among biomes in mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or tests of differences across biomes (mature forests, indicated by a dash instead of a letter above the box plot). Individual figures for each flux with sufficient data, along with maps showing geographic distribution of the data, are given in the Supplement (Figs. S5-S19).", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures/age_trends/for_ERL_review/Flux_age_trends.jpeg")
 ```
@@ -459,12 +459,12 @@ $BNPP_{root-coarse}$ also exhibited significant differences among biomes with th
 
 Biome differences were less consistent across C stocks than fluxes (Figs. `r stock_age_trends`, `r all_stock_age_trends`).
 There were sufficient data to assess mature forest biome differences for nine stock variables, and significant differences among biomes were detected for five variables ($B_{tot}$, $B_{ag}$, $B_{ag-wood}$, $B_{foliage}$, $B_{root-coarse}$; Table 1).
-For $B_{tot}$ and $B_{ag}$, tropical broadleaf forests had the highest mean biomass and boreal forests the lowest, with intermediate means for temperate broadleaf and needleleaf forests (temperate needleleaf excluded from $B_{tot}$ analysis becuase of insufficient data; Figs. `r B_tot_fig`, `r B_ag_fig`).
+For $B_{tot}$ and $B_{ag}$, tropical broadleaf forests had the highest mean biomass and boreal forests the lowest, with intermediate means for temperate broadleaf and needleleaf forests (temperate needleleaf excluded from $B_{tot}$ analysis because of insufficient data; Figs. `r B_tot_fig`, `r B_ag_fig`).
 However, maximum values for these variables -- along with all other  stocks including live or standing woody biomass ($B_{ag-wood}$, $B_{root}$, $B_{root-coarse}$, $DW_{tot}$, $DW_{standing}$) -- consistently occurred in temperate biomes (Figs. `r schematic`, `r stock_age_trends`, `r all_stock_age_trends`). 
 For variables for which temperate conifer forest records were disproportionately from high-biomass forests in the US Pacific Northwest ($B_{ag-wood}$, $B_{foliage}$, and $B_{root-coarse}$), temperate conifer forests had significantly higher stocks than other biomes.
 
 
-```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 8 | Age trends and biome differences in some of the major forest C stocks: (a) $B_{ag}$, (b) $B_{foliage}$, (c) $B_{root-fine}$, (d) $DW_{standing}$, (d) $DW_{down}$, and (d) $OL$. The scatterplots show age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of log10(age) and biome. The fitted lines indicate the effect of age (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant log10(age) x biome interaction (all variables but $DW_{down}$). The boxplots illustrate variation among biomes in mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or tests of differences across biomes (mature forests, indicated by a dash instead of a letter above the box plot). Individual figures for each stock with sufficient data, along with maps showing geographic distribution of the data, are given in the Supplement (Figs. S20-S30).", out.width='100%', fig.pos='H'}
+```{r eval = generate_figures, echo=FALSE, fig.align = "center", fig.cap = "Figure 8 | Age trends and biome differences in some of the major forest C stocks: (a) $B_{ag}$, (b) $B_{foliage}$, (c) $B_{root-fine}$, (d) $DW_{standing}$, (e) $DW_{down}$, and (f) $OL$. The scatterplots show age trends in forests up to 100 years old, as characterized by a linear mixed effects model with fixed effects of log10(age) and biome. The fitted lines indicate the effect of age (solid lines: significant at p<0.05, dashed lines: non-significant), and non-parallel lines indicate a significant log10(age) x biome interaction (all variables but $DW_{down}$). The boxplots illustrate variation among biomes in mature forests, with different letters indicating significant differences between biomes. Data from biomes that did not meet the sample size criteria (see Methods) are plotted, but lack regression lines (young forests) or tests of differences across biomes (mature forests, indicated by a dash instead of a letter above the box plot). Individual figures for each stock with sufficient data, along with maps showing geographic distribution of the data, are given in the Supplement (Figs. S20-S30).", out.width='100%', fig.pos='H'}
 
   knitr::include_graphics("tables_figures//age_trends/for_ERL_review/Stock_age_trends.jpeg")
 ```
@@ -473,7 +473,7 @@ For variables for which temperate conifer forest records were disproportionately
 ### C cycling in young forests
 
 C fluxes commonly increased significantly with stand age (Tables 1, S2, Figs. `r flux_age_trends`, `r age_trends_all`, `r all_age_trends`).
-*ForC* contained 16 C flux variables with sufficient data for analyses of age trends in young forests (see Methods).
+*ForC* contained 16 C flux variables with sufficient data to analyize age trends in young forests (see Methods).
 Of these, ten increased significantly with $log10[age]$: $NEP$, $GPP$, $ANPP$, $ANPP_{woody}$, $ANPP_{foliage}$, $ANPP_{litterfal}$, $BNPP$, $BNPP_{fine}$, $R_{eco}$, and $R_{root}$.
 The remaining six -- $NPP$, $ANPP_{stem}$, $ANPP_{branch}$, $BNPP_{coarse}$, $R_{soil}$, and $R_{het-soil}$ -- displayed no significant relationship to stand age.
 
@@ -486,20 +486,20 @@ Notably, and in contrast to the lack of biome differences in $NEP$ for mature fo
   knitr::include_graphics("tables_figures/stacked_age_trends/age_trends_all.png")
 ```
 
-"Closure" and internal consistency of the C flux budget was less successful for young than mature forests (Figs. `r age_trends_all`).
+"Closure" and internal consistency of the C flux budget were less successful for young than mature forests (Figs. `r age_trends_all`).
 Summed regression equations for $R_{soil-het}$ and $R_{root}$ were generally very close to $R_{soil}$.
 In assessing the C budget of young forests, we calculated $R_{auto-ag}$ as the difference between $R_{eco}$ and $R_{soil}$ (except for tropical forests, which had insufficient $R_{eco}$ data), effectively guaranteeing near-closure of the CO~2~ efflux (respiration) portion of the budget (negative values in Figs. `r age_trends_all`).
-In contrast, the  CO~2~ influx portion of the budget generally did not "close": the sum of $R_{auto}$ ($R_{root}+R_{auto-ag}$, as described above) and components of $NPP$ consistently fell short of $GPP$, particularly in in young stands (range across forest types and ages: 0.9-7.6 Mg C ha^-1^ yr^-1^).
+In contrast, the  CO~2~ influx portion of the budget generally did not "close": the sum of $R_{auto}$ ($R_{root}+R_{auto-ag}$, as described above) and components of $NPP$ consistently fell short of $GPP$, particularly in young stands (range across forest types and ages: 0.9-7.6 Mg C ha^-1^ yr^-1^).
 Moreover, there was not consistent budget closure among the components of $NPP$, and substantially different age trends resulting from the sum of components versus total $NPP$ (Figs. `r age_trends_all`).
-Although age trends of young forests often converged towards mature forest averages, there were also some discrepancies between young forest trends and mature forest averages (Figs. `r flux_age_trends`, `r age_trends_all`, `r all_age_trends`), most notably including a tendency for higher fluxes in regrowth boreal forests than in their mature counterparts (Fig. `r age_trends_all`).
+Although age trends of young forests often converged towards mature forest averages, there were some discrepancies, most notably including a tendency for higher fluxes in regrowth boreal forests than in their mature counterparts (Figs. `r flux_age_trends`, `r age_trends_all`, `r all_age_trends`).
 
 In terms of C stocks, ten variables (all but standing deadwood, $DW_{standing}$) had sufficient data to test for age trends (Table 1, Figs. `r stock_age_trends`, `r all_stock_age_trends`).
-All of these displayed a significant overall increase with with $log10[stand.age]$.
+All of these displayed a significant overall increase with $log10[stand.age]$.
 Age $\times$ biome interactions were also significant for all ten of these C stock variables (Table S2), with living C stocks tending to accumulate more rapidly during the early stages of forest regrowth in tropical forests (Figs. `r stock_age_trends`, `r age_trends_all`, `r all_stock_age_trends`).
 In the case of two non-living C stocks ($DW_{down}$ and $OL$), age $\times$ biome interactions were such that age trends were positive in some biomes and negative in others.
-Specifically, $DW_{down}$ declined with age in temperate and boreal forests, compared to an increase with age in tropical forests (Figs. `r stock_age_trends`,`r age_trends_all`, `r DW_down_fig`).
+Specifically, $DW_{down}$ declined with age in temperate and boreal forests, compared to an increase in tropical forests (Figs. `r stock_age_trends`,`r age_trends_all`, `r DW_down_fig`).
 Similarly, $OL$ declined slightly with age in temperate broadleaf forests, contrasting an increase in the other three biomes (Figs. `r stock_age_trends`, `r age_trends_all`,`r OL_fig`).
-Again, there were some discrepancies between young forest trends and mature forests, most notably including generally higher C stocks in mature forests relative to their 100-year counterparts, particularly for temperate conifer forests (with discrepancies again driven by differences in geographic representation) and, to a lesser extent, tropical broadleaf forests (FIg. `r age_trends_all`).
+Again, there were some discrepancies between young forest trends and mature forests, most notably including generally higher C stocks in mature forests relative to their 100-year counterparts, particularly for temperate conifer forests (with discrepancies again driven by differences in geographic representation) and, to a lesser extent, tropical broadleaf forests (Fig. `r age_trends_all`).
 
 \newpage
 
