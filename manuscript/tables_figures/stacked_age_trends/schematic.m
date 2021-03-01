@@ -9,7 +9,7 @@ set(0,'DefaultLegendAutoUpdate','off');
     %subplot positions
     plot_width_biome=0.27; 
     plot_width_age_f=0.57; 
-    plot_width_age_s=0.515;
+    plot_width_age_s=0.507;
     plot_height=0.37;
     left_marg=.09;
     lower_marg=.1;
@@ -46,16 +46,16 @@ GPP= NEP + (1.99+1.44)* log10(age);
 ANPP_foliage = 1.66* log10(age) +.18 - .01*(age-1);
 ANPP_woody = 2.31* log10(age) -.76 - .02*(age-1);
 ANPP_woody_turnover=1.7*log10(age)-1; %max(0,ANPP_woody-NEP);
-BNPP=0.97*log10(age)+.67 - .01*(age-1);
-NPP=ANPP_foliage+ANPP_woody+BNPP;
+BNPP_fine=1.46*log10(age) - .01*(age-1);
+NPP=ANPP_foliage+ANPP_woody+BNPP_fine; %missing BNPP_coarse, but equations for BNPP_fine and BNPP are very similar
 CUE=0.679-0.153*log10(age); %from DeLucia et al. 2007 (note that equation given mistakenly leaves of the log10(age)). Collati et al. 2020 gives an update of this.
 R_auto= max(0,NPP.*(1./CUE-1)); %Rauto=NPP*(1/CUE-1), and CUE equation is above
-R_het=ANPP_foliage+ANPP_woody_turnover+BNPP;
+R_het=ANPP_foliage+ANPP_woody_turnover+BNPP_fine;
 
 
 %categorize by "in" (GPP components, including NEP) and "out" (Reco components)
-in_fluxes = [R_auto; BNPP; ANPP_foliage;  ANPP_woody_turnover; NEP]; %matrix with all fluxes for stacked plot
-in_flux_names = {'R_{auto}', 'BNPP', 'ANPP_{foliage}', 'ANPP_{woody.turnover}',  'NEP'};
+in_fluxes = [R_auto; BNPP_fine; ANPP_foliage;  ANPP_woody_turnover; NEP]; %matrix with all fluxes for stacked plot
+in_flux_names = {'R_{auto}', 'BNPP_{fine}', 'ANPP_{foliage}', 'woody turnover*',  'NEP (incl. NPP_{woody})*'};
 out_fluxes = [R_auto; R_het];
 out_flux_names = {'R_{auto}', 'R_{het}'};
 
