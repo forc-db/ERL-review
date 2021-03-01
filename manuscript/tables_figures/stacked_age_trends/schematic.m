@@ -111,6 +111,7 @@ ylabel ('C fluxes (Mg C ha^{-1} yr^{-1})');
 set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)
+text(.05,.9,'A.', 'Units','Normalized' ) 
 box on
 
 subplot ('Position', pos_age_f)
@@ -139,6 +140,7 @@ set(gca, 'YTick', []); %ticks off
 ylim([0, max(in_sum)+1]);
 legend ([{'R_{het}'}, in_flux_names, {'GPP' 'R_{eco}' 'legacy R_{eco}'}], 'Location', 'BestOutside');
 legend('Boxoff')
+text(.05,.9,'B.', 'Units','Normalized' ) 
 
 subplot ('Position', pos_biome_s)
 h=bar(mature_stocks, 'stacked'); hold on;
@@ -153,6 +155,7 @@ ylabel ('C  stocks (Mg C ha^{-1})')
 set(gca, 'YTick', []); %ticks off
 set(gca, 'XTickLabel', {'Tropical' 'Temperate' 'Boreal'})
 xtickangle(30)
+text(.05,.9,'C.', 'Units','Normalized' ) 
 
 subplot ('Position', pos_age_s) %stocks by age:
 
@@ -171,6 +174,7 @@ set(gca, 'YTick', []); %ticks off
 
 legend ([stock_names,{'B_{tot}', 'legacy DW_{tot}'}], 'Location', 'BestOutside');
 legend('Boxoff')
+text(.05,.9,'D.', 'Units','Normalized' ) 
 
 %% ~~~~~~~ SAVE FIGURE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 print('schematic', '-dpng', '-r600')
