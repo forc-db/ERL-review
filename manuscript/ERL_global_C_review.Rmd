@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  pdf_document:
+  word_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -58,7 +58,7 @@ Maria M. H. Wang^1,7^
 ```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
 
 # KNIT IN FIGURES? 
-generate_figures=TRUE
+generate_figures=FALSE
 #note: table fails when knitting in word
 
 # DISPLAY ITEMS
@@ -81,7 +81,7 @@ schematics_caption_generic ="Arrows indicate fluxes (Mg C ha$^{-1}$ yr$^{-1}$); 
 TrB_mature_caption = paste( "Figure 3 | C cycle diagram for mature tropical broadleaf forests. ", schematics_caption_generic)  
 TeB_mature_caption = paste( "Figure 4 | C cycle diagram for mature temperate broadleaf forests. ", schematics_caption_generic)  
 TeN_mature_caption = paste( "Figure 5 | C cycle diagram for mature temperate conifer forests. ", schematics_caption_generic, "The temperate conifer biome in particular is subject to high variability, with highest fluxes and stocks in the high-biomass forests of the US Pacific Northwest. An asterisk after a variable name indicates lack of C cycle closure.")  
-BoN_mature_caption = paste( "Figure 6 | C cycle diagram for mature boreaal conifer forests. ", schematics_caption_generic)  
+BoN_mature_caption = paste( "Figure 6 | C cycle diagram for mature boreal conifer forests. ", schematics_caption_generic)  
 
 age_trends_all_caption= "Figure 9 | Age trends in C cycling. The selection of variables for plotting seeks to maximize sample size and broad geographic representation while representing all C cycle elements. Error bars on mature forest flux estimates indicate $\\pm$ 1 standard deviation. Asterisks indicate variables whose age trends were calculated based on other variables (* young and mature forests; ** young forests only; *** mature forests only), as follows. For all forests: $B_{ag-wood}=max(0,B_{ag}-B_{foliage})$, $B_{root-coarse}=max(0,B_{root}-B_{root-fine})$, $DW_{standing}=max(0, DW_{tot}-DW_{down})$. For tropical forests: $ANPP_{woody}=max(0,ANPP-ANPP_{foliage})$, $R_{auto-ag}=R_{auto}-R{root}$, where $R_{auto}=NPP(1/CUE-1)$ and $CUE$=0.46 (Collati et al. 2020). For non-tropical forests: $ANPP_{woody}=min(ANPP_{stem},ANPP_{woody})$, $R_{auto-ag}=R_{eco}-R{soil}$. Note that there remain substantial uncertainties in the functional form of age trends and discrepancies in closure among related variables."
 
