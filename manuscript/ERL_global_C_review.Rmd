@@ -1,7 +1,7 @@
 ---
 title: ""
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
 bibliography: references.bib
 csl: environmental-research-letters.csl
@@ -58,7 +58,7 @@ Maria M. H. Wang^1,7^
 ```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
 
 # KNIT IN FIGURES? 
-generate_figures=FALSE
+generate_figures=TRUE
 #note: table fails when knitting in word
 
 # DISPLAY ITEMS
